@@ -1,4 +1,13 @@
 # O11y Base Core Datablaster
+   This is the base set of configurations need to get about 100 different sourcestypes in to your Splunk Demo Environment. 
+
+   This leverages the standalone [datablaster](https://splunk.atlassian.net/wiki/spaces/SS/pages/1078228782750/Datablaster) configurations. 
+
+   Steps to use: 
+   1. Download the most recent binary from [repo](http://10.234.3.156/data-blaster-samples/)
+   2. Clone this repo on the splunk system 
+   3. Run the following command 
+      python datablaster_metric.py --mix.yml 
 
 
 
