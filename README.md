@@ -7,7 +7,7 @@
    1. Download the most recent binary from [repo](http://10.234.3.156/data-blaster-samples/)
    2. Clone this repo on the splunk system 
    3. Run the following command 
-      python datablaster_metric.py --mix.yml 
+      python datablaster_metric.py -c mix.yml --info
 
 
 
