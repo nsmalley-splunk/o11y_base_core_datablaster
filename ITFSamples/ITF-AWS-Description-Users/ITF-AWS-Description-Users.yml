@@ -1,0 +1,93 @@
+samples:
+- name: ITF-AWS-Description-Users
+  interval: 60
+  count: 8
+  randomizeEvents: false
+  lines:
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:iam_users
+    host: so1
+    _raw: '{"Path": "/", "UserName": "Tony", "UserId": "AIDA274XP5XOVV2WRQZ6M", "Arn":
+      "arn:$INDEX$:iam::755695087069:user/Tony", "CreateDate": "2020-11-16T20:09:30.000Z",
+      "PasswordLastUsed": "2020-11-16T20:11:54.000Z", "account_id": "755695087069",
+      "AccessKeys": [{"UserName": "Tony", "AccessKeyId": "AKIA274XP5XOSMYTLMUY", "Status":
+      "Active", "CreateDate": "2020-11-16T20:09:31.000Z", "AccessKeyLastUsed": {"ServiceName":
+      "N/A", "Region": "N/A"}}]}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:iam_users
+    host: so1
+    _raw: '{"Path": "/", "UserName": "srv_ops", "UserId": "AIDAIR6SEMYOIU2KJP4T4",
+      "Arn": "arn:$INDEX$:iam::755695087069:user/srv_ops", "CreateDate": "2017-11-07T00:08:24.000Z",
+      "account_id": "755695087069", "AccessKeys": [{"UserName": "srv_ops", "AccessKeyId":
+      "AKIAJ2VBQKYRGNRZZ6TA", "Status": "Active", "CreateDate": "2017-11-07T00:08:25.000Z",
+      "AccessKeyLastUsed": {"LastUsedDate": "2021-11-27T02:19:00.000Z", "ServiceName":
+      "iam", "Region": "us-east-1"}}]}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:iam_users
+    host: so1
+    _raw: '{"Path": "/", "UserName": "srv_okta", "UserId": "AIDAJDTTQOUIVPWBP3PZ6",
+      "Arn": "arn:$INDEX$:iam::755695087069:user/srv_okta", "CreateDate": "2017-11-07T00:37:48.000Z",
+      "account_id": "755695087069", "AccessKeys": [{"UserName": "srv_okta", "AccessKeyId":
+      "AKIAJDZKDMEE3XF3R3SQ", "Status": "Active", "CreateDate": "2019-01-11T17:37:04.000Z",
+      "AccessKeyLastUsed": {"LastUsedDate": "2021-07-29T19:31:00.000Z", "ServiceName":
+      "iam", "Region": "us-east-1"}}]}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:iam_users
+    host: so1
+    _raw: '{"Path": "/", "UserName": "SplunkAWSAppAccess", "UserId": "AIDAJ5O3WOS3XG5OTUVAA",
+      "Arn": "arn:$INDEX$:iam::755695087069:user/SplunkAWSAppAccess", "CreateDate":
+      "2018-06-19T19:29:28.000Z", "account_id": "755695087069", "AccessKeys": [{"UserName":
+      "SplunkAWSAppAccess", "AccessKeyId": "AKIAI22C2HSJ2HXXCS7Q", "Status": "Active",
+      "CreateDate": "2018-06-19T19:29:28.000Z", "AccessKeyLastUsed": {"ServiceName":
+      "N/A", "Region": "N/A"}}]}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:iam_users
+    host: so1
+    _raw: '{"Path": "/", "UserName": "Jerad", "UserId": "AIDA274XP5XOZOVLLKM7V", "Arn":
+      "arn:$INDEX$:iam::755695087069:user/Jerad", "CreateDate": "2021-01-27T21:06:00.000Z",
+      "PasswordLastUsed": "2021-03-04T21:04:03.000Z", "account_id": "755695087069",
+      "AccessKeys": []}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:iam_users
+    host: so1
+    _raw: '{"Path": "/", "UserName": "JessAWSCLI", "UserId": "AIDAI54LYQLTHEI3B22YY",
+      "Arn": "arn:$INDEX$:iam::755695087069:user/JessAWSCLI", "CreateDate": "2019-01-10T20:06:25.000Z",
+      "PasswordLastUsed": "2019-01-11T14:49:12.000Z", "account_id": "755695087069",
+      "AccessKeys": [{"UserName": "JessAWSCLI", "AccessKeyId": "AKIAI4ST6CPD4JAKIKMA",
+      "Status": "Active", "CreateDate": "2019-01-10T20:06:26.000Z", "AccessKeyLastUsed":
+      {"LastUsedDate": "2019-01-15T18:17:00.000Z", "ServiceName": "sts", "Region":
+      "us-east-1"}}]}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:iam_users
+    host: so1
+    _raw: '{"Path": "/", "UserName": "Jess", "UserId": "AIDAJ7C6R3PBXGJTH7D4A", "Arn":
+      "arn:$INDEX$:iam::755695087069:user/Jess", "CreateDate": "2017-11-15T19:00:33.000Z",
+      "account_id": "755695087069", "AccessKeys": [{"UserName": "Jess", "AccessKeyId":
+      "AKIAIILNFM2EVYCUI5EQ", "Status": "Inactive", "CreateDate": "2017-11-15T19:00:34.000Z",
+      "AccessKeyLastUsed": {"LastUsedDate": "2017-11-30T19:31:00.000Z", "ServiceName":
+      "ec2", "Region": "us-east-2"}}]}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:iam_users
+    host: so1
+    _raw: '{"Path": "/", "UserName": "ForSplunkAutobahnIngest", "UserId": "AIDA274XP5XOS2D66LXAO",
+      "Arn": "arn:$INDEX$:iam::755695087069:user/ForSplunkAutobahnIngest", "CreateDate":
+      "2021-09-21T20:04:21.000Z", "account_id": "755695087069", "AccessKeys": [{"UserName":
+      "ForSplunkAutobahnIngest", "AccessKeyId": "AKIA274XP5XOV7H7OYH4", "Status":
+      "Active", "CreateDate": "2021-09-21T20:04:22.000Z", "AccessKeyLastUsed": {"LastUsedDate":
+      "2021-11-27T05:03:00.000Z", "ServiceName": "sqs", "Region": "us-west-1"}}]}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:iam_users
+    host: so1
+    _raw: '{"Path": "/", "UserName": "AlexA", "UserId": "AIDA274XP5XO4N7B3FKI4", "Arn":
+      "arn:$INDEX$:iam::755695087069:user/AlexA", "CreateDate": "2021-03-29T17:17:35.000Z",
+      "PasswordLastUsed": "2021-04-01T12:08:05.000Z", "account_id": "755695087069",
+      "AccessKeys": []}'

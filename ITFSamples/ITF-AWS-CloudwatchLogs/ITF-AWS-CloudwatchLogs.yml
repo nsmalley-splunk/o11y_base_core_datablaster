@@ -1,0 +1,77 @@
+samples:
+- name: ITF-AWS-CloudwatchLogs
+  interval: 1
+  count: 1
+  randomizeEvents: true
+  lines:
+  - index: aws
+    sourcetype: aws:cloudwatchlogs
+    source: us-west-1:/aws/lambda/testLambda:2021/11/04/[$LATEST]0be7a7119d0c4469b79443d0efab5d2c
+    host: so1
+    _raw: "REPORT RequestId: 20f80076-a323-4f1f-99ed-a93b4bfa2d18\tDuration: 15.37\
+      \ ms\tBilled Duration: 16 ms\tMemory Size: 128 MB\tMax Memory Used: 37 MB\t\
+      Init Duration: 110.52 ms\t\n"
+  - index: aws
+    sourcetype: aws:cloudwatchlogs
+    source: us-west-1:/aws/lambda/testLambda:2021/11/04/[$LATEST]0be7a7119d0c4469b79443d0efab5d2c
+    host: so1
+    _raw: 'END RequestId: 20f80076-a323-4f1f-99ed-a93b4bfa2d18
+
+      '
+  - index: aws
+    sourcetype: aws:cloudwatchlogs
+    source: us-west-1:/aws/lambda/testLambda:2021/11/04/[$LATEST]0be7a7119d0c4469b79443d0efab5d2c
+    host: so1
+    _raw: "[ERROR] Exception: Something went wrong\rTraceback (most recent call last):\r\
+      \_\_File \"/var/task/lambda_function.py\", line 12, in lambda_handler\r\_\_\_\
+      \_raise Exception('Something went wrong')\n"
+  - index: aws
+    sourcetype: aws:cloudwatchlogs
+    source: us-west-1:/aws/lambda/testLambda:2021/11/04/[$LATEST]0be7a7119d0c4469b79443d0efab5d2c
+    host: so1
+    _raw: 'value3 = value3
+
+      '
+  - index: aws
+    sourcetype: aws:cloudwatchlogs
+    source: us-west-1:/aws/lambda/testLambda:2021/11/04/[$LATEST]0be7a7119d0c4469b79443d0efab5d2c
+    host: so1
+    _raw: 'Loading function
+
+      '
+  - index: aws
+    sourcetype: aws:cloudwatchlogs
+    source: us-west-1:/aws/lambda/testLambda:2021/11/04/[$LATEST]0be7a7119d0c4469b79443d0efab5d2c
+    host: so1
+    _raw: 'START RequestId: 20f80076-a323-4f1f-99ed-a93b4bfa2d18 Version: $LATEST
+
+      '
+  - index: aws
+    sourcetype: aws:cloudwatchlogs
+    source: us-west-1:/aws/lambda/testLambda:2021/11/04/[$LATEST]b855d8172f394b3c8072983fa709e6cb
+    host: so1
+    _raw: "[ERROR] ZeroDivisionError: division by zero\rTraceback (most recent call\
+      \ last):\r\_\_File \"/var/task/lambda_function.py\", line 12, in lambda_handler\r\
+      \_\_\_\_val = 5 / 0\n"
+  - index: aws
+    sourcetype: aws:cloudwatchlogs
+    source: us-west-1:/aws/lambda/testLambda:2021/11/04/[$LATEST]c829d82868bf472485bda6765a1510b4
+    host: so1
+    _raw: "REPORT RequestId: 3595735c-62be-40c8-87d8-caca0e608f6d\tDuration: 1.26\
+      \ ms\tBilled Duration: 2 ms\tMemory Size: 128 MB\tMax Memory Used: 37 MB\t\n"
+  - index: aws
+    sourcetype: aws:cloudwatchlogs
+    source: us-west-1:/aws/lambda/testLambda:2021/11/04/[$LATEST]ffb5de62656245169f4635e67bb83b60
+    host: so1
+    _raw: "[ERROR] KeyError: 'key1'\rTraceback (most recent call last):\r\_\_File\
+      \ \"/var/task/lambda_function.py\", line 8, in lambda_handler\r\_\_\_\_print(\"\
+      value1 = \" + event['key1'])\n"
+  - index: aws
+    sourcetype: aws:cloudwatchlogs
+    source: us-west-1:/aws/lambda/ErrorFunction:2021/09/28/[$LATEST]83d92290ea99448f9037e0f1586aa289
+    host: ip-10-202-14-145.ec2.splunkit.io
+    _raw: "2021-09-28T18:06:12.599Z\t88a4236e-2f6a-44a6-a2d6-cfc91828ffbf\tERROR\t\
+      Invoke Error \t{\"errorType\":\"CustomError\",\"errorMessage\":\"This is a custom\
+      \ error!\",\"name\":\"CustomError\",\"message\":\"This is a custom error!\"\
+      ,\"stack\":[\"Error\",\"    at Runtime.exports.handler (/var/task/index.js:6:29)\"\
+      ,\"    at Runtime.handleOnce (/var/runtime/Runtime.js:66:25)\"]}\n"

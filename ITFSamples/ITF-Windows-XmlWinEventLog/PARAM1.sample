@@ -1,0 +1,103 @@
+Network Setup Service
+WinHTTP Web Proxy Auto-Discovery Service
+Background Intelligent Transfer Service
+Google Update Service (gupdate)
+Windows Modules Installer
+Microsoft Account Sign-in Assistant
+Software Protection
+Windows Update
+AppX Deployment Service (AppXSVC)
+Delivery Optimization
+SplunkForwarder Service
+Client License Service (ClipSVC)
+Capability Access Manager Service
+Windows Error Reporting Service
+Device Setup Manager
+Diagnostic System Host
+Google Update Service (gupdatem)
+Windows Biometric Service
+Windows Update Medic Service
+0
+AWSLiteAgent
+AmazonSSMAgent
+BFE
+BITS
+BrokerInfrastructure
+CNG Key Isolation
+CertPropSvc
+Clipboard User Service_47434873b
+Connected Devices Platform Service
+Connected Devices Platform User Service_543b4
+CoreMessagingRegistrar
+CryptSvc
+DcomLaunch
+Device Install Service
+DeviceInstall
+Dhcp
+Diagnostic Policy Service
+Distributed Transaction Coordinator
+Dnscache
+DsmSvc
+EventLog
+EventSystem
+Fluentd Windows Service
+FontCache
+LSM
+LanmanServer
+LanmanWorkstation
+NcbService
+NlaSvc
+Other (Unplanned)
+PlugPlay
+Portable Device Enumerator Service
+Power
+ProfSvc
+Program Compatibility Assistant Service
+Remote Registry
+RemoteRegistry
+RpcEptMapper
+RpcSs
+SENS
+SamSs
+Schedule
+SessionEnv
+ShellHWDetection
+Splunk OpenTelemetry Collector
+SplunkForwarder
+Spooler
+StateRepository
+Storage Service
+SysMain
+SystemEventsBroker
+TermService
+Themes
+TimeBrokerSvc
+Touch Keyboard and Handwriting Panel Service
+TrkWks
+UmRdpService
+Update Orchestrator Service
+User Access Logging Service
+UserManager
+W32Time
+WMI Performance Adapter
+WPDBusEnum
+Wcmsvc
+WdNisSvc
+Web Account Manager
+WinDefend
+WinHttpAutoProxySvc
+WinRM
+Windows Installer
+Windows Push Notifications User Service_543b4
+Winmgmt
+WpnService
+dam
+gpsvc
+iphlpsvc
+lmhosts
+mpssvc
+netprofm
+nsi
+signalfx-agent
+splunk-otel-collector
+wmiApSrv

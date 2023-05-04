@@ -1,0 +1,950 @@
+samples:
+- name: ITF-UnixLinux-Metrics
+  interval: 30
+  count: 70
+  randomizeEvents: false
+  tokens:
+  - name: HOST
+    format: template
+    type: choice
+    sample: HOST.sample
+  - name: VALUE_1
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 90.0
+    upper: 100.0
+  - name: VALUE_2
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 88.0
+    upper: 100.0
+  - name: VALUE_3
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 89.0
+    upper: 98.99
+  - name: VALUE_4
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.01
+  - name: VALUE_5
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_6
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_7
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_8
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_9
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_10
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 7.0
+  - name: VALUE_11
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 6.06
+  - name: VALUE_12
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 6.0
+  - name: VALUE_13
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 6.93
+  - name: VALUE_14
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 6.0
+  - name: VALUE_15
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 5.03
+  - name: VALUE_16
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 4487136.0
+    upper: 4606268.0
+  - name: VALUE_17
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 8376300.0
+    upper: 8376301.0
+  - name: VALUE_18
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 46.0
+    upper: 47.0
+  - name: VALUE_19
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 3770032.0
+    upper: 3889164.0
+  - name: VALUE_20
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_21
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 20065772590.0
+    upper: 20130085492.0
+  - name: VALUE_22
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_23
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 162015001384.0
+    upper: 162545829900.0
+  - name: VALUE_24
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_25
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_26
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 4.0
+  - name: VALUE_27
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 6.42
+  - name: VALUE_28
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.2
+  - name: VALUE_29
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_30
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_31
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 360.0
+  - name: VALUE_32
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 81.0
+  - name: VALUE_33
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1652.0
+    upper: 1653.0
+  - name: VALUE_34
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1728.0
+    upper: 1729.0
+  - name: VALUE_35
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1844.0
+    upper: 1845.0
+  - name: VALUE_36
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 5676.0
+    upper: 5677.0
+  - name: VALUE_37
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 4380.0
+    upper: 4381.0
+  - name: VALUE_38
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 101848.0
+    upper: 101849.0
+  - name: VALUE_39
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 10536.0
+    upper: 10537.0
+  - name: VALUE_40
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 121288.0
+    upper: 121289.0
+  - name: VALUE_41
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 191248.0
+    upper: 191249.0
+  - name: VALUE_42
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 60432.0
+    upper: 60433.0
+  - name: VALUE_43
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_44
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_45
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_46
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_47
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_48
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_49
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_50
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_51
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.1
+    upper: 1.1
+  - name: VALUE_52
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.1
+    upper: 1.1
+  - name: VALUE_53
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1853775137.0
+    upper: 1892522500.0
+  - name: VALUE_54
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 251999639.0
+    upper: 252898231.0
+  - name: VALUE_55
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 3393015929.0
+    upper: 3422992399.0
+  - name: VALUE_56
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 80.5
+    upper: 519.5
+  - name: VALUE_57
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_58
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 3669.0
+    upper: 3675.0
+  - name: VALUE_59
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 93.1
+    upper: 94.1
+  - name: VALUE_60
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 3942.0
+    upper: 3943.0
+  - name: VALUE_61
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 267.0
+    upper: 273.0
+  - name: VALUE_62
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 6.8
+    upper: 7.8
+  - name: VALUE_63
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_64
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 357632089.0
+    upper: 359180060.0
+  - name: VALUE_65
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 204.0
+  - name: VALUE_66
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_67
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 98.0
+    upper: 107.0
+  - name: VALUE_68
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  - name: VALUE_69
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 199.0
+    upper: 208.0
+  - name: VALUE_70
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.0
+    upper: 1.0
+  lines:
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIdle":"$VALUE_1$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"1","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIdle":"$VALUE_2$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"all","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIdle":"$VALUE_3$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIowait":"$VALUE_4$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"1","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIowait":"$VALUE_5$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"all","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIowait":"$VALUE_6$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctNice":"$VALUE_7$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"1","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctNice":"$VALUE_8$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"all","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctNice":"$VALUE_9$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctSystem":"$VALUE_10$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"1","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctSystem":"$VALUE_11$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"all","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctSystem":"$VALUE_12$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctUser":"$VALUE_13$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"1","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctUser":"$VALUE_14$"}'
+  - index: itsi_im_metrics
+    sourcetype: cpu_metric
+    source: cpu
+    host: $HOST$
+    _raw: metric
+    fields: '{"CPU":"all","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctUser":"$VALUE_15$"}'
+  - index: itsi_im_metrics
+    sourcetype: df_metric
+    source: df
+    host: $HOST$
+    _raw: metric
+    fields: '{"Filesystem":"/dev/xvda1","IP_address":"172.31.19.173","MountedOn":"/","OS_name":"Amazon
+      Linux","OS_version":"2","Type":"xfs","entity_type":"TA_Nix","metric_name:df_metric.Avail_KB":"$VALUE_16$"}'
+  - index: itsi_im_metrics
+    sourcetype: df_metric
+    source: df
+    host: $HOST$
+    _raw: metric
+    fields: '{"Filesystem":"/dev/xvda1","IP_address":"172.31.19.173","MountedOn":"/","OS_name":"Amazon
+      Linux","OS_version":"2","Type":"xfs","entity_type":"TA_Nix","metric_name:df_metric.Size_KB":"$VALUE_17$"}'
+  - index: itsi_im_metrics
+    sourcetype: df_metric
+    source: df
+    host: $HOST$
+    _raw: metric
+    fields: '{"Filesystem":"/dev/xvda1","IP_address":"172.31.19.173","MountedOn":"/","OS_name":"Amazon
+      Linux","OS_version":"2","Type":"xfs","entity_type":"TA_Nix","metric_name:df_metric.UsePct":"$VALUE_18$"}'
+  - index: itsi_im_metrics
+    sourcetype: df_metric
+    source: df
+    host: $HOST$
+    _raw: metric
+    fields: '{"Filesystem":"/dev/xvda1","IP_address":"172.31.19.173","MountedOn":"/","OS_name":"Amazon
+      Linux","OS_version":"2","Type":"xfs","entity_type":"TA_Nix","metric_name:df_metric.Used_KB":"$VALUE_19$"}'
+  - index: itsi_im_metrics
+    sourcetype: interfaces_metric
+    source: interfaces
+    host: $HOST$
+    _raw: metric
+    fields: '{"Duplex":"<n/a>","IP_address":"172.31.19.173","MAC":"02:c8:00:b7:c2:e9","Name":"eth0","OS_name":"Amazon
+      Linux","OS_version":"2","RXdropped":"0","Speed":"<n/a>","TXdropped":"0","entity_type":"TA_Nix","inet6Addr":"fe80::c8:ff:feb7:c2e9/64","inetAddr":"172.31.19.173/20","metric_name:interfaces_metric.Collisions":"$VALUE_20$"}'
+  - index: itsi_im_metrics
+    sourcetype: interfaces_metric
+    source: interfaces
+    host: $HOST$
+    _raw: metric
+    fields: '{"Duplex":"<n/a>","IP_address":"172.31.19.173","MAC":"02:c8:00:b7:c2:e9","Name":"eth0","OS_name":"Amazon
+      Linux","OS_version":"2","RXdropped":"0","Speed":"<n/a>","TXdropped":"0","entity_type":"TA_Nix","inet6Addr":"fe80::c8:ff:feb7:c2e9/64","inetAddr":"172.31.19.173/20","metric_name:interfaces_metric.RXbytes":"$VALUE_21$"}'
+  - index: itsi_im_metrics
+    sourcetype: interfaces_metric
+    source: interfaces
+    host: $HOST$
+    _raw: metric
+    fields: '{"Duplex":"<n/a>","IP_address":"172.31.19.173","MAC":"02:c8:00:b7:c2:e9","Name":"eth0","OS_name":"Amazon
+      Linux","OS_version":"2","RXdropped":"0","Speed":"<n/a>","TXdropped":"0","entity_type":"TA_Nix","inet6Addr":"fe80::c8:ff:feb7:c2e9/64","inetAddr":"172.31.19.173/20","metric_name:interfaces_metric.RXerrors":"$VALUE_22$"}'
+  - index: itsi_im_metrics
+    sourcetype: interfaces_metric
+    source: interfaces
+    host: $HOST$
+    _raw: metric
+    fields: '{"Duplex":"<n/a>","IP_address":"172.31.19.173","MAC":"02:c8:00:b7:c2:e9","Name":"eth0","OS_name":"Amazon
+      Linux","OS_version":"2","RXdropped":"0","Speed":"<n/a>","TXdropped":"0","entity_type":"TA_Nix","inet6Addr":"fe80::c8:ff:feb7:c2e9/64","inetAddr":"172.31.19.173/20","metric_name:interfaces_metric.TXbytes":"$VALUE_23$"}'
+  - index: itsi_im_metrics
+    sourcetype: interfaces_metric
+    source: interfaces
+    host: $HOST$
+    _raw: metric
+    fields: '{"Duplex":"<n/a>","IP_address":"172.31.19.173","MAC":"02:c8:00:b7:c2:e9","Name":"eth0","OS_name":"Amazon
+      Linux","OS_version":"2","RXdropped":"0","Speed":"<n/a>","TXdropped":"0","entity_type":"TA_Nix","inet6Addr":"fe80::c8:ff:feb7:c2e9/64","inetAddr":"172.31.19.173/20","metric_name:interfaces_metric.TXerrors":"$VALUE_24$"}'
+  - index: itsi_im_metrics
+    sourcetype: iostat_metric
+    source: iostat
+    host: $HOST$
+    _raw: metric
+    fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.avgQueueSZ":"$VALUE_25$"}'
+  - index: itsi_im_metrics
+    sourcetype: iostat_metric
+    source: iostat
+    host: $HOST$
+    _raw: metric
+    fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.avgSvcMillis":"$VALUE_26$"}'
+  - index: itsi_im_metrics
+    sourcetype: iostat_metric
+    source: iostat
+    host: $HOST$
+    _raw: metric
+    fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.avgWaitMillis":"$VALUE_27$"}'
+  - index: itsi_im_metrics
+    sourcetype: iostat_metric
+    source: iostat
+    host: $HOST$
+    _raw: metric
+    fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.bandwUtilPct":"$VALUE_28$"}'
+  - index: itsi_im_metrics
+    sourcetype: iostat_metric
+    source: iostat
+    host: $HOST$
+    _raw: metric
+    fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.rKB_PS":"$VALUE_29$"}'
+  - index: itsi_im_metrics
+    sourcetype: iostat_metric
+    source: iostat
+    host: $HOST$
+    _raw: metric
+    fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.rReq_PS":"$VALUE_30$"}'
+  - index: itsi_im_metrics
+    sourcetype: iostat_metric
+    source: iostat
+    host: $HOST$
+    _raw: metric
+    fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.wKB_PS":"$VALUE_31$"}'
+  - index: itsi_im_metrics
+    sourcetype: iostat_metric
+    source: iostat
+    host: $HOST$
+    _raw: metric
+    fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.wReq_PS":"$VALUE_32$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--foreground_--hintpolicy=subset","COMMAND":"irqbalance","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"2566","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_33$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--keep-baud_115200,38400,9600_ttyS0_vt220","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"3118","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_34$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--noclear_tty1_linux","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"3119","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_35$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--switched-root_--system_--deserialize_21","COMMAND":"systemd","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"1","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_36$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--system_--address=systemd:_--nofork_--nopidfile_--systemd-activation","COMMAND":"dbus-daemon","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"2573","USER":"dbus","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_37$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--foreground_--hintpolicy=subset","COMMAND":"irqbalance","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"2566","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_38$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--keep-baud_115200,38400,9600_ttyS0_vt220","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"3118","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_39$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--noclear_tty1_linux","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"3119","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_40$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--switched-root_--system_--deserialize_21","COMMAND":"systemd","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"1","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_41$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--system_--address=systemd:_--nofork_--nopidfile_--systemd-activation","COMMAND":"dbus-daemon","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"2573","USER":"dbus","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_42$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--foreground_--hintpolicy=subset","COMMAND":"irqbalance","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"2566","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_43$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--keep-baud_115200,38400,9600_ttyS0_vt220","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"3118","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_44$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--noclear_tty1_linux","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"3119","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_45$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--switched-root_--system_--deserialize_21","COMMAND":"systemd","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"1","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_46$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--system_--address=systemd:_--nofork_--nopidfile_--systemd-activation","COMMAND":"dbus-daemon","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"2573","USER":"dbus","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_47$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--foreground_--hintpolicy=subset","COMMAND":"irqbalance","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"2566","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_48$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--keep-baud_115200,38400,9600_ttyS0_vt220","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"3118","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_49$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--noclear_tty1_linux","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"3119","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_50$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--switched-root_--system_--deserialize_21","COMMAND":"systemd","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"1","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_51$"}'
+  - index: itsi_im_metrics
+    sourcetype: ps_metric
+    source: ps
+    host: $HOST$
+    _raw: metric
+    fields: '{"ARGS":"--system_--address=systemd:_--nofork_--nopidfile_--systemd-activation","COMMAND":"dbus-daemon","IP_address":"172.31.19.173","OS_name":"Amazon
+      Linux","OS_version":"2","PID":"2573","USER":"dbus","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_52$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.cSwitches":"$VALUE_53$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.forks":"$VALUE_54$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.interrupts":"$VALUE_55$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.interrupts_PS":"$VALUE_56$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.loadAvg1mi":"$VALUE_57$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.memFreeMB":"$VALUE_58$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.memFreePct":"$VALUE_59$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.memTotalMB":"$VALUE_60$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.memUsedMB":"$VALUE_61$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.memUsedPct":"$VALUE_62$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.pgPageIn_PS":"$VALUE_63$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.pgPageOut":"$VALUE_64$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.pgPageOut_PS":"$VALUE_65$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.pgSwapOut":"$VALUE_66$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.processes":"$VALUE_67$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.swapUsedPct":"$VALUE_68$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.threads":"$VALUE_69$"}'
+  - index: itsi_im_metrics
+    sourcetype: vmstat_metric
+    source: vmstat
+    host: $HOST$
+    _raw: metric
+    fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.waitThreads":"$VALUE_70$"}'
