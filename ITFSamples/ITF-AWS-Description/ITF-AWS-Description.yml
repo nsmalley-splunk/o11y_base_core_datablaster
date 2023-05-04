@@ -1,0 +1,1234 @@
+samples:
+- name: ITF-AWS-Description
+  interval: 60
+  count: 95
+  randomizeEvents: false
+  lines:
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:s3_buckets
+    host: so1
+    _raw: '{"Name": "acme-semiprivate", "CreationDate": "2020-06-17T23:31:33.000Z",
+      "account_id": "755695087069", "LocationConstraint": "us-east-2", "region": "us-east-2"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:s3_buckets
+    host: so1
+    _raw: '{"Name": "acme-public", "CreationDate": "2021-11-04T13:44:36.000Z", "account_id":
+      "755695087069", "LocationConstraint": "us-west-1", "LoggingEnabled": {"TargetBucket":
+      "splunk-s3-access-bucket", "TargetPrefix": ""}, "region": "us-west-1"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:s3_buckets
+    host: so1
+    _raw: '{"Name": "acme-private", "CreationDate": "2021-08-06T14:39:42.000Z", "account_id":
+      "755695087069", "LocationConstraint": "us-east-2", "region": "us-east-2"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:s3_buckets
+    host: so1
+    _raw: '{"Name": "config-bucket-755695087069", "CreationDate": "2020-06-17T19:37:42.000Z",
+      "account_id": "755695087069", "LocationConstraint": "us-east-2", "region": "us-east-2"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:s3_buckets
+    host: so1
+    _raw: '{"Name": "cloudtrail-7556-9508-7069", "CreationDate": "2020-06-17T19:17:48.000Z",
+      "account_id": "755695087069", "LocationConstraint": "us-east-2", "region": "us-east-2"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_security_groups
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "default
+      VPC security group", "id": "sg-6692b900", "instances": [{"id": "i-082fcf2eba0f1cf39"},
+      {"id": "i-0d661437ec3bab1a4"}, {"id": "i-090bfe7b4ccad82fc"}, {"id": "i-023ee207c86a15a06"},
+      {"id": "i-0b08a46573d49b2ee"}, {"id": "i-08661e2f1ae1e78d2"}, {"id": "i-0c9e385c1272ae01a"},
+      {"id": "i-028d8660483298b4d"}, {"id": "i-0619234b444aef54d"}, {"id": "i-0379085f7566038cd"},
+      {"id": "i-06db6dbd61dbaca8d"}], "name": "default", "owner_id": "755695087069",
+      "rules_egress": [{"from_port": null, "grants": [{"cidr_ip": "0.0.0.0/0", "group_id":
+      null, "name": null, "owner_id": null}], "groups": "", "ipRanges": "\n                    ",
+      "ip_protocol": "-1", "to_port": null}], "rules": [{"from_port": "80", "grants":
+      [{"cidr_ip": "0.0.0.0/0", "group_id": null, "name": null, "owner_id": null}],
+      "groups": "", "ipRanges": "\n                    ", "ip_protocol": "tcp", "to_port":
+      "80"}, {"from_port": null, "grants": [{"cidr_ip": null, "group_id": "sg-6692b900",
+      "name": null, "owner_id": "755695087069"}, {"cidr_ip": "76.92.210.127/32", "group_id":
+      null, "name": null, "owner_id": null}, {"cidr_ip": "50.220.40.2/32", "group_id":
+      null, "name": null, "owner_id": null}, {"cidr_ip": "76.92.195.52/32", "group_id":
+      null, "name": null, "owner_id": null}], "groups": "\n                    ",
+      "ipRanges": "\n                    ", "ip_protocol": "-1", "to_port": null},
+      {"from_port": "8000", "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null,
+      "name": null, "owner_id": null}], "groups": "", "ipRanges": "\n                    ",
+      "ip_protocol": "tcp", "to_port": "8000"}, {"from_port": "9997", "grants": [{"cidr_ip":
+      "0.0.0.0/0", "group_id": null, "name": null, "owner_id": null}], "groups": "",
+      "ipRanges": "\n                    ", "ip_protocol": "tcp", "to_port": "9997"}],
+      "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_security_groups
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "launch-wizard-1
+      created 2020-05-04T16:08:12.615-05:00", "id": "sg-0f22c1e6805f805e5", "instances":
+      [], "name": "launch-wizard-1", "owner_id": "755695087069", "rules_egress": [{"from_port":
+      null, "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null, "name": null, "owner_id":
+      null}], "groups": "", "ipRanges": "\n                    ", "ip_protocol": "-1",
+      "to_port": null}], "rules": [{"from_port": "22", "grants": [{"cidr_ip": "0.0.0.0/0",
+      "group_id": null, "name": null, "owner_id": null}], "groups": "", "ipRanges":
+      "\n                    ", "ip_protocol": "tcp", "to_port": "22"}], "tags": {},
+      "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_security_groups
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "launch-wizard-3
+      created 2020-09-03T09:37:32.392-05:00", "id": "sg-0dd49ffa5ae581261", "instances":
+      [], "name": "launch-wizard-3", "owner_id": "755695087069", "rules_egress": [{"from_port":
+      null, "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null, "name": null, "owner_id":
+      null}], "groups": "", "ipRanges": "\n                    ", "ip_protocol": "-1",
+      "to_port": null}], "rules": [{"from_port": "22", "grants": [{"cidr_ip": "0.0.0.0/0",
+      "group_id": null, "name": null, "owner_id": null}], "groups": "", "ipRanges":
+      "\n                    ", "ip_protocol": "tcp", "to_port": "22"}], "tags": {},
+      "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_security_groups
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "Dev
+      Stuff Yo", "id": "sg-0ca77fec7791b10f1", "instances": [{"id": "i-0379085f7566038cd"}],
+      "name": "Dev Stuff Yo", "owner_id": "755695087069", "rules_egress": [{"from_port":
+      null, "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null, "name": null, "owner_id":
+      null}], "groups": "", "ipRanges": "\n                    ", "ip_protocol": "-1",
+      "to_port": null}], "rules": [{"from_port": "30000", "grants": [{"cidr_ip": "0.0.0.0/0",
+      "group_id": null, "name": null, "owner_id": null}], "groups": "", "ipRanges":
+      "\n                    ", "ip_protocol": "tcp", "to_port": "31000"}], "tags":
+      {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_security_groups
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "acme
+      dev sec group", "id": "sg-0a41c072dca7472f5", "instances": [{"id": "i-0b08a46573d49b2ee"},
+      {"id": "i-08661e2f1ae1e78d2"}, {"id": "i-0c9e385c1272ae01a"}, {"id": "i-028d8660483298b4d"},
+      {"id": "i-04e5990313a4ad32a"}, {"id": "i-09975fba3d9b63b3f"}, {"id": "i-007b4eae830ea759b"},
+      {"id": "i-0ddd565179c1430e8"}, {"id": "i-0a594ccf0f3c8f37f"}, {"id": "i-0e5bf972e5b5f5761"},
+      {"id": "i-06db6dbd61dbaca8d"}, {"id": "i-0236b19ca09ba67b0"}, {"id": "i-09ef0f9378369d086"}],
+      "name": "acme dev sec group", "owner_id": "755695087069", "rules_egress": [{"from_port":
+      null, "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null, "name": null, "owner_id":
+      null}], "groups": "", "ipRanges": "\n                    ", "ip_protocol": "-1",
+      "to_port": null}], "rules": [{"from_port": null, "grants": [{"cidr_ip": "0.0.0.0/0",
+      "group_id": null, "name": null, "owner_id": null}], "groups": "", "ipRanges":
+      "\n                    ", "ip_protocol": "-1", "to_port": null}, {"from_port":
+      "-1", "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null, "name": null, "owner_id":
+      null}], "groups": "", "ipRanges": "\n                    ", "ip_protocol": "icmp",
+      "to_port": "-1"}], "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_security_groups
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "bills
+      box", "id": "sg-061f78530728fb988", "instances": [{"id": "i-0d661437ec3bab1a4"}],
+      "name": "bills box", "owner_id": "755695087069", "rules_egress": [{"from_port":
+      null, "grants": [{"cidr_ip": "70.29.156.18/32", "group_id": null, "name": null,
+      "owner_id": null}, {"cidr_ip": "70.26.24.181/32", "group_id": null, "name":
+      null, "owner_id": null}], "groups": "", "ipRanges": "\n                    ",
+      "ip_protocol": "-1", "to_port": null}], "rules": [{"from_port": null, "grants":
+      [{"cidr_ip": "70.29.156.18/32", "group_id": null, "name": null, "owner_id":
+      null}, {"cidr_ip": "70.26.24.181/32", "group_id": null, "name": null, "owner_id":
+      null}, {"cidr_ip": "70.24.24.161/32", "group_id": null, "name": null, "owner_id":
+      null}], "groups": "", "ipRanges": "\n                    ", "ip_protocol": "-1",
+      "to_port": null}], "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_security_groups
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "This
+      security group was generated by AWS Marketplace and is based on recommended
+      settings for Splunk Enterprise version 8.0.5 provided by Splunk Inc.", "id":
+      "sg-04adb0e4594c5d3e5", "instances": [], "name": "bazookatron-nextgen", "owner_id":
+      "755695087069", "rules_egress": [{"from_port": null, "grants": [{"cidr_ip":
+      "0.0.0.0/0", "group_id": null, "name": null, "owner_id": null}], "groups": "",
+      "ipRanges": "\n                    ", "ip_protocol": "-1", "to_port": null}],
+      "rules": [{"from_port": "8000", "grants": [{"cidr_ip": "0.0.0.0/0", "group_id":
+      null, "name": null, "owner_id": null}], "groups": "", "ipRanges": "\n                    ",
+      "ip_protocol": "tcp", "to_port": "8000"}, {"from_port": "554", "grants": [{"cidr_ip":
+      "0.0.0.0/0", "group_id": null, "name": null, "owner_id": null}], "groups": "",
+      "ipRanges": "\n                    ", "ip_protocol": "tcp", "to_port": "554"},
+      {"from_port": "22", "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null, "name":
+      null, "owner_id": null}], "groups": "", "ipRanges": "\n                    ",
+      "ip_protocol": "tcp", "to_port": "22"}, {"from_port": "8089", "grants": [{"cidr_ip":
+      "0.0.0.0/0", "group_id": null, "name": null, "owner_id": null}], "groups": "",
+      "ipRanges": "\n                    ", "ip_protocol": "tcp", "to_port": "8089"},
+      {"from_port": "9997", "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null,
+      "name": null, "owner_id": null}], "groups": "", "ipRanges": "\n                    ",
+      "ip_protocol": "tcp", "to_port": "9997"}, {"from_port": "443", "grants": [{"cidr_ip":
+      "0.0.0.0/0", "group_id": null, "name": null, "owner_id": null}], "groups": "",
+      "ipRanges": "\n                    ", "ip_protocol": "tcp", "to_port": "443"}],
+      "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_security_groups
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "launch-wizard-2
+      created 2020-06-22T12:29:21.424-05:00", "id": "sg-031e400573551fe43", "instances":
+      [], "name": "launch-wizard-2", "owner_id": "755695087069", "rules_egress": [{"from_port":
+      null, "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null, "name": null, "owner_id":
+      null}], "groups": "", "ipRanges": "\n                    ", "ip_protocol": "-1",
+      "to_port": null}], "rules": [{"from_port": "22", "grants": [{"cidr_ip": "0.0.0.0/0",
+      "group_id": null, "name": null, "owner_id": null}], "groups": "", "ipRanges":
+      "\n                    ", "ip_protocol": "tcp", "to_port": "22"}], "tags": {},
+      "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:s3_buckets
+    host: so1
+    _raw: '{"Name": "aws-cloudtrail-logs-755695087069-5a673563-splunk", "CreationDate":
+      "2021-09-21T20:48:55.000Z", "account_id": "755695087069", "LocationConstraint":
+      "us-west-1", "region": "us-west-1"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:s3_buckets
+    host: so1
+    _raw: '{"Name": "splunk-s3-access-bucket", "CreationDate": "2021-11-04T13:18:44.000Z",
+      "account_id": "755695087069", "LocationConstraint": "us-west-1", "region": "us-west-1"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:s3_buckets
+    host: so1
+    _raw: '{"Name": "splunk-config-bucket", "CreationDate": "2021-09-21T20:57:53.000Z",
+      "account_id": "755695087069", "LocationConstraint": "us-west-1", "region": "us-west-1"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_addresses
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "public_ip": "13.56.98.60",
+      "instance_id": null, "domain": "vpc", "allocation_id": "eipalloc-d5a653ca",
+      "association_id": null, "network_interface_id": null, "network_interface_owner_id":
+      null, "private_ip_address": null}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2021-11-16T20:48:21.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-0302da28b04512044", "instance_id": "i-0e5bf972e5b5f5761", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0302da28b04512044",
+      "status": "in-use", "snapshot_id": "snap-05ff40a11b575eb3f", "size": 10, "iops":
+      100, "tags": {}, "create_time": "2021-11-16T20:48:21.149Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2021-10-25T14:20:34.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-046f324859a6660ea", "instance_id": "i-0a594ccf0f3c8f37f", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-046f324859a6660ea",
+      "status": "in-use", "snapshot_id": "snap-01a19e178363e12e0", "size": 250, "iops":
+      750, "tags": {}, "create_time": "2021-10-25T14:20:34.988Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2021-09-19T13:39:31.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-05d3b35f221e60b92", "instance_id": "i-0ddd565179c1430e8", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-05d3b35f221e60b92",
+      "status": "in-use", "snapshot_id": "snap-0b673fe510ec5a881", "size": 20, "iops":
+      100, "tags": {}, "create_time": "2021-09-19T13:39:31.581Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2021-05-01T14:32:03.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-08f2bd0df738e411c", "instance_id": "i-007b4eae830ea759b", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-08f2bd0df738e411c",
+      "status": "in-use", "snapshot_id": "snap-0d317194305d172df", "size": 100, "iops":
+      300, "tags": {}, "create_time": "2021-05-01T14:32:03.147Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2021-03-11T22:00:28.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-04354fdd7c2d79fc4", "instance_id": "i-09975fba3d9b63b3f", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-04354fdd7c2d79fc4",
+      "status": "in-use", "snapshot_id": "snap-02abf9eb240ca53e6", "size": 200, "iops":
+      600, "tags": {}, "create_time": "2021-03-11T22:00:28.379Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2021-01-23T15:46:02.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-0be26b02772715ef7", "instance_id": "i-04e5990313a4ad32a", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0be26b02772715ef7",
+      "status": "in-use", "snapshot_id": "snap-02abf9eb240ca53e6", "size": 200, "iops":
+      600, "tags": {}, "create_time": "2021-01-23T15:46:03.021Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2020-12-15T19:32:06.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-08a7098a4e38a7c4c", "instance_id": "i-0c9e385c1272ae01a", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-08a7098a4e38a7c4c",
+      "status": "in-use", "snapshot_id": "snap-0d4fee86508199e37", "size": 50, "iops":
+      150, "tags": {}, "create_time": "2020-12-15T19:32:06.276Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2020-12-15T19:30:38.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-0fbb544c3b796f232", "instance_id": "i-028d8660483298b4d", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0fbb544c3b796f232",
+      "status": "in-use", "snapshot_id": "snap-0d4fee86508199e37", "size": 50, "iops":
+      150, "tags": {}, "create_time": "2020-12-15T19:30:38.816Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2020-12-15T03:45:36.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-0428cb22aa251a107", "instance_id": "i-08661e2f1ae1e78d2", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0428cb22aa251a107",
+      "status": "in-use", "snapshot_id": "snap-0d4fee86508199e37", "size": 8, "iops":
+      100, "tags": {}, "create_time": "2020-12-15T03:45:36.192Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2020-08-28T20:07:18.000Z", "deleteOnTermination": "true", "device": "/dev/sda1",
+      "id": "vol-082bb054802514b7c", "instance_id": "i-023ee207c86a15a06", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-082bb054802514b7c",
+      "status": "in-use", "snapshot_id": "snap-0e11c5b7704afd47c", "size": 500, "iops":
+      1500, "tags": {}, "create_time": "2020-08-28T20:07:18.999Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2020-08-28T20:07:18.000Z", "deleteOnTermination": "true", "device": "/dev/sda1",
+      "id": "vol-0885d8c9e14187d71", "instance_id": "i-090bfe7b4ccad82fc", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0885d8c9e14187d71",
+      "status": "in-use", "snapshot_id": "snap-0e11c5b7704afd47c", "size": 500, "iops":
+      1500, "tags": {}, "create_time": "2020-08-28T20:07:19.008Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2020-08-28T20:07:19.000Z", "deleteOnTermination": "true", "device": "/dev/sda1",
+      "id": "vol-0c1e958d85f79a979", "instance_id": "i-0b08a46573d49b2ee", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0c1e958d85f79a979",
+      "status": "in-use", "snapshot_id": "snap-0e11c5b7704afd47c", "size": 500, "iops":
+      1500, "tags": {}, "create_time": "2020-08-28T20:07:19.145Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2020-05-05T19:09:17.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-0f2301cc9fd435b38", "instance_id": "i-0d661437ec3bab1a4", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0f2301cc9fd435b38",
+      "status": "in-use", "snapshot_id": "snap-02abf9eb240ca53e6", "size": 500, "iops":
+      1500, "tags": {}, "create_time": "2020-05-05T19:09:17.711Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2019-11-05T22:49:14.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-0df13a47a5de40695", "instance_id": "i-082fcf2eba0f1cf39", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0df13a47a5de40695",
+      "status": "in-use", "snapshot_id": "snap-03166c005cff9af97", "size": 500, "iops":
+      1500, "tags": {}, "create_time": "2019-11-05T22:49:14.969Z", "zone": "us-west-1c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2021-04-07T19:23:46.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-0fefbc64709d2e0d3", "instance_id": "i-09ef0f9378369d086", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0fefbc64709d2e0d3",
+      "status": "in-use", "snapshot_id": "snap-0fbf7b35b6f00249f", "size": 500, "iops":
+      1500, "tags": {}, "create_time": "2021-04-07T19:23:46.852Z", "zone": "us-west-1b"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2021-02-03T15:23:29.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-00743c4c5d1719718", "instance_id": "i-0236b19ca09ba67b0", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-00743c4c5d1719718",
+      "status": "in-use", "snapshot_id": "snap-02abf9eb240ca53e6", "size": 200, "iops":
+      600, "tags": {}, "create_time": "2021-02-03T15:23:29.080Z", "zone": "us-west-1b"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2020-10-22T18:54:15.000Z", "deleteOnTermination": "true", "device": "/dev/sda1",
+      "id": "vol-0efd4cef84dd8f8ab", "instance_id": "i-06db6dbd61dbaca8d", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0efd4cef84dd8f8ab",
+      "status": "in-use", "snapshot_id": "snap-055676ca35d18c71a", "size": 30, "iops":
+      100, "tags": {}, "create_time": "2020-10-22T18:54:15.196Z", "zone": "us-west-1b"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2020-06-02T21:15:43.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-0566e216d11068edf", "instance_id": "i-0379085f7566038cd", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0566e216d11068edf",
+      "status": "in-use", "snapshot_id": "snap-05dbd93527b8f6f59", "size": 200, "iops":
+      600, "tags": {}, "create_time": "2020-06-02T21:15:43.410Z", "zone": "us-west-1b"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_volumes
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "attach_data": {"attach_time":
+      "2020-01-15T14:43:12.000Z", "deleteOnTermination": "true", "device": "/dev/xvda",
+      "id": "vol-0fff8ddf3f25c2b84", "instance_id": "i-0619234b444aef54d", "status":
+      "attached"}, "encrypted": false, "type": "gp2", "id": "vol-0fff8ddf3f25c2b84",
+      "status": "in-use", "snapshot_id": "snap-02abf9eb240ca53e6", "size": 200, "iops":
+      600, "tags": {}, "create_time": "2020-01-15T14:43:12.559Z", "zone": "us-west-1b"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:lambda_functions
+    host: so1
+    _raw: '{"FunctionName": "ErrorFunction", "FunctionArn": "arn:$INDEX$:lambda:us-west-1:755695087069:function:ErrorFunction",
+      "Runtime": "nodejs12.x", "Role": "arn:$INDEX$:iam::755695087069:role/service-role/ErrorFunction-role-p5yyg2r6",
+      "Handler": "index.handler", "CodeSize": 268, "Description": "An AWS Lambda function
+      that throws an error. AWS Step Functions state machines can be configured to
+      handle (catch or retry) this error.", "Timeout": 3, "MemorySize": 128, "LastModified":
+      "2021-09-28T18:05:12.113+0000", "CodeSha256": "rQi+23OddMIHug9AKA9aLtzSNm47XJWR0IRzn6JFIWg=",
+      "Version": "$LATEST", "TracingConfig": {"Mode": "PassThrough"}, "RevisionId":
+      "0ec82ee3-dd0d-4d9a-bd13-91ce939c0554", "PackageType": "Zip", "region": "us-west-1"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:lambda_functions
+    host: so1
+    _raw: '{"FunctionName": "testLambda", "FunctionArn": "arn:$INDEX$:lambda:us-west-1:755695087069:function:testLambda",
+      "Runtime": "python3.7", "Role": "arn:$INDEX$:iam::755695087069:role/service-role/testLambda-role-prxlfqj6",
+      "Handler": "lambda_function.lambda_handler", "CodeSize": 343, "Description":
+      "A starter AWS Lambda function.", "Timeout": 3, "MemorySize": 128, "LastModified":
+      "2021-11-04T21:13:56.208+0000", "CodeSha256": "fAEs5UhBuPsBZFfi5rM96fol7VzH9GZtbp0EK6iGHQ0=",
+      "Version": "$LATEST", "TracingConfig": {"Mode": "PassThrough"}, "RevisionId":
+      "0c4e22d7-66c4-44e7-b17a-de54f3c05149", "PackageType": "Zip", "region": "us-west-1"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "stopped", "state_code": 80, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1b", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "", "ebs_optimized": false, "group_name": null, "hypervisor": "xen", "id": "i-09ef0f9378369d086",
+      "image_id": "ami-0577b787189839998", "instance_profile": null, "instance_type":
+      "t2.2xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2021-04-07T19:23:45.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-14-88.us-west-1.compute.internal",
+      "private_ip_address": "172.31.14.88", "public_dns_name": "", "reason": "User
+      initiated (2021-07-12 15:57:34 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
+      "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
+      "subnet-0696525d", "tags": {}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "stopped", "state_code": 80, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1b", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "", "ebs_optimized": false, "group_name": null, "hypervisor": "xen", "id": "i-0236b19ca09ba67b0",
+      "image_id": "ami-068f8b575f0b2f8b0", "instance_profile": null, "instance_type":
+      "t2.2xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2021-02-03T15:23:28.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-11-170.us-west-1.compute.internal",
+      "private_ip_address": "172.31.11.170", "public_dns_name": "", "reason": "User
+      initiated (2021-07-12 15:57:34 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
+      "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
+      "subnet-0696525d", "tags": {"Name": "Docker"}, "virtualization_type": "hvm",
+      "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1b", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "ec2-54-176-119-178.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "group_name": null, "hypervisor": "xen", "id": "i-06db6dbd61dbaca8d", "image_id":
+      "ami-047ce89c62c8f180e", "instance_profile": null, "instance_type": "t2.large",
+      "ip_address": "54.176.119.178", "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2021-01-29T19:33:09.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": "windows", "private_dns_name":
+      "ip-172-31-3-29.us-west-1.compute.internal", "private_ip_address": "172.31.3.29",
+      "public_dns_name": "ec2-54-176-119-178.us-west-1.compute.amazonaws.com", "reason":
+      "", "root_device_name": "/dev/sda1", "root_device_type": "ebs", "sourceDestCheck":
+      "true", "spot_instance_request_id": null, "subnet_id": "subnet-0696525d", "tags":
+      {"Name": "acme-dev-windows"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "stopped", "state_code": 80, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1b", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "", "ebs_optimized": false, "group_name": null, "hypervisor": "xen", "id": "i-0379085f7566038cd",
+      "image_id": "ami-04e59c05167ea7bd5", "instance_profile": null, "instance_type":
+      "t2.2xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2020-06-02T21:15:42.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-2-17.us-west-1.compute.internal",
+      "private_ip_address": "172.31.2.17", "public_dns_name": "", "reason": "User
+      initiated (2020-06-22 17:20:55 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
+      "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
+      "subnet-0696525d", "tags": {"Name": "New Dev Stuff"}, "virtualization_type":
+      "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "stopped", "state_code": 80, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1b", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "", "ebs_optimized": true, "group_name": null, "hypervisor": "xen", "id": "i-0619234b444aef54d",
+      "image_id": "ami-068f8b575f0b2f8b0", "instance_profile": null, "instance_type":
+      "c5.2xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2020-01-15T14:43:11.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-14-76.us-west-1.compute.internal",
+      "private_ip_address": "172.31.14.76", "public_dns_name": "", "reason": "User
+      initiated (2020-03-16 21:41:42 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
+      "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
+      "subnet-0696525d", "tags": {"Name": "Executive Demo"}, "virtualization_type":
+      "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "163709565037576098",
+      "dns_name": "ec2-54-215-127-2.us-west-1.compute.amazonaws.com", "ebs_optimized":
+      false, "group_name": null, "hypervisor": "xen", "id": "i-0e5bf972e5b5f5761",
+      "image_id": "ami-0ec66cb402b90492d", "instance_profile": null, "instance_type":
+      "t2.medium", "ip_address": "54.215.127.2", "item": "\n                ", "kernel":
+      null, "key_name": "stealth-tshirt-prj", "launch_time": "2021-11-16T20:48:20.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-16-204.us-west-1.compute.internal",
+      "private_ip_address": "172.31.16.204", "public_dns_name": "ec2-54-215-127-2.us-west-1.compute.amazonaws.com",
+      "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
+      "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
+      {"Name": "Tomcat"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "ec2-54-177-158-73.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "group_name": null, "hypervisor": "xen", "id": "i-0a594ccf0f3c8f37f", "image_id":
+      "ami-03ab7423a204da002", "instance_profile": null, "instance_type": "t2.large",
+      "ip_address": "54.177.158.73", "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2021-10-25T14:20:33.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-28-236.us-west-1.compute.internal",
+      "private_ip_address": "172.31.28.236", "public_dns_name": "ec2-54-177-158-73.us-west-1.compute.amazonaws.com",
+      "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
+      "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
+      {"Name": "Cloud gateway", "Jerad Is": "So Awesome", "I-Cant": "Express how awesome
+      he is"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "stopped", "state_code": 80, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "", "ebs_optimized": false, "group_name": null, "hypervisor": "xen", "id": "i-0ddd565179c1430e8",
+      "image_id": "ami-03cc7b6148031fb53", "instance_profile": null, "instance_type":
+      "t2.large", "ip_address": null, "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2021-09-19T13:39:30.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-22-255.us-west-1.compute.internal",
+      "private_ip_address": "172.31.22.255", "public_dns_name": "", "reason": "User
+      initiated (2021-09-19 14:06:49 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
+      "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
+      "subnet-dfd96eb8", "tags": {"Name": "Retail bridge"}, "virtualization_type":
+      "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "stopped", "state_code": 80, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "", "ebs_optimized": true, "group_name": null, "hypervisor": "xen", "id": "i-007b4eae830ea759b",
+      "image_id": "ami-0affa0c1e0ada22b4", "instance_profile": null, "instance_type":
+      "t3.xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2021-05-12T16:24:04.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-31-40.us-west-1.compute.internal",
+      "private_ip_address": "172.31.31.40", "public_dns_name": "", "reason": "User
+      initiated (2021-07-12 15:57:34 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
+      "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
+      "subnet-dfd96eb8", "tags": {"Name": "Retail analytics"}, "virtualization_type":
+      "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "stopped", "state_code": 80, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "", "ebs_optimized": true, "group_name": null, "hypervisor": "xen", "id": "i-09975fba3d9b63b3f",
+      "image_id": "ami-068f8b575f0b2f8b0", "instance_profile": null, "instance_type":
+      "t3.2xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2021-03-11T22:00:27.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-21-177.us-west-1.compute.internal",
+      "private_ip_address": "172.31.21.177", "public_dns_name": "", "reason": "User
+      initiated (2021-05-11 17:19:49 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
+      "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
+      "subnet-dfd96eb8", "tags": {"Name": "stealth-tshirt-prj"}, "virtualization_type":
+      "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "stopped", "state_code": 80, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "", "ebs_optimized": true, "group_name": null, "hypervisor": "xen", "id": "i-04e5990313a4ad32a",
+      "image_id": "ami-068f8b575f0b2f8b0", "instance_profile": null, "instance_type":
+      "t3.xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2021-01-23T15:46:01.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-16-82.us-west-1.compute.internal",
+      "private_ip_address": "172.31.16.82", "public_dns_name": "", "reason": "User
+      initiated (2021-07-12 15:57:34 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
+      "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
+      "subnet-dfd96eb8", "tags": {"Name": "Retail bridge"}, "virtualization_type":
+      "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "stopped", "state_code": 80, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "", "ebs_optimized": false, "group_name": null, "hypervisor": "xen", "id": "i-028d8660483298b4d",
+      "image_id": "ami-08d9a394ac1c2994c", "instance_profile": null, "instance_type":
+      "t2.medium", "ip_address": null, "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2020-12-15T19:30:37.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-28-230.us-west-1.compute.internal",
+      "private_ip_address": "172.31.28.230", "public_dns_name": "", "reason": "User
+      initiated (2020-12-16 15:31:30 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
+      "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
+      "subnet-dfd96eb8", "tags": {"Name": "Splunk-1"}, "virtualization_type": "hvm",
+      "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "stopped", "state_code": 80, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "", "ebs_optimized": false, "group_name": null, "hypervisor": "xen", "id": "i-0c9e385c1272ae01a",
+      "image_id": "ami-08d9a394ac1c2994c", "instance_profile": null, "instance_type":
+      "t2.medium", "ip_address": null, "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2020-12-15T19:32:05.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-27-132.us-west-1.compute.internal",
+      "private_ip_address": "172.31.27.132", "public_dns_name": "", "reason": "User
+      initiated (2020-12-16 15:31:30 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
+      "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
+      "subnet-dfd96eb8", "tags": {"Name": "Splunk-2"}, "virtualization_type": "hvm",
+      "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "ec2-54-193-115-237.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "group_name": null, "hypervisor": "xen", "id": "i-08661e2f1ae1e78d2", "image_id":
+      "ami-08d9a394ac1c2994c", "instance_profile": null, "instance_type": "t2.medium",
+      "ip_address": "54.193.115.237", "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2020-12-15T03:45:35.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-19-173.us-west-1.compute.internal",
+      "private_ip_address": "172.31.19.173", "public_dns_name": "ec2-54-193-115-237.us-west-1.compute.amazonaws.com",
+      "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
+      "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
+      {"Name": "stac-dev-nix"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "2", "architecture": "x86_64", "client_token": "", "dns_name":
+      "ec2-54-183-21-92.us-west-1.compute.amazonaws.com", "ebs_optimized": true, "group_name":
+      null, "hypervisor": "xen", "id": "i-0b08a46573d49b2ee", "image_id": "ami-066df92ac6f03efca",
+      "instance_profile": null, "instance_type": "c5.4xlarge", "ip_address": "54.183.21.92",
+      "item": "\n                ", "kernel": null, "key_name": "stealth-tshirt-prj",
+      "launch_time": "2020-09-08T21:43:52.000Z", "monitored": false, "monitoring":
+      "\n                    ", "monitoring_state": "disabled", "persistent": false,
+      "platform": null, "private_dns_name": "ip-172-31-23-120.us-west-1.compute.internal",
+      "private_ip_address": "172.31.23.120", "public_dns_name": "ec2-54-183-21-92.us-west-1.compute.amazonaws.com",
+      "reason": "", "root_device_name": "/dev/sda1", "root_device_type": "ebs", "sourceDestCheck":
+      "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
+      {"Name": "Prod-033"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "1", "architecture": "x86_64", "client_token": "", "dns_name":
+      "ec2-54-176-28-233.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "group_name": null, "hypervisor": "xen", "id": "i-023ee207c86a15a06", "image_id":
+      "ami-066df92ac6f03efca", "instance_profile": null, "instance_type": "t2.xlarge",
+      "ip_address": "54.176.28.233", "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2020-08-28T20:07:17.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-27-100.us-west-1.compute.internal",
+      "private_ip_address": "172.31.27.100", "public_dns_name": "ec2-54-176-28-233.us-west-1.compute.amazonaws.com",
+      "reason": "", "root_device_name": "/dev/sda1", "root_device_type": "ebs", "sourceDestCheck":
+      "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
+      {"Name": "Prod-057"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "ec2-3-101-112-216.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "group_name": null, "hypervisor": "xen", "id": "i-090bfe7b4ccad82fc", "image_id":
+      "ami-066df92ac6f03efca", "instance_profile": null, "instance_type": "t2.xlarge",
+      "ip_address": "3.101.112.216", "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2020-08-28T20:07:17.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-24-115.us-west-1.compute.internal",
+      "private_ip_address": "172.31.24.115", "public_dns_name": "ec2-3-101-112-216.us-west-1.compute.amazonaws.com",
+      "reason": "", "root_device_name": "/dev/sda1", "root_device_type": "ebs", "sourceDestCheck":
+      "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
+      {"Name": "Prod-058"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "ec2-54-241-82-250.us-west-1.compute.amazonaws.com", "ebs_optimized": true,
+      "group_name": null, "hypervisor": "xen", "id": "i-0d661437ec3bab1a4", "image_id":
+      "ami-068f8b575f0b2f8b0", "instance_profile": null, "instance_type": "c5.4xlarge",
+      "ip_address": "54.241.82.250", "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2020-12-16T15:35:37.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-25-138.us-west-1.compute.internal",
+      "private_ip_address": "172.31.25.138", "public_dns_name": "ec2-54-241-82-250.us-west-1.compute.amazonaws.com",
+      "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
+      "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
+      {"Name": "bills box"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "stopped", "state_code": 80, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "157299415165435431",
+      "dns_name": "", "ebs_optimized": true, "group_name": null, "hypervisor": "xen",
+      "id": "i-082fcf2eba0f1cf39", "image_id": "ami-05d9bf729b9d562b7", "instance_profile":
+      null, "instance_type": "c5.4xlarge", "ip_address": null, "item": "\n                ",
+      "kernel": null, "key_name": "stealth-tshirt-prj", "launch_time": "2021-01-29T22:03:34.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-18-47.us-west-1.compute.internal",
+      "private_ip_address": "172.31.18.47", "public_dns_name": "", "reason": "User
+      initiated (2021-03-06 14:34:47 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
+      "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
+      "subnet-dfd96eb8", "tags": {"Name": "stealth-tshirt-prj-devel"}, "virtualization_type":
+      "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_images
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "id": "ami-0f83fc10c9fffec86",
+      "location": "755695087069/stealth-tshirt-prj-fresh-install-v2", "state": "available",
+      "owner_id": "755695087069", "owner_alias": null, "is_public": false, "architecture":
+      "x86_64", "platform": null, "type": "machine", "kernel_id": null, "ramdisk_id":
+      null, "name": "stealth-tshirt-prj-fresh-install-v2", "description": "", "product_codes":
+      ["7azvchdfh74dcxoiwjhztgpel"], "billing_products": [], "root_device_type": "ebs",
+      "root_device_name": "/dev/xvda", "virtualization_type": "hvm", "hypervisor":
+      "xen", "instance_lifecycle": null, "sriov_net_support": "simple"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_images
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "id": "ami-0c0b67f529a15096f",
+      "location": "755695087069/bitcoin-miner-shh", "state": "available", "owner_id":
+      "755695087069", "owner_alias": null, "is_public": false, "architecture": "x86_64",
+      "platform": null, "type": "machine", "kernel_id": null, "ramdisk_id": null,
+      "name": "bitcoin-miner-shh", "description": "[Copied ami-00b2418dee9d71ae7 from
+      eu-west-1] bitcoin-miner-shh", "product_codes": [], "billing_products": [],
+      "root_device_type": "ebs", "root_device_name": "/dev/xvda", "virtualization_type":
+      "hvm", "hypervisor": "xen", "instance_lifecycle": null, "sriov_net_support":
+      "simple"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_images
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "id": "ami-089d27ff9ddc037bf",
+      "location": "755695087069/stealth-tshirt-prj-fresh-install", "state": "available",
+      "owner_id": "755695087069", "owner_alias": null, "is_public": false, "architecture":
+      "x86_64", "platform": null, "type": "machine", "kernel_id": null, "ramdisk_id":
+      null, "name": "stealth-tshirt-prj-fresh-install", "description": "", "product_codes":
+      ["7azvchdfh74dcxoiwjhztgpel"], "billing_products": [], "root_device_type": "ebs",
+      "root_device_name": "/dev/xvda", "virtualization_type": "hvm", "hypervisor":
+      "xen", "instance_lifecycle": null, "sriov_net_support": "simple"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_images
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "id": "ami-068f8b575f0b2f8b0",
+      "location": "755695087069/stealth-tshirt-prj-fresh-install-v3", "state": "available",
+      "owner_id": "755695087069", "owner_alias": null, "is_public": false, "architecture":
+      "x86_64", "platform": null, "type": "machine", "kernel_id": null, "ramdisk_id":
+      null, "name": "stealth-tshirt-prj-fresh-install-v3", "description": "", "product_codes":
+      ["7azvchdfh74dcxoiwjhztgpel"], "billing_products": [], "root_device_type": "ebs",
+      "root_device_name": "/dev/xvda", "virtualization_type": "hvm", "hypervisor":
+      "xen", "instance_lifecycle": null, "sriov_net_support": "simple"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_images
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "id": "ami-0688c77d30269b4cb",
+      "location": "755695087069/stealth-tshirt-prj-20200126", "state": "available",
+      "owner_id": "755695087069", "owner_alias": null, "is_public": false, "architecture":
+      "x86_64", "platform": null, "type": "machine", "kernel_id": null, "ramdisk_id":
+      null, "name": "stealth-tshirt-prj-20200126", "description": "", "product_codes":
+      ["7azvchdfh74dcxoiwjhztgpel"], "billing_products": [], "root_device_type": "ebs",
+      "root_device_name": "/dev/xvda", "virtualization_type": "hvm", "hypervisor":
+      "xen", "instance_lifecycle": null, "sriov_net_support": "simple"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_images
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "id": "ami-05a8275da4bbd60e2",
+      "location": "755695087069/stealth-tshirt-prj-20191203", "state": "available",
+      "owner_id": "755695087069", "owner_alias": null, "is_public": false, "architecture":
+      "x86_64", "platform": null, "type": "machine", "kernel_id": null, "ramdisk_id":
+      null, "name": "stealth-tshirt-prj-20191203", "description": "", "product_codes":
+      ["7azvchdfh74dcxoiwjhztgpel"], "billing_products": [], "root_device_type": "ebs",
+      "root_device_name": "/dev/xvda", "virtualization_type": "hvm", "hypervisor":
+      "xen", "instance_lifecycle": null, "sriov_net_support": "simple"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_images
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "id": "ami-04fae3f5c2523fae2",
+      "location": "755695087069/stealth-tshirt-prj-20191126", "state": "available",
+      "owner_id": "755695087069", "owner_alias": null, "is_public": false, "architecture":
+      "x86_64", "platform": null, "type": "machine", "kernel_id": null, "ramdisk_id":
+      null, "name": "stealth-tshirt-prj-20191126", "description": "", "product_codes":
+      ["7azvchdfh74dcxoiwjhztgpel"], "billing_products": [], "root_device_type": "ebs",
+      "root_device_name": "/dev/xvda", "virtualization_type": "hvm", "hypervisor":
+      "xen", "instance_lifecycle": null, "sriov_net_support": "simple"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_images
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "id": "ami-024a266eb13d4d932",
+      "location": "755695087069/stealth-tshirt-prj-20200109", "state": "available",
+      "owner_id": "755695087069", "owner_alias": null, "is_public": false, "architecture":
+      "x86_64", "platform": null, "type": "machine", "kernel_id": null, "ramdisk_id":
+      null, "name": "stealth-tshirt-prj-20200109", "description": "", "product_codes":
+      ["7azvchdfh74dcxoiwjhztgpel"], "billing_products": [], "root_device_type": "ebs",
+      "root_device_name": "/dev/xvda", "virtualization_type": "hvm", "hypervisor":
+      "xen", "instance_lifecycle": null, "sriov_net_support": "simple"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_images
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "id": "ami-005e8ba583ccdf8f7",
+      "location": "755695087069/Prod Stuff SH - Before ITSI Upgrade", "state": "available",
+      "owner_id": "755695087069", "owner_alias": null, "is_public": false, "architecture":
+      "x86_64", "platform": null, "type": "machine", "kernel_id": null, "ramdisk_id":
+      null, "name": "Prod Stuff SH - Before ITSI Upgrade", "description": "", "product_codes":
+      [], "billing_products": [], "root_device_type": "ebs", "root_device_name": "/dev/sda1",
+      "virtualization_type": "hvm", "hypervisor": "xen", "instance_lifecycle": null,
+      "sriov_net_support": "simple"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_images
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "id": "ami-0058915d3c8f8ddc9",
+      "location": "755695087069/stealth-tshirt-prj-20191111", "state": "available",
+      "owner_id": "755695087069", "owner_alias": null, "is_public": false, "architecture":
+      "x86_64", "platform": null, "type": "machine", "kernel_id": null, "ramdisk_id":
+      null, "name": "stealth-tshirt-prj-20191111", "description": "", "product_codes":
+      ["7azvchdfh74dcxoiwjhztgpel"], "billing_products": [], "root_device_type": "ebs",
+      "root_device_name": "/dev/xvda", "virtualization_type": "hvm", "hypervisor":
+      "xen", "instance_lifecycle": null, "sriov_net_support": "simple"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:vpc_subnets
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "adefaultForAz":
+      null, "availability_zone": "us-west-1b", "available_ip_address_count": 4086,
+      "cidr_block": "172.31.0.0/20", "id": "subnet-0696525d", "mapPublicIpOnLaunch":
+      "true", "state": "available", "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:vpc_subnets
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "adefaultForAz":
+      null, "availability_zone": "us-west-1c", "available_ip_address_count": 4077,
+      "cidr_block": "172.31.16.0/20", "id": "subnet-dfd96eb8", "mapPublicIpOnLaunch":
+      "true", "state": "available", "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_key_pairs
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "name": "stealth-tshirt-prj",
+      "fingerprint": "d0:43:92:b3:0f:86:9e:f4:35:a4:79:d8:e5:c0:c6:a2:19:b6:e2:7c"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_key_pairs
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "name": "ama", "fingerprint":
+      "40:78:10:21:5f:79:49:77:c6:be:e1:41:d2:94:9f:dd:a4:b9:ba:4e"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:vpcs
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "cidr_block": "172.31.0.0/16",
+      "classic_link_enabled": null, "dhcp_options_id": "dopt-67300503", "id": "vpc-41444e25",
+      "instance_tenancy": "default", "is_default": true, "state": "available", "tags":
+      {}}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ebs_snapshots
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "Created
+      by CreateImage(i-082fcf2eba0f1cf39) for ami-0058915d3c8f8ddc9 from vol-0df13a47a5de40695",
+      "encrypted": false, "id": "snap-06c3cdc8d4c82bb87", "item": "\n        ", "owner_alias":
+      null, "owner_id": "755695087069", "progress": "100%", "start_time": "2019-11-11T20:31:47.694Z",
+      "status": "completed", "tags": {}, "volume_id": "vol-0df13a47a5de40695", "volume_size":
+      500}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ebs_snapshots
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "Created
+      by CreateImage(i-082fcf2eba0f1cf39) for ami-04fae3f5c2523fae2 from vol-0df13a47a5de40695",
+      "encrypted": false, "id": "snap-03422f5f5cf21ebc5", "item": "\n        ", "owner_alias":
+      null, "owner_id": "755695087069", "progress": "100%", "start_time": "2019-11-26T20:34:01.674Z",
+      "status": "completed", "tags": {}, "volume_id": "vol-0df13a47a5de40695", "volume_size":
+      500}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ebs_snapshots
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "Created
+      by CreateImage(i-04f2004b6d3469cf3) for ami-068f8b575f0b2f8b0 from vol-0c64ce7baac98eb74",
+      "encrypted": false, "id": "snap-02abf9eb240ca53e6", "item": "\n        ", "owner_alias":
+      null, "owner_id": "755695087069", "progress": "100%", "start_time": "2019-11-26T23:10:08.039Z",
+      "status": "completed", "tags": {}, "volume_id": "vol-0c64ce7baac98eb74", "volume_size":
+      200}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ebs_snapshots
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "Created
+      by CreateImage(i-082fcf2eba0f1cf39) for ami-05a8275da4bbd60e2 from vol-0df13a47a5de40695",
+      "encrypted": false, "id": "snap-077026a90e82355ae", "item": "\n        ", "owner_alias":
+      null, "owner_id": "755695087069", "progress": "100%", "start_time": "2019-12-03T19:41:20.296Z",
+      "status": "completed", "tags": {}, "volume_id": "vol-0df13a47a5de40695", "volume_size":
+      500}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ebs_snapshots
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "Created
+      by CreateImage(i-082fcf2eba0f1cf39) for ami-024a266eb13d4d932 from vol-0df13a47a5de40695",
+      "encrypted": false, "id": "snap-0f3aa286739006f31", "item": "\n        ", "owner_alias":
+      null, "owner_id": "755695087069", "progress": "100%", "start_time": "2020-01-10T04:21:13.408Z",
+      "status": "completed", "tags": {}, "volume_id": "vol-0df13a47a5de40695", "volume_size":
+      500}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ebs_snapshots
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "Created
+      by CreateImage(i-082fcf2eba0f1cf39) for ami-0688c77d30269b4cb from vol-0df13a47a5de40695",
+      "encrypted": false, "id": "snap-0f43e76b5b91f21a9", "item": "\n        ", "owner_alias":
+      null, "owner_id": "755695087069", "progress": "100%", "start_time": "2020-01-27T15:41:31.211Z",
+      "status": "completed", "tags": {}, "volume_id": "vol-0df13a47a5de40695", "volume_size":
+      500}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ebs_snapshots
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "Copied
+      for DestinationAmi ami-0c0b67f529a15096f from SourceAmi ami-00b2418dee9d71ae7
+      for SourceSnapshot snap-0b72e2bc2cf66c6b3. Task created on 1,586,273,741,024.",
+      "encrypted": false, "id": "snap-0e399e8c9cf240c9e", "item": "\n        ", "owner_alias":
+      null, "owner_id": "755695087069", "progress": "100%", "start_time": "2020-04-07T15:35:43.308Z",
+      "status": "completed", "tags": {}, "volume_id": "vol-ffffffff", "volume_size":
+      100}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ebs_snapshots
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "Created
+      by CreateImage(i-0aa6fcbb5185c9e8b) for ami-089d27ff9ddc037bf from vol-0a5dc06e720e8bb57",
+      "encrypted": false, "id": "snap-0fd476708228a4729", "item": "\n        ", "owner_alias":
+      null, "owner_id": "755695087069", "progress": "100%", "start_time": "2019-11-19T03:16:58.236Z",
+      "status": "completed", "tags": {}, "volume_id": "vol-0a5dc06e720e8bb57", "volume_size":
+      200}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ebs_snapshots
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "Created
+      by CreateImage(i-0aa6fcbb5185c9e8b) for ami-0f83fc10c9fffec86 from vol-0a5dc06e720e8bb57",
+      "encrypted": false, "id": "snap-0b5fba3567cac52be", "item": "\n        ", "owner_alias":
+      null, "owner_id": "755695087069", "progress": "100%", "start_time": "2019-11-19T20:28:00.231Z",
+      "status": "completed", "tags": {}, "volume_id": "vol-0a5dc06e720e8bb57", "volume_size":
+      200}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ebs_snapshots
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "Created
+      by CreateImage(i-0b08a46573d49b2ee) for ami-005e8ba583ccdf8f7", "encrypted":
+      false, "id": "snap-00d3ecd8b4807d638", "item": "\n        ", "owner_alias":
+      null, "owner_id": "755695087069", "progress": "100%", "start_time": "2021-05-11T17:46:44.033Z",
+      "status": "completed", "tags": {}, "volume_id": "vol-0c1e958d85f79a979", "volume_size":
+      500}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:vpc_network_acls
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "associations": [{"id":
+      "aclassoc-85712dfc", "network_acl_id": "acl-a55782c2", "subnet_id": "subnet-dfd96eb8"},
+      {"id": "aclassoc-82712dfb", "network_acl_id": "acl-a55782c2", "subnet_id": "subnet-0696525d"}],
+      "default": "true", "id": "acl-a55782c2", "network_acl_entries": [{"cidr_block":
+      "0.0.0.0/0", "egress": "true", "icmp": {"code": null, "type": null}, "port_range":
+      {"from_port": null, "to_port": null}, "protocol": "-1", "rule_action": "allow",
+      "rule_number": "100"}, {"cidr_block": "0.0.0.0/0", "egress": "true", "icmp":
+      {"code": null, "type": null}, "port_range": {"from_port": null, "to_port": null},
+      "protocol": "-1", "rule_action": "deny", "rule_number": "32767"}, {"cidr_block":
+      "0.0.0.0/0", "egress": "false", "icmp": {"code": null, "type": null}, "port_range":
+      {"from_port": null, "to_port": null}, "protocol": "-1", "rule_action": "allow",
+      "rule_number": "100"}, {"cidr_block": "0.0.0.0/0", "egress": "false", "icmp":
+      {"code": null, "type": null}, "port_range": {"from_port": null, "to_port": null},
+      "protocol": "-1", "rule_action": "deny", "rule_number": "32767"}], "tags": {},
+      "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "163709565037576098",
+      "dns_name": "ec2-54-215-127-2.us-west-1.compute.amazonaws.com", "ebs_optimized":
+      false, "group_name": null, "hypervisor": "xen", "id": "i-0e5bf972e5b5f5761",
+      "image_id": "ami-0ec66cb402b90492d", "instance_profile": null, "instance_type":
+      "t2.medium", "ip_address": "54.215.127.2", "item": "\n                ", "kernel":
+      null, "key_name": "stealth-tshirt-prj", "launch_time": "2021-11-16T20:48:20.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-16-204.us-west-1.compute.internal",
+      "private_ip_address": "172.31.16.204", "public_dns_name": "ec2-54-215-127-2.us-west-1.compute.amazonaws.com",
+      "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
+      "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
+      {}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_security_groups
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "acme
+      dev sec group", "id": "sg-0a41c072dca7472f5", "instances": [{"id": "i-0b08a46573d49b2ee"},
+      {"id": "i-08661e2f1ae1e78d2"}, {"id": "i-0c9e385c1272ae01a"}, {"id": "i-028d8660483298b4d"},
+      {"id": "i-04e5990313a4ad32a"}, {"id": "i-09975fba3d9b63b3f"}, {"id": "i-007b4eae830ea759b"},
+      {"id": "i-0ddd565179c1430e8"}, {"id": "i-0a594ccf0f3c8f37f"}, {"id": "i-06db6dbd61dbaca8d"},
+      {"id": "i-0236b19ca09ba67b0"}, {"id": "i-09ef0f9378369d086"}], "name": "acme
+      dev sec group", "owner_id": "755695087069", "rules_egress": [{"from_port": null,
+      "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null, "name": null, "owner_id":
+      null}], "groups": "", "ipRanges": "\n                    ", "ip_protocol": "-1",
+      "to_port": null}], "rules": [{"from_port": null, "grants": [{"cidr_ip": "0.0.0.0/0",
+      "group_id": null, "name": null, "owner_id": null}], "groups": "", "ipRanges":
+      "\n                    ", "ip_protocol": "-1", "to_port": null}, {"from_port":
+      "-1", "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null, "name": null, "owner_id":
+      null}], "groups": "", "ipRanges": "\n                    ", "ip_protocol": "icmp",
+      "to_port": "-1"}], "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:vpc_subnets
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "adefaultForAz":
+      null, "availability_zone": "us-west-1c", "available_ip_address_count": 4078,
+      "cidr_block": "172.31.16.0/20", "id": "subnet-dfd96eb8", "mapPublicIpOnLaunch":
+      "true", "state": "available", "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:lambda_functions
+    host: so1
+    _raw: '{"FunctionName": "testLambda", "FunctionArn": "arn:$INDEX$:lambda:us-west-1:755695087069:function:testLambda",
+      "Runtime": "python3.7", "Role": "arn:$INDEX$:iam::755695087069:role/service-role/testLambda-role-prxlfqj6",
+      "Handler": "lambda_function.lambda_handler", "CodeSize": 343, "Description":
+      "A starter AWS Lambda function.", "Timeout": 3, "MemorySize": 128, "LastModified":
+      "2021-10-29T18:41:12.848+0000", "CodeSha256": "PshNplpM5YWO8/8sbx2kus7oY8h5eGuYToEOskmHVuE=",
+      "Version": "$LATEST", "TracingConfig": {"Mode": "PassThrough"}, "RevisionId":
+      "a993edb3-db03-4f43-aa01-9dfa69e701e8", "PackageType": "Zip", "region": "us-west-1"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:application_load_balancers
+    host: so1
+    _raw: '{"LoadBalancerArn": "arn:$INDEX$:elasticloadbalancing:us-west-1:755695087069:loadbalancer/app/fooLambda/78b15919699758a2",
+      "DNSName": "fooLambda-304069659.us-west-1.elb.amazonaws.com", "CanonicalHostedZoneId":
+      "Z368ELLRRE2KJ0", "CreatedTime": "2021-10-29T18:42:16.510Z", "LoadBalancerName":
+      "fooLambda", "Scheme": "internet-facing", "VpcId": "vpc-41444e25", "State":
+      {"Code": "active"}, "Type": "application", "AvailabilityZones": [{"ZoneName":
+      "us-west-1b", "SubnetId": "subnet-0696525d", "LoadBalancerAddresses": []}, {"ZoneName":
+      "us-west-1c", "SubnetId": "subnet-dfd96eb8", "LoadBalancerAddresses": []}],
+      "SecurityGroups": ["sg-0a41c072dca7472f5", "sg-6692b900"], "IpAddressType":
+      "ipv4", "account_id": "755695087069", "region": "us-west-1", "Tags": [], "TargetGroups":
+      [{"TargetGroupArn": "arn:$INDEX$:elasticloadbalancing:us-west-1:755695087069:targetgroup/TestLambdaRouter/92ffa1cc5ca55703",
+      "TargetGroupName": "TestLambdaRouter", "HealthCheckEnabled": false, "HealthCheckIntervalSeconds":
+      35, "HealthCheckTimeoutSeconds": 30, "HealthyThresholdCount": 5, "UnhealthyThresholdCount":
+      2, "HealthCheckPath": "/", "Matcher": {"HttpCode": "200"}, "LoadBalancerArns":
+      ["arn:$INDEX$:elasticloadbalancing:us-west-1:755695087069:loadbalancer/app/fooLambda/78b15919699758a2"],
+      "TargetType": "lambda", "TargetHealthDescriptions": [{"Target": {"Id": "arn:$INDEX$:lambda:us-west-1:755695087069:function:testLambda",
+      "AvailabilityZone": "all"}, "TargetHealth": {"State": "unavailable", "Reason":
+      "Target.HealthCheckDisabled", "Description": "Health checks are not enabled
+      for this target"}}]}], "Listeners": [{"ListenerArn": "arn:$INDEX$:elasticloadbalancing:us-west-1:755695087069:listener/app/fooLambda/78b15919699758a2/997e47ab09d7a2d5",
+      "LoadBalancerArn": "arn:$INDEX$:elasticloadbalancing:us-west-1:755695087069:loadbalancer/app/fooLambda/78b15919699758a2",
+      "Port": 80, "Protocol": "HTTP", "DefaultActions": [{"Type": "forward", "TargetGroupArn":
+      "arn:$INDEX$:elasticloadbalancing:us-west-1:755695087069:targetgroup/TestLambdaRouter/92ffa1cc5ca55703",
+      "ForwardConfig": {"TargetGroups": [{"TargetGroupArn": "arn:$INDEX$:elasticloadbalancing:us-west-1:755695087069:targetgroup/TestLambdaRouter/92ffa1cc5ca55703",
+      "Weight": 1}], "TargetGroupStickinessConfig": {"Enabled": false}}}]}]}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:vpc_subnets
+    host: so1
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "adefaultForAz":
+      null, "availability_zone": "us-west-1b", "available_ip_address_count": 4085,
+      "cidr_block": "172.31.0.0/20", "id": "subnet-0696525d", "mapPublicIpOnLaunch":
+      "true", "state": "available", "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_instances
+    host: so1
+    _raw: '{"owner_id": "755695087069", "account_id": "755695087069", "region": "us-west-1",
+      "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
+      0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
+      "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
+      "ec2-54-177-158-73.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "group_name": null, "hypervisor": "xen", "id": "i-0a594ccf0f3c8f37f", "image_id":
+      "ami-03ab7423a204da002", "instance_profile": null, "instance_type": "t2.large",
+      "ip_address": "54.177.158.73", "item": "\n                ", "kernel": null,
+      "key_name": "stealth-tshirt-prj", "launch_time": "2021-10-25T14:20:33.000Z",
+      "monitored": false, "monitoring": "\n                    ", "monitoring_state":
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-28-236.us-west-1.compute.internal",
+      "private_ip_address": "172.31.28.236", "public_dns_name": "ec2-54-177-158-73.us-west-1.compute.amazonaws.com",
+      "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
+      "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
+      {"Name": "Cloud gateway"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:s3_buckets
+    host: so1
+    _raw: '{"Name": "acme-public", "CreationDate": "2021-11-03T20:55:44.000Z", "account_id":
+      "755695087069", "LocationConstraint": "us-west-1", "region": "us-west-1"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:lambda_functions
+    host: so1
+    _raw: '{"FunctionName": "testLambda", "FunctionArn": "arn:$INDEX$:lambda:us-west-1:755695087069:function:testLambda",
+      "Runtime": "python3.7", "Role": "arn:$INDEX$:iam::755695087069:role/service-role/testLambda-role-prxlfqj6",
+      "Handler": "lambda_function.lambda_handler", "CodeSize": 343, "Description":
+      "A starter AWS Lambda function.", "Timeout": 3, "MemorySize": 128, "LastModified":
+      "2021-09-22T14:11:43.872+0000", "CodeSha256": "PshNplpM5YWO8/8sbx2kus7oY8h5eGuYToEOskmHVuE=",
+      "Version": "$LATEST", "TracingConfig": {"Mode": "PassThrough"}, "RevisionId":
+      "b4c8dae1-08a2-4eeb-a918-652fb09f1609", "PackageType": "Zip", "region": "us-west-1"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_security_groups
+    host: ip-10-202-14-145.ec2.splunkit.io
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "acme
+      dev sec group", "id": "sg-0a41c072dca7472f5", "instances": [{"id": "i-0b08a46573d49b2ee"},
+      {"id": "i-08661e2f1ae1e78d2"}, {"id": "i-0c9e385c1272ae01a"}, {"id": "i-028d8660483298b4d"},
+      {"id": "i-04e5990313a4ad32a"}, {"id": "i-09975fba3d9b63b3f"}, {"id": "i-007b4eae830ea759b"},
+      {"id": "i-0ddd565179c1430e8"}, {"id": "i-06db6dbd61dbaca8d"}, {"id": "i-0236b19ca09ba67b0"},
+      {"id": "i-09ef0f9378369d086"}], "name": "acme dev sec group", "owner_id": "755695087069",
+      "rules_egress": [{"from_port": null, "grants": [{"cidr_ip": "0.0.0.0/0", "group_id":
+      null, "name": null, "owner_id": null}], "groups": "", "ipRanges": "\n                    ",
+      "ip_protocol": "-1", "to_port": null}], "rules": [{"from_port": null, "grants":
+      [{"cidr_ip": "0.0.0.0/0", "group_id": null, "name": null, "owner_id": null}],
+      "groups": "", "ipRanges": "\n                    ", "ip_protocol": "-1", "to_port":
+      null}, {"from_port": "-1", "grants": [{"cidr_ip": "0.0.0.0/0", "group_id": null,
+      "name": null, "owner_id": null}], "groups": "", "ipRanges": "\n                    ",
+      "ip_protocol": "icmp", "to_port": "-1"}], "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_security_groups
+    host: ip-10-202-14-145.ec2.splunkit.io
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "description": "bills
+      box", "id": "sg-061f78530728fb988", "instances": [{"id": "i-0d661437ec3bab1a4"}],
+      "name": "bills box", "owner_id": "755695087069", "rules_egress": [{"from_port":
+      null, "grants": [{"cidr_ip": "70.29.156.18/32", "group_id": null, "name": null,
+      "owner_id": null}, {"cidr_ip": "70.26.24.181/32", "group_id": null, "name":
+      null, "owner_id": null}], "groups": "", "ipRanges": "\n                    ",
+      "ip_protocol": "-1", "to_port": null}], "rules": [{"from_port": null, "grants":
+      [{"cidr_ip": "70.29.156.18/32", "group_id": null, "name": null, "owner_id":
+      null}, {"cidr_ip": "70.26.24.181/32", "group_id": null, "name": null, "owner_id":
+      null}], "groups": "", "ipRanges": "\n                    ", "ip_protocol": "-1",
+      "to_port": null}], "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:vpc_subnets
+    host: ip-10-202-14-145.ec2.splunkit.io
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "adefaultForAz":
+      null, "availability_zone": "us-west-1c", "available_ip_address_count": 4079,
+      "cidr_block": "172.31.16.0/20", "id": "subnet-dfd96eb8", "mapPublicIpOnLaunch":
+      "true", "state": "available", "tags": {}, "vpc_id": "vpc-41444e25"}'
+  - index: aws
+    sourcetype: aws:description
+    source: us-west-1:ec2_addresses
+    host: ip-10-202-14-145.ec2.splunkit.io
+    _raw: '{"account_id": "755695087069", "region": "us-west-1", "public_ip": "13.56.73.90",
+      "instance_id": null, "domain": "vpc", "allocation_id": "eipalloc-22810b3a",
+      "association_id": null, "network_interface_id": null, "network_interface_owner_id":
+      null, "private_ip_address": null}'

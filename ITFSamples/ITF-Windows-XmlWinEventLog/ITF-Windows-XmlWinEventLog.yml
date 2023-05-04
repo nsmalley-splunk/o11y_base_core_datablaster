@@ -1,0 +1,724 @@
+samples:
+- name: ITF-Windows-XmlWinEventLog
+  interval: 1
+  count: 2
+  randomizeEvents: true
+  tokens:
+  - name: TIMESTAMP
+    format: template
+    type: gotimestamp
+    replacement: "2006-01-02T15:04:05Z07:00"
+  - name: ACTIVITYID
+    format: template
+    type: choice
+    sample: ACTIVITYID.sample
+  - name: GUID
+    format: template
+    type: choice
+    sample: GUID.sample
+  - name: NAME_2
+    format: template
+    type: choice
+    sample: NAME_2.sample
+  - name: USERID
+    format: template
+    type: choice
+    sample: USERID.sample
+  - name: EVENTSOURCENAME
+    format: template
+    type: choice
+    sample: EVENTSOURCENAME.sample
+  - name: PARAM1
+    format: template
+    type: choice
+    sample: PARAM1.sample
+  - name: PARAM6
+    format: template
+    type: choice
+    sample: PARAM6.sample
+  - name: HOST
+    format: template
+    type: choice
+    choice:
+      - win-01.internal.acme.com
+      - win-02.internal.acme.com
+      - win-03.internal.acme.com
+      - win-04.internal.acme.com
+      - win-05.internal.acme.com
+  - name: PARAM3
+    format: template
+    type: choice
+    sample: PARAM3.sample
+  - name: PARAM2
+    format: template
+    type: choice
+    sample: PARAM2.sample
+  - name: QUALIFIERS
+    format: template
+    type: choice
+    sample: QUALIFIERS.sample
+  - name: PROCESSID
+    format: template
+    type: choice
+    sample: PROCESSID.sample
+  - name: RETURNCODE
+    format: template
+    type: choice
+    sample: RETURNCODE.sample
+  - name: PROCESS_ID
+    format: template
+    type: choice
+    sample: PROCESS_ID.sample
+  - name: SIGNATURE_ID
+    format: template
+    type: choice
+    sample: SIGNATURE_ID.sample
+  - name: EVENTID
+    format: template
+    type: choice
+    sample: EVENTID.sample
+  - name: TASK
+    format: template
+    type: choice
+    sample: TASK.sample
+  - name: PARAM4
+    format: template
+    type: choice
+    sample: PARAM4.sample
+  - name: HIVENAMELENGTH
+    format: template
+    type: choice
+    sample: HIVENAMELENGTH.sample
+  - name: KEYSUPDATED
+    format: template
+    type: choice
+    sample: KEYSUPDATED.sample
+  - name: DRIVENAME
+    format: template
+    type: choice
+    sample: DRIVENAME.sample
+  - name: KEYLENGTH
+    format: template
+    type: choice
+    sample: KEYLENGTH.sample
+  - name: OPCODE
+    format: template
+    type: choice
+    sample: OPCODE.sample
+  - name: DIRTYPAGES
+    format: template
+    type: choice
+    sample: DIRTYPAGES.sample
+  - name: DEVICENAMELENGTH
+    format: template
+    type: choice
+    sample: DEVICENAMELENGTH.sample
+  - name: LOGONTYPE
+    format: template
+    type: choice
+    sample: LOGONTYPE.sample
+  - name: LEVEL
+    format: template
+    type: choice
+    sample: LEVEL.sample
+  - name: COUNTOFCREDENTIALSRETURNED
+    format: template
+    type: choice
+    choice:
+      - 0
+      - 1
+  - name: NUMBER
+    format: template
+    type: choice
+    sample: NUMBER.sample
+  - name: IPPORT
+    format: template
+    type: choice
+    sample: IPPORT.sample
+  - name: VERSION
+    format: template
+    type: choice
+    sample: VERSION.sample
+  - name: EVENTRECORDID
+    format: template
+    type: random
+    replacement: int
+    lower: 114869
+    upper: 23621116
+  - name: USER
+    format: template
+    type: random
+    replacement: int
+    lower: 1
+    upper: 12345678
+  - name: TARGETUSERNAME
+    format: template
+    type: random
+    replacement: int
+    lower: 1
+    upper: 12345678
+  lines:
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>0</EventID><Level>$PROCESS_ID$</Level><Task>0</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4576307</EventRecordID><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>Service stopped</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider\
+      \ Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>1</EventID><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated\
+      \ SystemTime='$TIMESTAMP$'/><EventRecordID>4566449</EventRecordID><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>1.646868069379301e+09\t\
+      info\tbuilder/receivers_builder.go:$SIGNATURE_ID$8\tReceiver is starting...\r\
+      \n</Data></EventData></Event>"
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>1000</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566746</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='2316'/><Channel>Application</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><UserData><EventXML xmlns='LoadPerf'><param1>WmiApRpl</param1><param2>WmiApRpl</param2><binaryDataSize>$SIGNATURE_ID$</binaryDataSize><binaryData>F42300009A240000F52300009B240000</binaryData></EventXML></UserData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>10000</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4576273</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='4212'/><Channel>Application</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><UserData><RmSessionEvent xmlns='http://www.microsoft.com/2005/08/Windows/Reliability/RestartManager/'><RmSessionId>$PARAM1$</RmSessionId><UTCStartTime>2022-03-10T03:$SIGNATURE_ID$2:$SIGNATURE_ID$.708156600Z</UTCStartTime></RmSessionEvent></UserData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>10001</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4576299</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='1964'/><Channel>Application</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><UserData><RmSessionEvent xmlns='http://www.microsoft.com/2005/08/Windows/Reliability/RestartManager/'><RmSessionId>$PARAM1$</RmSessionId><UTCStartTime>2022-03-10T03:$SIGNATURE_ID$2:$SIGNATURE_ID$.708156600Z</UTCStartTime></RmSessionEvent></UserData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>1001</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566745</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='2316'/><Channel>Application</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><UserData><EventXML xmlns='LoadPerf'><param1>WmiApRpl</param1><param2>WmiApRpl</param2><binaryDataSize>$OPCODE$</binaryDataSize><binaryData>F2230000F3230000D2050000</binaryData></EventXML></UserData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>1002</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566123</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>explorer.exe</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>1003</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566547</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>55c92734-d682-4d71-983e-d6ec3f16059f</Data><Data>
+      1: 1124ad22-3737-4c21-bfab-ae36a5323828, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      2: 175a4401-9571-44e3-b7ed-1418ac983e2b, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      3: 2e7a9ad1-a849-4b56-babe-17d5a29fe4b4, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      4: 34e1ae55-27f8-4950-8877-7a03be5fb181, 1, 1 [(0 [0x00000000, 1, 0], [(?)( 1 0x00000000)(?)( 2 0x00000000 0 0 msft:rm/algorithm/volume/1.0 0x4004F040 250118)(?)(?)( 10 0x00000000 msft:rm/algorithm/flags/1.0)(?)])(1 )(2 )(3 )]
+      5: 3c006fa7-3b03-45a4-93da-63ddc1bdce11, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      6: 44aba848-245e-4e1a-ac42-1def36871f95, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      7: 7305f85e-3cc0-4168-807e-af0afae1f51f, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      8: 7c815a7a-6d68-4369-9cfa-c3671c8d1a3f, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      9: 864fa973-9c03-4e02-81d2-87fd17bc0b8c, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      10: 950d5c80-3a8b-4c7a-991b-6487e045dbc3, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      11: 9db83b52-9904-4326-8957-ebe6feedf37c, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      12: c28b8385-97ea-4fb1-acae-57fa346e6158, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      13: ceae6266-8034-48db-92e4-fc94eb11742f, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+      14: d8966f28-347f-4d92-8912-1e57d357200b, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]
+
+      </Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>10100</EventID><Version>$SIGNATURE_ID$</Version><Level>$PROCESS_ID$</Level><Task>$TASK$</Task><Opcode>$SIGNATURE_ID$</Opcode><Keywords>0x2000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115233</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='4028'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><UserData><UMDFDeviceInstallEnd xmlns='http://www.microsoft.com/DriverFrameworks/UserMode/Event'><FinalStatus>$PARAM1$</FinalStatus></UMDFDeviceInstallEnd></UserData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>10148</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115201</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>System</Channel><Computer>$HOST$</Computer><Security/></System><EventData Name='Started Listening'></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>1033</EventID><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4576298</EventRecordID><Channel>Application</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data>Google Chrome</Data><Data>68.187.51</Data><Data>1033</Data><Data>$PARAM1$</Data><Data>Google LLC</Data><Data>(NULL)</Data><Data></Data><Binary>7B41343941304335312D393134412D333641302D423643322D4433344134424638373130417D3030303033666537356638326430643039633739326561313636313336346565383732643030303030393034</Binary></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>1040</EventID><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4576272</EventRecordID><Channel>Application</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data>C:\Users\Administrator\Downloads\googlechromestandaloneenterprise64.msi</Data><Data>2708</Data><Data>(NULL)</Data><Data>(NULL)</Data><Data>(NULL)</Data><Data>(NULL)</Data><Data></Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>1042</EventID><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4576296</EventRecordID><Channel>Application</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data>C:\Users\Administrator\Downloads\googlechromestandaloneenterprise64.msi</Data><Data>2708</Data><Data>(NULL)</Data><Data>(NULL)</Data><Data>(NULL)</Data><Data>(NULL)</Data><Data></Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>1066</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566546</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>C:\Windows\system32\sppwinob.dll, msft:spp/windowsfunctionality/agent/7.0, 0x00000000, 0x00000000
+      C:\Windows\system32\sppobjs.dll, msft:rm/algorithm/inherited/1.0, 0x00000000, 0x00000000
+      C:\Windows\system32\sppobjs.dll, msft:rm/algorithm/phone/1.0, 0x00000000, 0x00000000
+      C:\Windows\system32\sppobjs.dll, msft:rm/algorithm/pkey/detect, 0x00000000, 0x00000000
+      C:\Windows\system32\sppobjs.dll, msft:spp/ActionScheduler/1.0, 0x00000000, 0x00000000
+      C:\Windows\system32\sppobjs.dll, msft:spp/TaskScheduler/1.0, 0x00000000, 0x00000000
+      C:\Windows\system32\sppobjs.dll, msft:spp/statecollector/pkey, 0x00000000, 0x00000000
+      C:\Windows\system32\sppobjs.dll, msft:spp/volume/services/kms/1.0, 0x00000000, 0x00000000
+      C:\Windows\system32\sppobjs.dll, msft:spp/volume/services/kms/activationinfo/1.0, 0x00000000, 0x00000000
+      </Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>1076</EventID><Version>$PARAM1$</Version><Level>$SIGNATURE_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8080000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115296</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='4696'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='param1'>$PARAM1$</Data><Data Name='param2'>$PARAM2$</Data><Data Name='param3'></Data><Data Name='param4'></Data><Data Name='param5'>
+      </Data><Data Name='param6'>EC2AMAZ-3G1B1SF\Administrator</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>11707</EventID><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4576297</EventRecordID><Channel>Application</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data>Product: Google Chrome -- Installation completed successfully.</Data><Data>(NULL)</Data><Data>(NULL)</Data><Data>(NULL)</Data><Data>(NULL)</Data><Data>(NULL)</Data><Data></Data><Binary>7B41343941304335312D393134412D333641302D423643322D4433344134424638373130417D</Binary></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>14</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x4000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115149</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='656'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='Config'>$PARAM1$</Data><Data Name='IsTestConfig'>$PARAM1$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>15</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115147</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='520'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='HiveNameLength'>$HIVENAMELENGTH$</Data><Data Name='HiveName'>\SystemRoot\System32\Config\SOFTWARE</Data><Data Name='OriginalSize'>87552000</Data><Data Name='NewSize'>87588864</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>16</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115226</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='1704'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='HiveNameLength'>$HIVENAMELENGTH$</Data><Data Name='HiveName'>\??\C:\Users\Administrator\AppData\Local\Microsoft\Windows\UsrClass.dat</Data><Data Name='KeysUpdated'>$KEYSUPDATED$</Data><Data Name='DirtyPages'>$DIRTYPAGES$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>16384</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566909</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>2022-03-10T15:$DIRTYPAGES$9:$SIGNATURE_ID$4Z</Data><Data>RulesEngine</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>16394</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566881</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>16962</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115150</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='800'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData Name='SAMMSG_RESTRICT_REMOTE_SAM_DEFAULT_SD'><Data Name='Default SD String:'>O:SYG:SYD:(A;;RC;;;BA)</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>16977</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115151</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='800'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData Name='SAMMSG_MINPWDLEN_SETTINGS_IN_EFFECT'><Data Name='MinimumPasswordLength'>$PARAM1$</Data><Data Name='MinimumPasswordLengthAudit'>-1</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>172</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115140</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='184'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='State'>$SIGNATURE_ID$</Data><Data Name='Reason'>$SIGNATURE_ID$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>18</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115127</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='8'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='EntryCount'>$SIGNATURE_ID$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>19</EventID><Version>$SIGNATURE_ID$</Version><Level>$PROCESS_ID$</Level><Task>$SIGNATURE_ID$</Task><Opcode>$OPCODE$</Opcode><Keywords>0x8000000000000018</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115092</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='2548'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='updateTitle'>Security Intelligence Update for Microsoft Defender Antivirus - KB2267602 (Version 1.359.1623.0)</Data><Data Name='updateGuid'>{c9933e40-4146-4d91-93d3-79682e6101db}</Data><Data Name='updateRevisionNumber'>200</Data><Data Name='serviceGuid'>{9482f4b4-e343-43b6-b170-9a65bc822c77}</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider\
+      \ Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>2</EventID><Level>$SIGNATURE_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated\
+      \ SystemTime='$TIMESTAMP$'/><EventRecordID>4566339</EventRecordID><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>1.646868013211596e+09\t\
+      warn\ttranslation/converter.go:$PROCESS_ID$77\tdropping dimension\t{\"dimension_name\"\
+      : \"process.command_line\", \"reason\": \"dimension value longer than 256 characters\"\
+      , \"dimension_value\": \"\\\"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\
+      \\chrome.exe\\\" --type=renderer --display-capture-permissions-policy-allowed\
+      \ --origin-trial-disabled-features=$DRIVENAME$onditionalFocus --disable-gpu-compositing\
+      \ --lang=en-US --device-scale-factor=$SIGNATURE_ID$ --num-raster-threads=$SIGNATURE_ID$\
+      \ --renderer-client-id=$SIGNATURE_ID$0 --launch-time-ticks=$SIGNATURE_ID$4918034930556\
+      \ --mojo-platform-channel-handle=$PROCESS_ID$784 --field-trial-handle=$SIGNATURE_ID$812,i,11273038249563809001,16369896338658157196,131072\
+      \ /prefetch:$SIGNATURE_ID$\", \"dimension_value_length\": 436}\r\n</Data></EventData></Event>"
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>20</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$SIGNATURE_ID$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000010</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115129</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='8'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='UpdateReason'>$PARAM1$</Data><Data Name='EnabledNew'>true</Data><Data Name='CountNew'>$PARAM1$</Data><Data Name='CountOld'>$PARAM1$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>20001</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115244</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='4028'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><UserData><InstallDeviceID xmlns='http://manifests.microsoft.com/win/2004/08/windows/userpnp'><DriverName>wpdfs.inf_amd64_10bfe1c48f153b03</DriverName><DriverVersion>10.0.17763.1</DriverVersion><DriverProvider>Microsoft</DriverProvider><DeviceInstanceID>SWD\WPDBUSENUM\{F13F7189-D455-11E9-8225-806E6F6E6963}#0000000647700000</DeviceInstanceID><SetupClass>{eec5ad98-8080-425f-922a-dabf3de3f69a}</SetupClass><RebootOption>false</RebootOption><UpgradeDevice>false</UpgradeDevice><IsDriverOEM>false</IsDriverOEM><InstallStatus>$RETURNCODE$</InstallStatus><DriverDescription>WPD FileSystem Volume Driver</DriverDescription></InstallDeviceID></UserData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>20003</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115236</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='4028'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><UserData><AddServiceID xmlns='http://manifests.microsoft.com/win/2004/08/windows/userpnp'><ServiceName>WUDFWpdFs</ServiceName><DriverFileName>\SystemRoot\system32\DRIVERS\WUDFRd.sys</DriverFileName><DeviceInstanceID>SWD\WPDBUSENUM\{F13F7189-D455-11E9-8225-806E6F6E6963}#0000000647700000</DeviceInstanceID><PrimaryService>true</PrimaryService><UpdateService>false</UpdateService><AddServiceStatus>$PARAM1$</AddServiceStatus></AddServiceID></UserData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>24576</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$SIGNATURE_ID$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115240</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>System</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>WPD Device</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>24577</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$SIGNATURE_ID$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115241</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>System</Channel><Computer>$HOST$</Computer><Security/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>24579</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$SIGNATURE_ID$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115242</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>System</Channel><Computer>$HOST$</Computer><Security/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>25</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$SIGNATURE_ID$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115125</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='8'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='BootMenuPolicy'>$PARAM1$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>27</EventID><Version>$SIGNATURE_ID$</Version><Level>$PROCESS_ID$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115126</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='8'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='BootType'>$PARAM1$</Data><Data Name='LoadOptions'> NOEXECUTE=OPTOUT</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>3</EventID><Level>$SIGNATURE_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4576420</EventRecordID><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>time="2022-03-10T03:$SIGNATURE_ID$6:$SIGNATURE_ID$3Z" level=error msg="Error shipping events to SignalFx" error="invalid status code 401: "
+      </Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>32</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115128</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='8'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='BitlockerUserInputTime'>$PARAM1$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>35</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115248</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='3196'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData Name='TMP_EVENT_TIME_SOURCE_CHOSEN'><Data Name='TimeSource'>169.254.169.123,0x9 (ntp.m|0x9|0.0.0.0:$SIGNATURE_ID$23-&gt;169.254.169.123:$SIGNATURE_ID$23)</Data><Data Name='TimeSourceRefId'>2074738345</Data><Data Name='CurrentStratumNumber'>$PROCESS_ID$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>36874</EventID><Version>$PARAM1$</Version><Level>$SIGNATURE_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>114888</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='11924'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='Protocol'>TLS 1.2</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>37</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115219</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='3160'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData Name='TMP_EVENT_TIME_SOURCE_REACHABLE'><Data Name='TimeSource'>169.254.169.123,0x9 (ntp.m|0x9|0.0.0.0:$SIGNATURE_ID$23-&gt;169.254.169.123:$SIGNATURE_ID$23)</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>4097</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8080000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4576271</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='3024'/><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US</Data><Data>DDFB16CD4931C973A2037D3FC83A4D7D775D05E4</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>41</EventID><Version>$SIGNATURE_ID$</Version><Level>$SIGNATURE_ID$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000400000000002</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115139</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='8'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='BugcheckCode'>$PARAM1$</Data><Data Name='BugcheckParameter1'>$RETURNCODE$</Data><Data Name='BugcheckParameter2'>$RETURNCODE$</Data><Data Name='BugcheckParameter3'>$RETURNCODE$</Data><Data Name='BugcheckParameter4'>$RETURNCODE$</Data><Data Name='SleepInProgress'>$PARAM1$</Data><Data Name='PowerButtonTimestamp'>$PARAM1$</Data><Data Name='BootAppStatus'>$PARAM1$</Data><Data Name='Checkpoint'>$PARAM1$</Data><Data Name='ConnectedStandbyInProgress'>false</Data><Data Name='SystemSleepTransitionsToOn'>$PARAM1$</Data><Data Name='CsEntryScenarioInstanceId'>$PARAM1$</Data><Data Name='BugcheckInfoFromEFI'>false</Data><Data Name='CheckpointStatus'>$PARAM1$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>4100</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8080000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4565803</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='2936'/><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/CABD2A79A1076A31F21D253635CB039D4329A5E8.crt</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>4202</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$SIGNATURE_ID$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566543</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='param1'>$PARAM1$</Data><Data Name='param2'>$PARAM1$</Data><Data Name='param3'>$PARAM1$</Data><Data Name='param4'>$PARAM1$</Data><Data Name='param5'>$PARAM1$</Data><Data Name='param6'>$PARAM1$</Data><Data Name='param7'>$SIGNATURE_ID$</Data><Data Name='param8'>Mutual Authentication Required</Data><Data Name='param9'>NT AUTHORITY\NetworkService</Data><Data Name='param10'>$PARAM1$</Data><Data Name='param11'>$PARAM1$</Data><Data Name='param12'>$SIGNATURE_ID$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>43</EventID><Version>$SIGNATURE_ID$</Version><Level>$PROCESS_ID$</Level><Task>$SIGNATURE_ID$</Task><Opcode>$OPCODE$</Opcode><Keywords>0x8000000000002008</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115091</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='2548'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='updateTitle'>Security Intelligence Update for Microsoft Defender Antivirus - KB2267602 (Version 1.359.1623.0)</Data><Data Name='updateGuid'>{c9933e40-4146-4d91-93d3-79682e6101db}</Data><Data Name='updateRevisionNumber'>200</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>44</EventID><Version>$SIGNATURE_ID$</Version><Level>$PROCESS_ID$</Level><Task>$SIGNATURE_ID$</Task><Opcode>$OPCODE$</Opcode><Keywords>0x8000000000002004</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115090</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='2548'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='updateTitle'>Security Intelligence Update for Microsoft Defender Antivirus - KB2267602 (Version 1.359.1623.0)</Data><Data Name='updateGuid'>{c9933e40-4146-4d91-93d3-79682e6101db}</Data><Data Name='updateRevisionNumber'>200</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>4608</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23615563</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='800'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>4624</EventID><Version>$SIGNATURE_ID$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23621075</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='3768'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='SubjectUserSid'>S-1-5-18</Data><Data Name='SubjectUserName'>EC2AMAZ-3G1B1SF$</Data><Data Name='SubjectDomainName'>WORKGROUP</Data><Data Name='SubjectLogonId'>0x3e7</Data><Data Name='TargetUserSid'>S-1-5-18</Data><Data Name='TargetUserName'>SYSTEM</Data><Data Name='TargetDomainName'>NT AUTHORITY</Data><Data Name='TargetLogonId'>0x3e7</Data><Data Name='LogonType'>$DIRTYPAGES$</Data><Data Name='LogonProcessName'>Advapi  </Data><Data Name='AuthenticationPackageName'>Negotiate</Data><Data Name='WorkstationName'>$IPPORT$</Data><Data Name='LogonGuid'>{00000000-0000-0000-0000-000000000000}</Data><Data Name='TransmittedServices'>$IPPORT$</Data><Data Name='LmPackageName'>$IPPORT$</Data><Data Name='KeyLength'>$PARAM1$</Data><Data Name='ProcessId'>$PROCESS_ID$</Data><Data Name='ProcessName'>C:\Windows\System32\services.exe</Data><Data Name='IpAddress'>$IPPORT$</Data><Data Name='IpPort'>$IPPORT$</Data><Data Name='ImpersonationLevel'>%%1833</Data><Data Name='RestrictedAdminMode'>$IPPORT$</Data><Data Name='TargetOutboundUserName'>$IPPORT$</Data><Data Name='TargetOutboundDomainName'>$IPPORT$</Data><Data Name='VirtualAccount'>%%1843</Data><Data Name='TargetLinkedLogonId'>$RETURNCODE$</Data><Data Name='ElevatedToken'>%%1842</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>4625</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8010000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23621132</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='3468'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='SubjectUserSid'>S-1-0-0</Data><Data Name='SubjectUserName'>$IPPORT$</Data><Data Name='SubjectDomainName'>$IPPORT$</Data><Data Name='SubjectLogonId'>$RETURNCODE$</Data><Data Name='TargetUserSid'>S-1-0-0</Data><Data Name='TargetUserName'>DOMINIQUE</Data><Data Name='TargetDomainName'></Data><Data Name='Status'>0xc000006d</Data><Data Name='FailureReason'>%%2313</Data><Data Name='SubStatus'>0xc0000064</Data><Data Name='LogonType'>$SIGNATURE_ID$</Data><Data Name='LogonProcessName'>NtLmSsp </Data><Data Name='AuthenticationPackageName'>NTLM</Data><Data Name='WorkstationName'>$IPPORT$</Data><Data Name='TransmittedServices'>$IPPORT$</Data><Data Name='LmPackageName'>$IPPORT$</Data><Data Name='KeyLength'>$PARAM1$</Data><Data Name='ProcessId'>$RETURNCODE$</Data><Data Name='ProcessName'>$IPPORT$</Data><Data Name='IpAddress'>193.93.62.91</Data><Data Name='IpPort'>$PARAM1$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>4634</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23620957</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='4216'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='TargetUserSid'>S-1-5-21-867926485-3934617210-1925664431-500</Data><Data Name='TargetUserName'>Administrator</Data><Data Name='TargetDomainName'>$HOST$</Data><Data Name='TargetLogonId'>0xf278cf</Data><Data Name='LogonType'>$LOGONTYPE$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>4648</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23620954</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='3768'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='SubjectUserSid'>S-1-5-18</Data><Data Name='SubjectUserName'>EC2AMAZ-3G1B1SF$</Data><Data Name='SubjectDomainName'>WORKGROUP</Data><Data Name='SubjectLogonId'>0x3e7</Data><Data Name='LogonGuid'>{00000000-0000-0000-0000-000000000000}</Data><Data Name='TargetUserName'>Administrator</Data><Data Name='TargetDomainName'>$HOST$</Data><Data Name='TargetLogonGuid'>{00000000-0000-0000-0000-000000000000}</Data><Data Name='TargetServerName'>localhost</Data><Data Name='TargetInfo'>localhost</Data><Data Name='ProcessId'>0x91c</Data><Data Name='ProcessName'>C:\Windows\System32\svchost.exe</Data><Data Name='IpAddress'>76.92.195.52</Data><Data Name='IpPort'>$PARAM1$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider\
+      \ Name=$NAME_2$ Guid=$GUID$/><EventID>4672</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated\
+      \ SystemTime='$TIMESTAMP$'/><EventRecordID>23621076</EventRecordID><Correlation\
+      \ ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='3768'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data\
+      \ Name='SubjectUserSid'>S-1-5-18</Data><Data Name='SubjectUserName'>SYSTEM</Data><Data\
+      \ Name='SubjectDomainName'>NT AUTHORITY</Data><Data Name='SubjectLogonId'>0x3e7</Data><Data\
+      \ Name='PrivilegeList'>SeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\
+      \n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\
+      \n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\
+      \n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\
+      \n\t\t\tSeDelegateSessionUserImpersonatePrivilege</Data></EventData></Event>"
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>4688</EventID><Version>$SIGNATURE_ID$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23615562</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='176'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='SubjectUserSid'>S-1-5-18</Data><Data Name='SubjectUserName'>$IPPORT$</Data><Data Name='SubjectDomainName'>$IPPORT$</Data><Data Name='SubjectLogonId'>0x3e7</Data><Data Name='NewProcessId'>$PROCESS_ID$</Data><Data Name='NewProcessName'>C:\Windows\System32\lsass.exe</Data><Data Name='TokenElevationType'>%%1936</Data><Data Name='ProcessId'>$PROCESS_ID$</Data><Data Name='CommandLine'></Data><Data Name='TargetUserSid'>S-1-0-0</Data><Data Name='TargetUserName'>$IPPORT$</Data><Data Name='TargetDomainName'>$IPPORT$</Data><Data Name='TargetLogonId'>$RETURNCODE$</Data><Data Name='ParentProcessName'>C:\Windows\System32\wininit.exe</Data><Data Name='MandatoryLabel'>S-1-16-16384</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>4776</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23620953</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='3768'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='PackageName'>MICROSOFT_AUTHENTICATION_PACKAGE_V1_0</Data><Data Name='TargetUserName'>Administrator</Data><Data Name='Workstation'>$HOST$</Data><Data Name='Status'>$RETURNCODE$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>4798</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23615651</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='2104'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='TargetUserName'>Administrator</Data><Data Name='TargetDomainName'>$HOST$</Data><Data Name='TargetSid'>S-1-5-21-867926485-3934617210-1925664431-500</Data><Data Name='SubjectUserSid'>S-1-5-18</Data><Data Name='SubjectUserName'>EC2AMAZ-3G1B1SF$</Data><Data Name='SubjectDomainName'>WORKGROUP</Data><Data Name='SubjectLogonId'>0x3e7</Data><Data Name='CallerProcessId'>0x1250</Data><Data Name='CallerProcessName'>C:\Windows\System32\LogonUI.exe</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>4799</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23621062</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='1912'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='TargetUserName'>Backup Operators</Data><Data Name='TargetDomainName'>Builtin</Data><Data Name='TargetSid'>S-1-5-32-551</Data><Data Name='SubjectUserSid'>S-1-5-18</Data><Data Name='SubjectUserName'>EC2AMAZ-3G1B1SF$</Data><Data Name='SubjectDomainName'>WORKGROUP</Data><Data Name='SubjectLogonId'>0x3e7</Data><Data Name='CallerProcessId'>0x116c</Data><Data Name='CallerProcessName'>C:\Windows\System32\svchost.exe</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>4902</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23615565</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='860'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='PuaCount'>$PARAM1$</Data><Data Name='PuaPolicyId'>0x6442</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>50036</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PROCESS_ID$</Task><Opcode>$OPCODE$</Opcode><Keywords>0x2000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115181</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='1692'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>50103</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PROCESS_ID$</Task><Opcode>$OPCODE$</Opcode><Keywords>0x2000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115182</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='1692'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>5024</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23615620</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='2108'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>5033</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23615603</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='380'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>5058</EventID><Version>$SIGNATURE_ID$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23615666</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='852'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='SubjectUserSid'>S-1-5-19</Data><Data Name='SubjectUserName'>LOCAL SERVICE</Data><Data Name='SubjectDomainName'>NT AUTHORITY</Data><Data Name='SubjectLogonId'>0x3e5</Data><Data Name='ClientProcessId'>5520</Data><Data Name='ClientCreationTime'>2022-03-09T23:$SIGNATURE_ID$1:$PARAM1$9.076573700Z</Data><Data Name='ProviderName'>Microsoft Software Key Storage Provider</Data><Data Name='AlgorithmName'>UNKNOWN</Data><Data Name='KeyName'>Microsoft Connected Devices Platform device certificate</Data><Data Name='KeyType'>%%2500</Data><Data Name='KeyFilePath'>C:\Windows\ServiceProfiles\LocalService\AppData\Roaming\Microsoft\Crypto\Keys\de7cf8a7901d2ad13e5c67c29e5d1662_3210b093-1205-4be7-a9ec-97efeec2c989</Data><Data Name='Operation'>%%2458</Data><Data Name='ReturnCode'>$RETURNCODE$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>5059</EventID><Version>$SIGNATURE_ID$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23615668</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='852'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='SubjectUserSid'>S-1-5-19</Data><Data Name='SubjectUserName'>LOCAL SERVICE</Data><Data Name='SubjectDomainName'>NT AUTHORITY</Data><Data Name='SubjectLogonId'>0x3e5</Data><Data Name='ClientProcessId'>5520</Data><Data Name='ClientCreationTime'>2022-03-09T23:$SIGNATURE_ID$1:$PARAM1$9.076573700Z</Data><Data Name='ProviderName'>Microsoft Software Key Storage Provider</Data><Data Name='AlgorithmName'>ECDSA_P256</Data><Data Name='KeyName'>Microsoft Connected Devices Platform device certificate</Data><Data Name='KeyType'>%%2500</Data><Data Name='Operation'>%%2464</Data><Data Name='ReturnCode'>$RETURNCODE$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>5061</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23615667</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='852'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='SubjectUserSid'>S-1-5-19</Data><Data Name='SubjectUserName'>LOCAL SERVICE</Data><Data Name='SubjectDomainName'>NT AUTHORITY</Data><Data Name='SubjectLogonId'>0x3e5</Data><Data Name='ProviderName'>Microsoft Software Key Storage Provider</Data><Data Name='AlgorithmName'>ECDSA_P256</Data><Data Name='KeyName'>Microsoft Connected Devices Platform device certificate</Data><Data Name='KeyType'>%%2500</Data><Data Name='Operation'>%%2480</Data><Data Name='ReturnCode'>$RETURNCODE$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>51046</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PROCESS_ID$</Task><Opcode>$OPCODE$</Opcode><Keywords>0x2000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115184</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='1816'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>5379</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8020000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>23614706</EventRecordID><Correlation ActivityID=$ACTIVITYID$/><Execution ProcessID=$PROCESSID$ ThreadID='11100'/><Channel>Security</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='SubjectUserSid'>S-1-5-21-867926485-3934617210-1925664431-500</Data><Data Name='SubjectUserName'>Administrator</Data><Data Name='SubjectDomainName'>$HOST$</Data><Data Name='SubjectLogonId'>0x474346773</Data><Data Name='TargetName'>MicrosoftAccount:user=$PARAM1$2mmfbavqeclendx</Data><Data Name='Type'>$PARAM1$</Data><Data Name='CountOfCredentialsReturned'>$PARAM1$</Data><Data Name='ReadOperation'>%%8100</Data><Data Name='ReturnCode'>$RETURNCODE$</Data><Data Name='ProcessCreationTime'>2022-03-09T22:$PROCESS_ID$2:$TASK$.607226200Z</Data><Data Name='ClientProcessId'>7988</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>55</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115142</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='384'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='Group'>$PARAM1$</Data><Data Name='Number'>$SIGNATURE_ID$</Data><Data Name='IdleStateCount'>$SIGNATURE_ID$</Data><Data Name='IdleImplementation'>$SIGNATURE_ID$</Data><Data Name='NominalFrequency'>2400</Data><Data Name='MaximumPerformancePercent'>$TASK$</Data><Data Name='MinimumPerformancePercent'>$TASK$</Data><Data Name='MinimumThrottlePercent'>$TASK$</Data><Data Name='PerformanceImplementation'>$PARAM1$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>5615</EventID><Version>$SIGNATURE_ID$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566338</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='2924'/><Channel>Application</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>5617</EventID><Version>$SIGNATURE_ID$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566339</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='2564'/><Channel>Application</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>6</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115173</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='380'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='FinalStatus'>$RETURNCODE$</Data><Data Name='DeviceVersionMajor'>$DEVICENAMELENGTH$</Data><Data Name='DeviceVersionMinor'>$PARAM1$</Data><Data Name='DeviceNameLength'>$DEVICENAMELENGTH$</Data><Data Name='DeviceName'>storqosflt</Data><Data Name='DeviceTime'>1992-02-07T08:$SIGNATURE_ID$0:$SIGNATURE_ID$5.000000000Z</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>6005</EventID><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115132</EventRecordID><Channel>System</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Binary>E60703000300090017001400360067020000000000000000</Binary></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider\
+      \ Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>6008</EventID><Level>$SIGNATURE_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated\
+      \ SystemTime='$TIMESTAMP$'/><EventRecordID>115130</EventRecordID><Channel>System</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>11:$SIGNATURE_ID$9:$SIGNATURE_ID$8\
+      \ PM</Data><Data>\u200E3/\u200E9/\u200E2022</Data><Data></Data><Data></Data><Data>34919167</Data><Data></Data><Data></Data><Binary>E607030003000900170013001C005903E607030003000900170013001C0059033C0000003C000000000000000000000000000000000000000100000000000000</Binary></EventData></Event>"
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>6009</EventID><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115131</EventRecordID><Channel>System</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>10.00.</Data><Data>17763</Data><Data></Data><Data>Multiprocessor Free</Data><Data>$PARAM1$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>6013</EventID><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115133</EventRecordID><Channel>System</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data></Data><Data></Data><Data></Data><Data></Data><Data>$DEVICENAMELENGTH$</Data><Data>60</Data><Data>0 Coordinated Universal Time</Data><Binary>31002E003100000030000000570069006E0064006F007700730020005300650072007600650072002000320030003100390020004400610074006100630065006E007400650072000000310030002E0030002E003100370037003600330020004200750069006C0064002000310037003700360033002000200000004D0075006C0074006900700072006F0063006500730073006F007200200046007200650065000000310037003700360033002E007200730035005F00720065006C0065006100730065002E003100380030003900310034002D00310034003300340000003500660039003100640032003800350000004E006F007400200041007600610069006C00610062006C00650000004E006F007400200041007600610069006C00610062006C0065000000390000003200000038003100390032000000340030003900000045004300320041004D0041005A002D00330047003100420031005300460000000000</Binary></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>7001</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$TASK$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x2000200000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115224</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='4676'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='TSId'>$SIGNATURE_ID$</Data><Data Name='UserSid'>S-1-5-21-867926485-3934617210-1925664431-500</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>7023</EventID><Version>$PARAM1$</Version><Level>$SIGNATURE_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8080000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115246</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='856'/><Channel>System</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='param1'>$PARAM1$</Data><Data Name='param2'>$PARAM2$</Data><Binary>730070006C0075006E006B002D006F00740065006C002D0063006F006C006C006500630074006F0072000000</Binary></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider\
+      \ Name=$NAME_2$ Guid=$GUID$ EventSourceName=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>7026</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8080000000000000</Keywords><TimeCreated\
+      \ SystemTime='$TIMESTAMP$'/><EventRecordID>115228</EventRecordID><Correlation/><Execution\
+      \ ProcessID=$PROCESSID$ ThreadID='792'/><Channel>System</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data\
+      \ Name='param1'>\r\ndam</Data></EventData></Event>"
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>7036</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8080000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115324</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='6580'/><Channel>System</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data Name='param1'>$PARAM1$</Data><Data Name='param2'>$PARAM2$</Data><Binary>42004900540053002F0031000000</Binary></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>7040</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8080000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115323</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='6580'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='param1'>$PARAM1$</Data><Data Name='param2'>$PARAM3$</Data><Data Name='param3'>$PARAM3$</Data><Data Name='param4'>$PARAM1$</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>7045</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8080000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115305</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='5556'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='ServiceName'>MpKsle5c6eb56</Data><Data Name='ImagePath'>C:\ProgramData\Microsoft\Windows Defender\Definition Updates\{B51F5AE3-B57F-4D67-A293-2AA2E705E825}\MpKslDrv.sys</Data><Data Name='ServiceType'>kernel mode driver</Data><Data Name='StartType'>$PARAM3$</Data><Data Name='AccountName'></Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>900</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566544</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>&lt;explicit&gt;</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>902</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566548</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData><Data>10.0.17763.1518</Data></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$/><EventID Qualifiers=$QUALIFIERS$>9027</EventID><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566378</EventRecordID><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$ EventSourceName=$EVENTSOURCENAME$/><EventID Qualifiers=$QUALIFIERS$>903</EventID><Version>$PARAM1$</Version><Level>$PARAM1$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>4566579</EventRecordID><Correlation/><Execution ProcessID=$QUALIFIERS$ ThreadID=$QUALIFIERS$/><Channel>Application</Channel><Computer>$HOST$</Computer><Security/></System><EventData></EventData></Event>
+  - index: wineventlog
+    sourcetype: XmlWinEventLog
+    source: XmlWinEventLog:System
+    host: $HOST$
+    _raw: |-
+      <Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name=$NAME_2$ Guid=$GUID$/><EventID>98</EventID><Version>$PARAM1$</Version><Level>$PROCESS_ID$</Level><Task>$PARAM1$</Task><Opcode>$PARAM1$</Opcode><Keywords>0x8000000000000002</Keywords><TimeCreated SystemTime='$TIMESTAMP$'/><EventRecordID>115143</EventRecordID><Correlation/><Execution ProcessID=$PROCESSID$ ThreadID='32'/><Channel>System</Channel><Computer>$HOST$</Computer><Security UserID=$USERID$/></System><EventData><Data Name='DriveName'>D:</Data><Data Name='DeviceName'>\Device\HarddiskVolume2</Data><Data Name='CorruptionActionState'>$PARAM1$</Data></EventData></Event>

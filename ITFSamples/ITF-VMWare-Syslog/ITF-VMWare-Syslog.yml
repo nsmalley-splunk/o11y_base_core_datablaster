@@ -1,0 +1,1131 @@
+samples:
+- name: ITF-VMWare-Syslog
+  interval: 1
+  count: 1
+  randomizeEvents: true
+  tokens:
+  - name: HOST
+    format: template
+    type: choice
+    sample: HOST.sample
+  - name: TIMESTAMP
+    format: template
+    type: gotimestamp
+    replacement: '2006-01-02T15:04:05'
+  lines:
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<163>$TIMESTAMP$.769Z apps-esxi65-2 Hostd: [LikewiseGetDomainJoinInfo:354]
+      QueryInformation(): ERROR_FILE_NOT_FOUND (2/0):'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.617Z apps-esxi65-2 Vpxa: info vpxa[92D5B70] [Originator@6876
+      sub=vpxLro opID=29bea1d1-21] [VpxLRO] -- FINISH lro-7419090'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.615Z apps-esxi65-2 Vpxa: info vpxa[92D5B70] [Originator@6876
+      sub=vpxLro opID=29bea1d1-21] [VpxLRO] -- BEGIN lro-7419090 -- vpxa -- vpxapi.VpxaService.queryAvailableMetric
+      -- 526e8b9c-a7c7-c774-6a67-1bae70e56c30'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.408Z apps-esxi65-2 Vpxa: info vpxa[9548B70] [Originator@6876
+      sub=vpxLro opID=PollQuickStatsLoop-7dc43530-36] [VpxLRO] -- FINISH lro-7419074'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.406Z apps-esxi65-2 Vpxa: info vpxa[9548B70] [Originator@6876
+      sub=vpxLro opID=PollQuickStatsLoop-7dc43530-36] [VpxLRO] -- BEGIN lro-7419074
+      -- vpxa -- vpxapi.VpxaService.fetchQuickStats -- 526e8b9c-a7c7-c774-6a67-1bae70e56c30'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.688Z apps-esxi65-2 Vpxa: info vpxa[9230B70] [Originator@6876
+      sub=vpxLro opID=HB-host-29@517188-31e53997-33] [VpxLRO] -- FINISH lro-7419073'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.688Z apps-esxi65-2 Vpxa: info vpxa[9230B70] [Originator@6876
+      sub=vpxLro opID=HB-host-29@517188-31e53997-33] [VpxLRO] -- BEGIN lro-7419073
+      -- session[526e8b9c-a7c7-c774-6a67-1bae70e56c30]52ed0b6b-ad06-082d-6d99-751ff916c17b
+      -- vmodl.query.PropertyCollector.Filter.destroy -- 526e8b9c-a7c7-c774-6a67-1bae70e56c30'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.680Z apps-esxi65-2 Vpxa: info vpxa[939BB70] [Originator@6876
+      sub=vpxLro opID=HB-host-29@517188-31e53997-d6] [VpxLRO] -- FINISH session[526e8b9c-a7c7-c774-6a67-1bae70e56c30]5254ee78-6901-b0ca-548b-968770d5d163'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.675Z apps-esxi65-2 Vpxa: info vpxa[939BB70] [Originator@6876
+      sub=Default opID=HB-host-29@517188-31e53997-d6] [ReArrangeLayoutEx] Key re-assignments:
+      8:7, 7:6, 6:5, 5:3, 4:2, 3:1, 2:4, 1:8,'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.674Z apps-esxi65-2 Vpxa: info vpxa[939BB70] [Originator@6876
+      sub=Default opID=HB-host-29@517188-31e53997-d6] [ReArrangeLayoutEx] Key re-assignments:'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.648Z apps-esxi65-2 Vpxa: info vpxa[939BB70] [Originator@6876
+      sub=Default opID=HB-host-29@517188-31e53997-d6] [ReArrangeLayoutEx] Key re-assignments:
+      4:3, 3:2, 2:1, 1:4,'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.638Z apps-esxi65-2 Vpxa: info vpxa[939BB70] [Originator@6876
+      sub=Default opID=HB-host-29@517188-31e53997-d6] [ReArrangeLayoutEx] Key re-assignments:
+      6:7,'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.631Z apps-esxi65-2 Vpxa: info vpxa[8928B70] [Originator@6876
+      sub=vpxLro opID=HB-host-29@517188-31e53997-d6-SWI-3752f4b2] [VpxLroList::ForgetTask]
+      Unregistering vim.Task:session[526e8b9c-a7c7-c774-6a67-1bae70e56c30]524e46d7-220f-36d8-e187-9b6a7ee15b60'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.631Z apps-esxi65-2 Vpxa: info vpxa[939BB70] [Originator@6876
+      sub=vpxLro opID=HB-host-29@517188-31e53997-d6] [VpxLRO] -- BEGIN session[526e8b9c-a7c7-c774-6a67-1bae70e56c30]5254ee78-6901-b0ca-548b-968770d5d163
+      -- vpxa -- vpxapi.VpxaService.retrieveChanges -- 526e8b9c-a7c7-c774-6a67-1bae70e56c30'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.229Z apps-esxi65-2 Vpxa: warning vpxa[8A51B70] [Originator@6876
+      sub=VpxProfiler] InvokeWithOpId [TotalTime] took 5132 ms'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.228Z apps-esxi65-2 Hostd: warning hostd[B4E1B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-17/acme-prd-vm-17.vmx
+      opID=0cfe3d20 user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-17/vmware.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.150Z apps-esxi65-2 Hostd: info hostd[B4E1B70] [Originator@6876
+      sub=Libs opID=0cfe3d20 user=vpxuser] OBJLIB-LIB: ObjLib_GetNameSpaceObjectUniqueIdFromPath
+      : failed backend does not store object unique id in path'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.142Z apps-esxi65-2 Hostd: warning hostd[B4E1B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/acme-dev-vm-38/acme-dev-vm-38.vmx
+      opID=0cfe3d1d user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/2bde41b6-2c3dd3d0/acme-dev-vm-38/vmware-18.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.078Z apps-esxi65-2 Hostd: warning hostd[C340B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/acme-dev-vm-35/acme-dev-vm-35.vmx
+      opID=0cfe3d1a user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/2bde41b6-2c3dd3d0/acme-dev-vm-35/vmware.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.843Z apps-esxi65-2 Hostd: warning hostd[CD81B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/crest_vm_creation_splunk_data_collection_node_for_vmware_4.0.3-210706a/crest_vm_creation_splunk_data_collection_node_for_vmware_4.0.3-210706a.vmx
+      opID=0cfe3d11 user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/2bde41b6-2c3dd3d0/crest_vm_creation_splunk_data_collection_node_for_vmware_4.0.3-210706a/vmware.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.757Z apps-esxi65-2 Hostd: warning hostd[CD81B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-29/acme-prd-vm-29.vmx
+      opID=0cfe3d0e user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-29/vmware.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.636Z apps-esxi65-2 Hostd: warning hostd[B4E1B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/acme-dev-vm-36/acme-dev-vm-36.vmx
+      opID=0cfe3d0b user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/2bde41b6-2c3dd3d0/acme-dev-vm-36/vmware.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.541Z apps-esxi65-2 Hostd: warning hostd[C3C2B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/59038c47-9e2e9dd9-d03c-1866daf7bada/acme-prd-vm-9/acme-prd-vm-9.vmx
+      opID=0cfe3d09 user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/59038c47-9e2e9dd9-d03c-1866daf7bada/acme-prd-vm-9/vmware.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.453Z apps-esxi65-2 Hostd: warning hostd[C881B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-26/acme-prd-vm-26.vmx
+      opID=0cfe3cfc user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-26/vmware.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.181Z apps-esxi65-2 Hostd: warning hostd[CD81B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/59038c47-9e2e9dd9-d03c-1866daf7bada/acme-prd-vm-21/acme-prd-vm-21.vmx
+      opID=0cfe3cf9 user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/59038c47-9e2e9dd9-d03c-1866daf7bada/acme-prd-vm-21/vmware.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.177Z apps-esxi65-2 Hostd: warning hostd[C340B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/59038c47-9e2e9dd9-d03c-1866daf7bada/acme-dev-vm-33/acme-dev-vm-33.vmx
+      opID=0cfe3cf6 user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/59038c47-9e2e9dd9-d03c-1866daf7bada/acme-dev-vm-33/imcf-aRUEwA'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.162Z apps-esxi65-2 Hostd: info hostd[C3C2B70] [Originator@6876
+      sub=Libs opID=0cfe3cf3 user=vpxuser]  VAAI-NAS :: NAS Mapping Used successfully
+      for 710697 times'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.162Z apps-esxi65-2 Hostd: info hostd[C3C2B70] [Originator@6876
+      sub=Libs opID=0cfe3cf3 user=vpxuser]  VAAI-NAS :: vmfsNasPlugin: FAILURES: RsrvSpace
+      [0] Cln-Full [0] Cln-Lazy [0] cln-DRun [0], Ext-stats [0]'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.065Z apps-esxi65-2 Hostd: warning hostd[C3C2B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-8/acme-prd-vm-8.vmx
+      opID=0cfe3cee user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-8/vmware.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.866Z apps-esxi65-2 Hostd: warning hostd[CD81B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-18/acme-prd-vm-18.vmx
+      opID=0cfe3ce2 user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-18/vmware.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.699Z apps-esxi65-2 Hostd: warning hostd[C881B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/Boring-Folder-2-Kinjal-1/Boring-Folder-2-Kinjal-1.vmx
+      opID=0cfe3cd9 user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/2bde41b6-2c3dd3d0/Boring-Folder-2-Kinjal-1/vmware.log'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.761Z apps-esxi65-2 Hostd: warning hostd[C6C2B70] [Originator@6876
+      sub=Default opID=0cfe3cc8 user=vpxuser] FileLayoutExToFileLayout: While populating
+      disk layoutSkipping empty diskLayout configuration for VM [dstore03.internal.splunktshirtcompany.com]
+      vsim_netapp-7m/DataONTAP.vmx, key 3003'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.761Z apps-esxi65-2 Hostd: info hostd[C6C2B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/vsim_netapp-7m/DataONTAP.vmx opID=0cfe3cc8
+      user=vpxuser] Skip caching of external disk paths due to incomplete layout.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<163>$TIMESTAMP$.760Z apps-esxi65-2 Hostd: error hostd[C6C2B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/vsim_netapp-7m/DataONTAP.vmx opID=0cfe3cc8
+      user=vpxuser] Exception Object type requires hosted I/O trying to get sizes
+      from /vmfs/volumes/2bde41b6-2c3dd3d0/vsim_netapp-7m/DataONTAP-sim.vmdk'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.760Z apps-esxi65-2 Hostd: info hostd[C6C2B70] [Originator@6876
+      sub=DiskLib opID=0cfe3cc8 user=vpxuser] DISKLIB-LIB   : Failed to open ''/vmfs/volumes/2bde41b6-2c3dd3d0/vsim_netapp-7m/DataONTAP-sim.vmdk''
+      with flags 0x115 Object type requires hosted I/O (76).'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.760Z apps-esxi65-2 Hostd: info hostd[C6C2B70] [Originator@6876
+      sub=DiskLib opID=0cfe3cc8 user=vpxuser] DISKLIB-CHAIN : "/vmfs/volumes/2bde41b6-2c3dd3d0/vsim_netapp-7m/DataONTAP-sim.vmdk"
+      : failed to open (The system cannot find the file specified).'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.760Z apps-esxi65-2 Hostd: info hostd[C6C2B70] [Originator@6876
+      sub=DiskLib opID=0cfe3cc8 user=vpxuser] DISKLIB-LINK  : "/vmfs/volumes/2bde41b6-2c3dd3d0/vsim_netapp-7m/DataONTAP-sim.vmdk"
+      : failed to open (The system cannot find the file specified).'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.760Z apps-esxi65-2 Hostd: info hostd[C6C2B70] [Originator@6876
+      sub=DiskLib opID=0cfe3cc8 user=vpxuser] DISKLIB-SPARSE: "/vmfs/volumes/2bde41b6-2c3dd3d0/vsim_netapp-7m/DataONTAP-s049.vmdk"
+      : failed to open (25): ObjLib_Open failed'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.760Z apps-esxi65-2 Hostd: info hostd[C6C2B70] [Originator@6876
+      sub=Libs opID=0cfe3cc8 user=vpxuser] OBJLIB-FILEBE : FileBEOpen: can''t open
+      ''/vmfs/volumes/2bde41b6-2c3dd3d0/vsim_netapp-7m/DataONTAP-s049.vmdk'' : Could
+      not find the file (393218).'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.760Z apps-esxi65-2 Hostd: info hostd[C6C2B70] [Originator@6876
+      sub=Libs opID=0cfe3cc8 user=vpxuser] AIOGNRC: Failed to open ''/vmfs/volumes/2bde41b6-2c3dd3d0/vsim_netapp-7m/DataONTAP-s049.vmdk''
+      : Could not find the file (60003) (0x1).'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.960Z apps-esxi65-2 Hostd: warning hostd[C6C2B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/vsim_netapp-7m/DataONTAP.vmx opID=0cfe3cc8
+      user=vpxuser] File - failed to get objectId, ''/vmfs/volumes/2bde41b6-2c3dd3d0/vsim_netapp-7m/DataONTAP-nvram-flat.vmdk'':
+      Success.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.159Z apps-esxi65-2 Hostd: info hostd[C340B70] [Originator@6876
+      sub=VsanSimsStubImpl opID=0cfe3cab] Calling vim.host.VsanSystemEx.GetVsanRuntimeInfo'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.158Z apps-esxi65-2 Hostd: info hostd[C340B70] [Originator@6876
+      sub=Libs opID=0cfe3cab] NetstackInstanceImpl: congestion control algorithm:
+      newreno'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.108Z apps-esxi65-2 Hostd: IPMI SEL sync took 0 seconds
+      0 sel records, last 39'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<167>$TIMESTAMP$.108Z apps-esxi65-2 Hostd: count_events: GET_SEL_REPO_INFO
+      returned {version: 0x51, count 39, free 15760,add_stamp 1612754314, erase_stamp
+      1489704806 op_support 2}'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<167>$TIMESTAMP$.108Z apps-esxi65-2 Hostd: count_events: starting communication
+      with bmc over ipmi driver'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<167>$TIMESTAMP$.569Z apps-esxi65-2 Hostd: IpmiIfcRhGetDeviceId: BMC mfg
+      is Dell Inc. FW: 2.40'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.406Z apps-esxi65-2 Hostd: warning hostd[C6C2B70] [Originator@6876
+      sub=VigorStatsProvider(194442704)] AddVirtualMachine: VM ''566'' already registered'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.627Z apps-esxi65-2 Hostd: info hostd[CFC2B70] [Originator@6876
+      sub=Hostsvc.DvsTracker opID=0cfe3b01 user=vpxuser] FetchUplinkDVPortgroups:
+      added 0 items'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-probe
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.193Z apps-esxi65-2 hostd-probe: quiet hostd-probe[7B4AAD0]
+      [Originator@6876 sub=Default] Successfully acquired hardware: PowerEdge R630'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-probe
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.178Z apps-esxi65-2 hostd-probe: info hostd-probe[7B4AAD0]
+      [Originator@6876 sub=Default] Current process ID: 6934567'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-probe
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.178Z apps-esxi65-2 hostd-probe: info hostd-probe[7B4AAD0]
+      [Originator@6876 sub=Default] ReaperManager Initialized'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-probe
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.178Z apps-esxi65-2 hostd-probe: info hostd-probe[7B4AAD0]
+      [Originator@6876 sub=Default] Syscommand enabled: true'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-probe
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.178Z apps-esxi65-2 hostd-probe: info hostd-probe[7B4AAD0]
+      [Originator@6876 sub=FairScheduler] Priority level 16 is now active.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-probe
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.178Z apps-esxi65-2 hostd-probe: info hostd-probe[7B4AAD0]
+      [Originator@6876 sub=Default] Current working directory: /var/log/vmware'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-probe
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.177Z apps-esxi65-2 hostd-probe: info hostd-probe[7B4AAD0]
+      [Originator@6876 sub=Default] Initialized channel manager'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-probe
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.177Z apps-esxi65-2 hostd-probe: info hostd-probe[7B4AAD0]
+      [Originator@6876 sub=Default] The bora/lib logs WILL be handled by VmaCore'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-probe
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.177Z apps-esxi65-2 hostd-probe: info hostd-probe[7B4AAD0]
+      [Originator@6876 sub=Default] Logging uses fast path: true'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-probe
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.177Z apps-esxi65-2 hostd-probe: info -[7B4AAD0] [Originator@6876
+      sub=Default] Initialized SystemFactory
+
+      <166>------ Early init logs Z apps-esxi65-2 hostd-probe: d   --------'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-probe
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.177Z apps-esxi65-2 hostd-probe: info -[7B4AAD0] [Originator@6876
+      sub=Default] Glibc malloc guards disabled.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:syslog
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<13>$TIMESTAMP$Z apps-esxi65-2 syslog[6934567]: starting hostd probing.
+
+      <166>$TIMESTAMP$.177Z apps-esxi65-2 hostd-probe: - time the service was last
+      started, Section for VMware ESX, pid=6934567, version=6.5.0, build=16207673,
+      option=Release'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:crond
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<78>$TIMESTAMP$Z apps-esxi65-2 crond[66682]: USER root pid 6934564 cmd
+      /bin/hostd-probe.sh ++group=host/vim/vmvisor/hostd-probe/stats/sh'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Fdm
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.550Z apps-esxi65-2 Fdm: info fdm[3B70B70] [Originator@6876
+      sub=Cluster opID=SWI-3ab50c2a] [ClusterManagerImpl::LogState] hostId=host-29
+      state=Slave master=host-34 isolated=false host-list-version=19 config-version=36
+      vm-metadata-version=1090 slv-mst-tdiff-sec=22'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vmkernel
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<182>$TIMESTAMP$.022Z apps-esxi65-2 vmkernel: cpu36:66247)DVFilter: 5924:
+      Checking disconnected filters for timeouts'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vmkernel
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<182>$TIMESTAMP$.469Z apps-esxi65-2 vmkernel: cpu25:66280)ScsiDeviceIO:
+      3001: Cmd(0x439d0b433140) 0x1a, CmdSN 0x5e1a5c from world 0 to dev "naa.61866da09e678b00205da3280e7b7902"
+      failed H:0x0 D:0x2 P:0x0 Valid sense data: 0x5 0x24 0x0.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.909Z apps-esxi65-2 Hostd: info hostd[CF81B70] [Originator@6876
+      sub=Libs opID=0cfe389c user=vpxuser] SlowRefresh: path /vmfs/volumes/59038c47-9e2e9dd9-d03c-1866daf7bada
+      total blocks 591363309568 used blocks 323173220352'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Fdm
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.868Z apps-esxi65-2 Fdm: info fdm[3568B70] [Originator@6876
+      sub=Invt opID=SWI-5e99ce56] Unset _accessible for datastore (/vmfs/volumes/2bde41b6-2c3dd3d0).'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.868Z apps-esxi65-2 Hostd: info hostd[C340B70] [Originator@6876
+      sub=Vslmsvc.DatastoreStateListener] ReceiveDatastoreChange: Processing msg:
+      [N11HostdCommon18DatastoreSystemMsgE:0x0c2944c0]DatastoreSystemMsg::DsChange{Type=UPDATE_CAPACITY,
+      Msg=DatastoreResizedMsg{DatastoreMsg{Type=2, MoId=10.141.7.10:/datastore01/esxi_65,
+      Path=/vmfs/volumes/2bde41b6-2c3dd3d0}, NewCap=5994023809024, OldCap=5994283364352}};'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.867Z apps-esxi65-2 Hostd: info hostd[CF81B70] [Originator@6876
+      sub=Hostsvc.Datastore opID=0cfe3898 user=vpxuser] CheckIfCapacityChanged: Datastore
+      10.141.7.10:/datastore01/esxi_65 now has capacity 5994023809024'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.866Z apps-esxi65-2 Hostd: info hostd[CF81B70] [Originator@6876
+      sub=Libs opID=0cfe3898 user=vpxuser] SlowRefresh: path /vmfs/volumes/2bde41b6-2c3dd3d0
+      total blocks 5994023809024 used blocks 1202269364224'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.145Z apps-esxi65-2 Vpxa: info vpxa[8907B70] [Originator@6876
+      sub=vpxLro opID=441b2e0c] [VpxLRO] -- FINISH lro-7418919'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.111Z apps-esxi65-2 Vpxa: info vpxa[8907B70] [Originator@6876
+      sub=vpxLro opID=441b2e0c] [VpxLRO] -- BEGIN lro-7418919 -- vpxa -- vpxapi.VpxaService.querySummaryStatistics
+      -- 526e8b9c-a7c7-c774-6a67-1bae70e56c30'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.004Z apps-esxi65-2 Hostd: warning hostd[96D6B50] [Originator@6876
+      sub=Statssvc.vim.PerformanceManager] Calculated write I/O size 530691 for scsi0:0
+      is out of range -- 530691,prevBytes = 14390869869568 curBytes = 14391151136256
+      prevCommands = 456060933curCommands = 456061463'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.739Z apps-esxi65-2 Hostd: info hostd[C640B70] [Originator@6876
+      sub=Vimsvc.TaskManager opID=HB-host-29@517116-21bba49e-b8-2e82 user=vpxuser]
+      Task Completed : haTask--vim.OverheadService.downloadVMXConfig-191110878 Status
+      success'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.737Z apps-esxi65-2 Hostd: info hostd[C640B70] [Originator@6876
+      sub=Vimsvc.TaskManager opID=HB-host-29@517116-21bba49e-b8-2e82 user=vpxuser]
+      Task Created : haTask--vim.OverheadService.downloadVMXConfig-191110878'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.495Z apps-esxi65-2 Vpxa: info vpxa[896AB70] [Originator@6876
+      sub=hostdhost opID=WFU-5c5d7a1b] [QueryOverheadEx] Found network backing info
+      for device 4000 of type 03b328a8, removing vpxd moref vim.Network:HaNetwork-Apps
+      VMware (3704) before passing to hostd'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.495Z apps-esxi65-2 Vpxa: info vpxa[896AB70] [Originator@6876
+      sub=hostdhost opID=WFU-5c5d7a1b] [QueryOverheadEx] Found file backing info for
+      device 2000 of type 03b28f38, removing vpxd moref vim.Datastore:10.141.7.10:/datastore01/esxi_65
+      before passing to hostd'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.412Z apps-esxi65-2 Hostd: info hostd[C3C2B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-17/acme-prd-vm-17.vmx]
+      Send config update invoked'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:backup
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<13>$TIMESTAMP$Z apps-esxi65-2 backup.sh.6934163: Unlocking esx.conf'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:backup
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<13>$TIMESTAMP$Z apps-esxi65-2 backup.sh.6934163: Creating archive'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:crond
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<78>$TIMESTAMP$Z apps-esxi65-2 crond[66682]: USER root pid 6934129 cmd
+      /sbin/auto-backup.sh'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vmkernel
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<182>$TIMESTAMP$.142Z apps-esxi65-2 vmkernel: cpu28:6934114)MemSched: 14642:
+      uw.6934114 (21796523) extraMin/extraFromParent: 256/256, logging (730) childEmin/eMinLimit:
+      21760/21760'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vmkernel
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<182>$TIMESTAMP$.142Z apps-esxi65-2 vmkernel: cpu28:6934114)MemSched: 14635:
+      Admission failure in path: logging/python.6934114/uw.6934114'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vmkwarning
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<180>$TIMESTAMP$.141Z apps-esxi65-2 vmkwarning: cpu28:6934114)WARNING:
+      Heap: 4169: Heap_Align(vsiHeap.6934114, 39424/39424 bytes, 8 align) failed.  caller:
+      0x418030722bac'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vmkwarning
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<180>$TIMESTAMP$.141Z apps-esxi65-2 vmkwarning: cpu28:6934114)WARNING:
+      Heap: 3818: Could not allocate 40960 bytes for dynamic heap vsiHeap.6934114.
+      Request returned Admission check failed for memory resource'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:crond
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<78>$TIMESTAMP$Z apps-esxi65-2 crond[66682]: USER root pid 6934112 cmd
+      /usr/lib/vmware/vmksummary/log-heartbeat.py'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vmkwarning
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<180>$TIMESTAMP$.669Z apps-esxi65-2 vmkwarning: cpu41:6925504)WARNING:
+      LinuxThread: 381: vmsyslogd: Error cloning thread: -28 (bad0081)'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.062Z apps-esxi65-2 Vpxa: info vpxa[92B4B70] [Originator@6876
+      sub=hostdhost opID=WFU-32ac3e3d] [QueryOverheadEx] Found network backing info
+      for device 4002 of type 03b328a8, removing vpxd moref vim.Network:HaNetwork-APPS-VMware
+      before passing to hostd'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.973Z apps-esxi65-2 Hostd: info hostd[CD81B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-26/acme-prd-vm-26.vmx]
+      Send config update invoked'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.008Z apps-esxi65-2 Vpxa: info vpxa[8907B70] [Originator@6876
+      sub=hostdhost opID=WFU-23f487e6] [QueryOverheadEx] Found file backing info for
+      device 2000 of type 03b28f38, removing vpxd moref vim.Datastore:59038c47-9e2e9dd9-d03c-1866daf7bada
+      before passing to hostd'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.953Z apps-esxi65-2 Hostd: info hostd[CFC2B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/59038c47-9e2e9dd9-d03c-1866daf7bada/acme-prd-vm-21/acme-prd-vm-21.vmx]
+      Send config update invoked'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.633Z apps-esxi65-2 Hostd: info hostd[C6C2B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/59038c47-9e2e9dd9-d03c-1866daf7bada/acme-prd-vm-9/acme-prd-vm-9.vmx]
+      Send config update invoked'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:storageRM
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<14>$TIMESTAMP$.770Z apps-esxi65-2 storageRM:  Storage I/O Control: ANOMALY
+      - external workload detected on datastore dstore03.internal.splunktshirtcompany.com'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.574Z apps-esxi65-2 Vpxa: info vpxa[95CCB70] [Originator@6876
+      sub=VpxaHalResourcePool opID=SWI-13f0ba39] GetOverrideFailureCount() = 0 MAX_CONSECUTIVE_OVERRIDE_FAILURES
+      = 3'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.973Z apps-esxi65-2 Hostd: info hostd[B4E1B70] [Originator@6876
+      sub=Cimsvc] HardwwareSensorGroupStatus sent'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.972Z apps-esxi65-2 Hostd: info hostd[B4E1B70] [Originator@6876
+      sub=Vimsvc.ha-eventmgr] Event 19008 : Hardware Sensor Status: Processor green,
+      Memory green, Fan green, Voltage green, Temperature green, Power green, System
+      Board green, Battery green, Storage green, Other green'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:heartbeat
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<14>$TIMESTAMP$Z apps-esxi65-2 heartbeat: up 503d10h17m39s, 13 VMs; [[2781369
+      vmx 12578816kB] [4524243 vmx 16775180kB] [5389197 vmx 25165824kB]] [[2781369
+      vmx 0%max] [4524243 vmx 0%max] [5389197 vmx 0%max]]'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.891Z apps-esxi65-2 Hostd: -->  ($TIMESTAMP$.891Z cpu7:6925504)'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vmkalert
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<177>$TIMESTAMP$.891Z apps-esxi65-2 vmkalert: cpu7:6925504)ALERT: vmsyslog
+      logger 10.202.14.231:1514 lost 426330 log messages'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.891Z apps-esxi65-2 Hostd: info hostd[C640B70] [Originator@6876
+      sub=Vimsvc.ha-eventmgr] Event 19007 : Issue detected on apps-esxi65-2 in ha-datacenter:
+      vmsyslog logger 10.202.14.231:1514 lost 426330 log messages'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Rhttpproxy
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<164>$TIMESTAMP$.287Z apps-esxi65-2 Rhttpproxy: warning rhttpproxy[7744B70]
+      [Originator@6876 sub=Proxy Req 39007] Error reading from client while waiting
+      for header: N7Vmacore15SystemExceptionE(Connection reset by peer)
+
+      <164>$TIMESTAMP$.287Z apps-esxi65-2 Rhttpproxy: --> [context]zKq7AUoCAgAAADlP9wAPcmh0dHBwcm94eQAAHywubGlidm1hY29yZS5zbwAA4lUSAG+8DQDVxC0AgeYfAOKUJABKpSQASRUhARIUAnJodHRwcHJveHkAABObIAA+nyAA5eYgAGSqLgLKbABsaWJwdGhyZWFkLnNvLjAAAz5MDWxpYmMuc28uNgA=[/context]'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vmkernel
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<182>$TIMESTAMP$.597Z apps-esxi65-2 vmkernel: cpu1:6931523)User: 3089:
+      python: wantCoreDump:python signal:6 exitCode:0 coredump:disabled'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:tmpwatch
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<30>$TIMESTAMP$Z apps-esxi65-2 tmpwatch: done: removed 0 files.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:tmpwatch
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<30>$TIMESTAMP$Z apps-esxi65-2 tmpwatch: scanning'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:crond
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<78>$TIMESTAMP$Z apps-esxi65-2 crond[66682]: USER root pid 6926804 cmd
+      /sbin/tmpwatch.py'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:crond
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<78>$TIMESTAMP$Z apps-esxi65-2 crond[66682]: USER root pid 6926787 cmd
+      localcli storage core device purge'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.996Z apps-esxi65-2 Vpxa: info vpxa[89ACB70] [Originator@6876
+      sub=vpxLro opID=HostPropertyProvider:281881-409489-ngc-69-53] [VpxLRO] -- FINISH
+      lro-7397346'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:ImageConfigManager
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<14>$TIMESTAMP$Z apps-esxi65-2 ImageConfigManager: 2022-03-24 23:00:44,926
+      [MainProcess INFO ''imageprofile'' HostPropertyProvider:281881-409489-ngc-69-53-7751]
+      Adding VIB VMware_locker_tools-light_6.5.0-3.116.15256468 to ImageProfile (Updated)
+      ESXi-6.5.0-20170404001-standard\x00'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:ImageConfigManager
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<14>$TIMESTAMP$Z apps-esxi65-2 ImageConfigManager: 2022-03-24 23:00:44,916
+      [MainProcess INFO ''root'' MainThread] Starting CGI server on stdin/stdout\x00'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:hostd-icm
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<30>$TIMESTAMP$Z apps-esxi65-2 hostd-icm[6925771]: Registered ''ImageConfigManagerImpl:ha-image-config-manager'''
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:ImageConfigManager
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<14>$TIMESTAMP$Z apps-esxi65-2 ImageConfigManager: 2022-03-24 23:00:44,916
+      [MainProcess INFO ''HostImage'' MainThread] Installers initiated are {''live'':
+      <vmware.esximage.Installer.LiveImageInstaller.LiveImageInstaller object at 0xbffb967978>,
+      ''locker'': <vmware.esximage.Installer.LockerInstaller.LockerInstaller object
+      at 0xbffb97cf28>, ''boot'': <vmware.esximage.Installer.BootBankInstaller.BootBankInstaller
+      object at 0xbffb957f60>}\x00'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:ImageConfigManager
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<14>$TIMESTAMP$Z apps-esxi65-2 ImageConfigManager: 2022-03-24 23:00:44,836
+      [MainProcess INFO ''vmware.runcommand'' MainThread] runcommand called with:
+      args = ''[''/sbin/bootOption'', ''-ro'']'', outfile = ''None'', returnoutput
+      = ''True'', timeout = ''0.0''.\x00'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.394Z apps-esxi65-2 Hostd: info hostd[C381B70] [Originator@6876
+      sub=SysCommandPosix opID=HostPropertyProvider:281881-409489-ngc-69-53-7751 user=vpxuser:VSPHERE.LOCAL\Administrator]
+      ForkExec(/usr/bin/sh) 6925764'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.392Z apps-esxi65-2 Vpxa: info vpxa[89ACB70] [Originator@6876
+      sub=vpxLro opID=HostPropertyProvider:281881-409489-ngc-69-53] [VpxLRO] -- BEGIN
+      lro-7397346 -- imageConfigManager -- vim.host.ImageConfigManager.queryHostImageProfile
+      -- 526e8b9c-a7c7-c774-6a67-1bae70e56c30'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.304Z apps-esxi65-2 Vpxa: info vpxa[9062B70] [Originator@6876
+      sub=vpxLro opID=HostPropertyProvider:281865-409488-ngc-8d-a3] [VpxLRO] -- BEGIN
+      lro-7397345 -- vpxa -- vpxapi.VpxaService.queryBatchPerformanceStatistics --
+      526e8b9c-a7c7-c774-6a67-1bae70e56c30'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.469Z apps-esxi65-2 Vpxa: info vpxa[8FBDB70] [Originator@6876
+      sub=vpxLro opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-404082-ngc-11-2ccf6cc2-ba]
+      [VpxLRO] -- FINISH lro-7396445'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.469Z apps-esxi65-2 Vpxa: info vpxa[8FBDB70] [Originator@6876
+      sub=vpxLro opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-404082-ngc-11-2ccf6cc2-ba]
+      [VpxLRO] -- BEGIN lro-7396445 -- session[526e8b9c-a7c7-c774-6a67-1bae70e56c30]52884766-0430-af71-21f0-82c6637708bb
+      -- vmodl.query.PropertyCollector.Filter.destroy -- 526e8b9c-a7c7-c774-6a67-1bae70e56c30'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.455Z apps-esxi65-2 Vpxa: info vpxa[8A0FB70] [Originator@6876
+      sub=vpxLro opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-404082-ngc-11-2ccf6cc2-7d]
+      [VpxLRO] -- FINISH session[526e8b9c-a7c7-c774-6a67-1bae70e56c30]52e3112c-01aa-5e34-7dda-591fabeac129'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.453Z apps-esxi65-2 Vpxa: info vpxa[939BB70] [Originator@6876
+      sub=vpxLro opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-404082-ngc-11-2ccf6cc2-7d-SWI-22eba6f1]
+      [VpxLroList::ForgetTask] Unregistering vim.Task:session[526e8b9c-a7c7-c774-6a67-1bae70e56c30]521f58b3-33de-d1d2-706c-85a8ec489cf6'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.450Z apps-esxi65-2 Vpxa: info vpxa[8FFFB70] [Originator@6876
+      sub=vpxLro opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-404082-ngc-11-ec] [VpxLRO]
+      -- FINISH lro-7396443'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.449Z apps-esxi65-2 Hostd: info hostd[B4E1B70] [Originator@6876
+      sub=Vimsvc.TaskManager opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-404082-ngc-11-ec-58d0
+      user=vpxuser:VSPHERE.LOCAL\Administrator] Task Completed : haTask-ha-host-vim.host.ServiceSystem.restart-191040455
+      Status success
+
+      '
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.140Z apps-esxi65-2 Hostd: info hostd[B4E1B70] [Originator@6876
+      sub=SysCommandPosix opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-404082-ngc-11-ec-58d0
+      user=vpxuser:VSPHERE.LOCAL\Administrator] ForkExec(/etc/init.d/vmsyslogd) 6892663'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.088Z apps-esxi65-2 Vpxa: info vpxa[8FFFB70] [Originator@6876
+      sub=vpxLro opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-404082-ngc-11-ec] [VpxLRO]
+      -- BEGIN lro-7396443 -- serviceSystem -- vim.host.ServiceSystem.restart -- 526e8b9c-a7c7-c774-6a67-1bae70e56c30'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Vpxa
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<163>$TIMESTAMP$.296Z apps-esxi65-2 Vpxa: error vpxa[96B3B70] [Originator@6876
+      sub=vpxaVmomi opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-403956-ngc-92-d1] [VpxaClientAdapter::InvokeCommon]
+      Re-throwing method-fault ''N3Vim5Fault15HostConfigFault9ExceptionE(vim.fault.HostConfigFault)
+
+      <163>$TIMESTAMP$.296Z apps-esxi65-2 Vpxa: --> [context]zKq7AUoCAgAAADlP9wAidnB4YQAAHywubGlidm1hY29yZS5zbwAA4lUSAG+8DQFmT95saWJ2aW0tdHlwZXMuc28AAaF+1QKHWw1saWJ2bW9taS5zbwAC7GANA5i4FXZweGEAA+u6FQLwmg8CSpgPgU5MDQEBKa/7AjcsDALaUQwDOfwYA1EUKQOKqBUDOw0oAzO5JwPJchYDZAIoA/UeKAPbuCcDXcAnA253KAONlRMDyXIWABObIAA+nyAA5eYgAGSqLgTKbABsaWJwdGhyZWFkLnNvLjAABT5MDWxpYmMuc28uNgA=[/context]''
+      received while invoking updateConfig on vim.host.DateTimeSystem:dateTimeSystem'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.296Z apps-esxi65-2 Hostd: info hostd[C681B70] [Originator@6876
+      sub=Solo.Vmomi opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-403956-ngc-92-d1-5820
+      user=vpxuser:VSPHERE.LOCAL\Administrator] Result:
+
+      <166>$TIMESTAMP$.296Z apps-esxi65-2 Hostd: --> (vim.fault.HostConfigFault) {
+
+      <166>$TIMESTAMP$.296Z apps-esxi65-2 Hostd: -->    faultCause = (vmodl.MethodFault)
+      null,
+
+      <166>$TIMESTAMP$.296Z apps-esxi65-2 Hostd: -->    faultMessage = <unset>
+
+      <166>$TIMESTAMP$.296Z apps-esxi65-2 Hostd: -->    msg = ""
+
+      <166>$TIMESTAMP$.296Z apps-esxi65-2 Hostd: --> }'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.296Z apps-esxi65-2 Hostd: info hostd[C681B70] [Originator@6876
+      sub=Solo.Vmomi opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-403956-ngc-92-d1-5820
+      user=vpxuser:VSPHERE.LOCAL\Administrator] Throw vim.fault.HostConfigFault'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.296Z apps-esxi65-2 Hostd: info hostd[C681B70] [Originator@6876
+      sub=Solo.Vmomi opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-403956-ngc-92-d1-5820
+      user=vpxuser:VSPHERE.LOCAL\Administrator] Activation [N5Vmomi10ActivationE:0x0c728ed8]
+      : Invoke done [updateConfig] on [vim.host.DateTimeSystem:dateTimeSystem]'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.296Z apps-esxi65-2 Hostd: info hostd[C681B70] [Originator@6876
+      sub=Default opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-403956-ngc-92-d1-5820
+      user=vpxuser:VSPHERE.LOCAL\Administrator] AdapterServer caught exception: vim.fault.HostConfigFault'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<163>$TIMESTAMP$.295Z apps-esxi65-2 Hostd: error hostd[C681B70] [Originator@6876
+      sub=Hostsvc.DateTimeSystem opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-403956-ngc-92-d1-5820
+      user=vpxuser:VSPHERE.LOCAL\Administrator] Failed to update ntp config vmodl.fault.InvalidArgument'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: info hostd[C681B70] [Originator@6876
+      sub=Vimsvc.ha-eventmgr] Event 18943 : Firewall configuration has changed. Operation
+      ''enable'' for rule set ntpClient succeeded.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: info hostd[C681B70] [Originator@6876
+      sub=Hostsvc.VmkVprobSource] VmkVprobSource::Post event: (vim.event.EventEx)
+      {
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    key = 216224924,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    chainId = 0,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    createdTime = "1970-01-01T00:00:00Z",
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    userName = "",
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    datacenter = (vim.event.DatacenterEventArgument)
+      null,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    computeResource = (vim.event.ComputeResourceEventArgument)
+      null,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    host = (vim.event.HostEventArgument)
+      {
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->       name = "apps-esxi65-2",
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->       host = ''vim.HostSystem:ha-host''
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    },
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    vm = (vim.event.VmEventArgument)
+      null,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    ds = (vim.event.DatastoreEventArgument)
+      null,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    net = (vim.event.NetworkEventArgument)
+      null,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    dvs = (vim.event.DvsEventArgument)
+      null,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    fullFormattedMessage = <unset>,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    changeTag = <unset>,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    eventTypeId = "esx.audit.net.firewall.config.changed",
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    severity = <unset>,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    message = <unset>,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    arguments = (vmodl.KeyAnyValue)
+      [
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->       (vmodl.KeyAnyValue) {
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->          key = "1",
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->          value = "enable"
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->       },
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->       (vmodl.KeyAnyValue) {
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->          key = "2",
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->          value = "ntpClient"
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->       }
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    ],
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    objectId = "ha-host",
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    objectType = "vim.HostSystem",
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    objectName = <unset>,
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: -->    fault = (vmodl.MethodFault)
+      null
+
+      <166>$TIMESTAMP$.981Z apps-esxi65-2 Hostd: --> }'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vobd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<14>$TIMESTAMP$.981Z apps-esxi65-2 vobd:  [netCorrelator] 43450435603178us:
+      [esx.audit.net.firewall.config.changed] Firewall configuration has changed.
+      Operation ''enable'' for rule set ntpClient succeeded.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vobd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<14>$TIMESTAMP$.981Z apps-esxi65-2 vobd:  [netCorrelator] 43450435600601us:
+      [vob.net.firewall.config.changed] Firewall configuration has changed. Operation
+      ''enable'' for rule set ntpClient succeeded.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.838Z apps-esxi65-2 Hostd: info hostd[D003B70] [Originator@6876
+      sub=SysCommandPosix opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-403912-ngc-8-b-57fb
+      user=vpxuser:VSPHERE.LOCAL\Administrator] ForkExec(/sbin/chkconfig) 6925421'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.657Z apps-esxi65-2 Hostd: info hostd[C881B70] [Originator@6876
+      sub=Vimsvc.ha-eventmgr] Event 18910 : The host "10.141.4.254:1514" has become
+      unreachable.  Remote logging to this host has stopped.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vobd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<14>$TIMESTAMP$.656Z apps-esxi65-2 vobd:  [UserLevelCorrelator] 43449925278740us:
+      [esx.problem.vmsyslogd.remote.failure] The host "10.141.4.254:1514" has become
+      unreachable.  Remote logging to this host has stopped.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vobd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<14>$TIMESTAMP$.656Z apps-esxi65-2 vobd:  [GenericCorrelator] 43449925276055us:
+      [vob.user.vmsyslogd.remote.failure] The host "10.141.4.254:1514" has become
+      unreachable. Remote logging to this host has stopped.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.775Z apps-esxi65-2 Hostd: info hostd[B4E1B70] [Originator@6876
+      sub=Hbrsvc] Replicator: powerstate change VM: 212 Old: 1 New: 1'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.775Z apps-esxi65-2 Hostd: info hostd[B4E1B70] [Originator@6876
+      sub=Guestsvc.GuestFileTransfer] VmPowerStateListener succeeded'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.775Z apps-esxi65-2 Hostd: info hostd[D003B70] [Originator@6876
+      sub=Vmsvc.vm:/vmfs/volumes/2bde41b6-2c3dd3d0/Crest-acme-dev-vm-32/Crest-acme-dev-vm-32.vmx]
+      State Transition (VM_STATE_CREATE_SCREENSHOT -> VM_STATE_ON)'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:crond
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<75>$TIMESTAMP$Z apps-esxi65-2 crond[66682]: time disparity of 616 minutes
+      detected'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.483Z apps-esxi65-2 Hostd: info hostd[C840B70] [Originator@6876
+      sub=SysCommandPosix opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-401451-ngc-a3-6d-4765
+      user=vpxuser:VSPHERE.LOCAL\Administrator] ForkExec(/etc/init.d/vmware-fdm) 6924887'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:ntp
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<13>$TIMESTAMP$Z apps-esxi65-2 ntp.conf: File has not been changed'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:ntp
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<13>$TIMESTAMP$Z apps-esxi65-2 ntp.conf: Upgrade check for file /etc/ntp.conf'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.149Z apps-esxi65-2 Hostd: 202.38.207:1514,tcp://10.202.10.193:1514,tcp://10.202.21.100:1514,tcp://10.202.8.221:1514,tcp://10.202.12.177:1514,tcp://10.202.14.231:1514,tcp://54.183.21.92:1514,tcp://10.141.4.254:1514"'''
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:Hostd
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<166>$TIMESTAMP$.149Z apps-esxi65-2 Hostd: info hostd[96D6B50] [Originator@6876
+      sub=Hostsvc.SyslogConfigProvider opID=8a68e33f-9601-4e6d-930e-5cf649d8bc49-399736-ngc-be-b8-395f
+      user=vpxuser:VSPHERE.LOCAL\Administrator] Set called with key ''Syslog.global.logHost'',
+      value ''"tcp://10.202.18.6:1514,tcp://10.202.21.23:1514,tcp://10.202.12.30:1514,tcp://10.202.15.179:1514,tcp://10.141.5.15:1514,tcp://10.202.39.112:1514,tcp://10.202.11.119:1514,tcp://10.141.4.59:1514,tcp://10.202.39.25:1514,
+      tcp://10.202.35.80:1514, tcp://10.202.0.200:1514,tcp://10.141.4.52,tcp://10.141.4.237:1514,tcp://10.202.10.224:1514,tcp://10.202.39.188:1514,tcp://10.202.1.121:1514,tcp://10.202.4.163:1514,tcp://10.202.14.87:1514,tcp://10.202.37.206:1514,tcp://10.202.4.166:1514,tcp://10.202.3.203:1514,tcp://10.202.21.118:1514,tcp://10.224.100.162:48721,tcp://10.202.39.112:1514,tcp://10.202.33.251:1514,tcp://10.'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:ImageConfigManager
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<14>$TIMESTAMP$Z apps-esxi65-2 ImageConfigManager: 2022-03-24 11:18:18,875
+      [MainProcess INFO ''vmware.runcommand'' HostPropertyProvider:276474-399589-ngc-2c-6d-38b9]
+      runcommand called with: args = ''[''/sbin/esxcfg-advcfg'', ''-U'', ''host-acceptance-level'',
+      ''-G'']'', outfile = ''None'', returnoutput = ''True'', timeout = ''30.0''.\x00'
+  - index: vmware-esxilog
+    sourcetype: vmware:esxlog:vmkernel
+    source: vmware:esxlog:source::tcp:1514
+    host: $HOST$
+    _raw: '<182>$TIMESTAMP$.890Z apps-esxi65-2 vmkernel: cpu42:66294)ntg3:vmnic1:Ntg3HandleTxMappingErr:360:Avoid
+      frag of 4096 bytes at 0x4fffff000'

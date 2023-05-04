@@ -1,0 +1,1735 @@
+samples:
+- name: ITF-AWS-Cloudwatch
+  interval: 60
+  count: 229
+  randomizeEvents: false
+  lines:
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0e5bf972e5b5f5761]",
+      "metric_name": "DiskWriteOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 961.4, "Maximum": 982.0, "Minimum": 941.0, "SampleCount": 5.0,
+      "Sum": 4807.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0e5bf972e5b5f5761]", "metric_name": "NetworkPacketsIn", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 581.0, "Maximum": 608.0, "Minimum": 557.0, "SampleCount": 5.0,
+      "Sum": 2905.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0e5bf972e5b5f5761]", "metric_name": "NetworkPacketsOut", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 1304660.4, "Maximum": 1336651.0, "Minimum": 1294616.0, "SampleCount":
+      5.0, "Sum": 6523302.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0e5bf972e5b5f5761]", "metric_name": "NetworkOut", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 5092341.2, "Maximum": 5093879.0, "Minimum": 5090900.0, "SampleCount":
+      5.0, "Sum": 25461706.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0e5bf972e5b5f5761]", "metric_name": "NetworkIn", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 4.518306010928476, "Maximum": 4.74999999999757, "Minimum":
+      4.41666666666909, "SampleCount": 5.0, "Sum": 22.59153005464238, "Unit": "Percent",
+      "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0e5bf972e5b5f5761]",
+      "metric_name": "CPUUtilization", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0e5bf972e5b5f5761]",
+      "metric_name": "DiskWriteBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0e5bf972e5b5f5761]",
+      "metric_name": "DiskReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host:  ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0e5bf972e5b5f5761]",
+      "metric_name": "DiskReadBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0a594ccf0f3c8f37f]",
+      "metric_name": "DiskWriteOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-32.acme.com
+    _raw: '{"Average": 588.8, "Maximum": 1065.0, "Minimum": 405.0, "SampleCount":
+      5.0, "Sum": 2944.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0a594ccf0f3c8f37f]", "metric_name": "NetworkPacketsIn", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-32.acme.com
+    _raw: '{"Average": 573.4, "Maximum": 1074.0, "Minimum": 377.0, "SampleCount":
+      5.0, "Sum": 2867.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0a594ccf0f3c8f37f]", "metric_name": "NetworkPacketsOut", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-32.acme.com
+    _raw: '{"Average": 1254316.2, "Maximum": 2117583.0, "Minimum": 872377.0, "SampleCount":
+      5.0, "Sum": 6271581.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0a594ccf0f3c8f37f]", "metric_name": "NetworkOut", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-32.acme.com
+    _raw: '{"Average": 198157.0, "Maximum": 422288.0, "Minimum": 117963.0, "SampleCount":
+      5.0, "Sum": 990785.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0a594ccf0f3c8f37f]", "metric_name": "NetworkIn", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-32.acme.com
+    _raw: '{"Average": 4.844493840879823, "Maximum": 11.1475409835875, "Minimum":
+      2.11864406779661, "SampleCount": 5.0, "Sum": 24.22246920439911, "Unit": "Percent",
+      "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0a594ccf0f3c8f37f]",
+      "metric_name": "CPUUtilization", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0a594ccf0f3c8f37f]",
+      "metric_name": "DiskWriteBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0a594ccf0f3c8f37f]",
+      "metric_name": "DiskReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0a594ccf0f3c8f37f]",
+      "metric_name": "DiskReadBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
+      "metric_name": "DiskWriteOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 3076.4, "Maximum": 4280.0, "Minimum": 2668.0, "SampleCount":
+      5.0, "Sum": 15382.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-023ee207c86a15a06]", "metric_name": "NetworkPacketsIn", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 2633.8, "Maximum": 3761.0, "Minimum": 2269.0, "SampleCount":
+      5.0, "Sum": 13169.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-023ee207c86a15a06]", "metric_name": "NetworkPacketsOut", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 703748.4, "Maximum": 1760205.0, "Minimum": 410860.0, "SampleCount":
+      5.0, "Sum": 3518742.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-023ee207c86a15a06]", "metric_name": "NetworkOut", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 6756779.6, "Maximum": 7412154.0, "Minimum": 6175064.0, "SampleCount":
+      5.0, "Sum": 33783898.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-023ee207c86a15a06]", "metric_name": "NetworkIn", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 9.62500000000001, "Maximum": 17.4166666665891, "Minimum": 7.12500000023283,
+      "SampleCount": 5.0, "Sum": 48.12500000000005, "Unit": "Percent", "account_id":
+      "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]", "metric_name":
+      "CPUUtilization", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
+      "metric_name": "DiskWriteBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
+      "metric_name": "DiskReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
+      "metric_name": "DiskReadBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 100.0, "Maximum": 100.0, "Minimum": 100.0, "SampleCount": 5.0,
+      "Sum": 500.0, "Unit": "Percent", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0302da28b04512044]", "metric_name": "BurstBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 0.009766666666666668, "Maximum": 0.0111666666666667, "Minimum":
+      0.00766666666666667, "SampleCount": 5.0, "Sum": 0.04883333333333334, "Unit":
+      "Count", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0302da28b04512044]",
+      "metric_name": "VolumeQueueLength", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 59.82000000000001, "Maximum": 59.85, "Minimum": 59.79, "SampleCount":
+      5.0, "Sum": 299.1, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0302da28b04512044]", "metric_name": "VolumeIdleTime", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 0.004355555555555555, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      675.0, "Sum": 2.94, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0302da28b04512044]", "metric_name": "VolumeTotalWriteTime", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 135.0, "Maximum": 165.0, "Minimum": 104.0, "SampleCount": 5.0,
+      "Sum": 675.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0302da28b04512044]", "metric_name": "VolumeWriteOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0302da28b04512044]",
+      "metric_name": "VolumeReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 13392.402962962962, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      675.0, "Sum": 9039872.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0302da28b04512044]", "metric_name": "VolumeWriteBytes", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 100.0, "Maximum": 100.0, "Minimum": 100.0, "SampleCount": 5.0,
+      "Sum": 500.0, "Unit": "Percent", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-046f324859a6660ea]", "metric_name": "BurstBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 0.0008, "Maximum": 0.0035, "Minimum": 0.0, "SampleCount": 5.0,
+      "Sum": 0.004, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-046f324859a6660ea]", "metric_name": "VolumeQueueLength", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 59.988, "Maximum": 60.0, "Minimum": 59.97, "SampleCount": 5.0,
+      "Sum": 299.94, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-046f324859a6660ea]", "metric_name": "VolumeIdleTime", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 0.00032388663967611336, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      741.0, "Sum": 0.24, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-046f324859a6660ea]", "metric_name": "VolumeTotalWriteTime", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 148.2, "Maximum": 179.0, "Minimum": 120.0, "SampleCount": 5.0,
+      "Sum": 741.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-046f324859a6660ea]", "metric_name": "VolumeWriteOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-046f324859a6660ea]",
+      "metric_name": "VolumeReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 8775.859649122807, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      741.0, "Sum": 6502912.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-046f324859a6660ea]", "metric_name": "VolumeWriteBytes", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 100.0, "Maximum": 100.0, "Minimum": 100.0, "SampleCount": 5.0,
+      "Sum": 500.0, "Unit": "Percent", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0428cb22aa251a107]", "metric_name": "BurstBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.000433333333333334, "Maximum": 0.00216666666666667, "Minimum":
+      0.0, "SampleCount": 5.0, "Sum": 0.00216666666666667, "Unit": "Count", "account_id":
+      "755695087069", "metric_dimensions": "VolumeId=[vol-0428cb22aa251a107]", "metric_name":
+      "VolumeQueueLength", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 59.998000000000005, "Maximum": 60.0, "Minimum": 59.99, "SampleCount":
+      5.0, "Sum": 299.99, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0428cb22aa251a107]", "metric_name": "VolumeIdleTime", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0002719665271966527, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      478.0, "Sum": 0.13, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0428cb22aa251a107]", "metric_name": "VolumeTotalWriteTime", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 95.6, "Maximum": 157.0, "Minimum": 48.0, "SampleCount": 5.0,
+      "Sum": 478.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0428cb22aa251a107]", "metric_name": "VolumeWriteOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0428cb22aa251a107]",
+      "metric_name": "VolumeReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 5639.497907949791, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      478.0, "Sum": 2695680.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0428cb22aa251a107]", "metric_name": "VolumeWriteBytes", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 99.9999962962963, "Maximum": 100.0, "Minimum": 99.9999814814815,
+      "SampleCount": 5.0, "Sum": 499.9999814814815, "Unit": "Percent", "account_id":
+      "755695087069", "metric_dimensions": "VolumeId=[vol-082bb054802514b7c]", "metric_name":
+      "BurstBalance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.348833333333334, "Maximum": 1.42666666666667, "Minimum":
+      0.0261666666666667, "SampleCount": 5.0, "Sum": 1.74416666666667, "Unit": "Count",
+      "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-082bb054802514b7c]",
+      "metric_name": "VolumeQueueLength", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 58.077999999999996, "Maximum": 59.65, "Minimum": 52.57, "SampleCount":
+      5.0, "Sum": 290.39, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-082bb054802514b7c]", "metric_name": "VolumeIdleTime", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.003178728875826598, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      32664.0, "Sum": 103.83, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-082bb054802514b7c]", "metric_name": "VolumeTotalWriteTime", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0010272277227722773, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      808.0, "Sum": 0.8300000000000001, "Unit": "Seconds", "account_id": "755695087069",
+      "metric_dimensions": "VolumeId=[vol-082bb054802514b7c]", "metric_name": "VolumeTotalReadTime",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 6532.8, "Maximum": 19813.0, "Minimum": 1618.0, "SampleCount":
+      5.0, "Sum": 32664.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-082bb054802514b7c]", "metric_name": "VolumeWriteOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 161.6, "Maximum": 755.0, "Minimum": 0.0, "SampleCount": 5.0,
+      "Sum": 808.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-082bb054802514b7c]", "metric_name": "VolumeReadOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 44702.3149644869, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      32664.0, "Sum": 1460156416.0, "Unit": "Bytes", "account_id": "755695087069",
+      "metric_dimensions": "VolumeId=[vol-082bb054802514b7c]", "metric_name": "VolumeWriteBytes",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 26694.970297029704, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      808.0, "Sum": 21569536.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-082bb054802514b7c]", "metric_name": "VolumeReadBytes", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 100.0, "Maximum": 100.0, "Minimum": 100.0, "SampleCount": 5.0,
+      "Sum": 500.0, "Unit": "Percent", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0885d8c9e14187d71]", "metric_name": "BurstBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.37169999999999936, "Maximum": 1.62733333333333, "Minimum":
+      0.0085, "SampleCount": 5.0, "Sum": 1.8584999999999967, "Unit": "Count", "account_id":
+      "755695087069", "metric_dimensions": "VolumeId=[vol-0885d8c9e14187d71]", "metric_name":
+      "VolumeQueueLength", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 58.162, "Maximum": 59.9, "Minimum": 51.69, "SampleCount": 5.0,
+      "Sum": 290.81, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0885d8c9e14187d71]", "metric_name": "VolumeIdleTime", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.003929326381059752, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      28384.0, "Sum": 111.53, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0885d8c9e14187d71]", "metric_name": "VolumeTotalWriteTime", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0885d8c9e14187d71]",
+      "metric_name": "VolumeTotalReadTime", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 5676.8, "Maximum": 19518.0, "Minimum": 595.0, "SampleCount":
+      5.0, "Sum": 28384.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0885d8c9e14187d71]", "metric_name": "VolumeWriteOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.2, "Maximum": 1.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      1.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0885d8c9e14187d71]",
+      "metric_name": "VolumeReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 49071.098083427285, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      28384.0, "Sum": 1392834048.0, "Unit": "Bytes", "account_id": "755695087069",
+      "metric_dimensions": "VolumeId=[vol-0885d8c9e14187d71]", "metric_name": "VolumeWriteBytes",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 16384.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0,
+      "Sum": 16384.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0885d8c9e14187d71]", "metric_name": "VolumeReadBytes", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 99.0, "Maximum": 99.0, "Minimum": 99.0, "SampleCount": 5.0,
+      "Sum": 495.0, "Unit": "Percent", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0c1e958d85f79a979]", "metric_name": "BurstBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.062890625, "Maximum": 0.1611328125, "Minimum": 0.025390625,
+      "SampleCount": 5.0, "Sum": 0.314453125, "Unit": "Count", "account_id": "755695087069",
+      "metric_dimensions": "VolumeId=[vol-0c1e958d85f79a979]", "metric_name": "VolumeQueueLength",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 59.09694400000001, "Maximum": 59.652003, "Minimum": 57.260482,
+      "SampleCount": 5.0, "Sum": 295.48472000000004, "Unit": "Seconds", "account_id":
+      "755695087069", "metric_dimensions": "VolumeId=[vol-0c1e958d85f79a979]", "metric_name":
+      "VolumeIdleTime", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 3.82026, "Maximum": 9.723226, "Minimum": 1.566396, "SampleCount":
+      5.0, "Sum": 19.101300000000002, "Unit": "Seconds", "account_id": "755695087069",
+      "metric_dimensions": "VolumeId=[vol-0c1e958d85f79a979]", "metric_name": "VolumeTotalWriteTime",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0c1e958d85f79a979]",
+      "metric_name": "VolumeTotalReadTime", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 3331.8, "Maximum": 6709.0, "Minimum": 2069.0, "SampleCount":
+      5.0, "Sum": 16659.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0c1e958d85f79a979]", "metric_name": "VolumeWriteOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0c1e958d85f79a979]",
+      "metric_name": "VolumeReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 316239872.0, "Maximum": 1151280640.0, "Minimum": 25401344.0,
+      "SampleCount": 5.0, "Sum": 1581199360.0, "Unit": "Bytes", "account_id": "755695087069",
+      "metric_dimensions": "VolumeId=[vol-0c1e958d85f79a979]", "metric_name": "VolumeWriteBytes",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0c1e958d85f79a979]",
+      "metric_name": "VolumeReadBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 99.0, "Maximum": 99.0, "Minimum": 99.0, "SampleCount": 5.0,
+      "Sum": 495.0, "Unit": "Percent", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0f2301cc9fd435b38]", "metric_name": "BurstBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0408203125, "Maximum": 0.0546875, "Minimum": 0.0283203125,
+      "SampleCount": 5.0, "Sum": 0.2041015625, "Unit": "Count", "account_id": "755695087069",
+      "metric_dimensions": "VolumeId=[vol-0f2301cc9fd435b38]", "metric_name": "VolumeQueueLength",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 59.17665380000001, "Maximum": 59.502551, "Minimum": 58.901467,
+      "SampleCount": 5.0, "Sum": 295.88326900000004, "Unit": "Seconds", "account_id":
+      "755695087069", "metric_dimensions": "VolumeId=[vol-0f2301cc9fd435b38]", "metric_name":
+      "VolumeIdleTime", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 2.4868316000000004, "Maximum": 3.319478, "Minimum": 1.755112,
+      "SampleCount": 5.0, "Sum": 12.434158000000002, "Unit": "Seconds", "account_id":
+      "755695087069", "metric_dimensions": "VolumeId=[vol-0f2301cc9fd435b38]", "metric_name":
+      "VolumeTotalWriteTime", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0f2301cc9fd435b38]",
+      "metric_name": "VolumeTotalReadTime", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 3343.0, "Maximum": 3993.0, "Minimum": 2314.0, "SampleCount":
+      5.0, "Sum": 16715.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0f2301cc9fd435b38]", "metric_name": "VolumeWriteOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0f2301cc9fd435b38]",
+      "metric_name": "VolumeReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 80361062.4, "Maximum": 153223168.0, "Minimum": 42409984.0,
+      "SampleCount": 5.0, "Sum": 401805312.0, "Unit": "Bytes", "account_id": "755695087069",
+      "metric_dimensions": "VolumeId=[vol-0f2301cc9fd435b38]", "metric_name": "VolumeWriteBytes",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0f2301cc9fd435b38]",
+      "metric_name": "VolumeReadBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 99.99758518518517, "Maximum": 100.0, "Minimum": 99.9879259259259,
+      "SampleCount": 5.0, "Sum": 499.9879259259259, "Unit": "Percent", "account_id":
+      "755695087069", "metric_dimensions": "VolumeId=[vol-0efd4cef84dd8f8ab]", "metric_name":
+      "BurstBalance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.013600000000000001, "Maximum": 0.065, "Minimum": 0.0005,
+      "SampleCount": 5.0, "Sum": 0.068, "Unit": "Count", "account_id": "755695087069",
+      "metric_dimensions": "VolumeId=[vol-0efd4cef84dd8f8ab]", "metric_name": "VolumeQueueLength",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 59.31400000000001, "Maximum": 59.97, "Minimum": 56.75, "SampleCount":
+      5.0, "Sum": 296.57000000000005, "Unit": "Seconds", "account_id": "755695087069",
+      "metric_dimensions": "VolumeId=[vol-0efd4cef84dd8f8ab]", "metric_name": "VolumeIdleTime",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0005105633802816902, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      568.0, "Sum": 0.29000000000000004, "Unit": "Seconds", "account_id": "755695087069",
+      "metric_dimensions": "VolumeId=[vol-0efd4cef84dd8f8ab]", "metric_name": "VolumeTotalWriteTime",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0006121789694718139, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      6191.0, "Sum": 3.79, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0efd4cef84dd8f8ab]", "metric_name": "VolumeTotalReadTime", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 113.6, "Maximum": 123.0, "Minimum": 102.0, "SampleCount": 5.0,
+      "Sum": 568.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0efd4cef84dd8f8ab]", "metric_name": "VolumeWriteOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 1238.2, "Maximum": 6191.0, "Minimum": 0.0, "SampleCount": 5.0,
+      "Sum": 6191.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0efd4cef84dd8f8ab]", "metric_name": "VolumeReadOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 12365.521126760563, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      568.0, "Sum": 7023616.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0efd4cef84dd8f8ab]", "metric_name": "VolumeWriteBytes", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 16585.955096107253, "Maximum": 0.0, "Minimum": 0.0, "SampleCount":
+      6191.0, "Sum": 102683648.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0efd4cef84dd8f8ab]", "metric_name": "VolumeReadBytes", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 864.0, "Maximum": 864.0, "Minimum": 864.0, "SampleCount": 1.0,
+      "Sum": 864.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-06db6dbd61dbaca8d]", "metric_name": "CPUCreditBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-06db6dbd61dbaca8d]",
+      "metric_name": "MetadataNoToken", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-06db6dbd61dbaca8d]",
+      "metric_name": "CPUSurplusCreditsCharged", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-06db6dbd61dbaca8d]",
+      "metric_name": "DiskWriteOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 373.4, "Maximum": 411.0, "Minimum": 338.0, "SampleCount": 5.0,
+      "Sum": 1867.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-06db6dbd61dbaca8d]", "metric_name": "NetworkPacketsIn", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-54-43.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-06db6dbd61dbaca8d]",
+      "metric_name": "StatusCheckFailed", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: iip-10-345-54-43.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-06db6dbd61dbaca8d]",
+      "metric_name": "StatusCheckFailed_Instance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 315.2, "Maximum": 339.0, "Minimum": 291.0, "SampleCount": 5.0,
+      "Sum": 1576.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-06db6dbd61dbaca8d]", "metric_name": "NetworkPacketsOut", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 559687.0, "Maximum": 580875.0, "Minimum": 546460.0, "SampleCount":
+      5.0, "Sum": 2798435.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-06db6dbd61dbaca8d]", "metric_name": "NetworkOut", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 42750.4, "Maximum": 46851.0, "Minimum": 36007.0, "SampleCount":
+      5.0, "Sum": 213752.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-06db6dbd61dbaca8d]", "metric_name": "NetworkIn", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 19.78333333328677, "Maximum": 50.5000000000776, "Minimum":
+      3.75, "SampleCount": 5.0, "Sum": 98.91666666643385, "Unit": "Percent", "account_id":
+      "755695087069", "metric_dimensions": "InstanceId=[i-06db6dbd61dbaca8d]", "metric_name":
+      "CPUUtilization", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-06db6dbd61dbaca8d]",
+      "metric_name": "DiskWriteBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-06db6dbd61dbaca8d]",
+      "metric_name": "DiskReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-06db6dbd61dbaca8d]",
+      "metric_name": "DiskReadBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-06db6dbd61dbaca8d]",
+      "metric_name": "CPUSurplusCreditBalance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.424118, "Maximum": 0.424118, "Minimum": 0.424118, "SampleCount":
+      1.0, "Sum": 0.424118, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-06db6dbd61dbaca8d]", "metric_name": "CPUCreditUsage", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-06db6dbd61dbaca8d]",
+      "metric_name": "StatusCheckFailed_System", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 576.0, "Maximum": 576.0, "Minimum": 576.0, "SampleCount": 1.0,
+      "Sum": 576.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0e5bf972e5b5f5761]", "metric_name": "CPUCreditBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0e5bf972e5b5f5761]",
+      "metric_name": "MetadataNoToken", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0e5bf972e5b5f5761]",
+      "metric_name": "CPUSurplusCreditsCharged", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0e5bf972e5b5f5761]",
+      "metric_name": "StatusCheckFailed", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0e5bf972e5b5f5761]",
+      "metric_name": "StatusCheckFailed_Instance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0e5bf972e5b5f5761]",
+      "metric_name": "CPUSurplusCreditBalance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.45867, "Maximum": 0.45867, "Minimum": 0.45867, "SampleCount":
+      1.0, "Sum": 0.45867, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0e5bf972e5b5f5761]", "metric_name": "CPUCreditUsage", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-32.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0e5bf972e5b5f5761]",
+      "metric_name": "StatusCheckFailed_System", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-30.acme.com
+    _raw: '{"Average": 864.0, "Maximum": 864.0, "Minimum": 864.0, "SampleCount": 1.0,
+      "Sum": 864.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0a594ccf0f3c8f37f]", "metric_name": "CPUCreditBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-30.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0a594ccf0f3c8f37f]",
+      "metric_name": "MetadataNoToken", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-30.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0a594ccf0f3c8f37f]",
+      "metric_name": "CPUSurplusCreditsCharged", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-30.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0a594ccf0f3c8f37f]",
+      "metric_name": "StatusCheckFailed", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-30.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0a594ccf0f3c8f37f]",
+      "metric_name": "StatusCheckFailed_Instance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-30.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0a594ccf0f3c8f37f]",
+      "metric_name": "CPUSurplusCreditBalance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-30.acme.com
+    _raw: '{"Average": 0.485438, "Maximum": 0.485438, "Minimum": 0.485438, "SampleCount":
+      1.0, "Sum": 0.485438, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0a594ccf0f3c8f37f]", "metric_name": "CPUCreditUsage", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-30.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0a594ccf0f3c8f37f]",
+      "metric_name": "StatusCheckFailed_System", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 576.0, "Maximum": 576.0, "Minimum": 576.0, "SampleCount": 1.0,
+      "Sum": 576.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-08661e2f1ae1e78d2]", "metric_name": "CPUCreditBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-08661e2f1ae1e78d2]",
+      "metric_name": "MetadataNoToken", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-08661e2f1ae1e78d2]",
+      "metric_name": "CPUSurplusCreditsCharged", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-08661e2f1ae1e78d2]",
+      "metric_name": "DiskWriteOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 185.4, "Maximum": 211.0, "Minimum": 166.0, "SampleCount": 5.0,
+      "Sum": 927.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-08661e2f1ae1e78d2]", "metric_name": "NetworkPacketsIn", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-08661e2f1ae1e78d2]",
+      "metric_name": "StatusCheckFailed", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-08661e2f1ae1e78d2]",
+      "metric_name": "StatusCheckFailed_Instance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 241.0, "Maximum": 265.0, "Minimum": 223.0, "SampleCount": 5.0,
+      "Sum": 1205.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-08661e2f1ae1e78d2]", "metric_name": "NetworkPacketsOut", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 209883.0, "Maximum": 219248.0, "Minimum": 193428.0, "SampleCount":
+      5.0, "Sum": 1049415.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-08661e2f1ae1e78d2]", "metric_name": "NetworkOut", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 28212.4, "Maximum": 29256.0, "Minimum": 26586.0, "SampleCount":
+      5.0, "Sum": 141062.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-08661e2f1ae1e78d2]", "metric_name": "NetworkIn", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 1.120312794434308, "Maximum": 1.16666666658906, "Minimum":
+      1.08333333337214, "SampleCount": 5.0, "Sum": 5.60156397217154, "Unit": "Percent",
+      "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-08661e2f1ae1e78d2]",
+      "metric_name": "CPUUtilization", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-08661e2f1ae1e78d2]",
+      "metric_name": "DiskWriteBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-08661e2f1ae1e78d2]",
+      "metric_name": "DiskReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-08661e2f1ae1e78d2]",
+      "metric_name": "DiskReadBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-08661e2f1ae1e78d2]",
+      "metric_name": "CPUSurplusCreditBalance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 0.106919, "Maximum": 0.106919, "Minimum": 0.106919, "SampleCount":
+      1.0, "Sum": 0.106919, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-08661e2f1ae1e78d2]", "metric_name": "CPUCreditUsage", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-23-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-08661e2f1ae1e78d2]",
+      "metric_name": "StatusCheckFailed_System", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 1022936.4, "Maximum": 2344819.0, "Minimum": 644802.0, "SampleCount":
+      5.0, "Sum": 5114682.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0b08a46573d49b2ee]", "metric_name": "NetworkIn", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 2748.0, "Maximum": 4025.0, "Minimum": 2375.0, "SampleCount":
+      5.0, "Sum": 13740.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0b08a46573d49b2ee]", "metric_name": "NetworkPacketsIn", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0b08a46573d49b2ee]",
+      "metric_name": "StatusCheckFailed_Instance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 3331.8, "Maximum": 6709.0, "Minimum": 2069.0, "SampleCount":
+      5.0, "Sum": 16659.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0b08a46573d49b2ee]", "metric_name": "EBSWriteOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0b08a46573d49b2ee]",
+      "metric_name": "EBSReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 4.4, "Maximum": 6.0, "Minimum": 4.0, "SampleCount": 5.0, "Sum":
+      22.0, "Unit": "None", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0b08a46573d49b2ee]",
+      "metric_name": "MetadataNoToken", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0b08a46573d49b2ee]",
+      "metric_name": "StatusCheckFailed", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 15.166333333333332, "Maximum": 20.38, "Minimum": 11.301666666666668,
+      "SampleCount": 5.0, "Sum": 75.83166666666666, "Unit": "Percent", "account_id":
+      "755695087069", "metric_dimensions": "InstanceId=[i-0b08a46573d49b2ee]", "metric_name":
+      "CPUUtilization", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0b08a46573d49b2ee]",
+      "metric_name": "EBSReadBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 316239872.0, "Maximum": 1151280640.0, "Minimum": 25401344.0,
+      "SampleCount": 5.0, "Sum": 1581199360.0, "Unit": "Bytes", "account_id": "755695087069",
+      "metric_dimensions": "InstanceId=[i-0b08a46573d49b2ee]", "metric_name": "EBSWriteBytes",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 3275.8, "Maximum": 4690.0, "Minimum": 2618.0, "SampleCount":
+      5.0, "Sum": 16379.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0b08a46573d49b2ee]", "metric_name": "NetworkPacketsOut", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host:ip-10-345-22-28.acme.com
+    _raw: '{"Average": 9628478.4, "Maximum": 10664460.0, "Minimum": 6317114.0, "SampleCount":
+      5.0, "Sum": 48142392.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0b08a46573d49b2ee]", "metric_name": "NetworkOut", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-28.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0b08a46573d49b2ee]",
+      "metric_name": "StatusCheckFailed_System", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-26.acme.com
+    _raw: '{"Average": 1296.0, "Maximum": 1296.0, "Minimum": 1296.0, "SampleCount":
+      1.0, "Sum": 1296.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-023ee207c86a15a06]", "metric_name": "CPUCreditBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-26.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
+      "metric_name": "MetadataNoToken", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-26.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
+      "metric_name": "CPUSurplusCreditsCharged", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-26.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
+      "metric_name": "StatusCheckFailed", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-26.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
+      "metric_name": "StatusCheckFailed_Instance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-26.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
+      "metric_name": "CPUSurplusCreditBalance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-26.acme.com
+    _raw: '{"Average": 1.895239, "Maximum": 1.895239, "Minimum": 1.895239, "SampleCount":
+      1.0, "Sum": 1.895239, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-023ee207c86a15a06]", "metric_name": "CPUCreditUsage", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host:ip-10-345-22-26.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
+      "metric_name": "StatusCheckFailed_System", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-26.acme.com
+    _raw: '{"Average": 1296.0, "Maximum": 1296.0, "Minimum": 1296.0, "SampleCount":
+      1.0, "Sum": 1296.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-090bfe7b4ccad82fc]", "metric_name": "CPUCreditBalance", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-090bfe7b4ccad82fc]",
+      "metric_name": "MetadataNoToken", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-090bfe7b4ccad82fc]",
+      "metric_name": "CPUSurplusCreditsCharged", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-090bfe7b4ccad82fc]",
+      "metric_name": "DiskWriteOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 3117.8, "Maximum": 4978.0, "Minimum": 2440.0, "SampleCount":
+      5.0, "Sum": 15589.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-090bfe7b4ccad82fc]", "metric_name": "NetworkPacketsIn", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-090bfe7b4ccad82fc]",
+      "metric_name": "StatusCheckFailed", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-090bfe7b4ccad82fc]",
+      "metric_name": "StatusCheckFailed_Instance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 2324.8, "Maximum": 3219.0, "Minimum": 1948.0, "SampleCount":
+      5.0, "Sum": 11624.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-090bfe7b4ccad82fc]", "metric_name": "NetworkPacketsOut", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 366379.4, "Maximum": 740719.0, "Minimum": 250068.0, "SampleCount":
+      5.0, "Sum": 1831897.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-090bfe7b4ccad82fc]", "metric_name": "NetworkOut", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 4214743.2, "Maximum": 5993509.0, "Minimum": 3563438.0, "SampleCount":
+      5.0, "Sum": 21073716.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-090bfe7b4ccad82fc]", "metric_name": "NetworkIn", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 5.366666666620103, "Maximum": 8.29166666643384, "Minimum":
+      4.24999999968956, "SampleCount": 5.0, "Sum": 26.833333333100512, "Unit": "Percent",
+      "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-090bfe7b4ccad82fc]",
+      "metric_name": "CPUUtilization", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-090bfe7b4ccad82fc]",
+      "metric_name": "DiskWriteBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: $decideOnStartup
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-090bfe7b4ccad82fc]",
+      "metric_name": "DiskReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-090bfe7b4ccad82fc]",
+      "metric_name": "DiskReadBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-090bfe7b4ccad82fc]",
+      "metric_name": "CPUSurplusCreditBalance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 1.311816, "Maximum": 1.311816, "Minimum": 1.311816, "SampleCount":
+      1.0, "Sum": 1.311816, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-090bfe7b4ccad82fc]", "metric_name": "CPUCreditUsage", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-23.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-090bfe7b4ccad82fc]",
+      "metric_name": "StatusCheckFailed_System", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 11571469.4, "Maximum": 12007213.0, "Minimum": 11116164.0, "SampleCount":
+      5.0, "Sum": 57857347.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0d661437ec3bab1a4]", "metric_name": "NetworkIn", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 8231.4, "Maximum": 8522.0, "Minimum": 7913.0, "SampleCount":
+      5.0, "Sum": 41157.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0d661437ec3bab1a4]", "metric_name": "NetworkPacketsIn", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0d661437ec3bab1a4]",
+      "metric_name": "StatusCheckFailed_Instance", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 3343.0, "Maximum": 3993.0, "Minimum": 2314.0, "SampleCount":
+      5.0, "Sum": 16715.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0d661437ec3bab1a4]", "metric_name": "EBSWriteOps", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0d661437ec3bab1a4]",
+      "metric_name": "EBSReadOps", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "None", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0d661437ec3bab1a4]",
+      "metric_name": "MetadataNoToken", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0d661437ec3bab1a4]",
+      "metric_name": "StatusCheckFailed", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 8.695333333333334, "Maximum": 15.268333333333334, "Minimum":
+      6.513333333333334, "SampleCount": 5.0, "Sum": 43.476666666666674, "Unit": "Percent",
+      "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0d661437ec3bab1a4]",
+      "metric_name": "CPUUtilization", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0d661437ec3bab1a4]",
+      "metric_name": "EBSReadBytes", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 80361062.4, "Maximum": 153223168.0, "Minimum": 42409984.0,
+      "SampleCount": 5.0, "Sum": 401805312.0, "Unit": "Bytes", "account_id": "755695087069",
+      "metric_dimensions": "InstanceId=[i-0d661437ec3bab1a4]", "metric_name": "EBSWriteBytes",
+      "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 4485.6, "Maximum": 4667.0, "Minimum": 4350.0, "SampleCount":
+      5.0, "Sum": 22428.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0d661437ec3bab1a4]", "metric_name": "NetworkPacketsOut", "period":
+      300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 411002.6, "Maximum": 431862.0, "Minimum": 397703.0, "SampleCount":
+      5.0, "Sum": 2055013.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "InstanceId=[i-0d661437ec3bab1a4]", "metric_name": "NetworkOut", "period": 300,
+      "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EC2
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-0d661437ec3bab1a4]",
+      "metric_name": "StatusCheckFailed_System", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 2.0, "Sum":
+      0.0, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-0302da28b04512044]",
+      "metric_name": "VolumeTotalReadTime", "period": 300, "timestamp": "2021-11-27T05:40:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-345-22-21.acme.com
+    _raw: '{"Average": 4096.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 2.0,
+      "Sum": 8192.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-0302da28b04512044]", "metric_name": "VolumeReadBytes", "period":
+      300, "timestamp": "2021-11-27T05:40:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      0.0, "Unit": "Seconds", "account_id": "755695087069", "metric_dimensions": "VolumeId=[vol-046f324859a6660ea]",
+      "metric_name": "VolumeTotalReadTime", "period": 300, "timestamp": "2021-11-25T12:15:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/EBS
+    host: ip-10-45-23-35.acme.com
+    _raw: '{"Average": 4096.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0,
+      "Sum": 4096.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "VolumeId=[vol-046f324859a6660ea]", "metric_name": "VolumeReadBytes", "period":
+      300, "timestamp": "2021-11-25T12:15:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: acme-loadbalancer.lb.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "LoadBalancer=[app/fooLambda/78b15919699758a2]",
+      "metric_name": "ConsumedLCUs", "period": 300, "timestamp": "2021-11-04T21:30:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: acme-front-lb.acme.com
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 20.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "LoadBalancer=[app/fooLambda/78b15919699758a2]",
+      "metric_name": "RequestCount", "period": 300, "timestamp": "2021-11-04T21:20:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-12.34.456.234.ec2.acme.io
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 5.0, "Sum":
+      5.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[testLambda]",
+      "metric_name": "ConcurrentExecutions", "period": 300, "timestamp": "2021-11-04T21:10:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-12.34.456.234.ec2.acme.io
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[testLambda]",
+      "metric_name": "Throttles", "period": 300, "timestamp": "2021-11-04T21:10:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-12.34.456.234.ec2.acme.io
+    _raw: '{"Average": 4.39, "Maximum": 15.37, "Minimum": 1.25, "SampleCount": 5.0,
+      "Sum": 21.95, "Unit": "Milliseconds", "account_id": "755695087069", "metric_dimensions":
+      "FunctionName=[testLambda]", "metric_name": "Duration", "period": 300, "timestamp":
+      "2021-11-04T21:10:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-12.34.456.234.ec2.acme.io
+    _raw: '{"Average": 0.4, "Maximum": 1.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      2.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[testLambda]",
+      "metric_name": "Errors", "period": 300, "timestamp": "2021-11-04T21:10:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-12.34.456.234.ec2.acme.io
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 5.0, "Sum":
+      5.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[testLambda]",
+      "metric_name": "Invocations", "period": 300, "timestamp": "2021-11-04T21:10:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-12.34.456.234.ec2.acme.io
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[testLambda],Resource=[testLambda]",
+      "metric_name": "Throttles", "period": 300, "timestamp": "2021-11-04T21:10:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-12.34.456.234.ec2.acme.io
+    _raw: '{"Average": 4.39, "Maximum": 15.37, "Minimum": 1.25, "SampleCount": 5.0,
+      "Sum": 21.95, "Unit": "Milliseconds", "account_id": "755695087069", "metric_dimensions":
+      "FunctionName=[testLambda],Resource=[testLambda]", "metric_name": "Duration",
+      "period": 300, "timestamp": "2021-11-04T21:10:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-12.34.456.234.ec2.acme.io
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 5.0, "Sum":
+      5.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[testLambda],Resource=[testLambda]",
+      "metric_name": "Invocations", "period": 300, "timestamp": "2021-11-04T21:10:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-12.34.456.234.ec2.acme.io
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 5.0, "Sum":
+      5.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[testLambda],Resource=[testLambda]",
+      "metric_name": "ConcurrentExecutions", "period": 300, "timestamp": "2021-11-04T21:10:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: acme-application.alb.acme.com
+    _raw: '{"Average": 0.4, "Maximum": 1.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
+      2.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[testLambda],Resource=[testLambda]",
+      "metric_name": "Errors", "period": 300, "timestamp": "2021-11-04T21:10:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: acme-application.alb.acme.com
+    _raw: '{"Average": 395.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0,
+      "Sum": 395.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
+      "LoadBalancer=[app/fooLambda/78b15919699758a2]", "metric_name": "ProcessedBytes",
+      "period": 300, "timestamp": "2021-11-04T20:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: acme-application.alb.acme.com
+    _raw: '{"Average": 1.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      1.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "LoadBalancer=[app/fooLambda/78b15919699758a2]",
+      "metric_name": "NewConnectionCount", "period": 300, "timestamp": "2021-11-04T20:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: acme-application.alb.acme.com
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 1.0, "Sum":
+      1.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "LoadBalancer=[app/fooLambda/78b15919699758a2]",
+      "metric_name": "HTTPCode_ELB_4XX_Count", "period": 300, "timestamp": "2021-11-04T20:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: acme-application.alb.acme.com
+    _raw: '{"Average": 1.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 1.0, "Sum":
+      1.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "LoadBalancer=[app/fooLambda/78b15919699758a2]",
+      "metric_name": "ActiveConnectionCount", "period": 300, "timestamp": "2021-11-04T20:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: acme-application.alb.acme.com
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 1.0, "Sum":
+      1.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "AvailabilityZone=[us-west-1c],LoadBalancer=[app/fooLambda/78b15919699758a2]",
+      "metric_name": "HTTPCode_ELB_4XX_Count", "period": 300, "timestamp": "2021-11-04T20:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: acme-application.alb.acme.com
+    _raw: '{"Average": 0.022419333333333333, "Maximum": 0.03447, "Minimum": 0.016338,
+      "SampleCount": 3.0, "Sum": 0.067258, "Unit": "Seconds", "account_id": "755695087069",
+      "metric_dimensions": "LoadBalancer=[app/fooLambda/78b15919699758a2]", "metric_name":
+      "TargetResponseTime", "period": 300, "timestamp": "2021-11-04T20:30:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: acme-application.alb.acme.com
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 3.0, "Sum":
+      3.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "LoadBalancer=[app/fooLambda/78b15919699758a2]",
+      "metric_name": "HTTPCode_ELB_5XX_Count", "period": 300, "timestamp": "2021-11-04T20:30:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: acme-application.alb.acme.com
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 2.0, "Sum":
+      2.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "AvailabilityZone=[us-west-1b],LoadBalancer=[app/fooLambda/78b15919699758a2]",
+      "metric_name": "HTTPCode_ELB_5XX_Count", "period": 300, "timestamp": "2021-11-04T20:30:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: acme-application.alb.acme.com
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 1.0, "Sum":
+      1.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "AvailabilityZone=[us-west-1c],LoadBalancer=[app/fooLambda/78b15919699758a2]",
+      "metric_name": "HTTPCode_ELB_5XX_Count", "period": 300, "timestamp": "2021-11-04T20:30:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/ApplicationELB
+    host: 
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 1.0, "Sum":
+      1.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "AvailabilityZone=[us-west-1b],LoadBalancer=[app/fooLambda/78b15919699758a2]",
+      "metric_name": "HTTPCode_ELB_4XX_Count", "period": 300, "timestamp": "2021-11-04T19:55:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-10-202-14-145.ec2.acme.io
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 3.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[ErrorFunction],Resource=[ErrorFunction]",
+      "metric_name": "Throttles", "period": 300, "timestamp": "2021-09-28T18:05:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-10-202-14-145.ec2.acme.io
+    _raw: '{"Average": 49.52666666666667, "Maximum": 77.12, "Minimum": 34.13, "SampleCount":
+      3.0, "Sum": 148.58, "Unit": "Milliseconds", "account_id": "755695087069", "metric_dimensions":
+      "FunctionName=[ErrorFunction],Resource=[ErrorFunction]", "metric_name": "Duration",
+      "period": 300, "timestamp": "2021-09-28T18:05:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-10-202-14-145.ec2.acme.io
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 3.0, "Sum":
+      3.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[ErrorFunction],Resource=[ErrorFunction]",
+      "metric_name": "Invocations", "period": 300, "timestamp": "2021-09-28T18:05:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-10-202-14-145.ec2.acme.io
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 3.0, "Sum":
+      3.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[ErrorFunction],Resource=[ErrorFunction]",
+      "metric_name": "ConcurrentExecutions", "period": 300, "timestamp": "2021-09-28T18:05:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-10-202-14-145.ec2.acme.io
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 3.0, "Sum":
+      3.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[ErrorFunction],Resource=[ErrorFunction]",
+      "metric_name": "Errors", "period": 300, "timestamp": "2021-09-28T18:05:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-10-202-14-145.ec2.acme.io
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 3.0, "Sum":
+      3.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[ErrorFunction]",
+      "metric_name": "ConcurrentExecutions", "period": 300, "timestamp": "2021-09-28T18:05:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-10-202-14-145.ec2.acme.io
+    _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 3.0, "Sum":
+      0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[ErrorFunction]",
+      "metric_name": "Throttles", "period": 300, "timestamp": "2021-09-28T18:05:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-10-202-14-145.ec2.acme.io
+    _raw: '{"Average": 49.52666666666667, "Maximum": 77.12, "Minimum": 34.13, "SampleCount":
+      3.0, "Sum": 148.58, "Unit": "Milliseconds", "account_id": "755695087069", "metric_dimensions":
+      "FunctionName=[ErrorFunction]", "metric_name": "Duration", "period": 300, "timestamp":
+      "2021-09-28T18:05:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-10-202-14-145.ec2.acme.io
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 3.0, "Sum":
+      3.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[ErrorFunction]",
+      "metric_name": "Errors", "period": 300, "timestamp": "2021-09-28T18:05:00Z"}'
+  - index: aws
+    sourcetype: aws:cloudwatch
+    source: us-west-1:AWS/Lambda
+    host: ip-10-202-14-145.ec2.acme.io
+    _raw: '{"Average": 1.0, "Maximum": 1.0, "Minimum": 1.0, "SampleCount": 3.0, "Sum":
+      3.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "FunctionName=[ErrorFunction]",
+      "metric_name": "Invocations", "period": 300, "timestamp": "2021-09-28T18:05:00Z"}'

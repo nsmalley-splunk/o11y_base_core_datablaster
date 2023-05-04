@@ -1,0 +1,1216 @@
+samples:
+- name: ITF-Windows-PerfmonMetrics-win02
+  interval: 30
+  count: 93
+  randomizeEvents: false
+  tokens:
+  - name: VALUE_1
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 28.055372
+    upper: 30.143485
+  - name: VALUE_2
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 99.459784
+    upper: 100.459784
+  - name: VALUE_3
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 39.674426
+    upper: 41.422758
+  - name: VALUE_4
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 7215.0
+    upper: 7887.0
+  - name: VALUE_5
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 4971.0
+    upper: 4972.0
+  - name: VALUE_6
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 12186.0
+    upper: 12858.0
+  - name: VALUE_7
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 21.057214
+    upper: 30.232372
+  - name: VALUE_8
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 5633531904.0
+    upper: 6586040320.0
+  - name: VALUE_9
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2091339776.0
+    upper: 3002589184.0
+  - name: VALUE_10
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.016071
+    upper: 260.104063
+  - name: VALUE_11
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.016071
+    upper: 2457.976894
+  - name: VALUE_12
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 19.661191
+    upper: 600.447496
+  - name: VALUE_13
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 213.698668
+    upper: 2073098.694977
+  - name: VALUE_14
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 5335.682777
+    upper: 109915.285327
+  - name: VALUE_15
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.000424
+    upper: 13.21113
+  - name: VALUE_16
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.000424
+    upper: 13.21113
+  - name: VALUE_17
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.088519
+    upper: 28.479406
+  - name: VALUE_18
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.088519
+    upper: 28.479406
+  - name: VALUE_19
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 3.05755
+    upper: 4.05755
+  - name: VALUE_20
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026045
+    upper: 1.026045
+  - name: VALUE_21
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026032
+    upper: 1.026032
+  - name: VALUE_22
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026047
+    upper: 1.026047
+  - name: VALUE_23
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 12.666737
+    upper: 100.0
+  - name: VALUE_24
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 3.05755
+    upper: 4.05755
+  - name: VALUE_25
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026045
+    upper: 1.026045
+  - name: VALUE_26
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026032
+    upper: 1.026032
+  - name: VALUE_27
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026032
+    upper: 1.026032
+  - name: VALUE_28
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026038
+    upper: 1.026038
+  - name: VALUE_29
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.052082
+    upper: 1.052082
+  - name: VALUE_30
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026036
+    upper: 1.026036
+  - name: VALUE_31
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026032
+    upper: 1.026032
+  - name: VALUE_32
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026034
+    upper: 1.0260340000000001
+  - name: VALUE_33
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026019
+    upper: 1.026019
+  - name: VALUE_34
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 27.441844
+    upper: 28.441844
+  - name: VALUE_35
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 34.897539
+    upper: 35.897539
+  - name: VALUE_36
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1.555942
+    upper: 2.555942
+  - name: VALUE_37
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2.322708
+    upper: 3.322708
+  - name: VALUE_38
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 3.059107
+    upper: 4.059107
+  - name: VALUE_39
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 172.412155
+    upper: 173.412155
+  - name: VALUE_40
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 195.680126
+    upper: 196.680126
+  - name: VALUE_41
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 49.499661
+    upper: 50.499661
+  - name: VALUE_42
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2.931405
+    upper: 16.13577
+  - name: VALUE_43
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2.665547
+    upper: 3.665547
+  - name: VALUE_44
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1.465702
+    upper: 8.067885
+  - name: VALUE_45
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1.332773
+    upper: 2.332773
+  - name: VALUE_46
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.583225
+    upper: 1.583225
+  - name: VALUE_47
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 3880.630104
+    upper: 10962032.259257
+  - name: VALUE_48
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 137.281179
+    upper: 83605833.180217
+  - name: VALUE_49
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1904640.0
+    upper: 1904641.0
+  - name: VALUE_50
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 704512.0
+    upper: 704513.0
+  - name: VALUE_51
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 770048.0
+    upper: 770049.0
+  - name: VALUE_52
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 978944.0
+    upper: 978945.0
+  - name: VALUE_53
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 778240.0
+    upper: 778241.0
+  - name: VALUE_54
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2203466203136.0
+    upper: 2203466203137.0
+  - name: VALUE_55
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2203367563264.0
+    upper: 2203367563265.0
+  - name: VALUE_56
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2203368603648.0
+    upper: 2203368603649.0
+  - name: VALUE_57
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2203380928512.0
+    upper: 2203380928513.0
+  - name: VALUE_58
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2203368648704.0
+    upper: 2203368648705.0
+  - name: VALUE_59
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 847872.0
+    upper: 847873.0
+  - name: VALUE_60
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2826240.0
+    upper: 2826241.0
+  - name: VALUE_61
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2994176.0
+    upper: 2994177.0
+  - name: VALUE_62
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2990080.0
+    upper: 2990081.0
+  - name: VALUE_63
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2994176.0
+    upper: 2994177.0
+  - name: VALUE_64
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 48.510525
+    upper: 97.129159
+  - name: VALUE_65
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 38.305655
+    upper: 97.252677
+  - name: VALUE_66
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 52.982092
+    upper: 96.852742
+  - name: VALUE_67
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 92.713146
+    upper: 95.76138
+  - name: VALUE_68
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 92.621317
+    upper: 95.630501
+  - name: VALUE_69
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 48.510525
+    upper: 97.129159
+  - name: VALUE_70
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 38.305655
+    upper: 97.252677
+  - name: VALUE_71
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 52.982092
+    upper: 96.852742
+  - name: VALUE_72
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 92.713146
+    upper: 95.76138
+  - name: VALUE_73
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 92.621317
+    upper: 95.630501
+  - name: VALUE_74
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.024335
+    upper: 1.024335
+  - name: VALUE_75
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.024335
+    upper: 1.024335
+  - name: VALUE_76
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.012909
+    upper: 1.012909
+  - name: VALUE_77
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.048683
+    upper: 1.048683
+  - name: VALUE_78
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.026013
+    upper: 1.026013
+  - name: VALUE_79
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1.171776
+    upper: 7.752381
+  - name: VALUE_80
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.834444
+    upper: 10.474455
+  - name: VALUE_81
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1.266812
+    upper: 8.43703
+  - name: VALUE_82
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2.107084
+    upper: 3.432142
+  - name: VALUE_83
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1.794923
+    upper: 3.042679
+  - name: VALUE_84
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2.091866
+    upper: 52.429276
+  - name: VALUE_85
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1.943425
+    upper: 61.837461
+  - name: VALUE_86
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2.332108
+    upper: 46.321685
+  - name: VALUE_87
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 3.17819
+    upper: 6.090746
+  - name: VALUE_88
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 3.360284
+    upper: 5.82299
+  - name: VALUE_89
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.600909
+    upper: 46.346286
+  - name: VALUE_90
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.699112
+    upper: 51.379682
+  - name: VALUE_91
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.912104
+    upper: 38.908476
+  - name: VALUE_92
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1.066549
+    upper: 2.653216
+  - name: VALUE_93
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1.560803
+    upper: 2.774924
+  lines:
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:LogicalDisk
+    source: Perfmon:LogicalDisk
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"LogicalDisk","entity_type":"Windows_Host","instance":"C:","object":"LogicalDisk","metric_name:LogicalDisk.%_Free_Space":"$VALUE_1$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:LogicalDisk
+    source: Perfmon:LogicalDisk
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"LogicalDisk","entity_type":"Windows_Host","instance":"D:","object":"LogicalDisk","metric_name:LogicalDisk.%_Free_Space":"$VALUE_2$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:LogicalDisk
+    source: Perfmon:LogicalDisk
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"LogicalDisk","entity_type":"Windows_Host","instance":"_Total","object":"LogicalDisk","metric_name:LogicalDisk.%_Free_Space":"$VALUE_3$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:LogicalDisk
+    source: Perfmon:LogicalDisk
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"LogicalDisk","entity_type":"Windows_Host","instance":"C:","object":"LogicalDisk","metric_name:LogicalDisk.Free_Megabytes":"$VALUE_4$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:LogicalDisk
+    source: Perfmon:LogicalDisk
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"LogicalDisk","entity_type":"Windows_Host","instance":"D:","object":"LogicalDisk","metric_name:LogicalDisk.Free_Megabytes":"$VALUE_5$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:LogicalDisk
+    source: Perfmon:LogicalDisk
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"LogicalDisk","entity_type":"Windows_Host","instance":"_Total","object":"LogicalDisk","metric_name:LogicalDisk.Free_Megabytes":"$VALUE_6$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Memory
+    source: Perfmon:Memory
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Memory","entity_type":"Windows_Host","instance":"0","object":"Memory","metric_name:Memory.%_Committed_Bytes_In_Use":"$VALUE_7$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Memory
+    source: Perfmon:Memory
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Memory","entity_type":"Windows_Host","instance":"0","object":"Memory","metric_name:Memory.Available_Bytes":"$VALUE_8$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Memory
+    source: Perfmon:Memory
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Memory","entity_type":"Windows_Host","instance":"0","object":"Memory","metric_name:Memory.Committed_Bytes":"$VALUE_9$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Memory
+    source: Perfmon:Memory
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Memory","entity_type":"Windows_Host","instance":"0","object":"Memory","metric_name:Memory.Page_Reads/sec":"$VALUE_10$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Memory
+    source: Perfmon:Memory
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Memory","entity_type":"Windows_Host","instance":"0","object":"Memory","metric_name:Memory.Pages_Input/sec":"$VALUE_11$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Memory
+    source: Perfmon:Memory
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Memory","entity_type":"Windows_Host","instance":"0","object":"Memory","metric_name:Memory.Pages_Output/sec":"$VALUE_12$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Network
+    source: Perfmon:Network
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Network","entity_type":"Windows_Host","instance":"AWS_PV_Network_Device__0","object":"Network_Interface","metric_name:Network_Interface.Bytes_Received/sec":"$VALUE_13$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Network
+    source: Perfmon:Network
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Network","entity_type":"Windows_Host","instance":"AWS_PV_Network_Device__0","object":"Network_Interface","metric_name:Network_Interface.Bytes_Sent/sec":"$VALUE_14$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:PhysicalDisk
+    source: Perfmon:PhysicalDisk
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"PhysicalDisk","entity_type":"Windows_Host","instance":"0_C:_D:","object":"PhysicalDisk","metric_name:PhysicalDisk.%_Disk_Read_Time":"$VALUE_15$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:PhysicalDisk
+    source: Perfmon:PhysicalDisk
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"PhysicalDisk","entity_type":"Windows_Host","instance":"_Total","object":"PhysicalDisk","metric_name:PhysicalDisk.%_Disk_Read_Time":"$VALUE_16$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:PhysicalDisk
+    source: Perfmon:PhysicalDisk
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"PhysicalDisk","entity_type":"Windows_Host","instance":"0_C:_D:","object":"PhysicalDisk","metric_name:PhysicalDisk.%_Disk_Write_Time":"$VALUE_17$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:PhysicalDisk
+    source: Perfmon:PhysicalDisk
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"PhysicalDisk","entity_type":"Windows_Host","instance":"_Total","object":"PhysicalDisk","metric_name:PhysicalDisk.%_Disk_Write_Time":"$VALUE_18$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.2141.0","object":"Process","metric_name:Process.%_Privileged_Time":"$VALUE_19$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"ApplicationFrameHost","object":"Process","metric_name:Process.%_Privileged_Time":"$VALUE_20$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"GoogleCrashHandler","object":"Process","metric_name:Process.%_Privileged_Time":"$VALUE_21$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"GoogleUpdate","object":"Process","metric_name:Process.%_Privileged_Time":"$VALUE_22$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"Idle","object":"Process","metric_name:Process.%_Privileged_Time":"$VALUE_23$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.2141.0","object":"Process","metric_name:Process.%_Processor_Time":"$VALUE_24$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"ApplicationFrameHost","object":"Process","metric_name:Process.%_Processor_Time":"$VALUE_25$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"GoogleCrashHandler","object":"Process","metric_name:Process.%_Processor_Time":"$VALUE_26$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"GoogleCrashHandler64","object":"Process","metric_name:Process.%_Processor_Time":"$VALUE_27$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"GoogleUpdate","object":"Process","metric_name:Process.%_Processor_Time":"$VALUE_28$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"ApplicationFrameHost","object":"Process","metric_name:Process.%_User_Time":"$VALUE_29$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"GoogleCrashHandler","object":"Process","metric_name:Process.%_User_Time":"$VALUE_30$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"GoogleCrashHandler64","object":"Process","metric_name:Process.%_User_Time":"$VALUE_31$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"LiteAgent","object":"Process","metric_name:Process.%_User_Time":"$VALUE_32$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"LogonUI","object":"Process","metric_name:Process.%_User_Time":"$VALUE_33$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"97.0.4692.71_96.0.4664.110_chrome_updater","object":"Process","metric_name:Process.Elapsed_Time":"$VALUE_34$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta","object":"Process","metric_name:Process.Elapsed_Time":"$VALUE_35$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1425.0","object":"Process","metric_name:Process.Elapsed_Time":"$VALUE_36$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1481.0","object":"Process","metric_name:Process.Elapsed_Time":"$VALUE_37$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1532.0","object":"Process","metric_name:Process.Elapsed_Time":"$VALUE_38$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1653.0","object":"Process","metric_name:Process.IO_Read_Bytes/sec":"$VALUE_39$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.2141.0","object":"Process","metric_name:Process.IO_Read_Bytes/sec":"$VALUE_40$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"ApplicationFrameHost","object":"Process","metric_name:Process.IO_Read_Bytes/sec":"$VALUE_41$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"GoogleCrashHandler","object":"Process","metric_name:Process.IO_Read_Bytes/sec":"$VALUE_42$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"GoogleCrashHandler64","object":"Process","metric_name:Process.IO_Read_Bytes/sec":"$VALUE_43$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"GoogleCrashHandler","object":"Process","metric_name:Process.IO_Write_Bytes/sec":"$VALUE_44$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"GoogleCrashHandler64","object":"Process","metric_name:Process.IO_Write_Bytes/sec":"$VALUE_45$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"MpCmdRun","object":"Process","metric_name:Process.IO_Write_Bytes/sec":"$VALUE_46$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"MpSigStub","object":"Process","metric_name:Process.IO_Write_Bytes/sec":"$VALUE_47$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"MsMpEng","object":"Process","metric_name:Process.IO_Write_Bytes/sec":"$VALUE_48$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"97.0.4692.71_96.0.4664.110_chrome_updater","object":"Process","metric_name:Process.Private_Bytes":"$VALUE_49$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta","object":"Process","metric_name:Process.Private_Bytes":"$VALUE_50$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1425.0","object":"Process","metric_name:Process.Private_Bytes":"$VALUE_51$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1481.0","object":"Process","metric_name:Process.Private_Bytes":"$VALUE_52$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1532.0","object":"Process","metric_name:Process.Private_Bytes":"$VALUE_53$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"97.0.4692.71_96.0.4664.110_chrome_updater","object":"Process","metric_name:Process.Virtual_Bytes":"$VALUE_54$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta","object":"Process","metric_name:Process.Virtual_Bytes":"$VALUE_55$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1425.0","object":"Process","metric_name:Process.Virtual_Bytes":"$VALUE_56$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1481.0","object":"Process","metric_name:Process.Virtual_Bytes":"$VALUE_57$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1532.0","object":"Process","metric_name:Process.Virtual_Bytes":"$VALUE_58$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"97.0.4692.71_96.0.4664.110_chrome_updater","object":"Process","metric_name:Process.Working_Set":"$VALUE_59$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta","object":"Process","metric_name:Process.Working_Set":"$VALUE_60$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1425.0","object":"Process","metric_name:Process.Working_Set":"$VALUE_61$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1481.0","object":"Process","metric_name:Process.Working_Set":"$VALUE_62$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:Process
+    source: Perfmon:Process
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"Process","entity_type":"Windows_Host","instance":"AM_Delta_Patch_1.353.1532.0","object":"Process","metric_name:Process.Working_Set":"$VALUE_63$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_C1_Time":"$VALUE_64$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_C1_Time":"$VALUE_65$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"_Total","object":"Processor","tag":"cpu","metric_name:Processor.%_C1_Time":"$VALUE_66$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_C1_Time":"$VALUE_67$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_C1_Time":"$VALUE_68$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_Idle_Time":"$VALUE_69$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_Idle_Time":"$VALUE_70$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"_Total","object":"Processor","tag":"cpu","metric_name:Processor.%_Idle_Time":"$VALUE_71$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_Idle_Time":"$VALUE_72$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_Idle_Time":"$VALUE_73$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_Interrupt_Time":"$VALUE_74$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_Interrupt_Time":"$VALUE_75$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"_Total","object":"Processor","tag":"cpu","metric_name:Processor.%_Interrupt_Time":"$VALUE_76$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_Interrupt_Time":"$VALUE_77$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_Interrupt_Time":"$VALUE_78$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_Privileged_Time":"$VALUE_79$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_Privileged_Time":"$VALUE_80$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"_Total","object":"Processor","tag":"cpu","metric_name:Processor.%_Privileged_Time":"$VALUE_81$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_Privileged_Time":"$VALUE_82$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_Privileged_Time":"$VALUE_83$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_Processor_Time":"$VALUE_84$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_Processor_Time":"$VALUE_85$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"_Total","object":"Processor","tag":"cpu","metric_name:Processor.%_Processor_Time":"$VALUE_86$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_Processor_Time":"$VALUE_87$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_Processor_Time":"$VALUE_88$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_User_Time":"$VALUE_89$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_User_Time":"$VALUE_90$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance","instance":"_Total","object":"Processor","tag":"cpu","metric_name:Processor.%_User_Time":"$VALUE_91$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"0","object":"Processor","tag":"cpu","metric_name:Processor.%_User_Time":"$VALUE_92$"}'
+  - index: itsi_im_metrics
+    sourcetype: PerfmonMetrics:CPU
+    source: Perfmon:CPU
+    host: win-02.internal.acme.com
+    _raw: metric
+    fields: '{"collection":"CPU","entity_type":"Windows_Host","foo":"$instance$","instance":"1","object":"Processor","tag":"cpu","metric_name:Processor.%_User_Time":"$VALUE_93$"}'

@@ -1,0 +1,205 @@
+samples:
+- name: ITF-VMWare-Task
+  interval: 1
+  count: 1
+  randomizeEvents: true
+  tokens:
+  - name: TIMESTAMP
+    format: template
+    type: gotimestamp
+    replacement: '2006-01-02 15:04:05'
+  lines:
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "2022-03-25 14:34:21.984000+00:00", "descriptionId": "Drm.ExecuteVmPowerOnLRO",
+      "entity": {"moid": "vm-326", "type": "VirtualMachine"}, "entityName": "acme-dev-vm-51",
+      "eventChainId": "9255979", "key": "task-48818", "parentTaskKey": "task-48817",
+      "queueTime": "$TIMESTAMP$.486999+00:00", "reason": "", "rootTaskKey": "task-48817",
+      "startTime": "$TIMESTAMP$.492000+00:00", "state": "success", "task": {"moid":
+      "task-48818", "type": "Task"}, "pool_name": "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "$TIMESTAMP$.495000+00:00", "descriptionId": "Datacenter.powerOnVm", "entity":
+      {"moid": "datacenter-21", "type": "Datacenter"}, "entityName": "STSC-Datacenter",
+      "eventChainId": "9255978", "key": "task-48817", "name": "PowerOnMultiVM_Task",
+      "queueTime": "$TIMESTAMP$.440999+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
+      "result": {"attempted": [{"task": {"moid": "task-48818", "type": "Task"}, "vm":
+      {"moid": "vm-326", "type": "VirtualMachine"}}]}, "startTime": "$TIMESTAMP$.446999+00:00",
+      "state": "success", "task": {"moid": "task-48817", "type": "Task"}, "pool_name":
+      "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "True", "cancelled": "False", "completeTime":
+      "2022-03-25 14:27:03.415999+00:00", "descriptionId": "com.vmware.vcIntegrity.CheckNotificationTask",
+      "entity": {"moid": "group-d1", "type": "Folder"}, "entityName": "Datacenters",
+      "eventChainId": "9255931", "key": "task-48816", "queueTime": "$TIMESTAMP$.905000+00:00",
+      "reason": {"name": "VMware vSphere Update Manager Check Notification", "scheduledTask":
+      {"moid": "schedule-2", "type": "ScheduledTask"}}, "startTime": "2022-03-25 14:27:02.694000+00:00",
+      "state": "success", "task": {"moid": "task-48816", "type": "Task"}, "pool_name":
+      "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "True", "cancelled": "False", "completeTime":
+      "2022-03-24 23:30:05.405000+00:00", "descriptionId": "com.vmware.vcIntegrity.SigUpdateTask",
+      "entity": {"moid": "group-d1", "type": "Folder"}, "entityName": "Datacenters",
+      "eventChainId": "9249214", "key": "task-48801", "queueTime": "$TIMESTAMP$.052000+00:00",
+      "reason": {"name": "VMware vSphere Update Manager Update Download", "scheduledTask":
+      {"moid": "schedule-1", "type": "ScheduledTask"}}, "result": "", "startTime":
+      "$TIMESTAMP$.726999+00:00", "state": "success", "task": {"moid": "task-48801",
+      "type": "Task"}, "pool_name": "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "$TIMESTAMP$.953000+00:00", "descriptionId": "host.ServiceSystem.restart", "entity":
+      {"moid": "host-29", "type": "HostSystem"}, "entityName": "esxi02.internal.acme.com",
+      "eventChainId": "9246783", "key": "task-48793", "name": "RestartService", "queueTime":
+      "$TIMESTAMP$.554000+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
+      "startTime": "$TIMESTAMP$.557999+00:00", "state": "success", "task": {"moid":
+      "task-48793", "type": "Task"}, "pool_name": "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "$TIMESTAMP$.504000+00:00", "descriptionId": "host.FirewallSystem.enableRuleset",
+      "entity": {"moid": "host-29", "type": "HostSystem"}, "entityName": "esxi02.internal.acme.com",
+      "eventChainId": "9246777", "key": "task-48792", "name": "EnableRuleset", "queueTime":
+      "$TIMESTAMP$.443000+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
+      "startTime": "$TIMESTAMP$.446000+00:00", "state": "success", "task": {"moid":
+      "task-48792", "type": "Task"}, "pool_name": "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "$TIMESTAMP$.396999+00:00", "descriptionId": "host.ServiceSystem.updatePolicy",
+      "entity": {"moid": "host-29", "type": "HostSystem"}, "entityName": "esxi02.internal.acme.com",
+      "eventChainId": "9246776", "key": "task-48791", "name": "UpdateServicePolicy",
+      "queueTime": "$TIMESTAMP$.300999+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
+      "startTime": "$TIMESTAMP$.304999+00:00", "state": "success", "task": {"moid":
+      "task-48791", "type": "Task"}, "pool_name": "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "$TIMESTAMP$.917999+00:00", "descriptionId": "host.ServiceSystem.refresh", "entity":
+      {"moid": "host-34", "type": "HostSystem"}, "entityName": "esxi01.internal.acme.com",
+      "eventChainId": "9246415", "key": "task-48785", "name": "RefreshServices", "queueTime":
+      "$TIMESTAMP$.611999+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
+      "startTime": "$TIMESTAMP$.615999+00:00", "state": "success", "task": {"moid":
+      "task-48785", "type": "Task"}, "pool_name": "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "$TIMESTAMP$.757999+00:00", "descriptionId": "host.ServiceSystem.start", "entity":
+      {"moid": "host-34", "type": "HostSystem"}, "entityName": "esxi01.internal.acme.com",
+      "error": {"fault": {"text": "None"}, "localizedMessage": "An error occurred
+      during host configuration."}, "eventChainId": "9246414", "key": "task-48784",
+      "name": "StartService", "queueTime": "$TIMESTAMP$.632999+00:00", "reason": {"userName":
+      "VSPHERE.LOCAL\\Administrator"}, "startTime": "$TIMESTAMP$.635999+00:00", "state":
+      "error", "task": {"moid": "task-48784", "type": "Task"}, "pool_name": "Global
+      pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "2022-03-24 16:34:32.496000+00:00", "descriptionId": "option.OptionManager.updateValues",
+      "entity": {"moid": "host-29", "type": "HostSystem"}, "entityName": "esxi02.internal.acme.com",
+      "error": {"fault": {"reason": "Internal error"}, "localizedMessage": "A general
+      system error occurred: Internal error"}, "eventChainId": "9246155", "key": "task-48778",
+      "name": "UpdateOptions", "queueTime": "$TIMESTAMP$.850000+00:00", "reason":
+      {"userName": "VSPHERE.LOCAL\\Administrator"}, "startTime": "$TIMESTAMP$.853999+00:00",
+      "state": "error", "task": {"moid": "task-48778", "type": "Task"}, "pool_name":
+      "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "2022-03-14 19:00:12.144000+00:00", "descriptionId": "VirtualMachine.reset",
+      "entity": {"moid": "vm-416", "type": "VirtualMachine"}, "entityName": "acme-dev-vm-58",
+      "eventChainId": "9110059", "key": "task-48527", "name": "ResetVM_Task", "queueTime":
+      "$TIMESTAMP$.820999+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
+      "startTime": "$TIMESTAMP$.830000+00:00", "state": "success", "task": {"moid":
+      "task-48527", "type": "Task"}, "pool_name": "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "2022-03-14 18:28:46.140000+00:00", "descriptionId": "VirtualMachine.powerOff",
+      "entity": {"moid": "vm-416", "type": "VirtualMachine"}, "entityName": "acme-dev-vm-58",
+      "eventChainId": "9109366", "key": "task-48524", "name": "PowerOffVM_Task", "queueTime":
+      "$TIMESTAMP$.241999+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
+      "startTime": "$TIMESTAMP$.244999+00:00", "state": "success", "task": {"moid":
+      "task-48524", "type": "Task"}, "pool_name": "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "True", "cancelled": "False", "completeTime":
+      "2022-03-07 10:05:12.301999+00:00", "descriptionId": "VirtualMachine.relocate",
+      "entity": {"moid": "vm-420", "type": "VirtualMachine"}, "entityName": "acme-dev-vm-63",
+      "eventChainId": "8911406", "key": "task-48335", "name": "RelocateVM_Task", "queueTime":
+      "$TIMESTAMP$.682000+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
+      "startTime": "$TIMESTAMP$.686999+00:00", "state": "success", "task": {"moid":
+      "task-48335", "type": "Task"}, "pool_name": "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "$TIMESTAMP$.347000+00:00", "descriptionId": "VirtualMachine.rebootGuest", "entity":
+      {"moid": "vm-482", "type": "VirtualMachine"}, "entityName": "acme-prd-vm-17",
+      "eventChainId": "8677252", "key": "task-47619", "name": "RebootGuest", "queueTime":
+      "$TIMESTAMP$.256999+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
+      "startTime": "$TIMESTAMP$.262000+00:00", "state": "success", "task": {"moid":
+      "task-47619", "type": "Task"}, "pool_name": "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "True", "cancelled": "False", "descriptionId":
+      "ResourcePool.ImportVAppLRO", "entity": {"moid": "vm-482", "type": "VirtualMachine"},
+      "entityName": "acme-prd-vm-17", "eventChainId": "8677084", "key": "task-47616",
+      "queueTime": "$TIMESTAMP$.236999+00:00", "reason": {"userName": "VSPHERE.LOCAL\\vpxd-extension-be73b05d-e7f9-463b-93c0-60b6dca73feb"},
+      "startTime": "$TIMESTAMP$.242000+00:00", "state": "running", "task": {"moid":
+      "task-47616", "type": "Task"}, "pool_name": "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "5be1cb4b-7648-47da-9d9a-56c977ddcf2f", "cancelable":
+      "True", "cancelled": "False", "descriptionId": "com.vmware.ovfs.ImportSession.Create",
+      "entity": {"moid": "host-34", "type": "HostSystem"}, "entityName": "esxi01.internal.acme.com",
+      "eventChainId": "8677075", "key": "task-47615", "queueTime": "$TIMESTAMP$.514000+00:00",
+      "reason": {"userName": "vsphere.local\\Administrator"}, "startTime": "$TIMESTAMP$.689000+00:00",
+      "state": "running", "task": {"moid": "task-47615", "type": "Task"}, "pool_name":
+      "Global pool"}'
+  - index: vmware-taskevent
+    sourcetype: vmware_inframon:tasks
+    source: Username:N/A
+    host: vctr01.internal.acme.com
+    _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
+      "$TIMESTAMP$.618000+00:00", "descriptionId": "host.ActiveDirectoryAuthentication.listSmartCardTrustAnchors",
+      "entity": {"moid": "host-34", "type": "HostSystem"}, "entityName": "esxi01.internal.acme.com",
+      "eventChainId": "8596573", "key": "task-47341", "name": "ListSmartCardTrustAnchors",
+      "queueTime": "$TIMESTAMP$.596999+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
+      "startTime": "$TIMESTAMP$.599999+00:00", "state": "success", "task": {"moid":
+      "task-47341", "type": "Task"}, "pool_name": "Global pool"}'

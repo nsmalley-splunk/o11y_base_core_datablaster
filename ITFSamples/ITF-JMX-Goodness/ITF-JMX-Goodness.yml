@@ -1,0 +1,102 @@
+samples:
+- name: ITF-JMX-Goodness
+  interval: 60
+  count: 11
+  randomizeEvents: false
+  lines:
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: Catalina:type=GlobalRequestProcessor,name=cart-01.internal.acme.com:catalina_base
+    host: 10.1.2.156:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.156","runtime_vendor":"Oracle Corporation","mbean_property_name":"cart-01.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"cart-01.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.156:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.156|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: Catalina:type=GlobalRequestProcessor,name=cart-02.internal.acme.com:catalina_base
+    host: 10.1.2.157:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.157","runtime_vendor":"Oracle Corporation","mbean_property_name":"cart-02.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"cart-02.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.157:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.157|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: i-0867530945:Catalina:type=GlobalRequestProcessor,name=cart-04.internal.acme.com:catalina_base
+    host: 10.1.2.159:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.159","runtime_vendor":"Oracle Corporation","mbean_property_name":"cart-04.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"cart-04.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.159:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.159|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: i-0867530944:Catalina:type=GlobalRequestProcessor,name=cart-03.internal.acme.com:catalina_base
+    host: 10.1.2.158:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.158","runtime_vendor":"Oracle Corporation","mbean_property_name":"cart-03.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"cart-03.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.158:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.158|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: Catalina:type=GlobalRequestProcessor,name=auth-02.internal.acme.com:catalina_base
+    host: 10.1.2.102:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.102","runtime_vendor":"Oracle Corporation","mbean_property_name":"auth-02.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"auth-02.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.102:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.102|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: Catalina:type=GlobalRequestProcessor,name=auth-01.internal.acme.com:catalina_base
+    host: 10.1.2.101:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.101","runtime_vendor":"Oracle Corporation","mbean_property_name":"auth-01.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"auth-01.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.101:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.101|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: Catalina:type=GlobalRequestProcessor,name=auth-03.internal.acme.com:catalina_base
+    host: 10.1.2.103:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.103","runtime_vendor":"Oracle Corporation","mbean_property_name":"auth-03.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"auth-03.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.103:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.103|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: i-0867530939:Catalina:type=GlobalRequestProcessor,name=catalog-03.internal.acme.com:catalina_base
+    host: 10.1.2.131:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.131","runtime_vendor":"Oracle Corporation","mbean_property_name":"catalog-03.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"catalog-03.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.131:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.131|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: i-0867530937:Catalina:type=GlobalRequestProcessor,name=catalog-01.internal.acme.com:catalina_base
+    host: 10.1.2.129:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.129","runtime_vendor":"Oracle Corporation","mbean_property_name":"catalog-01.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"catalog-01.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.129:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.129|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: i-0867530938:Catalina:type=GlobalRequestProcessor,name=catalog-02.internal.acme.com:catalina_base
+    host: 10.1.2.130:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.130","runtime_vendor":"Oracle Corporation","mbean_property_name":"catalog-02.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"catalog-02.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.130:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.130|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: i-0867530940:Catalina:type=GlobalRequestProcessor,name=catalog-04.internal.acme.com:catalina_base
+    host: 10.1.2.132:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.132","runtime_vendor":"Oracle Corporation","mbean_property_name":"catalog-04.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"catalog-04.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.132:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.132|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'
+  - index: scenario
+    sourcetype: tomcat:jmx
+    source: Catalina:type=GlobalRequestProcessor,name=auth-04.internal.acme.com:catalina_base
+    host: 10.1.2.104:8888
+    _raw: '{"product_family":"Apache Foundation Software","vendor_product_runtime_version":"1.8","root_role":"application_server","mbean_property_type":"GlobalRequestProcessor","internal_use":"True","rootdir":"/tmi*","version_number":"Apache
+      Tomcat/8.0.23","ip_address":"10.1.2.104","runtime_vendor":"Oracle Corporation","mbean_property_name":"auth-04.internal.acme.com:8080","vendor_product_runtime":"Java
+      HotSpot(TM) 64-Bit Server VM","full_host_name":"auth-04.internal.acme.com","mbean_domain":"Catalina","jmxhost":"10.1.2.104:8888","product_family_abbreviation":"Tomcat","application_server":"10.1.2.104|Apache
+      Tomcat|8080","vendor_product":"Apache Tomcat"}'

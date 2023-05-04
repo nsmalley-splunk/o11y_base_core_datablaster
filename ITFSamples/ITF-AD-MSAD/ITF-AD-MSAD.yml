@@ -1,0 +1,5004 @@
+samples:
+- name: ITF-AD-MSAD
+  interval: 60
+  count: 728
+  randomizeEvents: false
+  lines:
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:57:13 [LOGON] [5792] ACME: SamLogon: Network logon of (null)\ADMINISTRATOR
+      from  Returns 0xC000006A'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:57:13 [CRITICAL] [5792] NlPrintRpcDebug: Couldn''t get EEInfo
+      for I_NetLogonSamLogonEx: 1761 (may be legitimate for 0xc000006a)'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:57:13 [LOGON] [5792] ACME: SamLogon: Network logon of (null)\ADMINISTRATOR
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:57:11 [LOGON] [5676] ACME: SamLogon: Network logon of (null)\\\
+      ADMINISTRATOR from  Returns 0xC000006A\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:57:11 [LOGON] [5676] ACME: SamLogon: Network logon of (null)\ADMINISTRATOR
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:57:10 [LOGON] [3288] CHILDDOMAIN: SamLogon: Network logon of (null)\\\
+      ADMIN from  Returns 0xC0000064\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:57:10 [SESSION] [3288] CHILDDOMAIN: NlPickDomainWithAccount: Username
+      ADMIN can''t be cracked (On GC). 0x0 2'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:57:10 [LOGON] [3288] CHILDDOMAIN: NlPickDomainWithAccount: ADMIN:
+      Algorithm entered. UPN:0 Sam:1 Exp:0 Cross: 0 Root:0 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:57:10 [LOGON] [3288] CHILDDOMAIN: SamLogon: Network logon of (null)\ADMIN
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:57:09 [LOGON] [5676] ACME: SamLogon: Network logon of (null)\ADMIN
+      from  Returns 0xC0000064'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:57:09 [LOGON] [5676] ACME: NlPickDomainWithAccount: ADMIN:
+      Algorithm entered. UPN:0 Sam:1 Exp:0 Cross: 0 Root:1 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:57:09 [LOGON] [5792] ACME: SamLogon: Network logon of (null)\\\
+      DEVELOPER from  Returns 0xC0000064\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:57:09 [LOGON] [5792] ACME: NlPickDomainWithAccount: DEVELOPER:
+      Algorithm entered. UPN:0 Sam:1 Exp:0 Cross: 0 Root:1 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:57:08 [LOGON] [5220] ACME: SamLogon: Transitive Network logon
+      of (null)\ADMINISTRATOR from  (via ACME-DC02) Returns 0xC000006A'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:57:08 [LOGON] [5220] ACME: SamLogon: Transitive Network logon
+      of (null)\ADMINISTRATOR from  (via ACME-DC02) Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:57:00 [LOGON] [3288] CHILDDOMAIN: Avoid send to PDC since user
+      ADMINISTRATOR failed recently'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:56:56 [LOGON] [7124] ACME: SamLogon: Transitive Network logon\
+      \ of (null)\\ADMINISTRATOR from  (via ACME-DC02) Returns 0xC000006A\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:56:50 [DOMAIN] [5660] ACME: Domain thread exitting\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:50 [DOMAIN] [5660] ACME: Domain thread started doing API
+      timeout'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:50 [DOMAIN] [5660] ACME: Domain thread started'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:56:46 [DOMAIN] [7132] CHILDDOMAIN: Domain thread exitting\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:56:46 [SESSION] [7132] CHILDDOMAIN: NlTimeoutApiClientSession
+      Called'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:56:46 [DOMAIN] [7132] CHILDDOMAIN: Domain thread started doing
+      API timeout'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:56:46 [DOMAIN] [7132] CHILDDOMAIN: Domain thread started'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:56:46 [MAILSLOT] [1304] Going to wait on mailslot. (Timeout: 45000)'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:56:45 [LOGON] [800] CHILDDOMAIN: SamLogon: Network logon of (null)\\\
+      ADMINISTRATOR from  Returns 0xC000006A\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:45 [LOGON] [800] CHILDDOMAIN: SamLogon: Network logon of (null)\ADMINISTRATOR
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:35 [MISC] [5792] DsrEnumerateDomainTrusts: returns: 0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:56:35 [CRITICAL] [5792] NlFindDomainByServerName failed acme.local
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:35 [MISC] [5792] DsrEnumerateDomainTrusts: Called, Flags =
+      0xb'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:35 [MISC] [5792] ACME: DsGetDcName function returns 0
+      (client PID=-1): Dom:acme.local Acct:(null) Flags: DSP DNS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:35 [MISC] [5792] DsGetDcName: results as follows: DCName:\\acme-dc02.acme.local
+      DCAddress:\\172.31.6.58 DCAddrType:0x1 DomainName:acme.local DnsForestName:acme.local
+      Flags:0xe003f1fc DcSiteName:Default-First-Site-Name ClientSiteName:Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:35 [MISC] [5792] NetpDcAllocateCacheEntry: new entry 0x000002798ADF50C0
+      -> DC:ACME-DC02 DnsDomName:acme.local Flags:0x3f1fc '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:35 [MAILSLOT] [5792] ACME: Ping response ''Sam Logon Response
+      Ex'' (null) to \\ACME-DC02 Site: Default-First-Site-Name on <Local>'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:56:35 [MAILSLOT] [5792] Received ping from ACME-DC02(acme-dc02.acme.local)
+      acme.local (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:35 [MISC] [5792] ACME: DsGetDcName function called: client
+      PID=-1, Dom:acme.local Acct:(null) Flags: DSP DNS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:35 [MISC] [4168] ACME: DsGetDcName function returns 0
+      (client PID=-1): Dom:acme.local Acct:(null) Flags: DSP DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:35 [MISC] [4168] ACME: DsGetDcName function called: client
+      PID=-1, Dom:acme.local Acct:(null) Flags: DSP DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:30 [MISC] [5792] ACME: DsGetDcName function returns 0
+      (client PID=5516): Dom:acme.local Acct:(null) Flags: GC LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:30 [MISC] [5792] ACME: DsGetDcName function called: client
+      PID=5516, Dom:acme.local Acct:(null) Flags: GC LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:56:29 [MAILSLOT] [1304] Going to wait on mailslot. (Timeout: 17689)\r\
+      \n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:56:28 [MISC] [2616] NlSitesGetCloseSites returns successfully
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:56:28 [MISC] [2616] Eventlog: 5793 (4) "SecondarySite" "ForestDnsZones.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:56:28 [SITE] [2616] NDNC: SecondarySite: Site is no longer auto
+      covered by our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:56:28 [SITE] [2616] NDNC list: Default-First-Site-Name acme-dc02-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:56:28 [SITE] [2616] NDNC list: Default-First-Site-Name acme-dc02.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:56:28 [MISC] [2616] Eventlog: 5793 (4) "SecondarySite" "DomainDnsZones.childdomain.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:56:28 [MISC] [2616] Eventlog: 5785 (4) "SecondarySite" "CHILDDOMAIN" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:56:28 [SITE] [1304] There is only one site.  All clients belong
+      to it.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:56:28 [SITE] [1304] Adding subnet to site mappings from the DS
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:56:28 [MISC] [4168] DsrEnumerateDomainTrusts: returns: 0\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:28 [MISC] [4168] ACME: DsGetDcName function returns 0
+      (client PID=-1): Dom:(null) Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:56:28 [MAILSLOT] [4168] Received ping from ACME-DC02(acme-dc02.acme.local)
+      acme.local. (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:28 [MISC] [4168] ACME: DsGetDcName function called: client
+      PID=-1, Dom:(null) Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:56:26 [MISC] [1304] NlMainLoop: Notification 1 that DS site info
+      changed'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:56:17 [DNS] [2648] NlDnsScavengeWorker: Set DNS scavenger to run\
+      \ in 30 minutes (1752700).\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:17 [DNS] [2648] ForestDnsZones.acme.local: NlDnsDeregisterOne:
+      being deregistered (success) 0: NlDnsLdapAtSite: _ldap._tcp.SecondarySite._sites.ForestDnsZones.acme.local.
+      600 IN SRV 0 100 389 acme-dc01.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:17 [DNS] [2648] ACME: NlDnsDeregisterOne: being deregistered
+      (success) 0: NlDnsGenericGcAtSite: _gc._tcp.SecondarySite._sites.acme.local.
+      600 IN SRV 0 100 3268 acme-dc01.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:17 [DNS] [2648] ACME: NlDnsDeregisterOne: being deregistered
+      (success) 0: NlDnsGcAtSite: _ldap._tcp.SecondarySite._sites.gc._msdcs.acme.local.
+      600 IN SRV 0 100 3268 acme-dc01.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:56:17 [SITE] [5792] DsrGetSiteName: Returning site name 'Default-First-Site-Name'\
+      \ from local cache.\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:17 [MISC] [5792] ACME: DsGetDcName function returns 1355
+      (client PID=5516): Dom:acme-dc02.acme.local Acct:(null) Flags: WRITABLE
+      LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:17 [MISC] [5792] NetpDcGetName: acme-dc02.acme.local similar
+      query failed recently 109'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:56:17 [CRITICAL] [5792] Ping from ACME-DC02 for domain acme-dc02.acme.local
+      (null) for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:17 [MISC] [5792] ACME: DsGetDcName function called: client
+      PID=5516, Dom:acme-dc02.acme.local Acct:(null) Flags: WRITABLE LDAPONLY
+      RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:16 [DNS] [2648] ForestDnsZones.acme.local: NlDnsAddDomainRecords:
+      marked for deregister: NlDnsLdapAtSite: _ldap._tcp.SecondarySite._sites.ForestDnsZones.acme.local.
+      600 IN SRV 0 100 389 acme-dc01.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:56:16 [MISC] [2648] NlSitesGetCloseSites returns successfully
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:16 [MISC] [2648] Eventlog: 5793 (4) "SecondarySite" "ForestDnsZones.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:16 [SITE] [2648] NDNC: SecondarySite: Site is no longer auto
+      covered by our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:16 [SITE] [2648] NDNC list: Default-First-Site-Name acme-dc02-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:16 [SITE] [2648] NDNC list: Default-First-Site-Name acme-dc02.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:16 [DNS] [2648] ACME: NlDnsAddDomainRecords: marked for
+      deregister: NlDnsGenericGcAtSite: _gc._tcp.SecondarySite._sites.acme.local.
+      600 IN SRV 0 100 3268 acme-dc01.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:16 [DNS] [2648] ACME: NlDnsAddDomainRecords: marked for
+      deregister: NlDnsGcAtSite: _ldap._tcp.SecondarySite._sites.gc._msdcs.acme.local.
+      600 IN SRV 0 100 3268 acme-dc01.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:16 [MISC] [2648] Eventlog: 5785 (4) "SecondarySite" "ACME" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:16 [DNS] [3004] NlDnsScavenge: Starting DNS scavenge with:
+      Force RefreshDomainRecords ForceRefreshDomainRecords 0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:56:16 [SITE] [3004] There is only one site.  All clients belong
+      to it.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:56:16 [SITE] [3004] Adding subnet to site mappings from the DS
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:16 [SITE] [5792] DsrGetSiteName: Returning site name ''Default-First-Site-Name''
+      from local cache.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:16 [CRITICAL] [5792] NetpDcGetName: acme-dc02.acme.local:
+      IP and Netbios are both done.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:16 [MISC] [5792] NetpDcGetName: NetpDcGetNameIp for acme-dc02.acme.local
+      returned 1355'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:16 [CRITICAL] [5792] NetpDcGetNameIp: acme-dc02.acme.local:
+      No data returned from DnsQuery.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:56:14 [MAILSLOT] [776] Going to wait on mailslot. (Timeout: 208642)\r\
+      \n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:56:14 [MISC] [3004] NlMainLoop: Notification 1 that DS site info\
+      \ changed\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:56:14 [CHANGELOG] [4032] NlSendChangeLogNotification: sent 6 for
+      Rid:0x1'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:56:13 [MISC] [6724] NlSitesGetCloseSites returns successfully
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:13 [MISC] [6724] Eventlog: 5793 (4) "SecondarySite" "ForestDnsZones.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:13 [SITE] [6724] NDNC: SecondarySite: Site is no longer auto
+      covered by our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:13 [SITE] [6724] NDNC list: Default-First-Site-Name acme-dc02-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:13 [SITE] [6724] NDNC list: Default-First-Site-Name acme-dc02.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:13 [MISC] [6724] Eventlog: 5793 (4) "SecondarySite" "DomainDnsZones.childdomain.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:13 [MISC] [6724] Eventlog: 5785 (4) "SecondarySite" "CHILDDOMAIN" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:13 [MAILSLOT] [776] Going to wait on mailslot. (Timeout: 209579)'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:56:13 [SITE] [776] There is only one site.  All clients belong
+      to it.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:56:13 [SITE] [776] Adding subnet to site mappings from the DS
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:11 [MISC] [776] NlMainLoop: Notification 1 that DS site info
+      changed'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:56:10 [MISC] [5668] CHILDDOMAIN: DsGetDcName function returns\
+      \ 0 (client PID=2256): Dom:CHILDDOMAIN Acct:(null) Flags: DS RET_DNS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:10 [MISC] [5668] DsGetDcName: results as follows: DCName:\\acme-dc01-child.childdomain.acme.local
+      DCAddress:\\172.31.8.190 DCAddrType:0x1 DomainName:childdomain.acme.local
+      DnsForestName:acme.local Flags:0xe003f1fd DcSiteName:Default-First-Site-Name
+      ClientSiteName:Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:10 [MISC] [5668] NetpDcDerefCacheEntry: destroying entry 0x000001A800D95E60'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:10 [MISC] [5668] NetpDcAllocateCacheEntry: new entry 0x000001A800D95E60
+      -> DC:ACME-DC01-CHILD DnsDomName:childdomain.acme.local Flags:0x3f1fd '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:56:10 [5668] 32b07eee 1438fdc8 607c35ab 6577b0b5   .~.2..8..5|`..we
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:10 [MAILSLOT] [5668] NetpDcHandlePingResponse: childdomain.acme.local.:
+      Received ''Sam Logon Response Ex'' response.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:10 [MAILSLOT] [5668] CHILDDOMAIN: Ping response ''Sam Logon
+      Response Ex'' (null) to \\ACME-DC01-CHILD Site: Default-First-Site-Name on <Local>'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:56:10 [MAILSLOT] [5668] Received ping from ACME-DC01-CHILD(acme-dc01-child.childdomain.acme.local)
+      childdomain.acme.local. (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:10 [MISC] [5668] CHILDDOMAIN: DsGetDcName function called:
+      client PID=2256, Dom:CHILDDOMAIN Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:56:09 [MISC] [5668] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=2256): Dom:CHILDDOMAIN Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:56:02 [MISC] [4168] ACME: DsGetDcName function returns 0\
+      \ (client PID=2228): Dom:ACME Acct:(null) Flags: DS RET_DNS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:02 [MISC] [4168] ACME: DsGetDcName function called: client
+      PID=2228, Dom:ACME Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:56:01 [MISC] [5424] ACME: DsGetDcName function returns 0
+      (client PID=2228): Dom:ACME Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:55:50 [DNS] [1456] NlDnsScavengeWorker: Set DNS scavenger to run\
+      \ in 15 minutes (873656).\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:50 [DNS] [1456] ForestDnsZones.acme.local: NlDnsDeregisterOne:
+      being deregistered (success) 0: NlDnsLdapAtSite: _ldap._tcp.SecondarySite._sites.ForestDnsZones.acme.local.
+      600 IN SRV 0 100 389 acme-dc02.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:50 [DNS] [1456] ACME: NlDnsDeregisterOne: being deregistered
+      (success) 0: NlDnsGenericGcAtSite: _gc._tcp.SecondarySite._sites.acme.local.
+      600 IN SRV 0 100 3268 acme-dc02.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:50 [DNS] [1456] ACME: NlDnsDeregisterOne: being deregistered
+      (success) 0: NlDnsGcAtSite: _ldap._tcp.SecondarySite._sites.gc._msdcs.acme.local.
+      600 IN SRV 0 100 3268 acme-dc02.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:49 [DNS] [1456] ForestDnsZones.acme.local: NlDnsAddDomainRecords:
+      marked for deregister: NlDnsLdapAtSite: _ldap._tcp.SecondarySite._sites.ForestDnsZones.acme.local.
+      600 IN SRV 0 100 389 acme-dc02.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:55:49 [MISC] [1456] NlSitesGetCloseSites returns successfully
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:49 [MISC] [1456] Eventlog: 5793 (4) "SecondarySite" "ForestDnsZones.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:49 [SITE] [1456] NDNC: SecondarySite: Site is no longer auto
+      covered by our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:49 [SITE] [1456] NDNC list: Default-First-Site-Name acme-dc02-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:49 [SITE] [1456] NDNC list: Default-First-Site-Name acme-dc02.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:49 [DNS] [1456] ACME: NlDnsAddDomainRecords: marked for
+      deregister: NlDnsGenericGcAtSite: _gc._tcp.SecondarySite._sites.acme.local.
+      600 IN SRV 0 100 3268 acme-dc02.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:49 [DNS] [1456] ACME: NlDnsAddDomainRecords: marked for
+      deregister: NlDnsGcAtSite: _ldap._tcp.SecondarySite._sites.gc._msdcs.acme.local.
+      600 IN SRV 0 100 3268 acme-dc02.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:49 [MISC] [1456] Eventlog: 5785 (4) "SecondarySite" "ACME" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:49 [DNS] [1028] NlDnsScavenge: Starting DNS scavenge with:
+      Force RefreshDomainRecords ForceRefreshDomainRecords 0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:55:49 [SITE] [1028] There is only one site.  All clients belong
+      to it.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:55:49 [SITE] [1028] Adding subnet to site mappings from the DS
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:47 [SESSION] [3120] CHILDDOMAIN: NlPickDomainWithAccount: Username
+      ADMIN can''t be cracked (On GC). 0x0 2'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:47 [LOGON] [3120] CHILDDOMAIN: NlPickDomainWithAccount: ADMIN:
+      Algorithm entered. UPN:0 Sam:1 Exp:0 Cross: 0 Root:0 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:47 [MISC] [1028] NlMainLoop: Notification 1 that DS site info
+      changed'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:47 [CHANGELOG] [1748] NlSendChangeLogNotification: sent 6 for
+      Rid:0x1'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:47 [MISC] [5424] ACME: DsGetDcName function returns 1355
+      (client PID=5516): Dom:acme-dc02.acme.local Acct:(null) Flags: LDAPONLY
+      RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:47 [MISC] [5424] ACME: DsGetDcName function called: client
+      PID=5516, Dom:acme-dc02.acme.local Acct:(null) Flags: LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:45 [LOGON] [3120] CHILDDOMAIN: SamLogon: Network logon of (null)\ADMINISTRATOR
+      from  Returns 0xC000006A'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:55:40 [MISC] [3288] CHILDDOMAIN: DsGetDcName function returns\
+      \ 0 (client PID=2280): Dom:CHILDDOMAIN Acct:(null) Flags: DS RET_DNS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:40 [MISC] [3288] DsGetDcName: results as follows: DCName:\\acme-dc02-child.childdomain.acme.local
+      DCAddress:\\172.31.6.93 DCAddrType:0x1 DomainName:childdomain.acme.local
+      DnsForestName:acme.local Flags:0xe003f1fc DcSiteName:Default-First-Site-Name
+      ClientSiteName:Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:40 [MISC] [3288] NetpDcAllocateCacheEntry: new entry 0x000002A541028090
+      -> DC:ACME-DC02-CHILD DnsDomName:childdomain.acme.local Flags:0x3f1fc '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:40 [3288] 46dcf9c7 e6cd3f3e bfb0561a 03286f56   ...F>?...V..Vo(.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:40 [MAILSLOT] [3288] NetpDcHandlePingResponse: childdomain.acme.local.:
+      Received ''Sam Logon Response Ex'' response.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:40 [MAILSLOT] [3288] CHILDDOMAIN: Ping response ''Sam Logon
+      Response Ex'' (null) to \\ACME-DC02-CHILD Site: Default-First-Site-Name on <Local>'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:40 [MAILSLOT] [3288] Received ping from ACME-DC02-CHILD(acme-dc02-child.childdomain.acme.local)
+      childdomain.acme.local. (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:40 [MISC] [3288] CHILDDOMAIN: DsGetDcName function called:
+      client PID=2280, Dom:CHILDDOMAIN Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:40 [MISC] [3288] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=2280): Dom:CHILDDOMAIN Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01
+    _raw: 2022-04-01T14:55:29-05:00 LastAttemptedSync="2022-04-01 14:52:57 -05:00"
+      type="ReplicationEvent" usn=517210 src_host="acme-dc02-child.childdomain.acme.local"
+      Result="0" transport="Rpc" naming_context="DC=childdomain,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01
+    _raw: 2022-04-01T14:55:29-05:00 LastAttemptedSync="2022-04-01 14:51:12 -05:00"
+      type="ReplicationEvent" usn=0 src_host="acme-dc02.acme.local" Result="8464"
+      transport="Rpc" naming_context="DC=childdomain,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01
+    _raw: 2022-04-01T14:55:29-05:00 LastAttemptedSync="2022-04-01 14:51:12 -05:00"
+      type="ReplicationEvent" usn=516367 src_host="acme-dc02-child.childdomain.acme.local"
+      Result="0" transport="Rpc" naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01
+    _raw: 2022-04-01T14:55:29-05:00 LastAttemptedSync="2022-04-01 14:51:12 -05:00"
+      type="ReplicationEvent" usn=3047565 src_host="acme-dc02.acme.local" Result="0"
+      transport="Rpc" naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01
+    _raw: 2022-04-01T14:55:29-05:00 LastAttemptedSync="2022-04-01 14:55:17 -05:00"
+      type="ReplicationEvent" usn=3048925 src_host="acme-dc02.acme.local" Result="0"
+      transport="Rpc" naming_context="DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:55:29 [SITE] [3928] DsrGetSiteName: Returning site name 'Default-First-Site-Name'\
+      \ from local cache.\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [3928] ACME: DsGetDcName function returns 1355
+      (client PID=7236): Dom:acme-dc01.acme.local Acct:(null) Flags: WRITABLE
+      LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [CRITICAL] [3928] NetpDcGetName: acme-dc01.acme.local:
+      IP and Netbios are both done.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [3928] NetpDcGetName: NetpDcGetNameIp for acme-dc01.acme.local
+      returned 1355'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [CRITICAL] [3928] NetpDcGetNameIp: acme-dc01.acme.local:
+      No data returned from DnsQuery.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:55:29 [CRITICAL] [3928] Ping from ACME-DC01 for domain acme-dc01.acme.local
+      (null) for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:55:29 [MAILSLOT] [3928] Received ping from ACME-DC01(acme-dc01.acme.local)
+      acme-dc01.acme.local (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [3928] NetpDcInitializeContext: DSGETDC_VALID_FLAGS
+      is c1fffff1'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [3928] ACME: DsGetDcName function called: client
+      PID=7236, Dom:acme-dc01.acme.local Acct:(null) Flags: WRITABLE LDAPONLY
+      RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [3928] ACME: DsGetDcName function returns 0
+      (client PID=7236): Dom:acme.local Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [3928] DsGetDcName: results as follows: DCName:\\acme-dc01.acme.local
+      DCAddress:\\172.31.10.229 DCAddrType:0x1 DomainName:acme.local DnsForestName:acme.local
+      Flags:0xe003f1fd DcSiteName:Default-First-Site-Name ClientSiteName:Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [3928] NetpDcAllocateCacheEntry: new entry 0x0000012577714960
+      -> DC:ACME-DC01 DnsDomName:acme.local Flags:0x3f1fd '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MAILSLOT] [3928] ACME: Ping response ''Sam Logon Response
+      Ex'' (null) to \\ACME-DC01 Site: Default-First-Site-Name on <Local>'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:55:29 [MAILSLOT] [3928] Received ping from ACME-DC01(acme-dc01.acme.local)
+      acme.local (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [3928] ACME: DsGetDcName function called: client
+      PID=7236, Dom:acme.local Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [3928] ACME: DsGetDcName function returns 0
+      (client PID=7236): Dom:acme.local Acct:(null) Flags: WRITABLE LDAPONLY
+      RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [3928] ACME: DsGetDcName function called: client
+      PID=7236, Dom:acme.local Acct:(null) Flags: WRITABLE LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [5220] ACME: DsGetDcName function returns 0
+      (client PID=7236): Dom:(null) Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:29 [MISC] [5220] ACME: DsGetDcName function called: client
+      PID=7236, Dom:(null) Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:21 [SITE] [6072] NDNC: SecondarySite: Site is auto covered
+      by our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:21 [MISC] [6072] Didn't log event since it was already logged.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:21 [MISC] [6072] Eventlog: 5802 (2) "Default-First-Site-Name"
+      "172.31.6.93" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:21 [SITE] [1304] 172.31.10.0/28: Subnet deleted'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:21 [MISC] [3288] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=1312): Dom:childdomain.acme.local Acct:(null) Flags: LDAPONLY
+      RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:21 [MAILSLOT] [3288] NetpDcHandlePingResponse: childdomain.acme.local:
+      Received ''Sam Logon Response Ex'' response.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:21 [MAILSLOT] [3288] Received ping from ACME-DC02-CHILD(acme-dc02-child.childdomain.acme.local)
+      childdomain.acme.local (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:21 [MISC] [3288] CHILDDOMAIN: DsGetDcName function called:
+      client PID=1312, Dom:childdomain.acme.local Acct:(null) Flags: LDAPONLY
+      RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:21 [SITE] [1600] DsrGetSiteName: Returning site name ''Default-First-Site-Name''
+      from local cache.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:21 [MISC] [1600] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=1312): Dom:childdomain.acme.local Acct:(null) Flags: DS BACKGROUND
+      RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:21 [MISC] [1600] CHILDDOMAIN: DsGetDcName function called:
+      client PID=1312, Dom:childdomain.acme.local Acct:(null) Flags: DS BACKGROUND
+      RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:55:14 [MISC] [7124] ACME: DsGetDcName function returns 0\
+      \ (client PID=1584): Dom:acme.local Acct:(null) Flags: LDAPONLY RET_DNS\
+      \ \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:14 [SITE] [7124] DsrGetSiteName: Returning site name ''Default-First-Site-Name''
+      from local cache.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:09 [SITE] [4428] NDNC: SecondarySite: Site is auto covered
+      by our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:55:09 [MISC] [4428] Didn't log event since it was already logged.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:09 [MISC] [4428] Eventlog: 5802 (2) "Default-First-Site-Name"
+      "172.31.10.229" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:09 [SITE] [3004] 172.31.10.0/28: Subnet deleted'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:55:09 [SITE] [3288] DsrGetSiteName: Returning site name 'Default-First-Site-Name'\
+      \ from local cache.\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:09 [MISC] [3288] CHILDDOMAIN: DsGetDcName function returns
+      1355 (client PID=5576): Dom:acme-dc02-child.childdomain.acme.local Acct:(null)
+      Flags: WRITABLE LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:09 [CRITICAL] [3288] NetpDcGetName: acme-dc02-child.childdomain.acme.local:
+      IP and Netbios are both done.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:09 [MISC] [3288] NetpDcGetName: NetpDcGetNameIp for acme-dc02-child.childdomain.acme.local
+      returned 1355'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:09 [CRITICAL] [3288] NetpDcGetNameIp: acme-dc02-child.childdomain.acme.local:
+      No data returned from DnsQuery.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:09 [CRITICAL] [3288] Ping from ACME-DC02-CHILD for domain acme-dc02-child.childdomain.acme.local
+      (null) for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:09 [MISC] [3288] CHILDDOMAIN: DsGetDcName function called:
+      client PID=5576, Dom:acme-dc02-child.childdomain.acme.local Acct:(null)
+      Flags: WRITABLE LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:09 [MISC] [3288] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=5576): Dom:(null) Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:09 [MISC] [3288] CHILDDOMAIN: DsGetDcName function called:
+      client PID=5576, Dom:(null) Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 2022-04-01T14:55:09-05:00 LastAttemptedSync="2022-04-01 14:55:00 -05:00"
+      type="ReplicationEvent" usn=3223980 src_host="acme-dc01.acme.local" Result="0"
+      transport="Rpc" naming_context="DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 2022-04-01T14:55:09-05:00 LastAttemptedSync="2022-04-01 14:50:42 -05:00"
+      type="ReplicationEvent" usn=525344 src_host="acme-dc01-child.childdomain.acme.local"
+      Result="0" transport="Rpc" naming_context="DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 2022-04-01T14:55:09-05:00 LastAttemptedSync="2022-04-01 14:54:42 -05:00"
+      type="ReplicationEvent" usn=526095 src_host="acme-dc01-child.childdomain.acme.local"
+      Result="0" transport="Rpc" naming_context="DC=DomainDnsZones,DC=childdomain,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 2022-04-01T14:55:09-05:00 LastAttemptedSync="2022-04-01 14:55:03 -05:00"
+      type="ReplicationEvent" usn=526114 src_host="acme-dc01-child.childdomain.acme.local"
+      Result="0" transport="Rpc" naming_context="DC=childdomain,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 2022-04-01T14:55:09-05:00 LastAttemptedSync="2022-04-01 14:55:06 -05:00"
+      type="ReplicationEvent" usn=3223971 src_host="acme-dc01.acme.local" Result="0"
+      transport="Rpc" naming_context="DC=ForestDnsZones,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 2022-04-01T14:55:09-05:00 LastAttemptedSync="2022-04-01 14:50:42 -05:00"
+      type="ReplicationEvent" usn=3222354 src_host="acme-dc01.acme.local" Result="0"
+      transport="Rpc" naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:55:08 [MISC] [3120] CHILDDOMAIN: DsGetDcName function returns\
+      \ 0 (client PID=1080): Dom:(null) Acct:(null) Flags: DS BACKGROUND \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:08 [MISC] [3120] CHILDDOMAIN: DsGetDcName function called:
+      client PID=1080, Dom:(null) Acct:(null) Flags: DS BACKGROUND '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:07 [DNS] [5164] NlDnsScavengeWorker: Set DNS scavenger to run
+      in 6 minutes (301781).'
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02
+    _raw: 'usn="3222354"
+
+      Result="0"
+
+      naming_context="DC=childdomain,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:51:42 PM"
+
+      transport="IP"
+
+      src_host="acme-dc01.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:51:42 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02
+    _raw: 'usn="525988"
+
+      Result="0"
+
+      naming_context="DC=childdomain,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:52:05 PM"
+
+      transport="IP"
+
+      src_host="acme-dc01-child.childdomain.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:52:05 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02
+    _raw: 'usn="3223980"
+
+      Result="0"
+
+      naming_context="DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:54:57 PM"
+
+      transport="IP"
+
+      src_host="acme-dc01.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:54:57 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02
+    _raw: 'usn="3222354"
+
+      Result="0"
+
+      naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:51:42 PM"
+
+      transport="IP"
+
+      src_host="acme-dc01.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:51:42 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02
+    _raw: 'usn="525200"
+
+      Result="0"
+
+      naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:51:42 PM"
+
+      transport="IP"
+
+      src_host="acme-dc01-child.childdomain.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:51:42 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Health
+    source: Powershell
+    host: ACME-DC02
+    _raw: 'Site="Default-First-Site-Name"
+
+      ForestName="acme.local"
+
+      SYSVOLShare="True"
+
+      Server="ACME-DC02"
+
+      Changed="3/29/2022 10:35:23 PM"
+
+      DomainNetBIOSName="ACME"
+
+      ProcsOK="True"
+
+      DNSRegister="True"
+
+      SchemaVersion="88"
+
+      ServicesNotRunning="ntfrs"
+
+      DomainDNSName="acme.local"
+
+      GlobalCatalog="True"
+
+      ServicePack=""
+
+      ServicesRunning="dfsr,ismserv,kdc,Netlogon,w32time"
+
+      Created="2/7/2022 10:29:26 AM"
+
+      HighestUSN="3048917"
+
+      OSVersion="10.0 (17763)"
+
+      OperatingSystem="Windows Server 2019 Datacenter"
+
+      ForestLevel="Windows2016Forest"
+
+      FSMORoles=""
+
+      RODC="False"
+
+      Enabled="True"
+
+      IsIntersiteTopologyGenerator="True"
+
+      DCWeight="100"
+
+      DomainLevel="Windows2016Domain"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:55:07 [MISC] [4168] ACME: DsGetDcName function returns 1355\
+      \ (client PID=4612): Dom:ACME-DC02 Acct:(null) Flags: DS GC RET_DNS WS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:07 [CRITICAL] [4168] ACME-DC02: Cannot even find a DC much
+      less a GC.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:55:07 [CRITICAL] [4168] Ping from ACME-DC02 for domain (null) ACME-DC02
+      for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:55:07 [MAILSLOT] [4168] Received ping from ACME-DC02(acme-dc02.acme.local)
+      (null) (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:55:07 [CRITICAL] [4168] Ping from ACME-DC02 for domain ACME-DC02
+      ACME-DC02 for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:55:07 [MAILSLOT] [4168] Received ping from ACME-DC02(acme-dc02.acme.local)
+      ACME-DC02 (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:07 [MISC] [4168] DsIGetDcName: DNS suffix search list allowed
+      but single label DNS disallowed for name ACME-DC02'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:07 [MISC] [4168] ACME: DsGetDcName function called: client
+      PID=4612, Dom:ACME-DC02 Acct:(null) Flags: DS GC RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:07 [MISC] [4168] ACME: DsGetDcName function returns 1355
+      (client PID=4612): Dom:ACME-DC02 Acct:(null) Flags: DS GC RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:55:07 [DNS] [5164] [Unknown]: NlDnsAddName: New name added to\
+      \ the list: NlDnsLdapAtSite: _ldap._tcp.SecondarySite._sites.ForestDnsZones.acme.local.\
+      \ 600 IN SRV 0 100 389 acme-dc01.acme.local.\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:07 [MISC] [5164] Eventlog: 5792 (4) "Default-First-Site-Name"
+      "SecondarySite" "ForestDnsZones.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:07 [DNS] [5164] [Unknown]: NlDnsAddName: New name added to
+      the list: NlDnsGenericGcAtSite: _gc._tcp.SecondarySite._sites.acme.local.
+      600 IN SRV 0 100 3268 acme-dc01.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:07 [DNS] [5164] [Unknown]: NlDnsAddName: New name added to
+      the list: NlDnsGcAtSite: _ldap._tcp.SecondarySite._sites.gc._msdcs.acme.local.
+      600 IN SRV 0 100 3268 acme-dc01.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:07 [MISC] [5164] ACME: Added the 0x1B name on transport
+      \Device\NetBT_Tcpip_{54B31D7E-36BF-4BBE-9AB2-106A939CD78C}'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:07 [MISC] [3004] NlMainLoop: Notification 0 that DS site info
+      changed'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:06 [CRITICAL] [4168] NetpDcGetName: ACME-DC02: IP and Netbios
+      are both done.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:06 [MISC] [4168] NetpDcGetName: NetpDcGetNameNetbios for ACME-DC02
+      returned 1355'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:06 [CRITICAL] [4168] NetpDcGetNameIp: ACME-DC02: No data returned
+      from DnsQuery.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:06 [MISC] [4168] ACME: DsGetDcName function returns 1355
+      (client PID=4612): Dom:ACME-DC02 Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:06 [MISC] [4168] ACME: DsGetDcName function called: client
+      PID=4612, Dom:ACME-DC02 Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:06 [SITE] [756] NDNC: SecondarySite: Site is auto covered by
+      our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:55:06 [MISC] [756] Didn't log event since it was already logged.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:06 [MISC] [756] Eventlog: 5802 (2) "Default-First-Site-Name"
+      "172.31.8.190" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:06 [SITE] [776] 172.31.10.0/28: Subnet deleted'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:05 [MISC] [5424] ACME: DsGetDcName function returns 0
+      (client PID=-1): Dom:(null) Acct:(null) Flags: RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:05 [MISC] [5424] ACME: DsGetDcName function called: client
+      PID=-1, Dom:(null) Acct:(null) Flags: RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:05 [CRITICAL] [5424] NetpDcGetNameNetbios: ACME-DC02: Cannot
+      NlBrowserSendDatagram. (1C) 53'
+  - index: msad
+    sourcetype: MSAD:NT6:Health
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 'Site="Default-First-Site-Name"
+
+      ForestName="acme.local"
+
+      SYSVOLShare="True"
+
+      Server="ACME-DC02-CHILD"
+
+      Changed="3/25/2022 10:35:19 AM"
+
+      DomainNetBIOSName="CHILDDOMAIN"
+
+      ProcsOK="True"
+
+      DNSRegister="True"
+
+      SchemaVersion="88"
+
+      ServicesNotRunning="ntfrs"
+
+      DomainDNSName="childdomain.acme.local"
+
+      GlobalCatalog="True"
+
+      ServicePack=""
+
+      ServicesRunning="dfsr,ismserv,kdc,Netlogon,w32time"
+
+      Created="3/4/2022 9:57:20 AM"
+
+      HighestUSN="517353"
+
+      OSVersion="10.0 (17763)"
+
+      OperatingSystem="Windows Server 2019 Datacenter"
+
+      ForestLevel="Windows2016Forest"
+
+      FSMORoles=""
+
+      RODC="False"
+
+      Enabled="True"
+
+      IsIntersiteTopologyGenerator="False"
+
+      DCWeight="100"
+
+      DomainLevel="Windows2016Domain"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:04 [MISC] [3288] CHILDDOMAIN: DsGetDcName function returns
+      1355 (client PID=2000): Dom:ACME-DC02-CHILD Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:04 [CRITICAL] [3288] Ping from ACME-DC02-CHILD for domain ACME-DC02-CHILD
+      ACME-DC02-CHILD for (null) on <Local> is invalid since we don't host the named
+      domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:04 [MAILSLOT] [3288] Received ping from ACME-DC02-CHILD(acme-dc02-child.childdomain.acme.local)
+      ACME-DC02-CHILD (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:04 [MISC] [3288] DsIGetDcName: DNS suffix search list allowed
+      but single label DNS disallowed for name ACME-DC02-CHILD'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:04 [MISC] [3288] CHILDDOMAIN: DsGetDcName function called:
+      client PID=2000, Dom:ACME-DC02-CHILD Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:04 [MISC] [3288] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=2000): Dom:acme.local Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:04 [MISC] [3288] DsGetDcName: results as follows: DCName:\\acme-dc01.acme.local
+      DCAddress:\\172.31.10.229 DCAddrType:0x1 DomainName:acme.local DnsForestName:acme.local
+      Flags:0xe003f1fd DcSiteName:Default-First-Site-Name ClientSiteName:Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:04 [MISC] [3288] NetpDcGetName: acme.local using cached
+      information ( NlDcCacheEntry = 0x000002A53F915F30 )'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:04 [CRITICAL] [3288] Ping from ACME-DC02-CHILD for domain acme.local
+      (null) for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:04 [MAILSLOT] [3288] Received ping from ACME-DC02-CHILD(acme-dc02-child.childdomain.acme.local)
+      acme.local (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:04 [MISC] [3288] CHILDDOMAIN: DsGetDcName function called:
+      client PID=2000, Dom:acme.local Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:55:04 [MISC] [3288] CHILDDOMAIN: DsGetDcName function returns\
+      \ 0 (client PID=2000): Dom:childdomain.acme.local Acct:(null) Flags: DS\
+      \ RET_DNS WS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:03 [SITE] [996] NDNC: SecondarySite: Site is auto covered by
+      our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:55:03 [MISC] [996] Didn't log event since it was already logged.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:03 [MISC] [996] Eventlog: 5802 (2) "Default-First-Site-Name"
+      "172.31.6.58" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:55:03 [SITE] [1028] 10.10.10.0/24: Subnet deleted'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:55:03 [MAILSLOT] [5424] Sent 'Sam Logon' message to ACME-DC02[1C]
+      on all transports.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:03 [MISC] [3120] CHILDDOMAIN: DsGetDcName function returns
+      1355 (client PID=7036): Dom:ACME-DC01-CHILD Acct:(null) Flags: DS GC RET_DNS
+      WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:03 [CRITICAL] [3120] ACME-DC01-CHILD: Cannot even find a DC
+      much less a GC.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:03 [MISC] [3120] NetpDcGetName: ACME-DC01-CHILD similar query
+      failed recently 375'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:55:03 [CRITICAL] [3120] Ping from ACME-DC01-CHILD for domain (null)
+      ACME-DC01-CHILD for (null) on <Local> is invalid since we don't host the named
+      domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:55:03 [MAILSLOT] [3120] Received ping from ACME-DC01-CHILD(acme-dc01-child.childdomain.acme.local)
+      (null) (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:55:03 [CRITICAL] [3120] Ping from ACME-DC01-CHILD for domain ACME-DC01-CHILD
+      ACME-DC01-CHILD for (null) on <Local> is invalid since we don't host the named
+      domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:55:03 [MAILSLOT] [3120] Received ping from ACME-DC01-CHILD(acme-dc01-child.childdomain.acme.local)
+      ACME-DC01-CHILD (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:03 [MISC] [3120] DsIGetDcName: DNS suffix search list allowed
+      but single label DNS disallowed for name ACME-DC01-CHILD'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:03 [MISC] [3120] CHILDDOMAIN: DsGetDcName function called:
+      client PID=7036, Dom:ACME-DC01-CHILD Acct:(null) Flags: DS GC RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01
+    _raw: 'usn="0"
+
+      Result="8464"
+
+      naming_context="DC=childdomain,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:51:12 PM"
+
+      transport="IP"
+
+      src_host="acme-dc02.acme.local"
+
+      LastSuccessfulSync="3/9/2022 11:35:58 AM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01
+    _raw: 'usn="517210"
+
+      Result="0"
+
+      naming_context="DC=childdomain,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:52:57 PM"
+
+      transport="IP"
+
+      src_host="acme-dc02-child.childdomain.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:52:57 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01
+    _raw: 'usn="3047565"
+
+      Result="0"
+
+      naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:51:12 PM"
+
+      transport="IP"
+
+      src_host="acme-dc02.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:51:12 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01
+    _raw: 'usn="516367"
+
+      Result="0"
+
+      naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:51:12 PM"
+
+      transport="IP"
+
+      src_host="acme-dc02-child.childdomain.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:51:12 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01
+    _raw: 'usn="3048904"
+
+      Result="0"
+
+      naming_context="DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:54:57 PM"
+
+      transport="IP"
+
+      src_host="acme-dc02.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:54:57 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 'usn="517239"
+
+      Result="0"
+
+      naming_context="DC=childdomain,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:54:46 PM"
+
+      transport="IP"
+
+      src_host="acme-dc02-child.childdomain.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:54:46 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 'usn="516534"
+
+      Result="0"
+
+      naming_context="DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:50:23 PM"
+
+      transport="IP"
+
+      src_host="acme-dc02-child.childdomain.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:50:23 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 'usn="3048904"
+
+      Result="0"
+
+      naming_context="DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:55:00 PM"
+
+      transport="IP"
+
+      src_host="acme-dc02.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:55:00 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 'usn="516290"
+
+      Result="0"
+
+      naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:50:23 PM"
+
+      transport="IP"
+
+      src_host="acme-dc02-child.childdomain.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:50:23 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 'usn="3047484"
+
+      Result="0"
+
+      naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:50:23 PM"
+
+      transport="IP"
+
+      src_host="acme-dc02.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:50:23 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 'usn="3048878"
+
+      Result="0"
+
+      naming_context="CN=Configuration,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:54:39 PM"
+
+      transport="IP"
+
+      src_host="acme-dc02.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:54:39 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Health
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 'Site="Default-First-Site-Name"
+
+      ForestName="acme.local"
+
+      SYSVOLShare="True"
+
+      Server="ACME-DC01-CHILD"
+
+      Changed="3/25/2022 10:26:16 AM"
+
+      DomainNetBIOSName="CHILDDOMAIN"
+
+      ProcsOK="True"
+
+      DNSRegister="True"
+
+      SchemaVersion="88"
+
+      ServicesNotRunning="ntfrs"
+
+      DomainDNSName="childdomain.acme.local"
+
+      GlobalCatalog="True"
+
+      ServicePack=""
+
+      ServicesRunning="dfsr,ismserv,kdc,Netlogon,w32time"
+
+      Created="3/4/2022 9:37:53 AM"
+
+      HighestUSN="526140"
+
+      OSVersion="10.0 (17763)"
+
+      OperatingSystem="Windows Server 2019 Datacenter"
+
+      ForestLevel="Windows2016Forest"
+
+      FSMORoles="PDCEmulator RID Infrastructure"
+
+      RODC="False"
+
+      Enabled="True"
+
+      IsIntersiteTopologyGenerator="False"
+
+      DCWeight="100"
+
+      DomainLevel="Windows2016Domain"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:02 [CRITICAL] [3120] NetpDcGetName: ACME-DC01-CHILD: IP and
+      Netbios are both done.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:02 [MISC] [3120] NetpDcGetName: NetpDcGetNameNetbios for ACME-DC01-CHILD
+      returned 1355'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:02 [CRITICAL] [3120] NetpDcGetNameIp: ACME-DC01-CHILD: No data
+      returned from DnsQuery.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:02 [MISC] [3120] CHILDDOMAIN: DsGetDcName function returns
+      1355 (client PID=7036): Dom:ACME-DC01-CHILD Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:02 [MISC] [3120] CHILDDOMAIN: DsGetDcName function called:
+      client PID=7036, Dom:ACME-DC01-CHILD Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:02 [CRITICAL] [3120] NetpDcGetNameNetbios: ACME-DC01-CHILD:
+      Cannot NlBrowserSendDatagram. (1C) 53'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:55:02 [3120] f9c1065d 3e3b276b 07ce6e90 b0285f0f   ]...k';>.n..._(.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:55:02 [MISC] [3928] ACME: DsGetDcName function returns 1355\
+      \ (client PID=9920): Dom:ACME-DC01 Acct:(null) Flags: DS GC RET_DNS WS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:02 [CRITICAL] [3928] ACME-DC01: Cannot even find a DC much
+      less a GC.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:02 [MISC] [3928] NetpDcGetName: ACME-DC01 similar query failed
+      recently 140'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:55:02 [CRITICAL] [3928] Ping from ACME-DC01 for domain (null) ACME-DC01
+      for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:55:02 [MAILSLOT] [3928] Received ping from ACME-DC01(acme-dc01.acme.local)
+      (null) (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:55:02 [CRITICAL] [3928] Ping from ACME-DC01 for domain ACME-DC01
+      ACME-DC01 for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:55:02 [MAILSLOT] [3928] Received ping from ACME-DC01(acme-dc01.acme.local)
+      ACME-DC01 (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:02 [MISC] [3928] DsIGetDcName: DNS suffix search list allowed
+      but single label DNS disallowed for name ACME-DC01'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:02 [MISC] [3928] ACME: DsGetDcName function called: client
+      PID=9920, Dom:ACME-DC01 Acct:(null) Flags: DS GC RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:02 [MISC] [3928] ACME: DsGetDcName function returns 1355
+      (client PID=9920): Dom:ACME-DC01 Acct:(null) Flags: DS GC RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:02 [CRITICAL] [7124] NetpDcGetName: ACME-DC01: IP and Netbios
+      are both done.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:02 [MISC] [7124] NetpDcGetName: NetpDcGetNameNetbios for ACME-DC01
+      returned 1355'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:02 [CRITICAL] [7124] NetpDcGetNameIp: ACME-DC01: No data returned
+      from DnsQuery.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:02 [MISC] [7124] ACME: DsGetDcName function returns 1355
+      (client PID=9920): Dom:ACME-DC01 Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:02 [CRITICAL] [7124] NetpDcGetNameNetbios: ACME-DC01: Cannot
+      NlBrowserSendDatagram. (1C) 53'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:02 [MISC] [1600] CHILDDOMAIN: DsGetDcName function returns
+      1355 (client PID=2000): Dom:ACME-DC02-CHILD Acct:(null) Flags: DS GC RET_DNS
+      WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:02 [CRITICAL] [1600] ACME-DC02-CHILD: Cannot even find a DC
+      much less a GC.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:02 [CRITICAL] [1600] Ping from ACME-DC02-CHILD for domain (null)
+      ACME-DC02-CHILD for (null) on <Local> is invalid since we don't host the named
+      domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:02 [MAILSLOT] [1600] Received ping from ACME-DC02-CHILD(acme-dc02-child.childdomain.acme.local)
+      (null) (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:02 [MISC] [1600] CHILDDOMAIN: DsGetDcName function called:
+      client PID=2000, Dom:ACME-DC02-CHILD Acct:(null) Flags: DS GC RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:02 [CRITICAL] [3288] NetpDcGetName: ACME-DC02-CHILD: IP and
+      Netbios are both done.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:02 [MISC] [3288] NetpDcGetName: NetpDcGetNameNetbios for ACME-DC02-CHILD
+      returned 1355'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:02 [CRITICAL] [3288] NetpDcGetNameIp: ACME-DC02-CHILD: No data
+      returned from DnsQuery.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:55:02 [CRITICAL] [792] NetpDcGetNameNetbios: ACME-DC02-CHILD:
+      Cannot NlBrowserSendDatagram. (1C) 53'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:55:02 [792] cfcf18b4 b39c3cff defef648 cf60ace6   .....<..H.....`.
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 'usn="526095"
+
+      Result="0"
+
+      naming_context="DC=childdomain,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:54:46 PM"
+
+      transport="IP"
+
+      src_host="acme-dc01-child.childdomain.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:54:46 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 'usn="525344"
+
+      Result="0"
+
+      naming_context="DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:50:42 PM"
+
+      transport="IP"
+
+      src_host="acme-dc01-child.childdomain.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:50:42 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 'usn="3223980"
+
+      Result="0"
+
+      naming_context="DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:55:00 PM"
+
+      transport="IP"
+
+      src_host="acme-dc01.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:55:00 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 'usn="525148"
+
+      Result="0"
+
+      naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:50:42 PM"
+
+      transport="IP"
+
+      src_host="acme-dc01-child.childdomain.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:50:42 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 'usn="3222354"
+
+      Result="0"
+
+      naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:50:42 PM"
+
+      transport="IP"
+
+      src_host="acme-dc01.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:50:42 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 'usn="3223958"
+
+      Result="0"
+
+      naming_context="CN=Configuration,DC=acme,DC=local"
+
+      type="ReplicationEvent"
+
+      LastAttemptedSync="4/1/2022 2:54:51 PM"
+
+      transport="IP"
+
+      src_host="acme-dc01.acme.local"
+
+      LastSuccessfulSync="4/1/2022 2:54:51 PM"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:55:01 [MISC] [5424] ACME: DsGetDcName function returns 0\
+      \ (client PID=4612): Dom:acme.local Acct:(null) Flags: DS RET_DNS WS \r\
+      \n"
+  - index: msad
+    sourcetype: MSAD:NT6:Health
+    source: Powershell
+    host: ACME-DC01
+    _raw: 'Site="Default-First-Site-Name"
+
+      ForestName="acme.local"
+
+      SYSVOLShare="True"
+
+      Server="ACME-DC01"
+
+      Changed="4/1/2022 5:49:52 AM"
+
+      DomainNetBIOSName="ACME"
+
+      ProcsOK="True"
+
+      DNSRegister="True"
+
+      SchemaVersion="88"
+
+      ServicesNotRunning="ntfrs"
+
+      DomainDNSName="acme.local"
+
+      GlobalCatalog="True"
+
+      ServicePack=""
+
+      ServicesRunning="dfsr,ismserv,kdc,Netlogon,w32time"
+
+      Created="2/7/2022 10:15:44 AM"
+
+      HighestUSN="3223987"
+
+      OSVersion="10.0 (17763)"
+
+      OperatingSystem="Windows Server 2019 Datacenter"
+
+      ForestLevel="Windows2016Forest"
+
+      FSMORoles="Schema DomainNaming PDCEmulator RID Infrastructure"
+
+      RODC="False"
+
+      Enabled="True"
+
+      IsIntersiteTopologyGenerator="False"
+
+      DCWeight="100"
+
+      DomainLevel="Windows2016Domain"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:55:00 [MAILSLOT] [3120] Sent 'Sam Logon' message to ACME-DC01-CHILD[1C]\
+      \ on all transports.\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:00 [MISC] [3120] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=7036): Dom:acme.local Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:00 [MISC] [3120] DsGetDcName: results as follows: DCName:\\acme-dc01.acme.local
+      DCAddress:\\172.31.10.229 DCAddrType:0x1 DomainName:acme.local DnsForestName:acme.local
+      Flags:0xe003f1fd DcSiteName:Default-First-Site-Name ClientSiteName:Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:00 [MISC] [3120] NetpDcGetName: acme.local using cached
+      information ( NlDcCacheEntry = 0x000001A87F5D6930 )'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:55:00 [CRITICAL] [3120] Ping from ACME-DC01-CHILD for domain acme.local
+      (null) for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:55:00 [MAILSLOT] [3120] Received ping from ACME-DC01-CHILD(acme-dc01-child.childdomain.acme.local)
+      acme.local (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:00 [MISC] [3120] CHILDDOMAIN: DsGetDcName function called:
+      client PID=7036, Dom:acme.local Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:00 [MISC] [3120] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=7036): Dom:childdomain.acme.local Acct:(null) Flags: DS RET_DNS
+      WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:00 [MAILSLOT] [3120] NetpDcHandlePingResponse: childdomain.acme.local:
+      Received ''Sam Logon Response Ex'' response.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:55:00 [MAILSLOT] [3120] Received ping from ACME-DC01-CHILD(acme-dc01-child.childdomain.acme.local)
+      childdomain.acme.local (null) on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:55:00 [MISC] [3120] CHILDDOMAIN: DsGetDcName function called:
+      client PID=7036, Dom:childdomain.acme.local Acct:(null) Flags: DS RET_DNS
+      WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:55:00 [MAILSLOT] [792] Sent 'Sam Logon' message to ACME-DC02-CHILD[1C]\
+      \ on all transports.\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:55:00 [MAILSLOT] [7124] Sent 'Sam Logon' message to ACME-DC01[1C]\
+      \ on all transports.\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:55:00 [MISC] [7124] ACME: DsGetDcName function called: client
+      PID=9920, Dom:ACME-DC01 Acct:(null) Flags: DS RET_DNS WS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:53 [MISC] [5924] Eventlog: 5798 (4) "Default-First-Site-Name"
+      "SecondarySite" "ForestDnsZones.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:53 [SITE] [5924] NDNC: Default-First-Site-Name: Site is no
+      longer auto covered by our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:53 [MISC] [5924] Eventlog: 5798 (4) "Default-First-Site-Name"
+      "SecondarySite" "DomainDnsZones.childdomain.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:53 [MISC] [5924] Eventlog: 5795 (4) "Default-First-Site-Name"
+      "CHILDDOMAIN" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:53 [MISC] [5924] Eventlog: 5794 (4) "Default-First-Site-Name"
+      "SecondarySite" "CHILDDOMAIN" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:53 [SITE] [1304] 172.31.10.0/28: Re-adding Subnet for site
+      ''Default-First-Site-Name'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:53 [SITE] [1304] 10.10.10.0/24: Re-adding Subnet for site ''SecondarySite'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:53 [SITE] [1304] 10.10.10.0/24: Site SecondarySite is not site
+      this DC is in.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:54:53 [SITE] [1304] Setting site name to 'Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:51 [DNS] [3336] [Unknown]: NlDnsAddName: New name added to
+      the list: NlDnsLdapAtSite: _ldap._tcp.SecondarySite._sites.ForestDnsZones.acme.local.
+      600 IN SRV 0 100 389 acme-dc02.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:51 [MISC] [3336] Eventlog: 5792 (4) "Default-First-Site-Name"
+      "SecondarySite" "ForestDnsZones.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:51 [DNS] [3336] [Unknown]: NlDnsAddName: New name added to
+      the list: NlDnsGenericGcAtSite: _gc._tcp.SecondarySite._sites.acme.local.
+      600 IN SRV 0 100 3268 acme-dc02.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:51 [DNS] [3336] [Unknown]: NlDnsAddName: New name added to
+      the list: NlDnsGcAtSite: _ldap._tcp.SecondarySite._sites.gc._msdcs.acme.local.
+      600 IN SRV 0 100 3268 acme-dc02.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:51 [SITE] [1028] 10.10.10.0/24: Re-adding Subnet for site ''SecondarySite'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:51 [SITE] [1028] 10.10.10.0/24: Site SecondarySite is not site
+      this DC is in.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:51 [MISC] [1304] NlMainLoop: Notification 8 that info related
+      to next closest site changed'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:54:49 [MISC] [1028] NlMainLoop: Notification 0 that DS site info\
+      \ changed\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:54:44 [SESSION] [1600] DeleteContext: 0.aad: context freed\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:44 [SESSION] [1600] DeleteSecurityContext: 0.aad: called'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:54:44 [SESSION] [4968] DeleteContext: 0.521: context freed\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:44 [SESSION] [4968] DeleteSecurityContext: 0.521: called'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:43 [LOGON] [1600] CHILDDOMAIN: SamLogon: Network logon of (null)\ADMIN
+      from  Returns 0xC0000064'
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02
+    _raw: 2022-04-01T14:54:43-05:00 LastAttemptedSync="2022-04-01 14:52:05 -05:00"
+      type="ReplicationEvent" usn=525988 src_host="acme-dc01-child.childdomain.acme.local"
+      Result="0" transport="Rpc" naming_context="DC=childdomain,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02
+    _raw: 2022-04-01T14:54:43-05:00 LastAttemptedSync="2022-04-01 14:51:42 -05:00"
+      type="ReplicationEvent" usn=3222354 src_host="acme-dc01.acme.local" Result="0"
+      transport="Rpc" naming_context="DC=childdomain,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02
+    _raw: 2022-04-01T14:54:43-05:00 LastAttemptedSync="2022-04-01 14:51:42 -05:00"
+      type="ReplicationEvent" usn=525200 src_host="acme-dc01-child.childdomain.acme.local"
+      Result="0" transport="Rpc" naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02
+    _raw: 2022-04-01T14:54:43-05:00 LastAttemptedSync="2022-04-01 14:51:42 -05:00"
+      type="ReplicationEvent" usn=3222354 src_host="acme-dc01.acme.local" Result="0"
+      transport="Rpc" naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC02
+    _raw: 2022-04-01T14:54:43-05:00 LastAttemptedSync="2022-04-01 14:54:39 -05:00"
+      type="ReplicationEvent" usn=3223951 src_host="acme-dc01.acme.local" Result="0"
+      transport="Rpc" naming_context="DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:54:42 [MISC] [3004] NlMainLoop: Notification 8 that info related\
+      \ to next closest site changed\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:54:42 [MISC] [3004] NlMainLoop: Notification 8 that info related
+      to next closest site changed'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:42 [SITE] [4068] NDNC list: SecondarySite acme-dc02-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:42 [SITE] [4068] NDNC: Default-First-Site-Name: Site is auto
+      covered by our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:41 [MISC] [5424] ACME: DsGetDcName function returns 0
+      (client PID=5608): Dom:acme.local Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:41 [MISC] [5424] ACME: DsGetDcName function called: client
+      PID=5608, Dom:acme.local Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:41 [MISC] [5424] ACME: DsGetDcName function returns 0
+      (client PID=5608): Dom:(null) Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:41 [MISC] [5424] ACME: DsGetDcName function called: client
+      PID=5608, Dom:(null) Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:54:41 [MISC] [5584] NlSitesGetCloseSites returns successfully\r\
+      \n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:41 [MISC] [5584] Eventlog: 5798 (4) "Default-First-Site-Name"
+      "SecondarySite" "ForestDnsZones.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:41 [SITE] [5584] NDNC: Default-First-Site-Name: Site is no
+      longer auto covered by our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:41 [MISC] [5584] Eventlog: 5798 (4) "Default-First-Site-Name"
+      "SecondarySite" "DomainDnsZones.childdomain.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:41 [MISC] [5584] Eventlog: 5795 (4) "Default-First-Site-Name"
+      "CHILDDOMAIN" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:41 [MISC] [5584] Eventlog: 5794 (4) "Default-First-Site-Name"
+      "SecondarySite" "CHILDDOMAIN" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:41 [SITE] [776] 172.31.10.0/28: Re-adding Subnet for site ''Default-First-Site-Name'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:41 [SITE] [776] 10.10.10.0/24: Re-adding Subnet for site ''SecondarySite'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:41 [SITE] [776] 10.10.10.0/24: Site SecondarySite is not site
+      this DC is in.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:54:41 [SITE] [776] Setting site name to 'Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:39 [MISC] [776] NlMainLoop: Notification 8 that info related
+      to next closest site changed'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:32 [MISC] [1600] DsGetDcName: results as follows: DCName:\\acme-dc02-child.childdomain.acme.local
+      DCAddress:\\172.31.6.93 DCAddrType:0x1 DomainName:childdomain.acme.local
+      DnsForestName:acme.local Flags:0xe003f1fc DcSiteName:SecondarySite ClientSiteName:SecondarySite'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:54:32 [1600] 785014c6 4cceb9f2 846d02d9 5d2818f7   ..Px...L..m...(]
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:32 [MAILSLOT] [1600] CHILDDOMAIN: Ping response ''Sam Logon
+      Response Ex'' (null) to \\ACME-DC02-CHILD Site: SecondarySite on <Local>'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:31 [LOGON] [3120] CHILDDOMAIN: SamLogon: Transitive Network
+      logon of (null)\ADMINISTRATOR from  (via ACME-DC02-CHILD) Returns 0xC000006A'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:31 [SESSION] [3120] QueryContextAttributes: 0.521: 3 returns
+      0x0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:31 [LOGON] [3120] CHILDDOMAIN: SamLogon: Transitive Network
+      logon of (null)\ADMINISTRATOR from  (via ACME-DC02-CHILD) Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:31 [SESSION] [3120] UnsealMessage: 0.521: returns 0x0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:31 [SESSION] [3120] AcceptSecurityContext: called'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:31 [CRITICAL] [1600] NlPrintRpcDebug: Couldn''t get EEInfo
+      for I_NetLogonSamLogonEx: 1761 (may be legitimate for 0xc000006a)'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:31 [SESSION] [1600] UnsealMessage: 0.aad: returns 0x0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:31 [SESSION] [1600] QueryContextAttributes: 0.aad: 0 returns
+      0x0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:31 [SESSION] [1600] InitializeSecurityContext: 0.aad: ACME-DC02-CHILD:
+      called with context handle'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:31 [SESSION] [1600] InitializeSecurityContext: ACME-DC02-CHILD:
+      called'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:31 [SESSION] [1600] AcquireCredentialsHandleW: called'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:31 [SESSION] [1600] CHILDDOMAIN: CHILDDOMAIN: NlStartApiClientSession:
+      Try to NlBindingSetAuthInfo'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:54:31 [SESSION] [1600] CHILDDOMAIN: CHILDDOMAIN: NlStartApiClientSession:
+      Bind to server \\acme-dc01-child.childdomain.acme.local (TCP) 1 (Retry:
+      0).'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:29 [MISC] [1028] NlMainLoop: Notification 8 that info related
+      to next closest site changed'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:27 [SITE] [3992] NDNC list: SecondarySite acme-dc02-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:27 [SITE] [3992] NDNC: Default-First-Site-Name: Site is auto
+      covered by our site.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:27 [MISC] [3992] CHILDDOMAIN: Added the 0x1B name on transport
+      \Device\NetBT_Tcpip_{54B31D7E-36BF-4BBE-9AB2-106A939CD78C}'
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 2022-04-01T14:54:25-05:00 LastAttemptedSync="2022-04-01 14:54:23 -05:00"
+      type="ReplicationEvent" usn=3048865 src_host="acme-dc02.acme.local" Result="0"
+      transport="Rpc" naming_context="DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 2022-04-01T14:54:25-05:00 LastAttemptedSync="2022-04-01 14:50:23 -05:00"
+      type="ReplicationEvent" usn=516534 src_host="acme-dc02-child.childdomain.acme.local"
+      Result="0" transport="Rpc" naming_context="DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 2022-04-01T14:54:25-05:00 LastAttemptedSync="2022-04-01 14:51:36 -05:00"
+      type="ReplicationEvent" usn=517175 src_host="acme-dc02-child.childdomain.acme.local"
+      Result="0" transport="Rpc" naming_context="DC=DomainDnsZones,DC=childdomain,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 2022-04-01T14:54:25-05:00 LastAttemptedSync="2022-04-01 14:52:54 -05:00"
+      type="ReplicationEvent" usn=517206 src_host="acme-dc02-child.childdomain.acme.local"
+      Result="0" transport="Rpc" naming_context="DC=childdomain,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 2022-04-01T14:54:25-05:00 LastAttemptedSync="2022-04-01 14:51:21 -05:00"
+      type="ReplicationEvent" usn=3048657 src_host="acme-dc02.acme.local" Result="0"
+      transport="Rpc" naming_context="DC=ForestDnsZones,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Replication
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 2022-04-01T14:54:25-05:00 LastAttemptedSync="2022-04-01 14:50:23 -05:00"
+      type="ReplicationEvent" usn=3047484 src_host="acme-dc02.acme.local" Result="0"
+      transport="Rpc" naming_context="CN=Schema,CN=Configuration,DC=acme,DC=local"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:54:24 [SITE] [4968] DsrGetSiteName: Returning site name 'SecondarySite'\
+      \ from local cache.\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:24 [MISC] [4968] CHILDDOMAIN: DsGetDcName function returns
+      1355 (client PID=6232): Dom:acme-dc01-child.childdomain.acme.local Acct:(null)
+      Flags: WRITABLE LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:24 [CRITICAL] [4968] NetpDcGetName: acme-dc01-child.childdomain.acme.local:
+      IP and Netbios are both done.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:24 [MISC] [4968] NetpDcGetName: NetpDcGetNameIp for acme-dc01-child.childdomain.acme.local
+      returned 1355'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:24 [CRITICAL] [4968] NetpDcGetNameIp: acme-dc01-child.childdomain.acme.local:
+      No data returned from DnsQuery.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:54:24 [CRITICAL] [4968] Ping from ACME-DC01-CHILD for domain acme-dc01-child.childdomain.acme.local
+      (null) for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:24 [MISC] [4968] CHILDDOMAIN: DsGetDcName function called:
+      client PID=6232, Dom:acme-dc01-child.childdomain.acme.local Acct:(null)
+      Flags: WRITABLE LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:24 [MISC] [4968] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=6232): Dom:childdomain.acme.local Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:24 [MISC] [4968] DsGetDcName: results as follows: DCName:\\acme-dc01-child.childdomain.acme.local
+      DCAddress:\\172.31.8.190 DCAddrType:0x1 DomainName:childdomain.acme.local
+      DnsForestName:acme.local Flags:0xe003f1fd DcSiteName:SecondarySite ClientSiteName:SecondarySite'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:54:24 [4968] aabc36a3 c8b55121 ba8493ad da5f1c23   .6..!Q......#._.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:24 [MAILSLOT] [4968] CHILDDOMAIN: Ping response ''Sam Logon
+      Response Ex'' (null) to \\ACME-DC01-CHILD Site: SecondarySite on <Local>'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:24 [MISC] [4968] CHILDDOMAIN: DsGetDcName function called:
+      client PID=6232, Dom:childdomain.acme.local Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:54:24 [MISC] [4968] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=6232): Dom:(null) Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:54:24 [SITE] [6684] NDNC list: SecondarySite acme-dc02-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:54:01 [SITE] [6220] NDNC list: SecondarySite acme-dc02-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:53:40 [LOGON] [4168] ACME: SamLogon: Network logon of (null)\\\
+      (null) from  Returns 0xC0000064\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:53:40 [CRITICAL] [4168] ACME: NlPickDomainWithAccount: :
+      Must be either UPN or SAM account. UPN:0 Sam:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:53:40 [LOGON] [4168] ACME: SamLogon: Network logon of (null)\(null)
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:53:36 [MISC] [4968] CHILDDOMAIN: DsGetDcName function returns\
+      \ 0 (client PID=1080): Dom:childdomain.acme.local Acct:(null) Flags: DS\
+      \ IP \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:53:36 [SITE] [4968] DsrGetSiteName: Returning site name ''SecondarySite''
+      from local cache.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:53:03 [MISC] [3288] CHILDDOMAIN: DsGetDcName function returns\
+      \ 0 (client PID=1312): Dom:childdomain.acme.local Acct:(null) Flags: LDAPONLY\
+      \ RET_DNS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:53:03 [SITE] [792] DsrGetSiteName: Returning site name ''SecondarySite''
+      from local cache.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:53:02 [MISC] [1600] DsrEnumerateDomainTrusts: Called, Flags =
+      0x1'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:53:02 [CRITICAL] [3288] Ping from ACME-DC02-CHILD for domain acme.local
+      ACME for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:52:32 [MISC] [3928] ACME: DsGetDcName function returns 0\
+      \ (client PID=3076): Dom:ACME Acct:(null) Flags: DS RET_DNS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:52:32 [MISC] [3928] ACME: DsGetDcName function called: client
+      PID=3076, Dom:ACME Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:52:31 [MISC] [7124] ACME: DsGetDcName function returns 0
+      (client PID=3076): Dom:ACME Acct:(null) Flags: DS RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:52:22 [SITE] [1028] 172.31.10.0/28: Re-adding Subnet for site
+      ''Default-First-Site-Name'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:52:20 [SESSION] [5824] CHILDDOMAIN: CHILDDOMAIN: NlTimeoutApiClientSession:
+      Unbind from server \\acme-dc01-child.childdomain.acme.local (TCP) 1.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:52:16 [MISC] [3288] CHILDDOMAIN: DsGetDcName function returns\
+      \ 0 (client PID=1100): Dom:(null) Acct:(null) Flags: DS BACKGROUND \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:52:15 [MISC] [5424] ACME: DsGetDcName function returns 0\
+      \ (client PID=1092): Dom:(null) Acct:(null) Flags: DS BACKGROUND \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:52:13 [MAILSLOT] [7008] ACME: Ping response ''Sam Logon Response
+      Ex'' (null) to \\ACME-DC02 Site: (null) on UDP LDAP'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:52:13 [7008] ACME: NO_CLIENT_SITE: ACME-DC02 172.31.6.58'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:52:13 [MISC] [7008] NlQueryClientSiteFromAddressLookup: result:
+      0x0 for ACME-DC02'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:52:13 [MISC] [7008] NlQueryClientSiteViaDNS: returning 0x0.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:52:13 [MISC] [7008] NlQueryClientSiteViaDNS: total of 0x0(0) DNS
+      records found.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:52:13 [MISC] [7008] NlQueryClientSiteViaDNS: result: 0x251d from
+      DnsQuery_W(DNS_TYPE_AAAA) on acme-dc02.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:52:13 [MISC] [7008] NlQueryClientSiteViaDNS: querying IPV4=FALSE,
+      IPV6=TRUE on acme-dc02.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:52:13 [MISC] [7008] NlQueryClientSiteFromAddressLookup: site lookup
+      requested for ACME-DC02 (acme-dc02.acme.local) with lookup policy=0x2.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:52:13 [MAILSLOT] [7008] Received ping from ACME-DC02(acme-dc02.acme.local)
+      acme.local. (null) on UDP LDAP
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:52:13 [PERF] [5424] NlSetServerClientSession: Not changing connection\
+      \ (0000027987115998): \"\\\\acme-dc01.acme.local\"\n    ClientSession:\
+      \ 000002798A56BD40NetpDcDerefCacheEntry: destroying entry 0x000002798D993260"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:52:13 [MISC] [5424] NlPingDcNameWithContext: acme-dc01.acme.local
+      responded over IP.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:52:13 [MISC] [5424] NlPingDcNameWithContext: Sent 1/1 ldap pings
+      to acme-dc01.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:52:13 [MAILSLOT] [5424] NetpDcPingListIp: acme.local.: Sent
+      UDP ping to 172.31.10.229'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:51:25 [MISC] [3928] ACME: DsGetDcName function returns 0\
+      \ (client PID=2176): Dom:(null) Acct:(null) Flags: DS BACKGROUND \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:51:17 [MISC] [5424] ACME: DsGetDcName function returns 0\
+      \ (client PID=7136): Dom:CHILDDOMAIN.ACME.LOCAL Acct:(null) Flags: IP KDC\
+      \ \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:51:17 [MISC] [5424] DsGetDcName: results as follows: DCName:\\acme-dc02-child.childdomain.acme.local
+      DCAddress:\\172.31.6.93 DCAddrType:0x1 DomainName:childdomain.acme.local
+      DnsForestName:acme.local Flags:0xe003f1fc DcSiteName:SecondarySite ClientSiteName:(null)'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:51:17 [MISC] [5424] NetpDcGetName: CHILDDOMAIN.ACME.LOCAL
+      using cached information ( NlDcCacheEntry = 0x000002798A5467A0 )'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:51:17 [MISC] [5424] NlPingDcNameWithContext: acme-dc02-child.childdomain.acme.local
+      responded over IP.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:51:17 [MISC] [5424] NetpDchandlePingResponse: CHILDDOMAIN.ACME.LOCAL
+      DC marked as close (via DNS)'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:51:17 [MISC] [5424] NetpDcAllocateCacheEntry: new entry 0x000002798A5467A0
+      -> DC:ACME-DC02-CHILD DnsDomName:childdomain.acme.local Flags:0x3f17c '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:51:17 [MISC] [5424] NlPingDcNameWithContext: Sent 1/1 ldap pings
+      to acme-dc02-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:51:17 [MISC] [5424] NetpDcGetName: CHILDDOMAIN.ACME.LOCAL
+      cache is too old. 16025500'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:51:17 [1856] 567940f8 4e2028da 4a7db77d 07a88c3a   .@yV.( N}.}J:...\r\
+      \n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:51:17 [MAILSLOT] [1856] CHILDDOMAIN: Ping response ''Sam Logon
+      Response Ex'' (null) to \\ACME-DC02 Site: (null) on UDP LDAP'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:51:17 [1856] CHILDDOMAIN: NO_CLIENT_SITE: ACME-DC02 172.31.6.58'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:51:17 [MISC] [1856] NlQueryClientSiteFromAddressLookup: result:
+      0x0 for ACME-DC02'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:51:17 [MISC] [1856] NlQueryClientSiteViaDNS: returning 0x0.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:51:17 [MISC] [1856] NlQueryClientSiteViaDNS: total of 0x0(0) DNS
+      records found.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:51:17 [MISC] [1856] NlQueryClientSiteViaDNS: result: 0x251d from
+      DnsQuery_W(DNS_TYPE_AAAA) on acme-dc02.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:51:17 [MISC] [1856] NlQueryClientSiteViaDNS: querying IPV4=FALSE,
+      IPV6=TRUE on acme-dc02.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:51:17 [MISC] [1856] NlQueryClientSiteFromAddressLookup: site lookup
+      requested for ACME-DC02 (acme-dc02.acme.local) with lookup policy=0x2.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:51:17 [MAILSLOT] [1856] Received ping from ACME-DC02(acme-dc02.acme.local)
+      CHILDDOMAIN.ACME.LOCAL (null) on UDP LDAP
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:51:11 [MISC] [5792] ACME: DsGetDcName function returns 0\
+      \ (client PID=752): Dom:ACME Acct:(null) Flags: DS NETBIOS RET_DNS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:50:48 [MISC] [892] CHILDDOMAIN: DsGetDcName function returns 0\
+      \ (client PID=-1): Dom:ACME.LOCAL Acct:(null) Flags: IP KDC \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:50:48 [MISC] [892] DsGetDcName: results as follows: DCName:\\acme-dc01.acme.local
+      DCAddress:\\172.31.10.229 DCAddrType:0x1 DomainName:acme.local DnsForestName:acme.local
+      Flags:0xe003f17d DcSiteName:Default-First-Site-Name ClientSiteName:(null)'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:50:48 [MISC] [892] NlPingDcNameWithContext: acme-dc01.acme.local
+      responded over IP.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:50:48 [MISC] [892] NetpDcAllocateCacheEntry: new entry 0x000002A54101CC60
+      -> DC:ACME-DC01 DnsDomName:acme.local Flags:0x3f17d '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:50:48 [892] 178417c9 2f03010d cd72c8e1 6f09b813   ......./..r....o
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:50:48 [MAILSLOT] [892] NetpDcHandlePingResponse: ACME.LOCAL:
+      Received ''Sam Logon Response Ex'' response.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:50:48 [MISC] [892] NlPingDcNameWithContext: Sent 1/1 ldap pings
+      to acme-dc01.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:50:48 [MAILSLOT] [892] NetpDcPingListIp: ACME.LOCAL: Sent
+      UDP ping to 172.31.10.229'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:50:48 [MISC] [892] NetpDcGetName: ACME.LOCAL cache is too
+      old. 22201234'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:50:48 [MISC] [892] CHILDDOMAIN: DsGetDcName function called: client
+      PID=-1, Dom:ACME.LOCAL Acct:(null) Flags: IP KDC '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:50:48 [MAILSLOT] [7052] ACME: Ping response 'Sam Logon Response\
+      \ Ex' (null) to \\\\ACME-DC02-CHILD Site: (null) on UDP LDAP\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:50:48 [MISC] [7052] NlQueryClientSiteViaDNS: result: 0x251d from
+      DnsQuery_W(DNS_TYPE_AAAA) on acme-dc02-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:50:48 [MISC] [7052] NlQueryClientSiteViaDNS: querying IPV4=FALSE,
+      IPV6=TRUE on acme-dc02-child.childdomain.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:50:48 [MISC] [7052] NlQueryClientSiteFromAddressLookup: site lookup
+      requested for ACME-DC02-CHILD (acme-dc02-child.childdomain.acme.local)
+      with lookup policy=0x2.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:50:48 [MAILSLOT] [7052] Received ping from ACME-DC02-CHILD(acme-dc02-child.childdomain.acme.local)
+      ACME.LOCAL (null) on UDP LDAP
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:50:28 [LOGON] [7124] ACME: SamLogon: Network logon of (null)\B.DAVIS
+      from  Returns 0xC0000064'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:50:28 [LOGON] [7124] ACME: NlPickDomainWithAccount: B.DAVIS:
+      Algorithm entered. UPN:0 Sam:1 Exp:0 Cross: 0 Root:1 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:50:28 [LOGON] [7124] ACME: SamLogon: Network logon of (null)\B.DAVIS
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:50:13 [MISC] [7124] ACME: DsGetDcName function returns 0\
+      \ (client PID=1584): Dom:acme.local Acct:(null) Flags: DS BACKGROUND RET_DNS\
+      \ \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Health
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 'Site="SecondarySite"
+
+      ForestName="acme.local"
+
+      SYSVOLShare="True"
+
+      Server="ACME-DC01-CHILD"
+
+      Changed="3/25/2022 10:26:16 AM"
+
+      DomainNetBIOSName="CHILDDOMAIN"
+
+      ProcsOK="True"
+
+      DNSRegister="True"
+
+      SchemaVersion="88"
+
+      ServicesNotRunning="ntfrs"
+
+      DomainDNSName="childdomain.acme.local"
+
+      GlobalCatalog="True"
+
+      ServicePack=""
+
+      ServicesRunning="dfsr,ismserv,kdc,Netlogon,w32time"
+
+      Created="3/4/2022 9:37:53 AM"
+
+      HighestUSN="525863"
+
+      OSVersion="10.0 (17763)"
+
+      OperatingSystem="Windows Server 2019 Datacenter"
+
+      ForestLevel="Windows2016Forest"
+
+      FSMORoles="PDCEmulator RID Infrastructure"
+
+      RODC="False"
+
+      Enabled="True"
+
+      IsIntersiteTopologyGenerator="False"
+
+      DCWeight="100"
+
+      DomainLevel="Windows2016Domain"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:50:03 [MISC] [3120] CHILDDOMAIN: DsGetDcName function returns\
+      \ 1355 (client PID=7036): Dom:ACME-DC01-CHILD Acct:(null) Flags: DS RET_DNS\
+      \ WS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Health
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 'Site="SecondarySite"
+
+      ForestName="acme.local"
+
+      SYSVOLShare="True"
+
+      Server="ACME-DC02-CHILD"
+
+      Changed="3/25/2022 10:35:19 AM"
+
+      DomainNetBIOSName="CHILDDOMAIN"
+
+      ProcsOK="True"
+
+      DNSRegister="True"
+
+      SchemaVersion="88"
+
+      ServicesNotRunning="ntfrs"
+
+      DomainDNSName="childdomain.acme.local"
+
+      GlobalCatalog="True"
+
+      ServicePack=""
+
+      ServicesRunning="dfsr,ismserv,kdc,Netlogon,w32time"
+
+      Created="3/4/2022 9:57:20 AM"
+
+      HighestUSN="517019"
+
+      OSVersion="10.0 (17763)"
+
+      OperatingSystem="Windows Server 2019 Datacenter"
+
+      ForestLevel="Windows2016Forest"
+
+      FSMORoles=""
+
+      RODC="False"
+
+      Enabled="True"
+
+      IsIntersiteTopologyGenerator="False"
+
+      DCWeight="100"
+
+      DomainLevel="Windows2016Domain"
+
+      '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:50:02 [800] c13e436c f05a694f 40a04a31 f2faa468   lC>.OiZ.1J.@h...
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:50:02 [792] 706c65de 0b89be33 5ecec047 3fa18a53   .elp3...G..^S..?
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:50:00 [MAILSLOT] [5792] Sent 'Sam Logon' message to ACME-DC02[1C]\
+      \ on all transports.\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:50:00 [MAILSLOT] [5220] Sent 'Sam Logon' message to ACME-DC01[1C]
+      on all transports.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:49:58 [MISC] [4836] Eventlog: 5798 (4) "SecondarySite" "Default-First-Site-Name"
+      "DomainDnsZones.childdomain.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:49:58 [MISC] [4836] Eventlog: 5794 (4) "SecondarySite" "Default-First-Site-Name"
+      "CHILDDOMAIN" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:49:58 [SITE] [1304] 172.31.10.0/28: Site Default-First-Site-Name
+      is not site this DC is in.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:49:58 [SITE] [1304] Setting site name to 'SecondarySite'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:43 [MISC] [3172] Eventlog: 5798 (4) "SecondarySite" "Default-First-Site-Name"
+      "DomainDnsZones.childdomain.acme.local" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:43 [MISC] [3172] Eventlog: 5794 (4) "SecondarySite" "Default-First-Site-Name"
+      "CHILDDOMAIN" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:43 [SITE] [776] 172.31.10.0/28: Site Default-First-Site-Name
+      is not site this DC is in.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:49:43 [SITE] [776] Setting site name to 'SecondarySite'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:49:40 [SITE] [1304] 10.10.10.0/24: Adding Subnet for site ''SecondarySite'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:49:40 [SITE] [3004] 172.31.10.0/28: Re-adding Subnet for site
+      ''Default-First-Site-Name'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:49:40 [SITE] [3004] 10.10.10.0/24: Adding Subnet for site ''SecondarySite'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:49:40 [SITE] [3004] 10.10.10.0/24: Site SecondarySite is not site
+      this DC is in.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:49:38 [MISC] [1028] NlMainLoop: Notification 8 that info related\
+      \ to next closest site changed\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:26 [MISC] [6292] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=-1): Dom:ACME.LOCAL Acct:(null) Flags: IP KDC '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:26 [MISC] [6292] NlPingDcNameWithContext: acme-dc01.acme.local
+      responded over IP.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:26 [MISC] [6292] NetpDcAllocateCacheEntry: new entry 0x000001A800C97A90
+      -> DC:ACME-DC01 DnsDomName:acme.local Flags:0x3f1fd '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:49:26 [6292] 96647b8a ffdc2a8e 6a664b07 937c20ec   .{d..*...Kfj.
+      |.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:26 [MAILSLOT] [6292] NetpDcHandlePingResponse: ACME.LOCAL:
+      Received ''Sam Logon Response Ex'' response.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:25 [MISC] [6292] NlPingDcNameWithContext: Sent 1/1 ldap pings
+      to acme-dc01.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:25 [MAILSLOT] [6292] NetpDcPingListIp: ACME.LOCAL: Sent
+      UDP ping to 172.31.10.229'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:25 [MISC] [6292] NetpDcGetName: ACME.LOCAL cache is too
+      old. 1943468'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:25 [MISC] [6292] CHILDDOMAIN: DsGetDcName function called:
+      client PID=-1, Dom:ACME.LOCAL Acct:(null) Flags: IP KDC '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:25 [SITE] [776] 10.10.10.0/24: Adding Subnet for site ''SecondarySite'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:49:25 [MAILSLOT] [7052] ACME: Ping response 'Sam Logon Response\
+      \ Ex' (null) to \\\\ACME-DC01-CHILD Site: Default-First-Site-Name on UDP LDAP\r\
+      \n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:49:24 [SITE] [3120] DsrGetSiteName: Returning site name ''Default-First-Site-Name''
+      from local cache.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:49:22 [DNS] [1484] [Unknown]: NlDnsAddName: New name added to
+      the list: NlDnsLdapAtSite: _ldap._tcp.SecondarySite._sites.ForestDnsZones.acme.local.
+      600 IN SRV 0 100 389 acme-dc01.acme.local.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:49:22 [SITE] [1028] 10.10.10.0/24: Adding Subnet for site ''SecondarySite'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:49:21 [MISC] [1484] Eventlog: 5784 (4) "Default-First-Site-Name"
+      "SecondarySite" "ACME" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:48:58 [DNS] [2420] [Unknown]: NlDnsAddName: New name added to\
+      \ the list: NlDnsLdapAtSite: _ldap._tcp.SecondarySite._sites.ForestDnsZones.acme.local.\
+      \ 600 IN SRV 0 100 389 acme-dc02.acme.local.\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:48:58 [MISC] [2420] Eventlog: 5784 (4) "Default-First-Site-Name"
+      "SecondarySite" "ACME" '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:48:47 [SITE] [1304] 172.31.10.0/28: Adding Subnet for site ''Default-First-Site-Name'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:48:41 [LOGON] [10568] ACME: SamLogon: Network logon of (null)\\\
+      B.DAVIS from  Returns 0xC0000064\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:48:32 [SITE] [776] 172.31.10.0/28: Adding Subnet for site ''Default-First-Site-Name'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:48:29 [SITE] [3004] 172.31.10.0/28: Adding Subnet for site ''Default-First-Site-Name'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:48:28 [MISC] [5792] ACME: DsGetDcName function returns 0\
+      \ (client PID=1304): Dom:acme.local Acct:(null) Flags: LDAPONLY RET_DNS\
+      \ \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:48:22 [MISC] [844] In control handler (Opcode: 4)\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:48:07 [SITE] [1028] 172.31.10.0/28: Adding Subnet for site ''Default-First-Site-Name'''
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:47:29 [DNS] [4080] NlDnsScavengeWorker: Set DNS scavenger to run
+      in 23 minutes (1374963).'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:47:09 [SESSION] [6480] DeleteCredential: 0.8: credential dereferenced:
+      1'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:46:16 [LOGON] [792] CHILDDOMAIN: SamLogon: Network logon of domain\\\
+      administrator from  Returns 0xC000006A\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:46:16 [SESSION] [792] CHILDDOMAIN: NlPickDomainWithAccount: Username
+      domain\administrator can''t be cracked (on GC). 0x0 2'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:46:16 [LOGON] [792] CHILDDOMAIN: NlPickDomainWithAccount: domain\administrator:
+      Algorithm entered. UPN:0 Sam:1 Exp:0 Cross: 0 Root:0 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:46:16 [LOGON] [792] CHILDDOMAIN: SamLogon: Network logon of domain\administrator
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:46:10 [LOGON] [3928] ACME: SamLogon: Network logon of (null)\\\
+      from  Returns 0xC0000064'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:46:10 [CRITICAL] [3928] ACME: NlPickDomainWithAccount: \\:
+      Must be either UPN or SAM account. UPN:0 Sam:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:46:10 [LOGON] [3928] ACME: NlPickDomainWithAccount: \\: Algorithm
+      entered. UPN:0 Sam:0 Exp:0 Cross: 0 Root:1 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:46:10 [LOGON] [3928] ACME: SamLogon: Network logon of (null)\\\
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:45:44 [LOGON] [7124] ACME: SamLogon: Network logon of (null)\\\
+      \\\\ from  Returns 0xC0000064\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:45:04 [MAILSLOT] [7008] ACME: Ping response ''Sam Logon Response
+      Ex'' (null) to \\ACME-DC02-CHILD Site: Default-First-Site-Name on UDP LDAP'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:45:04 [MISC] [1600] CHILDDOMAIN: DsGetDcName function returns\
+      \ 1355 (client PID=2000): Dom:ACME-DC02-CHILD Acct:(null) Flags: DS RET_DNS\
+      \ WS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:45:04 [6712] 9a691de2 b6304251 0ce557ab dd5fd6c3   ..i.QB0..W...._.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:45:03 [MISC] [800] CHILDDOMAIN: DsGetDcName function returns 1355\
+      \ (client PID=7036): Dom:ACME-DC01-CHILD Acct:(null) Flags: DS GC RET_DNS WS\
+      \ \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:45:03 [5668] 55686881 27fe69d2 2617d4b4 cbba1f1c   .hhU.i.'...&....
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:45:03 [MISC] [6712] CHILDDOMAIN: DsGetDcName function returns\
+      \ 0 (client PID=2000): Dom:acme.local Acct:(null) Flags: DS RET_DNS WS\
+      \ \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:45:02 [1600] fbfe68af 39b3442e 3c115999 de37b74d   .h...D.9.Y.<M.7.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:44:44 [LOGON] [5792] ACME: SamLogon: Network logon of (null)\\\
+      B.DAVIS from  Returns 0xC0000064\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:44:44 [LOGON] [5792] ACME: NlPickDomainWithAccount: B.DAVIS:
+      Algorithm entered. UPN:0 Sam:1 Exp:0 Cross: 0 Root:1 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:44:44 [LOGON] [5792] ACME: SamLogon: Network logon of (null)\B.DAVIS
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:43:53 [LOGON] [4168] ACME: SamLogon: Network logon of (null)\(null)
+      from  Returns 0xC0000064'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:42:34 [SESSION] [7012] ACME: ACME: NlTimeoutApiClientSession:
+      Unbind from server \\acme-dc01.acme.local (TCP) 0.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:41:46 [LOGON] [5424] ACME: SamLogon: Network logon of (null)\\\
+      \\\\ from  Returns 0xC0000064\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:41:46 [CRITICAL] [5424] ACME: NlPickDomainWithAccount: \\:
+      Must be either UPN or SAM account. UPN:0 Sam:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:41:46 [LOGON] [5424] ACME: NlPickDomainWithAccount: \\: Algorithm
+      entered. UPN:0 Sam:0 Exp:0 Cross: 0 Root:1 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:41:46 [LOGON] [5424] ACME: SamLogon: Network logon of (null)\\\
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:41:45 [LOGON] [5424] ACME: SamLogon: Network logon of (null)\\\
+      from  Returns 0xC0000064'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:40:06 [LOGON] [5792] ACME: SamLogon: Transitive Network logon
+      of (null)\testuser1 from  (via WIN-711SO5F6E2C) Returns 0x0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:40:06 [LOGON] [5792] LsaIFilterInboundNamespace succeeded - FilterInboundNamespaceSucceeded
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:40:06 [LOGON] [5792] Calling LsaIFilterInboundNamespace for TrustName:'(null)'
+      Flags:0x0 MsvAvNbDomainName:'ACME' MsvAvDnsDomainName:'acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:40:06 [LOGON] [5792] ACME: SamLogon: Transitive Network logon
+      of (null)\testuser1 from  (via WIN-711SO5F6E2C) Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:40:04 [MISC] [1600] CHILDDOMAIN: DsGetDcName function returns\
+      \ 1355 (client PID=2000): Dom:ACME-DC02-CHILD Acct:(null) Flags: DS GC RET_DNS\
+      \ WS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:40:03 [5668] 9a691de2 b6304251 0ce557ab dd5fd6c3   ..i.QB0..W...._.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:40:03 [1600] 9c202821 70e06155 854a4010 c5f255cc   !( .Ua.p.@J..U..
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:40:03 [MISC] [5668] NlPingDcNameWithContext: Sent 1/1 ldap pings\
+      \ to acme-dc01.acme.local\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:40:02 [3120] 98c2737f 0c51b108 007cf43b 5c49c8d8   .s....Q.;.|...I\
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:39:24 [SITE] [800] DsrGetSiteName: Returning site name 'Default-First-Site-Name'\
+      \ from local cache.\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:39:01 [CRITICAL] [1748] ACME: I_NetLogonSendToSamOnDc: (null):
+      failed C0000225'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:39:01 [SESSION] [1748] [Unknown]: I_NetLogonSendToSamOnDc: Sending
+      buffer to DC of (null), SCType 0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:39:01 [SESSION] [3928] ACME: NetrLogonSendToSam: ACME-DC02:\
+      \ returns 0xC0000225\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:39:01 [SESSION] [3928] ACME: NetrLogonSendToSam: ACME-DC02:
+      Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:38:53 [MISC] [5792] ACME: DsGetDcName function returns 0
+      (client PID=4580): Dom:acme.local Acct:(null) Flags: DS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:38:53 [MISC] [5792] ACME: DsGetDcName function called: client
+      PID=4580, Dom:acme.local Acct:(null) Flags: DS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:38:45 [MISC] [5424] ACME: DsGetDcName function returns 0
+      (client PID=4580): Dom:acme.local Acct:(null) Flags: DS IP WRITABLE RET_NETBIOS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:38:45 [MISC] [5424] DsGetDcName: results as follows: DCName:\\ACME-DC02
+      DCAddress:\\172.31.6.58 DCAddrType:0x1 DomainName:ACME DnsForestName:acme.local
+      Flags:0x8003f1fc DcSiteName:Default-First-Site-Name ClientSiteName:Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:38:45 [MISC] [5424] ACME: DsGetDcName function called: client
+      PID=4580, Dom:acme.local Acct:(null) Flags: DS IP WRITABLE RET_NETBIOS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:38:33 [MISC] [800] CHILDDOMAIN: DsGetDcName function returns 0\
+      \ (client PID=1280): Dom:childdomain.acme.local Acct:(null) Flags: DS BACKGROUND\
+      \ RET_DNS \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:38:12 [MISC] [5424] ACME: DsGetDcName function returns 0
+      (client PID=1304): Dom:(null) Acct:(null) Flags: LDAPONLY BACKGROUND RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:38:12 [MISC] [5424] ACME: DsGetDcName function called: client
+      PID=1304, Dom:(null) Acct:(null) Flags: LDAPONLY BACKGROUND RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:36:53 [MISC] [1028] NlMainLoop: Notification that trust account
+      added (or changed) WIN-711SO5F6E2C$ 0x64a 2'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:36:53 [CHANGELOG] [5424] NlSendChangeLogNotification: sent 0 for
+      WIN-711SO5F6E2C$ Rid:0x64a Obj Guid:00000002-0000-0000-0000-000000000000'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:36:52 [MAILSLOT] [1748] ACME: Ping response ''Sam Logon Response
+      Ex'' (null) to \\WIN-711SO5F6E2C Site: Default-First-Site-Name on UDP LDAP'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:36:52 [MAILSLOT] [1748] Received ping from WIN-711SO5F6E2C(WIN-711SO5F6E2C.acme.local)
+      acme.local. (null) on UDP LDAP
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:36:28 [1856] 68187208 a6f0ffb7 b97acb35 18d99e94   .r.h....5.z.....\r\
+      \n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:36:28 [MAILSLOT] [1856] DomainDnsZones.childdomain.acme.local:
+      Ping response ''Sam Logon Response Ex'' (null) to \\WIN-711SO5F6E2C Site: Default-First-Site-Name
+      on UDP LDAP'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:36:28 [MAILSLOT] [1856] Received ping from WIN-711SO5F6E2C(WIN-711SO5F6E2C.acme.local)
+      DomainDnsZones.childdomain.acme.local (null) on UDP LDAP
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:36:28 [2032] 2cd0bcf8 e1bfb25b c118d034 f413f689   ...,[...4.......
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:36:28 [MAILSLOT] [2032] CHILDDOMAIN: Ping response ''Sam Logon
+      Response Ex'' (null) to \\WIN-711SO5F6E2C Site: Default-First-Site-Name on UDP
+      LDAP'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:36:28 [MAILSLOT] [2032] Received ping from WIN-711SO5F6E2C(WIN-711SO5F6E2C.acme.local)
+      acme.local. (null) on UDP LDAP
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:35:03 [5668] 8bb334f4 32004cbb c7177ab3 132ff28d   .4...L.2.z..../.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:35:02 [792] b1ccc43f 3c114760 6a326738 55360fbd   ?...`G.<8g2j..6U
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:35:01 [MAILSLOT] [5668] Sent 'Sam Logon' message to ACME-DC01-CHILD[1C]
+      on all transports.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:35:00 [MISC] [3120] CHILDDOMAIN: DsGetDcName function returns\
+      \ 0 (client PID=7036): Dom:acme.local Acct:(null) Flags: DS RET_DNS WS\
+      \ \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:33:42 [LOGON] [3232] CHILDDOMAIN: SamLogon: Network logon of (null)\\\
+      from  Returns 0xC0000064'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:33:42 [CRITICAL] [3232] CHILDDOMAIN: NlPickDomainWithAccount:
+      \\: Must be either UPN or SAM account. UPN:0 Sam:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:33:42 [LOGON] [3232] CHILDDOMAIN: NlPickDomainWithAccount: \\:
+      Algorithm entered. UPN:0 Sam:0 Exp:0 Cross: 0 Root:0 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:33:42 [LOGON] [3232] CHILDDOMAIN: SamLogon: Network logon of (null)\\\
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:33:37 [LOGON] [792] CHILDDOMAIN: SamLogon: Network logon of (null)\\\
+      \\\\ from  Returns 0xC0000064\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:33:26 [1768] a77b58e2 77bd6735 834851c4 d843d996   .X{.5g.w.QH...C.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:33:26 [MAILSLOT] [1768] CHILDDOMAIN: Ping response ''Sam Logon
+      Response Ex'' (null) to \\ACME-DC02-CHILD Site: Default-First-Site-Name on UDP
+      LDAP'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:33:26 [MAILSLOT] [1768] Received ping from ACME-DC02-CHILD(acme-dc02-child.childdomain.acme.local)
+      childdomain.acme.local. (null) on UDP LDAP
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:33:26 [SESSION] [3232] CHILDDOMAIN: CHILDDOMAIN: NlSetServerClientSession:
+      New DC runs the time service: \\acme-dc01-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:33:26 [SESSION] [3232] CHILDDOMAIN: CHILDDOMAIN: NlSetServerClientSession:
+      New DC is an NT 5 DC: \\acme-dc01-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:33:26 [MISC] [3232] NlPingDcNameWithContext: acme-dc01-child.childdomain.acme.local
+      responded over IP.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:33:26 [3232] a77b58e2 77bd6735 834851c4 d843d996   .X{.5g.w.QH...C.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:33:26 [MISC] [3232] NlPingDcNameWithContext: Sent 1/1 ldap pings
+      to acme-dc01-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:33:26 [MAILSLOT] [3232] NetpDcPingListIp: childdomain.acme.local.:
+      Sent UDP ping to 172.31.8.190'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:32:47 [LOGON] [3232] CHILDDOMAIN: SamLogon: Network logon of (null)\\\
+      OVRO-8 from  Returns 0xC0000064\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:32:47 [SESSION] [3232] CHILDDOMAIN: NlPickDomainWithAccount: Username
+      OVRO-8 can''t be cracked (On GC). 0x0 2'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:32:47 [LOGON] [3232] CHILDDOMAIN: NlPickDomainWithAccount: OVRO-8:
+      Algorithm entered. UPN:0 Sam:1 Exp:0 Cross: 0 Root:0 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:32:47 [LOGON] [3232] CHILDDOMAIN: SamLogon: Network logon of (null)\OVRO-8
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:32:45 [LOGON] [792] CHILDDOMAIN: SamLogon: Network logon of (null)\OVRO-8
+      from  Returns 0xC0000064'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:30:03 [1600] c96c73f9 64915214 0222bbd6 bcfdcff6   .sl..R.d..".....
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:30:02 [800] 82cd1e6a 57b75ea9 654fa5f7 6d354c99   j....^.W..Oe.L5m
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:30:01 [MAILSLOT] [1600] Sent 'Sam Logon' message to ACME-DC02-CHILD[1C]
+      on all transports.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:28:50 [MISC] [792] CHILDDOMAIN: DsGetDcName function returns 0
+      (client PID=1312): Dom:(null) Acct:(null) Flags: LDAPONLY BACKGROUND RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:28:50 [MISC] [792] CHILDDOMAIN: DsGetDcName function called: client
+      PID=1312, Dom:(null) Acct:(null) Flags: LDAPONLY BACKGROUND RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:28:34 [SESSION] [6896] CHILDDOMAIN: ACME: NlTimeoutApiClientSession:
+      Unbind from server \\acme-dc01.acme.local (TCP) 1.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:28:31 [MISC] [180] CHILDDOMAIN: DsGetDcName function returns 1212
+      (client PID=748): Dom:Window Manager Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:28:31 [MISC] [180] CHILDDOMAIN: DsGetDcName function called: client
+      PID=748, Dom:Window Manager Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:28:31 [MISC] [3232] CHILDDOMAIN: DsGetDcName function returns\
+      \ 1212 (client PID=748): Dom:Font Driver Host Acct:(null) Flags: DSP \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:28:31 [MISC] [3232] CHILDDOMAIN: DsGetDcName function called:
+      client PID=748, Dom:Font Driver Host Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:25:32 [MISC] [792] DsGetDcName: results as follows: DCName:\\ACME-DC02-CHILD
+      DCAddress:\\172.31.6.93 DCAddrType:0x1 DomainName:CHILDDOMAIN DnsForestName:acme.local
+      Flags:0x8003f1fc DcSiteName:Default-First-Site-Name ClientSiteName:Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:25:19 [MISC] [3232] CHILDDOMAIN: DsGetDcName function returns\
+      \ 1212 (client PID=748): Dom:Window Manager Acct:(null) Flags: DSP \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:25:16 [MISC] [180] CHILDDOMAIN: DsGetDcName function returns 1212
+      (client PID=748): Dom:Font Driver Host Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:25:12 [LOGON] [4168] ACME: SamLogon: Network logon of (null)\B.DAVIS
+      from  Returns 0xC0000064'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:25:09 [MISC] [10228] DsGetDcName: results as follows: DCName:\\ACME-DC01-CHILD
+      DCAddress:\\172.31.8.190 DCAddrType:0x1 DomainName:CHILDDOMAIN DnsForestName:acme.local
+      Flags:0x8003f1fd DcSiteName:Default-First-Site-Name ClientSiteName:Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:25:09 [MISC] [10228] NetpDcGetName: childdomain.acme.local
+      using cached information ( NlDcCacheEntry = 0x0000012577798470 )'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:25:09 [CRITICAL] [10228] Ping from ACME-DC01 for domain childdomain.acme.local
+      childdomain for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:25:06 [MISC] [180] NetpDcGetName: acme-dc02-child.childdomain.acme.local
+      similar query failed recently 25906'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:25:03 [6556] 732d598c 09cb3d2c c94874f5 3ce82613   .Y-s,=...tH..&.<
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:25:02 [792] e330dba1 9a4ef64e 9b5567a4 4dcb70ad   ..0.N.N..gU..p.M
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:24:57 [LOGON] [792] CHILDDOMAIN: SamLogon: Network logon of ACME\jtest
+      from ACME-DC01 Returns 0xC0000064'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:24:57 [LOGON] [3928] ACME: SamLogon: Transitive Network logon\
+      \ of ACME\\jtest from ACME-DC01 (via ACME-DC02-CHILD) Returns 0xC0000064\r\
+      \n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:24:57 [LOGON] [3928] LsaIFilterInboundNamespace succeeded - FilterInboundNamespaceSucceeded
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:24:57 [LOGON] [3928] Calling LsaIFilterInboundNamespace for TrustName:'childdomain.acme.local'
+      Flags:0x0 MsvAvNbDomainName:'CHILDDOMAIN' MsvAvDnsDomainName:'childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:24:57 [LOGON] [3928] ACME: SamLogon: Transitive Network logon
+      of ACME\jtest from ACME-DC01 (via ACME-DC02-CHILD) Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:24:57 [MISC] [5220] ACME: DsGetDcName function returns 1317
+      (client PID=10368): Dom:ACME Acct:jtest Flags: IP KDC '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:24:57 [CRITICAL] [5220] NetpDcGetNameIp: acme.local.: Couldn''t
+      ping any DCs.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:24:56 [MAILSLOT] [1748] ACME: Ping response ''Sam User Unknown
+      Ex'' jtest to \\ACME-DC01 Site: Default-First-Site-Name on UDP LDAP'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:24:56 [MAILSLOT] [1748] Received ping from ACME-DC01(acme-dc01.acme.local)
+      acme.local. jtest on UDP LDAP
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:24:56 [CRITICAL] [5220] NetpDcHandlePingResponse: acme.local.:
+      jtest: response says specified account not found.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:24:56 [MAILSLOT] [5220] NetpDcPingListIp: acme.local.: Sent
+      UDP ping to 172.31.6.58'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:24:56 [MAILSLOT] [5220] ACME: Ping response ''Sam User Unknown
+      Ex'' jtest to \\ACME-DC01 Site: Default-First-Site-Name on <Local>'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:24:56 [MAILSLOT] [5220] Received ping from ACME-DC01(acme-dc01.acme.local)
+      acme.local. jtest on <Local>
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:24:56 [MISC] [5220] ACME: DsGetDcName function called: client
+      PID=10368, Dom:ACME Acct:jtest Flags: IP KDC '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:24:46 [MISC] [180] CHILDDOMAIN: DsGetDcName function returns 0\
+      \ (client PID=3244): Dom:acme.local Acct:(null) Flags: DS GC RET_DNS Try_Next_Closest_Site\
+      \ \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:24:46 [MISC] [180] CHILDDOMAIN: DsGetDcName function called: client
+      PID=3244, Dom:acme.local Acct:(null) Flags: DS GC RET_DNS Try_Next_Closest_Site '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:24:44 [MISC] [180] CHILDDOMAIN: DsGetDcName function returns 0
+      (client PID=3244): Dom:childdomain.acme.local Acct:(null) Flags: DS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:24:44 [MISC] [180] CHILDDOMAIN: DsGetDcName function called: client
+      PID=3244, Dom:childdomain.acme.local Acct:(null) Flags: DS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:24:42 [MISC] [180] CHILDDOMAIN: DsGetDcName function returns 0
+      (client PID=-1): Dom:(null) Acct:(null) Flags: RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:24:42 [MISC] [180] CHILDDOMAIN: DsGetDcName function called: client
+      PID=-1, Dom:(null) Acct:(null) Flags: RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:24:42 [MISC] [792] CHILDDOMAIN: DsGetDcName function returns 0
+      (client PID=3244): Dom:childdomain.acme.local Acct:(null) Flags: '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:24:42 [MISC] [792] CHILDDOMAIN: DsGetDcName function called: client
+      PID=3244, Dom:childdomain.acme.local Acct:(null) Flags: '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:24:40 [MISC] [792] CHILDDOMAIN: DsGetDcName function returns 1355
+      (client PID=3244): Dom:acme-dc02-child.childdomain.acme.local Acct:(null)
+      Flags: LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:24:40 [MISC] [792] CHILDDOMAIN: DsGetDcName function called: client
+      PID=3244, Dom:acme-dc02-child.childdomain.acme.local Acct:(null) Flags:
+      LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:23:09 [SESSION] [1600] CHILDDOMAIN: ACME: NlStartApiClientSession:
+      Bind to server \\acme-dc01.acme.local (TCP) 1 (Retry: 0).'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:23:09 [SESSION] [1600] CHILDDOMAIN: ACME: NlSetServerClientSession:
+      New DC runs the time service: \\acme-dc01.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:23:09 [SESSION] [1600] CHILDDOMAIN: ACME: NlSetServerClientSession:
+      New DC is an NT 5 DC: \\acme-dc01.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:23:09 [MISC] [3928] NetpDcGetName: acme.local. cache is too
+      old, need to redo discovery. 2075521390'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:21:30 [SESSION] [3120] CHILDDOMAIN: NetrLogonSendToSam: ACME-DC02-CHILD:
+      returns 0xC0000225'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:21:30 [CRITICAL] [3120] CHILDDOMAIN: NetrLogonSendToSam: Cannot
+      NewCallToSam C0000225'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:21:30 [SESSION] [3120] CHILDDOMAIN: NetrLogonSendToSam: ACME-DC02-CHILD:
+      Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:21:30 [CRITICAL] [1856] CHILDDOMAIN: I_NetLogonSendToSamOnDc:\
+      \ (null): failed C0000225\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:21:30 [1856] 7dc7c1f0 6c0fd4fc 777a0e7d 001e8ecf   ...}...l}.zw....
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:21:30 [SESSION] [1856] [Unknown]: I_NetLogonSendToSamOnDc: Sending
+      buffer to DC of (null), SCType 0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: "04/01 14:21:15 [MISC] [1600] DsrEnumerateDomainTrusts: returns: 0\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:21:15 [MISC] [1600] CHILDDOMAIN: DsGetDcName function returns
+      0 (client PID=3244): Dom:childdomain.acme.local Acct:(null) Flags: DS IP
+      WRITABLE RET_NETBIOS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: '04/01 14:21:15 [MISC] [1600] CHILDDOMAIN: DsGetDcName function called:
+      client PID=3244, Dom:childdomain.acme.local Acct:(null) Flags: DS IP WRITABLE
+      RET_NETBIOS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:20:33 [INIT] [1304] Following are the effective values after parsing
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:20:33 [INIT] [1304]    VulnerableChannelAllowList is empty
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02-CHILD
+    _raw: 04/01 14:20:31 [MISC] [1600] DbFlag is set to 2080fff
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:20:05 [3120] 068887d2 4bfd82ee 5e2d9c87 0482e89e   .......K..-^....
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: '04/01 14:19:45 [MISC] [1736] DsGetDcName: results as follows: DCName:\\ACME-DC01
+      DCAddress:\\172.31.10.229 DCAddrType:0x1 DomainName:ACME DnsForestName:acme.local
+      Flags:0x8003f1fd DcSiteName:Default-First-Site-Name ClientSiteName:Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:19:45 [CRITICAL] [1736] Ping from ACME-DC01-CHILD for domain acme.local
+      ACME for (null) on <Local> is invalid since we don't host the named domain.
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:19:23 [INIT] [776] Following are the effective values after parsing
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: 04/01 14:19:23 [INIT] [776]    VulnerableChannelAllowList is empty
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01-CHILD
+    _raw: "04/01 14:19:21 [MISC] [800] DbFlag is set to 2080fff\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:23 [MISC] [3928] ACME: DsGetDcName function returns 0
+      (client PID=8544): Dom:acme.local Acct:(null) Flags: DS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:23 [MISC] [3928] ACME: DsGetDcName function called: client
+      PID=8544, Dom:acme.local Acct:(null) Flags: DS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:19 [MISC] [3928] ACME: DsGetDcName function returns 0
+      (client PID=8544): Dom:acme.local Acct:(null) Flags: DS IP WRITABLE RET_NETBIOS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:19 [MISC] [3928] ACME: DsGetDcName function called: client
+      PID=8544, Dom:acme.local Acct:(null) Flags: DS IP WRITABLE RET_NETBIOS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:19 [MISC] [3928] DsrEnumerateDomainTrusts: returns: 0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:19 [MISC] [3928] DsrEnumerateDomainTrusts: Called, Flags =
+      0xb'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:16 [MISC] [10516] ACME: DsGetDcName function returns 0
+      (client PID=-1): Dom:(null) Acct:(null) Flags: RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:16 [MISC] [10516] ACME: DsGetDcName function called: client
+      PID=-1, Dom:(null) Acct:(null) Flags: RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:16 [MISC] [10516] NetpDcGetName: acme-dc01.acme.local
+      similar query failed recently 8719'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:16 [MISC] [10516] ACME: DsGetDcName function returns 0
+      (client PID=8544): Dom:acme.local Acct:(null) Flags: '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:16 [MISC] [10516] ACME: DsGetDcName function called: client
+      PID=8544, Dom:acme.local Acct:(null) Flags: '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:08 [MISC] [3928] ACME: DsGetDcName function returns 1355
+      (client PID=8544): Dom:acme-dc01.acme.local Acct:(null) Flags: LDAPONLY
+      RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:08 [MISC] [3928] ACME: DsGetDcName function called: client
+      PID=8544, Dom:acme-dc01.acme.local Acct:(null) Flags: LDAPONLY RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:01 [MISC] [10516] ACME: DsGetDcName function returns 0
+      (client PID=1608): Dom:(null) Acct:(null) Flags: LDAPONLY BACKGROUND RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:16:01 [MISC] [10516] ACME: DsGetDcName function called: client
+      PID=1608, Dom:(null) Acct:(null) Flags: LDAPONLY BACKGROUND RET_DNS '
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC02
+    _raw: Type="Subnet" ForestName="acme.local" Name="192.168.1.0/24" Site="Default-First-Site-Name"
+      Location=""
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC02
+    _raw: Type="SiteLink" ForestName="acme.local" Name="DEFAULTIPSITELINK" Cost="100"
+      DataCompressionEnabled=True NotificationEnabled=False ReciprocalReplicationEnabled=False
+      TransportType=IP ReplicationIntervalSecs=900
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC02
+    _raw: Type="Site" ForestName="acme.local" Site="Default-First-Site-Name"
+      Location="" IntersiteTopologyGenerator="" SiteLink="DEFAULTIPSITELINK" Subnet="192.168.1.0/24"
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: Type="Subnet" ForestName="acme.local" Name="192.168.1.0/24" Site="Default-First-Site-Name"
+      Location=""
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: Type="SiteLink" ForestName="acme.local" Name="DEFAULTIPSITELINK" Cost="100"
+      DataCompressionEnabled=True NotificationEnabled=False ReciprocalReplicationEnabled=False
+      TransportType=IP ReplicationIntervalSecs=900
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: Type="Site" ForestName="acme.local" Site="Default-First-Site-Name"
+      Location="" IntersiteTopologyGenerator="acme-dc01-child.childdomain.acme.local"
+      SiteLink="DEFAULTIPSITELINK" Subnet="192.168.1.0/24"
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC01
+    _raw: Type="Subnet" ForestName="acme.local" Name="192.168.1.0/24" Site="Default-First-Site-Name"
+      Location=""
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC01
+    _raw: Type="SiteLink" ForestName="acme.local" Name="DEFAULTIPSITELINK" Cost="100"
+      DataCompressionEnabled=True NotificationEnabled=False ReciprocalReplicationEnabled=False
+      TransportType=IP ReplicationIntervalSecs=900
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC01
+    _raw: Type="Site" ForestName="acme.local" Site="Default-First-Site-Name"
+      Location="" IntersiteTopologyGenerator="" SiteLink="DEFAULTIPSITELINK" Subnet="192.168.1.0/24"
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: Type="Subnet" ForestName="acme.local" Name="192.168.1.0/24" Site="Default-First-Site-Name"
+      Location=""
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: Type="SiteLink" ForestName="acme.local" Name="DEFAULTIPSITELINK" Cost="100"
+      DataCompressionEnabled=True NotificationEnabled=False ReciprocalReplicationEnabled=False
+      TransportType=IP ReplicationIntervalSecs=900
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: Type="Site" ForestName="acme.local" Site="Default-First-Site-Name"
+      Location="" IntersiteTopologyGenerator="acme-dc01-child.childdomain.acme.local"
+      SiteLink="DEFAULTIPSITELINK" Subnet="192.168.1.0/24"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:14:35 [LOGON] [5792] ACME: SamLogon: Network logon of (null)\US-RM
+      from  Returns 0xC0000064'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:14:35 [LOGON] [5792] ACME: NlPickDomainWithAccount: US-RM:
+      Algorithm entered. UPN:0 Sam:1 Exp:0 Cross: 0 Root:1 DC:0'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:14:35 [LOGON] [5792] ACME: SamLogon: Network logon of (null)\US-RM
+      from  Entered'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:12:04 [MISC] [5220] ACME: DsGetDcName function returns 0\
+      \ (client PID=1608): Dom:(null) Acct:(null) Flags: LDAPONLY BACKGROUND RET_DNS\
+      \ \r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:10:47 [MISC] [5220] DsGetDcName: results as follows: DCName:\\acme-dc01-child.childdomain.acme.local
+      DCAddress:\\172.31.8.190 DCAddrType:0x1 DomainName:childdomain.acme.local
+      DnsForestName:acme.local Flags:0xe003f1fd DcSiteName:Default-First-Site-Name
+      ClientSiteName:Default-First-Site-Name'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:10:47 [MISC] [5220] NlPingDcNameWithContext: acme-dc01-child.childdomain.acme.local
+      responded over IP.'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:10:47 [MISC] [5220] NetpDcAllocateCacheEntry: new entry 0x0000012577798470
+      -> DC:ACME-DC01-CHILD DnsDomName:childdomain.acme.local Flags:0x3f1fd '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:10:47 [MISC] [5220] NlPingDcNameWithContext: Sent 1/1 ldap pings
+      to acme-dc01-child.childdomain.acme.local'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:10:47 [MISC] [5220] NetpDcGetName: CHILDDOMAIN.ACME.LOCAL
+      cache is too old. 13665672'
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:10:38 [LOGON] [6152] ACME: NlPickDomainWithAccount: B1_Tech_User:\
+      \ Algorithm entered. UPN:0 Sam:1 Exp:0 Cross: 0 Root:1 DC:0\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:10:02 [MISC] [3928] ACME: DsGetDcName function returns 1212
+      (client PID=800): Dom:Window Manager Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:10:02 [MISC] [3928] ACME: DsGetDcName function called: client
+      PID=800, Dom:Window Manager Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:10:02 [MISC] [7672] ACME: DsGetDcName function returns 1212
+      (client PID=800): Dom:Font Driver Host Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: '04/01 14:10:02 [MISC] [7672] ACME: DsGetDcName function called: client
+      PID=800, Dom:Font Driver Host Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: "04/01 14:08:53 [MISC] [784] In control handler (Opcode: 4)\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:08:45 [MISC] [5424] ACME: DsGetDcName function returns 1212
+      (client PID=752): Dom:Font Driver Host Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:08:45 [MISC] [5424] ACME: DsGetDcName function called: client
+      PID=752, Dom:Font Driver Host Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:08:45 [MISC] [4168] ACME: DsGetDcName function returns 1212
+      (client PID=752): Dom:Window Manager Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: '04/01 14:08:45 [MISC] [4168] ACME: DsGetDcName function called: client
+      PID=752, Dom:Window Manager Acct:(null) Flags: DSP '
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:07:43 [INIT] [1028] Following are the effective values after parsing
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:07:43 [INIT] [1028]    VulnerableChannelAllowList is empty
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC02
+    _raw: 04/01 14:07:41 [MISC] [6152] DbFlag is set to 2080ffff
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:07:21 [INIT] [3004] Following are the effective values after parsing\r\
+      \n"
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:07:21 [INIT] [3004] Group Policy is not defined for Netlogon
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: 04/01 14:07:21 [INIT] [3004]    VulnerableChannelAllowList is empty
+  - index: msad
+    sourcetype: MSAD:NT6:Netlogon
+    source: C:\Windows\debug\netlogon.log
+    host: ACME-DC01
+    _raw: "04/01 14:07:19 [MISC] [10516] DbFlag is set to 2080ffff\r\n"
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC01
+    _raw: Type="Site" ForestName="acme.local" Site="Default-First-Site-Name"
+      Location="" IntersiteTopologyGenerator="" SiteLink="DEFAULTIPSITELINK"
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: Type="Site" ForestName="acme.local" Site="Default-First-Site-Name"
+      Location="" IntersiteTopologyGenerator="acme-dc01-child.childdomain.acme.local"
+      SiteLink="DEFAULTIPSITELINK"
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC02
+    _raw: Type="Site" ForestName="acme.local" Site="Default-First-Site-Name"
+      Location="" IntersiteTopologyGenerator="" SiteLink="DEFAULTIPSITELINK"
+  - index: msad
+    sourcetype: MSAD:NT6:SiteInfo
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: Type="Site" ForestName="acme.local" Site="Default-First-Site-Name"
+      Location="" IntersiteTopologyGenerator="acme-dc01-child.childdomain.acme.local"
+      SiteLink="DEFAULTIPSITELINK"

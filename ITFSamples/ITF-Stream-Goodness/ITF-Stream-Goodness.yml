@@ -1,0 +1,348 @@
+samples:
+- name: ITF-Stream-Goodness
+  interval: 1
+  count: 3
+  randomizeEvents: true
+  tokens:
+  - name: HTTP_USER_AGENT
+    format: template
+    type: choice
+    sample: HTTP_USER_AGENT.sample
+  - name: TIME_TAKEN
+    format: template
+    type: choice
+    sample: TIME_TAKEN.sample
+  - name: USER
+    format: template
+    type: choice
+    sample: USER.sample
+  - name: BYTES_OUT
+    format: template
+    type: choice
+    sample: BYTES_OUT.sample
+  - name: BYTES
+    format: template
+    type: choice
+    sample: BYTES.sample
+  - name: BYTES_IN
+    format: template
+    type: choice
+    sample: BYTES_IN.sample
+  lines:
+  - index: scenario
+    sourcetype: stream:http
+    source: i-0867530939:stream:http
+    host: catalog-03.internal.acme.com
+    _raw: '{ "bytes_in": $BYTES_IN$, "bytes_out": $BYTES_OUT$, "bytes": $BYTES$, "dest_ip":
+      "10.1.2.131", "time_taken": $TIME_TAKEN$, "src_ip": "10.1.1.103", "site": "store.acme.com",
+      "http_method": "GET", "status": 200, "url": "/inventory/product/name/", "cookie":
+      "56b43b9c-44ed-4f3a-8dd7-016699a002c9", "transport": "tcp", "dest_port": 443,
+      "http_user_agent": "$HTTP_USER_AGENT$", "src_content": {"product_name": "Zombie_Survival_Guide"},
+      "dest_content": {}, "host": "catalog-03.internal.acme.com"}'
+  - index: scenario
+    sourcetype: stream:http
+    source: i-0867530937:stream:http
+    host: catalog-01.internal.acme.com
+    _raw: '{ "bytes_in": $BYTES_IN$, "bytes_out": $BYTES_OUT$, "bytes": $BYTES$, "dest_ip":
+      "10.1.2.129", "time_taken": $TIME_TAKEN$, "src_ip": "10.1.1.102", "site": "store.acme.com",
+      "http_method": "GET", "status": 200, "url": "/inventory/search", "cookie": "332b509d-1a33-4c68-ae26-b938dfb82c24",
+      "transport": "tcp", "dest_port": 443, "http_user_agent": "$HTTP_USER_AGENT$",
+      "src_content": {"product_name": "Man_Candle-Beer"}, "dest_content": {}, "host":
+      "catalog-01.internal.acme.com"}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-03.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.131","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"SELECT
+      * FROM products WHERE product_name=Zombie_Survival_Guide","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-01.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.129","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.43","query":"SELECT
+      product_name FROM products WHERE product_name LIKE Man_Candle-Beer","dest_host":"clouddb-03.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:http
+    source: i-0867530938:stream:http
+    host: catalog-02.internal.acme.com
+    _raw: '{ "bytes_in": $BYTES_IN$, "bytes_out": $BYTES_OUT$, "bytes": $BYTES$, "dest_ip":
+      "10.1.2.130", "time_taken": $TIME_TAKEN$, "src_ip": "10.1.1.101", "site": "store.acme.com",
+      "http_method": "GET", "status": 200, "url": "/inventory/product/name/", "cookie":
+      "b99b4b1a-c263-4f02-a713-347081dd9017", "transport": "tcp", "dest_port": 443,
+      "http_user_agent": "$HTTP_USER_AGENT$", "src_content": {"product_name": "Man_Candle-Bacon"},
+      "dest_content": {}, "host": "catalog-02.internal.acme.com"}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-02.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.130","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"SELECT
+      * FROM products WHERE product_name=Man_Candle-Bacon","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:http
+    source: i-0867530945:stream:http
+    host: cart-04.internal.acme.com
+    _raw: '{ "bytes_in": $BYTES_IN$, "bytes_out": $BYTES_OUT$, "bytes": $BYTES$, "dest_ip":
+      "10.1.2.159", "time_taken": $TIME_TAKEN$, "src_ip": "10.1.1.102", "site": "store.acme.com",
+      "http_method": "POST", "status": 200, "url": "/cart/add", "cookie": "314cc0cb-1d2a-4306-9426-59342dddc447",
+      "transport": "tcp", "dest_port": 443, "http_user_agent": "$HTTP_USER_AGENT$",
+      "src_content": {"product_name": "Batman_Snuggie", "cartid": "314cc0cb-1d2a-4306-9426-59342dddc447"},
+      "dest_content": {}, "host": "cart-04.internal.acme.com"}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-04.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.159","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.41","query":"INSERT
+      INTO cart (cartid, product) VALUES (314cc0cb-1d2a-4306-9426-59342dddc447,Batman_Snuggie)","dest_host":"clouddb-01.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-03.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.131","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.41","query":"SELECT
+      product_name FROM products WHERE product_name LIKE Man_Candle-Beer","dest_host":"clouddb-01.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:http
+    source: stream:http
+    host: cart-01.internal.acme.com
+    _raw: '{ "bytes_in": $BYTES_IN$, "bytes_out": $BYTES_OUT$, "bytes": $BYTES$, "dest_ip":
+      "10.1.2.156", "time_taken": $TIME_TAKEN$, "src_ip": "10.1.1.102", "site": "store.acme.com",
+      "http_method": "POST", "status": 200, "url": "/cart/checkout", "cookie": "70504bf5-c573-461e-914a-9f2154ecdc48",
+      "transport": "tcp", "dest_port": 443, "http_user_agent": "$HTTP_USER_AGENT$",
+      "src_content": {"cartid": "70504bf5-c573-461e-914a-9f2154ecdc48"}, "dest_content":
+      {"items": ["BW-3"]}, "host": "cart-01.internal.acme.com"}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-01.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.156","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.41","query":"SELECT
+      items FROM cart WHERE cartid=70504bf5-c573-461e-914a-9f2154ecdc48,Dynamite_Fire_Starter)","dest_host":"clouddb-01.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:http
+    source: i-0867530940:stream:http
+    host: catalog-04.internal.acme.com
+    _raw: '{ "bytes_in": $BYTES_IN$, "bytes_out": $BYTES_OUT$, "bytes": $BYTES$, "dest_ip":
+      "10.1.2.132", "time_taken": $TIME_TAKEN$, "src_ip": "10.1.1.104", "site": "store.acme.com",
+      "http_method": "GET", "status": 200, "url": "/inventory/search", "cookie": "56f9ed96-47f9-4843-9954-40942f2ce655",
+      "transport": "tcp", "dest_port": 443, "http_user_agent": "$HTTP_USER_AGENT$",
+      "src_content": {"product_name": "Zombie_Survival_Guide"}, "dest_content": {},
+      "host": "catalog-04.internal.acme.com"}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-04.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.132","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"SELECT
+      product_name FROM products WHERE product_name LIKE Zombie_Survival_Guide","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:http
+    source: stream:http
+    host: auth-02.internal.acme.com
+    _raw: '{ "bytes_in": $BYTES_IN$, "bytes_out": $BYTES_OUT$, "bytes": $BYTES$, "dest_ip":
+      "10.1.2.102", "time_taken": $TIME_TAKEN$, "src_ip": "10.1.1.101", "site": "store.acme.com",
+      "http_method": "POST", "status": 200, "url": "/user/auth", "cookie": "904aa600-dea6-43d7-81fc-15e3f6e758c2",
+      "transport": "tcp", "dest_port": 443, "http_user_agent": "$HTTP_USER_AGENT$",
+      "src_content": {"userid": "erabbfi"}, "dest_content": {"status": "success"},
+      "host": "auth-02.internal.acme.com"}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: auth-02.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.102","dbname":"auth","bytes":$BYTES$,"dest_ip":"10.2.2.3","query":"query=SELECT
+      * FROM customers WHERE customer_uid=erabbfi","dest_host":"mysql-03.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:http
+    source: stream:http
+    host: cart-02.internal.acme.com
+    _raw: '{ "bytes_in": $BYTES_IN$, "bytes_out": $BYTES_OUT$, "bytes": $BYTES$, "dest_ip":
+      "10.1.2.157", "time_taken": $TIME_TAKEN$, "src_ip": "242.112.14.255", "site":
+      "store.acme.com", "http_method": "POST", "status": 200, "url": "/cart/add",
+      "cookie": "f3d94866-59d2-4493-a46a-ccfe48e1f6e5", "transport": "tcp", "dest_port":
+      443, "http_user_agent": "$HTTP_USER_AGENT$", "src_content": {"product_name":
+      "Man_Candle-Beer", "cartid": "f3d94866-59d2-4493-a46a-ccfe48e1f6e5"}, "dest_content":
+      {}, "host": "cart-02.internal.acme.com"}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-02.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.157","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.41","query":"INSERT
+      INTO cart (cartid, product) VALUES (f3d94866-59d2-4493-a46a-ccfe48e1f6e5,Man_Candle-Beer)","dest_host":"clouddb-01.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-03.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.131","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.42","query":"SELECT
+      * FROM products WHERE product_name=Man_Candle-Football","dest_host":"clouddb-02.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-02.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.130","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.41","query":"SELECT
+      product_name FROM products WHERE product_name LIKE Poo_Pouri","dest_host":"clouddb-01.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:http
+    source: i-0867530944:stream:http
+    host: cart-03.internal.acme.com
+    _raw: '{ "bytes_in": $BYTES_IN$, "bytes_out": $BYTES_OUT$, "bytes": $BYTES$, "dest_ip":
+      "10.1.2.158", "time_taken": $TIME_TAKEN$, "src_ip": "10.1.1.102", "site": "store.acme.com",
+      "http_method": "POST", "status": 200, "url": "/cart/checkout", "cookie": "37ec6a0f-79d5-4d2c-a85d-bbf8a4d9abd3",
+      "transport": "tcp", "dest_port": 443, "http_user_agent": "$HTTP_USER_AGENT$",
+      "src_content": {"cartid": "37ec6a0f-79d5-4d2c-a85d-bbf8a4d9abd3"}, "dest_content":
+      {"items": ["ZSG-2","MCB-6","DFS-2"]}, "host": "cart-03.internal.acme.com"}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: auth-01.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.101","dbname":"auth","bytes":$BYTES$,"dest_ip":"10.2.2.2","query":"query=SELECT
+      * FROM customers WHERE customer_uid=bsculleyj","dest_host":"mysql-02.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: auth-04.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.104","dbname":"auth","bytes":$BYTES$,"dest_ip":"10.2.2.2","query":"query=SELECT
+      * FROM customers WHERE customer_uid=nlettley4a","dest_host":"mysql-02.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-03.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.158","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.42","query":"SELECT
+      items FROM cart WHERE cartid=37ec6a0f-79d5-4d2c-a85d-bbf8a4d9abd3,Zombie_Survival_Guide)","dest_host":"clouddb-02.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-04.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.132","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"SELECT
+      * FROM products WHERE product_name=Poo_Pouri","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-02.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.157","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.41","query":"SELECT
+      items FROM cart WHERE cartid=81e0cc4d-ef3c-4619-979f-c6f5b7158263,Bubble_Wrap)","dest_host":"clouddb-01.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-03.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.158","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"INSERT
+      INTO cart (cartid, product) VALUES (63f1969d-a450-4fb0-ad72-5f74df629a7e,Canned_Unicorn_Meat)","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-04.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.159","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.43","query":"SELECT
+      items FROM cart WHERE cartid=e1d45e1e-a743-407f-a8b8-14a25a83b301,Canned_Unicorn_Meat)","dest_host":"clouddb-03.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-01.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.156","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.43","query":"INSERT
+      INTO cart (cartid, product) VALUES (904aa600-dea6-43d7-81fc-15e3f6e758c2,Dynamite_Fire_Starter)","dest_host":"clouddb-03.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-02.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.130","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.42","query":"SELECT
+      * FROM products WHERE product_name=Batman_Snuggie","dest_host":"clouddb-02.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-04.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.132","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.41","query":"SELECT
+      * FROM products WHERE product_name=Man_Candle-Beer","dest_host":"clouddb-01.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:http
+    source: stream:http
+    host: auth-03.internal.acme.com
+    _raw: '{ "bytes_in": $BYTES_IN$, "bytes_out": $BYTES_OUT$, "bytes": $BYTES$, "dest_ip":
+      "10.1.2.103", "time_taken": $TIME_TAKEN$, "src_ip": "10.1.1.102", "site": "store.acme.com",
+      "http_method": "POST", "status": 200, "url": "/user/auth", "cookie": "56f9ed96-47f9-4843-9954-40942f2ce655",
+      "transport": "tcp", "dest_port": 443, "http_user_agent": "$HTTP_USER_AGENT$",
+      "src_content": {"userid": "jgirling65"}, "dest_content": {"status": "success"},
+      "host": "auth-03.internal.acme.com"}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-01.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.129","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"SELECT
+      * FROM products WHERE product_name=Water_Proof_Scratch_and_Sniff","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: auth-03.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.103","dbname":"auth","bytes":$BYTES$,"dest_ip":"10.2.2.4","query":"query=SELECT
+      * FROM customers WHERE customer_uid=jgirling65","dest_host":"mysql-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-02.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.157","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.41","query":"SELECT
+      items FROM cart WHERE cartid=1de80cb8-c6ec-474e-ba5f-a321c9a145aa,Man_Candle-Football)","dest_host":"clouddb-01.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-04.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.159","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.42","query":"SELECT
+      items FROM cart WHERE cartid=56f9ed96-47f9-4843-9954-40942f2ce655,Man_Candle-Bacon)","dest_host":"clouddb-02.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-04.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.159","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.43","query":"INSERT
+      INTO cart (cartid, product) VALUES (8e96a16c-54a6-423b-b099-ba90e5fe97c0,Man_Candle-Bacon)","dest_host":"clouddb-03.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-01.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.156","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.43","query":"INSERT
+      INTO cart (cartid, product) VALUES (177d1006-9d97-4284-b2be-2da2deeecc5d,Man_Candle-Beer)","dest_host":"clouddb-03.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-02.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.157","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.41","query":"INSERT
+      INTO cart (cartid, product) VALUES (75094e87-6846-4008-b3c0-cddcb788c8a6,Poo_Pouri)","dest_host":"clouddb-01.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-04.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.132","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.42","query":"SELECT
+      product_name FROM products WHERE product_name LIKE Man_Candle-Beer","dest_host":"clouddb-02.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-03.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.131","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.43","query":"SELECT
+      product_name FROM products WHERE product_name LIKE Batman_Snuggie","dest_host":"clouddb-03.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-02.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.130","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"SELECT
+      product_name FROM products WHERE product_name LIKE Man_Candle-Beer","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-03.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.158","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"SELECT
+      items FROM cart WHERE cartid=81e0cc4d-ef3c-4619-979f-c6f5b7158263,Man_Candle-Football)","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-01.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.156","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"SELECT
+      items FROM cart WHERE cartid=dcd4a91c-b611-4b09-8c17-9b2b7d869c87,Man_Candle-Bacon)","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-01.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.129","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"SELECT
+      product_name FROM products WHERE product_name LIKE Poo_Pouri","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: cart-03.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.158","dbname":"user","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"INSERT
+      INTO cart (cartid, product) VALUES (fbbcae9a-e3ab-4883-8766-f47c36c0ad7e,Man_Candle-Football)","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'
+  - index: scenario
+    sourcetype: stream:mysql
+    source: stream:mysql
+    host: catalog-01.internal.acme.com
+    _raw: '{"src_ip":"10.1.2.129","dbname":"inventory","bytes":$BYTES$,"dest_ip":"10.2.2.44","query":"SELECT
+      * FROM products WHERE product_name=Man_Candle-Beer","dest_host":"clouddb-04.internal.acme.com","transport":"tcp","login":"$USER$","dest_port":"3306","time_taken":$TIME_TAKEN$}'

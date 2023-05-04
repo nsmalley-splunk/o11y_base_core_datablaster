@@ -1,0 +1,759 @@
+samples:
+- name: ITF-Apache-Access
+  interval: 1
+  count: 1
+  randomizeEvents: true
+  tokens:
+  - name: HTTP_USER_AGENT
+    format: template
+    type: choice
+    sample: HTTP_USER_AGENT.sample
+  - name: USER
+    format: template
+    type: choice
+    sample: USER.sample
+  - name: BYTES
+    format: template
+    type: choice
+    sample: BYTES.sample
+  - name: BYTES_OUT
+    format: template
+    type: choice
+    sample: BYTES_OUT.sample
+  - name: BYTES_IN
+    format: template
+    type: choice
+    sample: BYTES_IN.sample
+  - name: DEST_PORT
+    format: template
+    type: choice
+    sample: DEST_PORT.sample
+  - name: STATUS
+    format: template
+    type: choice
+    sample: STATUS.sample
+  - name: TIMESTAMP
+    format: template
+    type: gotimestamp
+    replacement: 02/Jan/2006 15:04:05
+  lines:
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 85.54.119.149 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:834000000]
+      GET /view?product_name=Dynamite_Fire_Starter&JSEssIONID=24d5522b-a1a7-4d85-8d61-afa470a8dd4e
+      HTTP/1.1 product_name=Dynamite_Fire_Starter&JSEssIONID=24d5522b-a1a7-4d85-8d61-afa470a8dd4e
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      306176
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 26.213.160.193 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:625000000]
+      POST /cart?action=add&product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=56f9ed96-47f9-4843-9954-40942f2ce655
+      HTTP/1.1 action=add&product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=56f9ed96-47f9-4843-9954-40942f2ce655
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      215040
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 234.205.245.152 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:625000000]
+      POST /cart?action=add&product_name=Man_Candle-Beer&JSEssIONID=56b43b9c-44ed-4f3a-8dd7-016699a002c9
+      HTTP/1.1 action=add&product_name=Man_Candle-Beer&JSEssIONID=56b43b9c-44ed-4f3a-8dd7-016699a002c9
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      304128
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 64.222.209.169 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:575000000]
+      GET /view?product_name=Dynamite_Fire_Starter&JSEssIONID=4c68c41c-aeaa-4a0d-aee5-fbbdd272ee76
+      HTTP/1.1 product_name=Dynamite_Fire_Starter&JSEssIONID=4c68c41c-aeaa-4a0d-aee5-fbbdd272ee76
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      301056
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 116.191.229.221 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:525000000]
+      GET /view?product_name=Bubble_Wrap&JSEssIONID=fbbcae9a-e3ab-4883-8766-f47c36c0ad7e
+      HTTP/1.1 product_name=Bubble_Wrap&JSEssIONID=fbbcae9a-e3ab-4883-8766-f47c36c0ad7e
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      290816
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 34.183.237.36 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:84000000]
+      POST /cart?action=add&product_name=Man_Candle-Bacon&JSEssIONID=15802e9f-30fb-4307-aadd-ce571f8792fa
+      HTTP/1.1 action=add&product_name=Man_Candle-Bacon&JSEssIONID=15802e9f-30fb-4307-aadd-ce571f8792fa
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      258048
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 193.62.107.110 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:834000000]
+      GET /view?product_name=Man_Candle-Beer&JSEssIONID=904aa600-dea6-43d7-81fc-15e3f6e758c2
+      HTTP/1.1 product_name=Man_Candle-Beer&JSEssIONID=904aa600-dea6-43d7-81fc-15e3f6e758c2
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      251904
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 98.37.10.185 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:$BYTES_IN$000000]
+      GET /view?product_name=Canned_Unicorn_Meat&JSEssIONID=8101de9f-a92d-4382-9e33-c4f6e9e63dc0
+      HTTP/1.1 product_name=Canned_Unicorn_Meat&JSEssIONID=8101de9f-a92d-4382-9e33-c4f6e9e63dc0
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      236544
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 82.234.99.118 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:$BYTES_IN$000000]
+      POST /cart?action=add&product_name=Man_Candle-Bacon&JSEssIONID=dcd4a91c-b611-4b09-8c17-9b2b7d869c87
+      HTTP/1.1 action=add&product_name=Man_Candle-Bacon&JSEssIONID=dcd4a91c-b611-4b09-8c17-9b2b7d869c87
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      201728
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 20.160.33.75 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:134000000]
+      GET /view?product_name=Man_Candle-Bacon&JSEssIONID=419efb88-91c3-4c0f-802c-6981346f8977
+      HTTP/1.1 product_name=Man_Candle-Bacon&JSEssIONID=419efb88-91c3-4c0f-802c-6981346f8977
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      223232
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 39.231.171.106 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:925000000]
+      GET /view?product_name=Bubble_Wrap&JSEssIONID=6f98db05-498e-4054-a826-aa66e530fe40
+      HTTP/1.1 product_name=Bubble_Wrap&JSEssIONID=6f98db05-498e-4054-a826-aa66e530fe40
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      306176
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 90.242.244.216 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:934000000]
+      GET /view?product_name=Dynamite_Fire_Starter&JSEssIONID=$BYTES_IN$04bf5-c573-461e-914a-9f2154ecdc48
+      HTTP/1.1 product_name=Dynamite_Fire_Starter&JSEssIONID=$BYTES_IN$04bf5-c573-461e-914a-9f2154ecdc48
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      260096
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 53.104.180.128 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:$BYTES_IN$000000]
+      POST /cart?action=add&product_name=Poo_Pouri&JSEssIONID=b99b4b1a-c263-4f02-a713-347081dd9017
+      HTTP/1.1 action=add&product_name=Poo_Pouri&JSEssIONID=b99b4b1a-c263-4f02-a713-347081dd9017
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      222208
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 243.184.192.192 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:84000000]
+      POST /cart?action=add&product_name=Poo_Pouri&JSEssIONID=81e0cc4d-ef3c-4619-979f-c6f5b7158263
+      HTTP/1.1 action=add&product_name=Poo_Pouri&JSEssIONID=81e0cc4d-ef3c-4619-979f-c6f5b7158263
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      216064
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 181.81.39.181 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:234000000]
+      GET /view?product_name=Batman_Snuggie&JSEssIONID=1de80cb8-c6ec-474e-ba5f-a321c9a145aa
+      HTTP/1.1 product_name=Batman_Snuggie&JSEssIONID=1de80cb8-c6ec-474e-ba5f-a321c9a145aa
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      266240
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 34.60.109.102 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:134000000]
+      POST /cart?action=add&product_name=Batman_Snuggie&JSEssIONID=bd10bd55-bc17-492a-9547-cabea2dd3dd3
+      HTTP/1.1 action=add&product_name=Batman_Snuggie&JSEssIONID=bd10bd55-bc17-492a-9547-cabea2dd3dd3
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      273408
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 219.185.49.18 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:875000000]
+      POST /cart?action=add&product_name=Bubble_Wrap&JSEssIONID=332b509d-1a33-4c68-ae26-b938dfb82c24
+      HTTP/1.1 action=add&product_name=Bubble_Wrap&JSEssIONID=332b509d-1a33-4c68-ae26-b938dfb82c24
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      276480
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 43.106.168.54 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:634000000]
+      GET /view?product_name=Zombie_Survival_Guide&JSEssIONID=8e96a16c-54a6-423b-b099-ba90e5fe97c0
+      HTTP/1.1 product_name=Zombie_Survival_Guide&JSEssIONID=8e96a16c-54a6-423b-b099-ba90e5fe97c0
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      211968
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 39.231.171.106 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:425000000]
+      POST /cart?action=add&product_name=Dynamite_Fire_Starter&JSEssIONID=6f98db05-498e-4054-a826-aa66e530fe40
+      HTTP/1.1 action=add&product_name=Dynamite_Fire_Starter&JSEssIONID=6f98db05-498e-4054-a826-aa66e530fe40
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      295936
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 248.227.152.97 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:275000000]
+      POST /cart?action=add&product_name=Man_Candle-Beer&JSEssIONID=e1d45e1e-a743-407f-a8b8-14a25a83b301
+      HTTP/1.1 action=add&product_name=Man_Candle-Beer&JSEssIONID=e1d45e1e-a743-407f-a8b8-14a25a83b301
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      264192
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 193.62.107.110 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:734000000]
+      GET /view?product_name=Zombie_Survival_Guide&JSEssIONID=904aa600-dea6-43d7-81fc-15e3f6e758c2
+      HTTP/1.1 product_name=Zombie_Survival_Guide&JSEssIONID=904aa600-dea6-43d7-81fc-15e3f6e758c2
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      257024
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 243.184.192.192 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:634000000]
+      GET /view?product_name=Canned_Unicorn_Meat&JSEssIONID=81e0cc4d-ef3c-4619-979f-c6f5b7158263
+      HTTP/1.1 product_name=Canned_Unicorn_Meat&JSEssIONID=81e0cc4d-ef3c-4619-979f-c6f5b7158263
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      189440
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 181.81.39.181 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:284000000]
+      POST /cart?action=add&product_name=Canned_Unicorn_Meat&JSEssIONID=1de80cb8-c6ec-474e-ba5f-a321c9a145aa
+      HTTP/1.1 action=add&product_name=Canned_Unicorn_Meat&JSEssIONID=1de80cb8-c6ec-474e-ba5f-a321c9a145aa
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      220160
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 138.130.249.132 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:225000000]
+      POST /cart?action=add&product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=9c96d40a-3ee6-4ccc-aafe-89f3289ab276
+      HTTP/1.1 action=add&product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=9c96d40a-3ee6-4ccc-aafe-89f3289ab276
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      219136
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 26.213.160.193 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:75000000]
+      GET /view?product_name=Canned_Unicorn_Meat&JSEssIONID=56f9ed96-47f9-4843-9954-40942f2ce655
+      HTTP/1.1 product_name=Canned_Unicorn_Meat&JSEssIONID=56f9ed96-47f9-4843-9954-40942f2ce655
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      197632
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 64.222.209.169 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:$BYTES_IN$000000]
+      GET /view?product_name=Man_Candle-Beer&JSEssIONID=4c68c41c-aeaa-4a0d-aee5-fbbdd272ee76
+      HTTP/1.1 product_name=Man_Candle-Beer&JSEssIONID=4c68c41c-aeaa-4a0d-aee5-fbbdd272ee76
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      272384
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 98.37.10.185 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:234000000]
+      GET /view?product_name=Poo_Pouri&JSEssIONID=8101de9f-a92d-4382-9e33-c4f6e9e63dc0
+      HTTP/1.1 product_name=Poo_Pouri&JSEssIONID=8101de9f-a92d-4382-9e33-c4f6e9e63dc0
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      285696
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 63.224.8.198 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:934000000]
+      GET /view?product_name=Man_Candle-Bacon&JSEssIONID=314cc0cb-1d2a-4306-9426-59342dddc447
+      HTTP/1.1 product_name=Man_Candle-Bacon&JSEssIONID=314cc0cb-1d2a-4306-9426-59342dddc447
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      277504
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 181.81.39.181 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:434000000]
+      GET /view?product_name=Man_Candle-Beer&JSEssIONID=1de80cb8-c6ec-474e-ba5f-a321c9a145aa
+      HTTP/1.1 product_name=Man_Candle-Beer&JSEssIONID=1de80cb8-c6ec-474e-ba5f-a321c9a145aa
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      245760
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 43.232.113.156 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:325000000]
+      GET /view?product_name=Dynamite_Fire_Starter&JSEssIONID=cf1a33ea-7aa3-49fa-93e5-ca695038deed
+      HTTP/1.1 product_name=Dynamite_Fire_Starter&JSEssIONID=cf1a33ea-7aa3-49fa-93e5-ca695038deed
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      206848
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 234.205.245.152 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:875000000]
+      POST /cart?action=add&product_name=Bubble_Wrap&JSEssIONID=56b43b9c-44ed-4f3a-8dd7-016699a002c9
+      HTTP/1.1 action=add&product_name=Bubble_Wrap&JSEssIONID=56b43b9c-44ed-4f3a-8dd7-016699a002c9
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      194560
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 219.185.49.18 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:$BYTES_OUT$00000]
+      GET /view?product_name=Man_Candle-Football&JSEssIONID=332b509d-1a33-4c68-ae26-b938dfb82c24
+      HTTP/1.1 product_name=Man_Candle-Football&JSEssIONID=332b509d-1a33-4c68-ae26-b938dfb82c24
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      246784
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 82.234.99.118 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:634000000]
+      GET /view?product_name=Poo_Pouri&JSEssIONID=dcd4a91c-b611-4b09-8c17-9b2b7d869c87
+      HTTP/1.1 product_name=Poo_Pouri&JSEssIONID=dcd4a91c-b611-4b09-8c17-9b2b7d869c87
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      249856
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 91.217.200.173 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:425000000]
+      POST /cart?action=add&product_name=Zombie_Survival_Guide&JSEssIONID=a6c69a7e-bec2-46c7-a23d-a94c2d9dfe81
+      HTTP/1.1 action=add&product_name=Zombie_Survival_Guide&JSEssIONID=a6c69a7e-bec2-46c7-a23d-a94c2d9dfe81
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      226304
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 98.37.10.185 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:284000000]
+      POST /cart?action=add&product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=8101de9f-a92d-4382-9e33-c4f6e9e63dc0
+      HTTP/1.1 action=add&product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=8101de9f-a92d-4382-9e33-c4f6e9e63dc0
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      204800
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 26.213.160.193 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:225000000]
+      GET /view?product_name=Bubble_Wrap&JSEssIONID=56f9ed96-47f9-4843-9954-40942f2ce655
+      HTTP/1.1 product_name=Bubble_Wrap&JSEssIONID=56f9ed96-47f9-4843-9954-40942f2ce655
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      214016
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 128.91.207.162 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:734000000]
+      GET /view?product_name=Man_Candle-Football&JSEssIONID=75094e87-6846-4008-b3c0-cddcb788c8a6
+      HTTP/1.1 product_name=Man_Candle-Football&JSEssIONID=75094e87-6846-4008-b3c0-cddcb788c8a6
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      204800
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 138.130.249.132 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:75000000]
+      POST /cart?action=add&product_name=Canned_Unicorn_Meat&JSEssIONID=9c96d40a-3ee6-4ccc-aafe-89f3289ab276
+      HTTP/1.1 action=add&product_name=Canned_Unicorn_Meat&JSEssIONID=9c96d40a-3ee6-4ccc-aafe-89f3289ab276
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      226304
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 243.184.192.192 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:984000000]
+      POST /cart?action=add&product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=81e0cc4d-ef3c-4619-979f-c6f5b7158263
+      HTTP/1.1 action=add&product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=81e0cc4d-ef3c-4619-979f-c6f5b7158263
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      244736
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 64.222.209.169 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:875000000]
+      POST /cart?action=add&product_name=Zombie_Survival_Guide&JSEssIONID=4c68c41c-aeaa-4a0d-aee5-fbbdd272ee76
+      HTTP/1.1 action=add&product_name=Zombie_Survival_Guide&JSEssIONID=4c68c41c-aeaa-4a0d-aee5-fbbdd272ee76
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      225280
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 63.224.8.198 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:$BYTES_IN$000000]
+      GET /view?product_name=Man_Candle-Football&JSEssIONID=314cc0cb-1d2a-4306-9426-59342dddc447
+      HTTP/1.1 product_name=Man_Candle-Football&JSEssIONID=314cc0cb-1d2a-4306-9426-59342dddc447
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      250880
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 43.106.168.54 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:934000000]
+      POST /cart?action=add&product_name=Man_Candle-Football&JSEssIONID=8e96a16c-54a6-423b-b099-ba90e5fe97c0
+      HTTP/1.1 action=add&product_name=Man_Candle-Football&JSEssIONID=8e96a16c-54a6-423b-b099-ba90e5fe97c0
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      251904
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 138.130.249.132 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:775000000]
+      GET /view?product_name=Poo_Pouri&JSEssIONID=9c96d40a-3ee6-4ccc-aafe-89f3289ab276
+      HTTP/1.1 product_name=Poo_Pouri&JSEssIONID=9c96d40a-3ee6-4ccc-aafe-89f3289ab276
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      278528
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 34.60.109.102 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:734000000]
+      GET /view?product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=bd10bd55-bc17-492a-9547-cabea2dd3dd3
+      HTTP/1.1 product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=bd10bd55-bc17-492a-9547-cabea2dd3dd3
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      246784
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 64.222.209.169 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:575000000]
+      POST /cart?action=add&product_name=Man_Candle-Football&JSEssIONID=4c68c41c-aeaa-4a0d-aee5-fbbdd272ee76
+      HTTP/1.1 action=add&product_name=Man_Candle-Football&JSEssIONID=4c68c41c-aeaa-4a0d-aee5-fbbdd272ee76
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      296960
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 90.242.244.216 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:734000000]
+      POST /cart?action=add&product_name=Poo_Pouri&JSEssIONID=$BYTES_IN$04bf5-c573-461e-914a-9f2154ecdc48
+      HTTP/1.1 action=add&product_name=Poo_Pouri&JSEssIONID=$BYTES_IN$04bf5-c573-461e-914a-9f2154ecdc48
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      193536
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 218.155.139.214 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:125000000]
+      POST /cart?action=add&product_name=Man_Candle-Beer&JSEssIONID=37ec6a0f-79d5-4d2c-a85d-bbf8a4d9abd3
+      HTTP/1.1 action=add&product_name=Man_Candle-Beer&JSEssIONID=37ec6a0f-79d5-4d2c-a85d-bbf8a4d9abd3
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      259072
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 91.217.200.173 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:825000000]
+      POST /cart?action=add&product_name=Poo_Pouri&JSEssIONID=a6c69a7e-bec2-46c7-a23d-a94c2d9dfe81
+      HTTP/1.1 action=add&product_name=Poo_Pouri&JSEssIONID=a6c69a7e-bec2-46c7-a23d-a94c2d9dfe81
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      228352
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 193.62.107.110 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:534000000]
+      GET /view?product_name=Man_Candle-Bacon&JSEssIONID=904aa600-dea6-43d7-81fc-15e3f6e758c2
+      HTTP/1.1 product_name=Man_Candle-Bacon&JSEssIONID=904aa600-dea6-43d7-81fc-15e3f6e758c2
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      245760
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 116.191.229.221 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:225000000]
+      POST /cart?action=add&product_name=Man_Candle-Football&JSEssIONID=fbbcae9a-e3ab-4883-8766-f47c36c0ad7e
+      HTTP/1.1 action=add&product_name=Man_Candle-Football&JSEssIONID=fbbcae9a-e3ab-4883-8766-f47c36c0ad7e
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      195584
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 85.54.119.149 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:234000000]
+      POST /cart?action=add&product_name=Bubble_Wrap&JSEssIONID=24d5522b-a1a7-4d85-8d61-afa470a8dd4e
+      HTTP/1.1 action=add&product_name=Bubble_Wrap&JSEssIONID=24d5522b-a1a7-4d85-8d61-afa470a8dd4e
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      247808
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 82.234.99.118 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:984000000]
+      GET /view?product_name=Man_Candle-Football&JSEssIONID=dcd4a91c-b611-4b09-8c17-9b2b7d869c87
+      HTTP/1.1 product_name=Man_Candle-Football&JSEssIONID=dcd4a91c-b611-4b09-8c17-9b2b7d869c87
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      248832
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 43.106.168.54 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:984000000]
+      GET /view?product_name=Batman_Snuggie&JSEssIONID=8e96a16c-54a6-423b-b099-ba90e5fe97c0
+      HTTP/1.1 product_name=Batman_Snuggie&JSEssIONID=8e96a16c-54a6-423b-b099-ba90e5fe97c0
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      192512
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 63.224.8.198 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:484000000]
+      POST /cart?action=add&product_name=Dynamite_Fire_Starter&JSEssIONID=314cc0cb-1d2a-4306-9426-59342dddc447
+      HTTP/1.1 action=add&product_name=Dynamite_Fire_Starter&JSEssIONID=314cc0cb-1d2a-4306-9426-59342dddc447
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      206848
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 98.37.10.185 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:334000000]
+      POST /cart?action=add&product_name=Dynamite_Fire_Starter&JSEssIONID=8101de9f-a92d-4382-9e33-c4f6e9e63dc0
+      HTTP/1.1 action=add&product_name=Dynamite_Fire_Starter&JSEssIONID=8101de9f-a92d-4382-9e33-c4f6e9e63dc0
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      197632
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 82.234.99.118 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:134000000]
+      POST /cart?action=add&product_name=Zombie_Survival_Guide&JSEssIONID=dcd4a91c-b611-4b09-8c17-9b2b7d869c87
+      HTTP/1.1 action=add&product_name=Zombie_Survival_Guide&JSEssIONID=dcd4a91c-b611-4b09-8c17-9b2b7d869c87
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      231424
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 181.81.39.181 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:534000000]
+      GET /view?product_name=Batman_Snuggie&JSEssIONID=1de80cb8-c6ec-474e-ba5f-a321c9a145aa
+      HTTP/1.1 product_name=Batman_Snuggie&JSEssIONID=1de80cb8-c6ec-474e-ba5f-a321c9a145aa
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      258048
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 234.205.245.152 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:275000000]
+      GET /view?product_name=Batman_Snuggie&JSEssIONID=56b43b9c-44ed-4f3a-8dd7-016699a002c9
+      HTTP/1.1 product_name=Batman_Snuggie&JSEssIONID=56b43b9c-44ed-4f3a-8dd7-016699a002c9
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      242688
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 219.185.49.18 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:125000000]
+      POST /cart?action=add&product_name=Dynamite_Fire_Starter&JSEssIONID=332b509d-1a33-4c68-ae26-b938dfb82c24
+      HTTP/1.1 action=add&product_name=Dynamite_Fire_Starter&JSEssIONID=332b509d-1a33-4c68-ae26-b938dfb82c24
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      274432
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 43.232.113.156 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:975000000]
+      GET /view?product_name=Bubble_Wrap&JSEssIONID=cf1a33ea-7aa3-49fa-93e5-ca695038deed
+      HTTP/1.1 product_name=Bubble_Wrap&JSEssIONID=cf1a33ea-7aa3-49fa-93e5-ca695038deed
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      305152
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 128.91.207.162 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:634000000]
+      POST /cart?action=add&product_name=Man_Candle-Football&JSEssIONID=75094e87-6846-4008-b3c0-cddcb788c8a6
+      HTTP/1.1 action=add&product_name=Man_Candle-Football&JSEssIONID=75094e87-6846-4008-b3c0-cddcb788c8a6
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      262144
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 85.54.119.149 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:534000000]
+      GET /view?product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=24d5522b-a1a7-4d85-8d61-afa470a8dd4e
+      HTTP/1.1 product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=24d5522b-a1a7-4d85-8d61-afa470a8dd4e
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      263168
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 39.231.171.106 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:$BYTES_IN$000000]
+      POST /cart?action=add&product_name=Batman_Snuggie&JSEssIONID=6f98db05-498e-4054-a826-aa66e530fe40
+      HTTP/1.1 action=add&product_name=Batman_Snuggie&JSEssIONID=6f98db05-498e-4054-a826-aa66e530fe40
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      273408
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530902:/opt/apache/log/access.log
+    host: apache-03.external.acme.com
+    _raw: 219.185.49.18 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:75000000]
+      GET /view?product_name=Man_Candle-Bacon&JSEssIONID=332b509d-1a33-4c68-ae26-b938dfb82c24
+      HTTP/1.1 product_name=Man_Candle-Bacon&JSEssIONID=332b509d-1a33-4c68-ae26-b938dfb82c24
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      204800
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 64.222.209.169 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:825000000]
+      POST /cart?action=add&product_name=Bubble_Wrap&JSEssIONID=4c68c41c-aeaa-4a0d-aee5-fbbdd272ee76
+      HTTP/1.1 action=add&product_name=Bubble_Wrap&JSEssIONID=4c68c41c-aeaa-4a0d-aee5-fbbdd272ee76
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      189440
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 128.91.207.162 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:684000000]
+      GET /view?product_name=Zombie_Survival_Guide&JSEssIONID=75094e87-6846-4008-b3c0-cddcb788c8a6
+      HTTP/1.1 product_name=Zombie_Survival_Guide&JSEssIONID=75094e87-6846-4008-b3c0-cddcb788c8a6
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      199680
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 53.104.180.128 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:534000000]
+      GET /view?product_name=Zombie_Survival_Guide&JSEssIONID=b99b4b1a-c263-4f02-a713-347081dd9017
+      HTTP/1.1 product_name=Zombie_Survival_Guide&JSEssIONID=b99b4b1a-c263-4f02-a713-347081dd9017
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      192512
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 20.160.33.75 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:84000000]
+      POST /cart?action=add&product_name=Batman_Snuggie&JSEssIONID=419efb88-91c3-4c0f-802c-6981346f8977
+      HTTP/1.1 action=add&product_name=Batman_Snuggie&JSEssIONID=419efb88-91c3-4c0f-802c-6981346f8977
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      201728
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 63.224.8.198 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:734000000]
+      POST /cart?action=add&product_name=Man_Candle-Bacon&JSEssIONID=314cc0cb-1d2a-4306-9426-59342dddc447
+      HTTP/1.1 action=add&product_name=Man_Candle-Bacon&JSEssIONID=314cc0cb-1d2a-4306-9426-59342dddc447
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      223232
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 243.184.192.192 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:534000000]
+      POST /cart?action=add&product_name=Canned_Unicorn_Meat&JSEssIONID=81e0cc4d-ef3c-4619-979f-c6f5b7158263
+      HTTP/1.1 action=add&product_name=Canned_Unicorn_Meat&JSEssIONID=81e0cc4d-ef3c-4619-979f-c6f5b7158263
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      195584
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 248.227.152.97 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:425000000]
+      POST /cart?action=add&product_name=Man_Candle-Beer&JSEssIONID=e1d45e1e-a743-407f-a8b8-14a25a83b301
+      HTTP/1.1 action=add&product_name=Man_Candle-Beer&JSEssIONID=e1d45e1e-a743-407f-a8b8-14a25a83b301
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      209920
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 43.106.168.54 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:284000000]
+      GET /view?product_name=Man_Candle-Beer&JSEssIONID=8e96a16c-54a6-423b-b099-ba90e5fe97c0
+      HTTP/1.1 product_name=Man_Candle-Beer&JSEssIONID=8e96a16c-54a6-423b-b099-ba90e5fe97c0
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      279552
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 243.184.192.192 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:434000000]
+      GET /view?product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=81e0cc4d-ef3c-4619-979f-c6f5b7158263
+      HTTP/1.1 product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=81e0cc4d-ef3c-4619-979f-c6f5b7158263
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      306176
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 128.91.207.162 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:584000000]
+      POST /cart?action=add&product_name=Canned_Unicorn_Meat&JSEssIONID=75094e87-6846-4008-b3c0-cddcb788c8a6
+      HTTP/1.1 action=add&product_name=Canned_Unicorn_Meat&JSEssIONID=75094e87-6846-4008-b3c0-cddcb788c8a6
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      262144
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 181.81.39.181 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:134000000]
+      GET /view?product_name=Poo_Pouri&JSEssIONID=1de80cb8-c6ec-474e-ba5f-a321c9a145aa
+      HTTP/1.1 product_name=Poo_Pouri&JSEssIONID=1de80cb8-c6ec-474e-ba5f-a321c9a145aa
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      249856
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 193.62.107.110 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:234000000]
+      POST /cart?action=add&product_name=Man_Candle-Bacon&JSEssIONID=904aa600-dea6-43d7-81fc-15e3f6e758c2
+      HTTP/1.1 action=add&product_name=Man_Candle-Bacon&JSEssIONID=904aa600-dea6-43d7-81fc-15e3f6e758c2
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      221184
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530901:/opt/apache/log/access.log
+    host: apache-02.external.acme.com
+    _raw: 248.227.152.97 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:725000000]
+      POST /cart?action=add&product_name=Zombie_Survival_Guide&JSEssIONID=e1d45e1e-a743-407f-a8b8-14a25a83b301
+      HTTP/1.1 action=add&product_name=Zombie_Survival_Guide&JSEssIONID=e1d45e1e-a743-407f-a8b8-14a25a83b301
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      300032
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 63.224.8.198 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:884000000]
+      GET /view?product_name=Canned_Unicorn_Meat&JSEssIONID=314cc0cb-1d2a-4306-9426-59342dddc447
+      HTTP/1.1 product_name=Canned_Unicorn_Meat&JSEssIONID=314cc0cb-1d2a-4306-9426-59342dddc447
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      198656
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530903:/opt/apache/log/access.log
+    host: apache-04.external.acme.com
+    _raw: 193.62.107.110 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:734000000]
+      POST /cart?action=add&product_name=Batman_Snuggie&JSEssIONID=904aa600-dea6-43d7-81fc-15e3f6e758c2
+      HTTP/1.1 action=add&product_name=Batman_Snuggie&JSEssIONID=904aa600-dea6-43d7-81fc-15e3f6e758c2
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      296960
+  - index: scenario
+    sourcetype: apache:access
+    source: i-0867530900:/opt/apache/log/access.log
+    host: apache-01.external.acme.com
+    _raw: 128.91.207.162 store.acme.com - $USER$ $DEST_PORT$ [$TIMESTAMP$:34000000]
+      GET /view?product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=75094e87-6846-4008-b3c0-cddcb788c8a6
+      HTTP/1.1 product_name=Water_Proof_Scratch_and_Sniff&JSEssIONID=75094e87-6846-4008-b3c0-cddcb788c8a6
+      $STATUS$ $BYTES$ https://store.acme.com [$HTTP_USER_AGENT$] $BYTES_IN$ $BYTES_OUT$
+      266240

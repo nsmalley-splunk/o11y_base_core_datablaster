@@ -1,0 +1,1606 @@
+samples:
+- name: ITF-Nagios-Goodness
+  interval: 30
+  count: 1
+  randomizeEvents: true
+  lines:
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=down attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta nan, lost 100%" results="rta=0.000ms;200;500;0; pl=100%;40;80;; rtmax-0.000ms;;;;
+      rtmin=0.00ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 196ms, lost 0%" results="rta=196ms;200;500;0; pl=0%;40;80;; rtmax=359ms;;;;
+      rtmin=109ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 168ms, lost 0%" results="rta=168ms;200;500;0; pl=0%;40;80;; rtmax=292ms;;;;
+      rtmin=20ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 112ms, lost 0%" results="rta=112ms;200;500;0; pl=0%;40;80;; rtmax=494ms;;;;
+      rtmin=80ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 39ms, lost 0%" results="rta=39ms;200;500;0; pl=0%;40;80;; rtmax=142ms;;;;
+      rtmin=29ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 102ms, lost 0%" results="rta=102ms;200;500;0; pl=0%;40;80;; rtmax=163ms;;;;
+      rtmin=26ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 142ms, lost 0%" results="rta=142ms;200;500;0; pl=0%;40;80;; rtmax=315ms;;;;
+      rtmin=47ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 1ms, lost 0%" results="rta=1ms;200;500;0; pl=0%;40;80;; rtmax=435ms;;;;
+      rtmin=0ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 151ms, lost 0%" results="rta=151ms;200;500;0; pl=0%;40;80;; rtmax=260ms;;;;
+      rtmin=71ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 160ms, lost 0%" results="rta=160ms;200;500;0; pl=0%;40;80;; rtmax=236ms;;;;
+      rtmin=27ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 29ms, lost 0%" results="rta=29ms;200;500;0; pl=0%;40;80;; rtmax=197ms;;;;
+      rtmin=0ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 70ms, lost 0%" results="rta=70ms;200;500;0; pl=0%;40;80;; rtmax=107ms;;;;
+      rtmin=44ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 3ms, lost 0%" results="rta=3ms;200;500;0; pl=0%;40;80;; rtmax=225ms;;;;
+      rtmin=0ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 26ms, lost 0%" results="rta=26ms;200;500;0; pl=0%;40;80;; rtmax=425ms;;;;
+      rtmin=13ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 109ms, lost 0%" results="rta=109ms;200;500;0; pl=0%;40;80;; rtmax=484ms;;;;
+      rtmin=42ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 22ms, lost 0%" results="rta=22ms;200;500;0; pl=0%;40;80;; rtmax=242ms;;;;
+      rtmin=11ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 128ms, lost 0%" results="rta=128ms;200;500;0; pl=0%;40;80;; rtmax=237ms;;;;
+      rtmin=55ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 96ms, lost 0%" results="rta=96ms;200;500;0; pl=0%;40;80;; rtmax=256ms;;;;
+      rtmin=76ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 187ms, lost 0%" results="rta=187ms;200;500;0; pl=0%;40;80;; rtmax=292ms;;;;
+      rtmin=165ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 25ms, lost 0%" results="rta=25ms;200;500;0; pl=0%;40;80;; rtmax=275ms;;;;
+      rtmin=22ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=5 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 195ms, lost 0%" results="rta=195ms;200;500;0; pl=0%;40;80;; rtmax=357ms;;;;
+      rtmin=101ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 89ms, lost 0%" results="rta=89ms;200;500;0; pl=0%;40;80;; rtmax=187ms;;;;
+      rtmin=7ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 146ms, lost 0%" results="rta=146ms;200;500;0; pl=0%;40;80;; rtmax=475ms;;;;
+      rtmin=43ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 182ms, lost 0%" results="rta=182ms;200;500;0; pl=0%;40;80;; rtmax=401ms;;;;
+      rtmin=69ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 115ms, lost 0%" results="rta=115ms;200;500;0; pl=0%;40;80;; rtmax=281ms;;;;
+      rtmin=58ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 171ms, lost 0%" results="rta=171ms;200;500;0; pl=0%;40;80;; rtmax=291ms;;;;
+      rtmin=112ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 50ms, lost 0%" results="rta=50ms;200;500;0; pl=0%;40;80;; rtmax=284ms;;;;
+      rtmin=33ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=5 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 65ms, lost 0%" results="rta=65ms;200;500;0; pl=0%;40;80;; rtmax=278ms;;;;
+      rtmin=28ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 156ms, lost 0%" results="rta=156ms;200;500;0; pl=0%;40;80;; rtmax=366ms;;;;
+      rtmin=76ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 2ms, lost 0%" results="rta=2ms;200;500;0; pl=0%;40;80;; rtmax=69ms;;;;
+      rtmin=0ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 188ms, lost 0%" results="rta=188ms;200;500;0; pl=0%;40;80;; rtmax=265ms;;;;
+      rtmin=43ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 56ms, lost 0%" results="rta=56ms;200;500;0; pl=0%;40;80;; rtmax=421ms;;;;
+      rtmin=49ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 66ms, lost 0%" results="rta=66ms;200;500;0; pl=0%;40;80;; rtmax=437ms;;;;
+      rtmin=51ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 153ms, lost 0%" results="rta=153ms;200;500;0; pl=0%;40;80;; rtmax=369ms;;;;
+      rtmin=13ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 59ms, lost 0%" results="rta=59ms;200;500;0; pl=0%;40;80;; rtmax=375ms;;;;
+      rtmin=35ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 149ms, lost 0%" results="rta=149ms;200;500;0; pl=0%;40;80;; rtmax=184ms;;;;
+      rtmin=56ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 10ms, lost 0%" results="rta=10ms;200;500;0; pl=0%;40;80;; rtmax=359ms;;;;
+      rtmin=4ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 141ms, lost 0%" results="rta=141ms;200;500;0; pl=0%;40;80;; rtmax=250ms;;;;
+      rtmin=53ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 12ms, lost 0%" results="rta=12ms;200;500;0; pl=0%;40;80;; rtmax=418ms;;;;
+      rtmin=1ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 165ms, lost 0%" results="rta=165ms;200;500;0; pl=0%;40;80;; rtmax=410ms;;;;
+      rtmin=51ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 35ms, lost 0%" results="rta=35ms;200;500;0; pl=0%;40;80;; rtmax=160ms;;;;
+      rtmin=33ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 118ms, lost 0%" results="rta=118ms;200;500;0; pl=0%;40;80;; rtmax=312ms;;;;
+      rtmin=39ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 100ms, lost 0%" results="rta=100ms;200;500;0; pl=0%;40;80;; rtmax=287ms;;;;
+      rtmin=48ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 161ms, lost 0%" results="rta=161ms;200;500;0; pl=0%;40;80;; rtmax=233ms;;;;
+      rtmin=104ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 136ms, lost 0%" results="rta=136ms;200;500;0; pl=0%;40;80;; rtmax=203ms;;;;
+      rtmin=82ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 108ms, lost 0%" results="rta=108ms;200;500;0; pl=0%;40;80;; rtmax=305ms;;;;
+      rtmin=6ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 46ms, lost 0%" results="rta=46ms;200;500;0; pl=0%;40;80;; rtmax=348ms;;;;
+      rtmin=32ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 125ms, lost 0%" results="rta=125ms;200;500;0; pl=0%;40;80;; rtmax=355ms;;;;
+      rtmin=72ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 42ms, lost 0%" results="rta=42ms;200;500;0; pl=0%;40;80;; rtmax=275ms;;;;
+      rtmin=14ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 87ms, lost 0%" results="rta=87ms;200;500;0; pl=0%;40;80;; rtmax=470ms;;;;
+      rtmin=33ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 147ms, lost 0%" results="rta=147ms;200;500;0; pl=0%;40;80;; rtmax=377ms;;;;
+      rtmin=33ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 69ms, lost 0%" results="rta=69ms;200;500;0; pl=0%;40;80;; rtmax=340ms;;;;
+      rtmin=52ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 72ms, lost 0%" results="rta=72ms;200;500;0; pl=0%;40;80;; rtmax=410ms;;;;
+      rtmin=64ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 71ms, lost 0%" results="rta=71ms;200;500;0; pl=0%;40;80;; rtmax=394ms;;;;
+      rtmin=19ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 48ms, lost 0%" results="rta=48ms;200;500;0; pl=0%;40;80;; rtmax=138ms;;;;
+      rtmin=2ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 180ms, lost 0%" results="rta=180ms;200;500;0; pl=0%;40;80;; rtmax=368ms;;;;
+      rtmin=146ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 162ms, lost 0%" results="rta=162ms;200;500;0; pl=0%;40;80;; rtmax=372ms;;;;
+      rtmin=92ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 63ms, lost 0%" results="rta=63ms;200;500;0; pl=0%;40;80;; rtmax=349ms;;;;
+      rtmin=47ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 144ms, lost 0%" results="rta=144ms;200;500;0; pl=0%;40;80;; rtmax=402ms;;;;
+      rtmin=119ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 67ms, lost 0%" results="rta=67ms;200;500;0; pl=0%;40;80;; rtmax=164ms;;;;
+      rtmin=37ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 193ms, lost 0%" results="rta=193ms;200;500;0; pl=0%;40;80;; rtmax=393ms;;;;
+      rtmin=81ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 132ms, lost 0%" results="rta=132ms;200;500;0; pl=0%;40;80;; rtmax=352ms;;;;
+      rtmin=5ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 163ms, lost 0%" results="rta=163ms;200;500;0; pl=0%;40;80;; rtmax=240ms;;;;
+      rtmin=127ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 131ms, lost 0%" results="rta=131ms;200;500;0; pl=0%;40;80;; rtmax=255ms;;;;
+      rtmin=111ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 77ms, lost 0%" results="rta=77ms;200;500;0; pl=0%;40;80;; rtmax=186ms;;;;
+      rtmin=16ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 117ms, lost 0%" results="rta=117ms;200;500;0; pl=0%;40;80;; rtmax=329ms;;;;
+      rtmin=74ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 18ms, lost 0%" results="rta=18ms;200;500;0; pl=0%;40;80;; rtmax=368ms;;;;
+      rtmin=3ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 184ms, lost 0%" results="rta=184ms;200;500;0; pl=0%;40;80;; rtmax=288ms;;;;
+      rtmin=182ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 55ms, lost 0%" results="rta=55ms;200;500;0; pl=0%;40;80;; rtmax=199ms;;;;
+      rtmin=16ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 81ms, lost 0%" results="rta=81ms;200;500;0; pl=0%;40;80;; rtmax=445ms;;;;
+      rtmin=14ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 76ms, lost 0%" results="rta=76ms;200;500;0; pl=0%;40;80;; rtmax=306ms;;;;
+      rtmin=17ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 155ms, lost 0%" results="rta=155ms;200;500;0; pl=0%;40;80;; rtmax=304ms;;;;
+      rtmin=113ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 4ms, lost 0%" results="rta=4ms;200;500;0; pl=0%;40;80;; rtmax=36ms;;;;
+      rtmin=1ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 127ms, lost 0%" results="rta=127ms;200;500;0; pl=0%;40;80;; rtmax=327ms;;;;
+      rtmin=67ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 101ms, lost 0%" results="rta=101ms;200;500;0; pl=0%;40;80;; rtmax=313ms;;;;
+      rtmin=49ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 194ms, lost 0%" results="rta=194ms;200;500;0; pl=0%;40;80;; rtmax=237ms;;;;
+      rtmin=47ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 137ms, lost 0%" results="rta=137ms;200;500;0; pl=0%;40;80;; rtmax=338ms;;;;
+      rtmin=53ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 27ms, lost 0%" results="rta=27ms;200;500;0; pl=0%;40;80;; rtmax=495ms;;;;
+      rtmin=5ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=5 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 167ms, lost 0%" results="rta=167ms;200;500;0; pl=0%;40;80;; rtmax=336ms;;;;
+      rtmin=149ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 51ms, lost 0%" results="rta=51ms;200;500;0; pl=0%;40;80;; rtmax=422ms;;;;
+      rtmin=20ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 189ms, lost 0%" results="rta=189ms;200;500;0; pl=0%;40;80;; rtmax=361ms;;;;
+      rtmin=146ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 126ms, lost 0%" results="rta=126ms;200;500;0; pl=0%;40;80;; rtmax=340ms;;;;
+      rtmin=28ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 179ms, lost 0%" results="rta=179ms;200;500;0; pl=0%;40;80;; rtmax=386ms;;;;
+      rtmin=48ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 36ms, lost 0%" results="rta=36ms;200;500;0; pl=0%;40;80;; rtmax=486ms;;;;
+      rtmin=4ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 105ms, lost 0%" results="rta=105ms;200;500;0; pl=0%;40;80;; rtmax=468ms;;;;
+      rtmin=58ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 7ms, lost 0%" results="rta=7ms;200;500;0; pl=0%;40;80;; rtmax=42ms;;;;
+      rtmin=2ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=6 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 90ms, lost 0%" results="rta=90ms;200;500;0; pl=0%;40;80;; rtmax=441ms;;;;
+      rtmin=32ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=5 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 154ms, lost 0%" results="rta=154ms;200;500;0; pl=0%;40;80;; rtmax=210ms;;;;
+      rtmin=46ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=5 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 148ms, lost 0%" results="rta=148ms;200;500;0; pl=0%;40;80;; rtmax=482ms;;;;
+      rtmin=82ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 79ms, lost 0%" results="rta=79ms;200;500;0; pl=0%;40;80;; rtmax=99ms;;;;
+      rtmin=25ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=5 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 177ms, lost 0%" results="rta=177ms;200;500;0; pl=0%;40;80;; rtmax=192ms;;;;
+      rtmin=22ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 86ms, lost 0%" results="rta=86ms;200;500;0; pl=0%;40;80;; rtmax=406ms;;;;
+      rtmin=14ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 120ms, lost 0%" results="rta=120ms;200;500;0; pl=0%;40;80;; rtmax=297ms;;;;
+      rtmin=36ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 129ms, lost 0%" results="rta=129ms;200;500;0; pl=0%;40;80;; rtmax=138ms;;;;
+      rtmin=49ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 57ms, lost 0%" results="rta=57ms;200;500;0; pl=0%;40;80;; rtmax=206ms;;;;
+      rtmin=12ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 75ms, lost 0%" results="rta=75ms;200;500;0; pl=0%;40;80;; rtmax=145ms;;;;
+      rtmin=11ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 197ms, lost 0%" results="rta=197ms;200;500;0; pl=0%;40;80;; rtmax=199ms;;;;
+      rtmin=70ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 95ms, lost 0%" results="rta=95ms;200;500;0; pl=0%;40;80;; rtmax=273ms;;;;
+      rtmin=82ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 173ms, lost 0%" results="rta=173ms;200;500;0; pl=0%;40;80;; rtmax=415ms;;;;
+      rtmin=141ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 33ms, lost 0%" results="rta=33ms;200;500;0; pl=0%;40;80;; rtmax=483ms;;;;
+      rtmin=9ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 58ms, lost 0%" results="rta=58ms;200;500;0; pl=0%;40;80;; rtmax=279ms;;;;
+      rtmin=55ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 159ms, lost 0%" results="rta=159ms;200;500;0; pl=0%;40;80;; rtmax=386ms;;;;
+      rtmin=1ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 64ms, lost 0%" results="rta=64ms;200;500;0; pl=0%;40;80;; rtmax=272ms;;;;
+      rtmin=51ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 74ms, lost 0%" results="rta=74ms;200;500;0; pl=0%;40;80;; rtmax=436ms;;;;
+      rtmin=48ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 97ms, lost 0%" results="rta=97ms;200;500;0; pl=0%;40;80;; rtmax=254ms;;;;
+      rtmin=96ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 30ms, lost 0%" results="rta=30ms;200;500;0; pl=0%;40;80;; rtmax=422ms;;;;
+      rtmin=2ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 21ms, lost 0%" results="rta=21ms;200;500;0; pl=0%;40;80;; rtmax=453ms;;;;
+      rtmin=10ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 78ms, lost 0%" results="rta=78ms;200;500;0; pl=0%;40;80;; rtmax=339ms;;;;
+      rtmin=68ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 191ms, lost 0%" results="rta=191ms;200;500;0; pl=0%;40;80;; rtmax=443ms;;;;
+      rtmin=184ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 172ms, lost 0%" results="rta=172ms;200;500;0; pl=0%;40;80;; rtmax=258ms;;;;
+      rtmin=105ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 170ms, lost 0%" results="rta=170ms;200;500;0; pl=0%;40;80;; rtmax=266ms;;;;
+      rtmin=133ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 135ms, lost 0%" results="rta=135ms;200;500;0; pl=0%;40;80;; rtmax=318ms;;;;
+      rtmin=108ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 198ms, lost 0%" results="rta=198ms;200;500;0; pl=0%;40;80;; rtmax=309ms;;;;
+      rtmin=24ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 114ms, lost 0%" results="rta=114ms;200;500;0; pl=0%;40;80;; rtmax=216ms;;;;
+      rtmin=53ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 49ms, lost 0%" results="rta=49ms;200;500;0; pl=0%;40;80;; rtmax=304ms;;;;
+      rtmin=27ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 62ms, lost 0%" results="rta=62ms;200;500;0; pl=0%;40;80;; rtmax=123ms;;;;
+      rtmin=4ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 88ms, lost 0%" results="rta=88ms;200;500;0; pl=0%;40;80;; rtmax=435ms;;;;
+      rtmin=71ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 5ms, lost 0%" results="rta=5ms;200;500;0; pl=0%;40;80;; rtmax=122ms;;;;
+      rtmin=1ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 99ms, lost 0%" results="rta=99ms;200;500;0; pl=0%;40;80;; rtmax=302ms;;;;
+      rtmin=18ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 119ms, lost 0%" results="rta=119ms;200;500;0; pl=0%;40;80;; rtmax=220ms;;;;
+      rtmin=54ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 98ms, lost 0%" results="rta=98ms;200;500;0; pl=0%;40;80;; rtmax=325ms;;;;
+      rtmin=79ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 37ms, lost 0%" results="rta=37ms;200;500;0; pl=0%;40;80;; rtmax=389ms;;;;
+      rtmin=8ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 19ms, lost 0%" results="rta=19ms;200;500;0; pl=0%;40;80;; rtmax=46ms;;;;
+      rtmin=7ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 176ms, lost 0%" results="rta=176ms;200;500;0; pl=0%;40;80;; rtmax=393ms;;;;
+      rtmin=113ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 68ms, lost 0%" results="rta=68ms;200;500;0; pl=0%;40;80;; rtmax=442ms;;;;
+      rtmin=66ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 41ms, lost 0%" results="rta=41ms;200;500;0; pl=0%;40;80;; rtmax=401ms;;;;
+      rtmin=3ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 54ms, lost 0%" results="rta=54ms;200;500;0; pl=0%;40;80;; rtmax=380ms;;;;
+      rtmin=20ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 111ms, lost 0%" results="rta=111ms;200;500;0; pl=0%;40;80;; rtmax=250ms;;;;
+      rtmin=15ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 181ms, lost 0%" results="rta=181ms;200;500;0; pl=0%;40;80;; rtmax=364ms;;;;
+      rtmin=112ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 166ms, lost 0%" results="rta=166ms;200;500;0; pl=0%;40;80;; rtmax=411ms;;;;
+      rtmin=159ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 124ms, lost 0%" results="rta=124ms;200;500;0; pl=0%;40;80;; rtmax=140ms;;;;
+      rtmin=92ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 85ms, lost 0%" results="rta=85ms;200;500;0; pl=0%;40;80;; rtmax=443ms;;;;
+      rtmin=54ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 150ms, lost 0%" results="rta=150ms;200;500;0; pl=0%;40;80;; rtmax=353ms;;;;
+      rtmin=18ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 152ms, lost 0%" results="rta=152ms;200;500;0; pl=0%;40;80;; rtmax=438ms;;;;
+      rtmin=18ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 143ms, lost 0%" results="rta=143ms;200;500;0; pl=0%;40;80;; rtmax=184ms;;;;
+      rtmin=10ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 11ms, lost 0%" results="rta=11ms;200;500;0; pl=0%;40;80;; rtmax=453ms;;;;
+      rtmin=8ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 13ms, lost 0%" results="rta=13ms;200;500;0; pl=0%;40;80;; rtmax=370ms;;;;
+      rtmin=7ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 80ms, lost 0%" results="rta=80ms;200;500;0; pl=0%;40;80;; rtmax=361ms;;;;
+      rtmin=57ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 9ms, lost 0%" results="rta=9ms;200;500;0; pl=0%;40;80;; rtmax=354ms;;;;
+      rtmin=0ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 38ms, lost 0%" results="rta=38ms;200;500;0; pl=0%;40;80;; rtmax=338ms;;;;
+      rtmin=21ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 73ms, lost 0%" results="rta=73ms;200;500;0; pl=0%;40;80;; rtmax=443ms;;;;
+      rtmin=1ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 47ms, lost 0%" results="rta=47ms;200;500;0; pl=0%;40;80;; rtmax=231ms;;;;
+      rtmin=22ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 106ms, lost 0%" results="rta=106ms;200;500;0; pl=0%;40;80;; rtmax=190ms;;;;
+      rtmin=1ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 14ms, lost 0%" results="rta=14ms;200;500;0; pl=0%;40;80;; rtmax=46ms;;;;
+      rtmin=12ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 44ms, lost 0%" results="rta=44ms;200;500;0; pl=0%;40;80;; rtmax=344ms;;;;
+      rtmin=43ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 43ms, lost 0%" results="rta=43ms;200;500;0; pl=0%;40;80;; rtmax=212ms;;;;
+      rtmin=1ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 123ms, lost 0%" results="rta=123ms;200;500;0; pl=0%;40;80;; rtmax=446ms;;;;
+      rtmin=112ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 40ms, lost 0%" results="rta=40ms;200;500;0; pl=0%;40;80;; rtmax=254ms;;;;
+      rtmin=0ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 140ms, lost 0%" results="rta=140ms;200;500;0; pl=0%;40;80;; rtmax=466ms;;;;
+      rtmin=41ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 28ms, lost 0%" results="rta=28ms;200;500;0; pl=0%;40;80;; rtmax=399ms;;;;
+      rtmin=9ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 103ms, lost 0%" results="rta=103ms;200;500;0; pl=0%;40;80;; rtmax=489ms;;;;
+      rtmin=54ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 186ms, lost 0%" results="rta=186ms;200;500;0; pl=0%;40;80;; rtmax=215ms;;;;
+      rtmin=147ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 16ms, lost 0%" results="rta=16ms;200;500;0; pl=0%;40;80;; rtmax=322ms;;;;
+      rtmin=1ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 92ms, lost 0%" results="rta=92ms;200;500;0; pl=0%;40;80;; rtmax=244ms;;;;
+      rtmin=54ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 32ms, lost 0%" results="rta=32ms;200;500;0; pl=0%;40;80;; rtmax=378ms;;;;
+      rtmin=0ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 17ms, lost 0%" results="rta=17ms;200;500;0; pl=0%;40;80;; rtmax=464ms;;;;
+      rtmin=16ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 20ms, lost 0%" results="rta=20ms;200;500;0; pl=0%;40;80;; rtmax=447ms;;;;
+      rtmin=3ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 157ms, lost 0%" results="rta=157ms;200;500;0; pl=0%;40;80;; rtmax=495ms;;;;
+      rtmin=46ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 94ms, lost 0%" results="rta=94ms;200;500;0; pl=0%;40;80;; rtmax=219ms;;;;
+      rtmin=48ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 178ms, lost 0%" results="rta=178ms;200;500;0; pl=0%;40;80;; rtmax=278ms;;;;
+      rtmin=72ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 34ms, lost 0%" results="rta=34ms;200;500;0; pl=0%;40;80;; rtmax=87ms;;;;
+      rtmin=15ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 24ms, lost 0%" results="rta=24ms;200;500;0; pl=0%;40;80;; rtmax=371ms;;;;
+      rtmin=13ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 139ms, lost 0%" results="rta=139ms;200;500;0; pl=0%;40;80;; rtmax=208ms;;;;
+      rtmin=19ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 84ms, lost 0%" results="rta=84ms;200;500;0; pl=0%;40;80;; rtmax=175ms;;;;
+      rtmin=64ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 52ms, lost 0%" results="rta=52ms;200;500;0; pl=0%;40;80;; rtmax=170ms;;;;
+      rtmin=36ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 185ms, lost 0%" results="rta=185ms;200;500;0; pl=0%;40;80;; rtmax=393ms;;;;
+      rtmin=175ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 169ms, lost 0%" results="rta=169ms;200;500;0; pl=0%;40;80;; rtmax=238ms;;;;
+      rtmin=130ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 104ms, lost 0%" results="rta=104ms;200;500;0; pl=0%;40;80;; rtmax=174ms;;;;
+      rtmin=48ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 31ms, lost 0%" results="rta=31ms;200;500;0; pl=0%;40;80;; rtmax=88ms;;;;
+      rtmin=29ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 110ms, lost 0%" results="rta=110ms;200;500;0; pl=0%;40;80;; rtmax=187ms;;;;
+      rtmin=96ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 133ms, lost 0%" results="rta=133ms;200;500;0; pl=0%;40;80;; rtmax=149ms;;;;
+      rtmin=95ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 91ms, lost 0%" results="rta=91ms;200;500;0; pl=0%;40;80;; rtmax=165ms;;;;
+      rtmin=25ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 122ms, lost 0%" results="rta=122ms;200;500;0; pl=0%;40;80;; rtmax=389ms;;;;
+      rtmin=121ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 175ms, lost 0%" results="rta=175ms;200;500;0; pl=0%;40;80;; rtmax=371ms;;;;
+      rtmin=17ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 15ms, lost 0%" results="rta=15ms;200;500;0; pl=0%;40;80;; rtmax=330ms;;;;
+      rtmin=11ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 23ms, lost 0%" results="rta=23ms;200;500;0; pl=0%;40;80;; rtmax=334ms;;;;
+      rtmin=19ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 61ms, lost 0%" results="rta=61ms;200;500;0; pl=0%;40;80;; rtmax=410ms;;;;
+      rtmin=9ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 138ms, lost 0%" results="rta=138ms;200;500;0; pl=0%;40;80;; rtmax=386ms;;;;
+      rtmin=59ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 15:03:64 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 53ms, lost 0%" results="rta=53ms;200;500;0; pl=0%;40;80;; rtmax=321ms;;;;
+      rtmin=13ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 15:03:18 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 116ms, lost 0%" results="rta=116ms;200;500;0; pl=0%;40;80;; rtmax=216ms;;;;
+      rtmin=1ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 14:03:64 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 158ms, lost 0%" results="rta=158ms;200;500;0; pl=0%;40;80;; rtmax=363ms;;;;
+      rtmin=99ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 14:03:64 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=4 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 60ms, lost 0%" results="rta=60ms;200;500;0; pl=0%;40;80;; rtmax=443ms;;;;
+      rtmin=49ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 14:03:18 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 45ms, lost 0%" results="rta=45ms;200;500;0; pl=0%;40;80;; rtmax=57ms;;;;
+      rtmin=16ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 14:03:64 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 6ms, lost 0%" results="rta=6ms;200;500;0; pl=0%;40;80;; rtmax=412ms;;;;
+      rtmin=4ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-02.internal.acme.com
+    _raw: 2022/03/28 14:03:64 src_host="filesrv-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 130ms, lost 0%" results="rta=130ms;200;500;0; pl=0%;40;80;; rtmax=344ms;;;;
+      rtmin=123ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-01.internal.acme.com
+    _raw: 2022/03/28 14:03:64 src_host="mail-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 83ms, lost 0%" results="rta=83ms;200;500;0; pl=0%;40;80;; rtmax=118ms;;;;
+      rtmin=13ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 14:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 190ms, lost 0%" results="rta=190ms;200;500;0; pl=0%;40;80;; rtmax=276ms;;;;
+      rtmin=120ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 14:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 121ms, lost 0%" results="rta=121ms;200;500;0; pl=0%;40;80;; rtmax=288ms;;;;
+      rtmin=113ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 14:03:18 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 113ms, lost 0%" results="rta=113ms;200;500;0; pl=0%;40;80;; rtmax=235ms;;;;
+      rtmin=67ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-02.internal.acme.com
+    _raw: 2022/03/28 14:03:18 src_host="hr-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 134ms, lost 0%" results="rta=134ms;200;500;0; pl=0%;40;80;; rtmax=451ms;;;;
+      rtmin=79ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 14:03:64 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 174ms, lost 0%" results="rta=174ms;200;500;0; pl=0%;40;80;; rtmax=271ms;;;;
+      rtmin=138ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 14:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 0ms, lost 0%" results="rta=0ms;200;500;0; pl=0%;40;80;; rtmax=317ms;;;;
+      rtmin=0ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 14:03:18 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 192ms, lost 0%" results="rta=192ms;200;500;0; pl=0%;40;80;; rtmax=373ms;;;;
+      rtmin=30ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: hr-01.internal.acme.com
+    _raw: 2022/03/28 14:03:64 src_host="hr-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=3 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 93ms, lost 0%" results="rta=93ms;200;500;0; pl=0%;40;80;; rtmax=400ms;;;;
+      rtmin=92ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-02.internal.acme.com
+    _raw: 2022/03/28 14:03:18 src_host="bazookatron-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 145ms, lost 0%" results="rta=145ms;200;500;0; pl=0%;40;80;; rtmax=464ms;;;;
+      rtmin=45ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: filesrv-01.internal.acme.com
+    _raw: 2022/03/28 14:03:18 src_host="filesrv-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 164ms, lost 0%" results="rta=164ms;200;500;0; pl=0%;40;80;; rtmax=313ms;;;;
+      rtmin=104ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 14:03:18 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 107ms, lost 0%" results="rta=107ms;200;500;0; pl=0%;40;80;; rtmax=168ms;;;;
+      rtmin=36ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 13:03:18 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=2 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 82ms, lost 0%" results="rta=82ms;200;500;0; pl=0%;40;80;; rtmax=446ms;;;;
+      rtmin=41ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: bazookatron-01.internal.acme.com
+    _raw: 2022/03/28 13:03:64 src_host="bazookatron-01.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 183ms, lost 0%" results="rta=183ms;200;500;0; pl=0%;40;80;; rtmax=285ms;;;;
+      rtmin=119ms;;;;"
+  - index: scenario
+    sourcetype: nagioshostperf
+    source: nagios
+    host: mail-02.internal.acme.com
+    _raw: 2022/03/28 13:03:64 src_host="mail-02.internal.acme.com" perfdata=HOSTPERFDATA
+      hoststate=up attempt=1 statetype=HARD executiontime=0.0 latency=0.0 reason="OK
+      - rta 8ms, lost 0%" results="rta=8ms;200;500;0; pl=0%;40;80;; rtmax=39ms;;;;
+      rtmin=0ms;;;;"

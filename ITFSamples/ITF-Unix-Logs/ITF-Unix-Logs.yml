@@ -1,0 +1,360 @@
+samples:
+- name: ITF-Unix-Logs
+  interval: 10
+  count: 1
+  randomizeEvents: true
+  tokens:
+  - name: TIMESTAMP
+    format: template
+    type: gotimestamp
+    replacement: $TIMESTAMP$
+  lines:
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_KEY_USER msg=audit(1648488740.629:5936963): pid=25881 uid=0
+      auid=4294967295 ses=4294967295 msg=''op=destroy kind=server fp=SHA256:46:e2:e9:a9:40:d6:a4:68:ee:48:ed:0a:c3:9a:e6:d8:6f:32:74:21:89:a0:05:f4:49:46:23:c9:7b:95:78:30
+      direction=? spid=25881 suid=0  exe="/usr/sbin/sshd" hostname=? addr=? terminal=?
+      res=success'''
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_KEY_USER msg=audit(1648488740.629:5936959): pid=25881 uid=0
+      auid=4294967295 ses=4294967295 msg=''op=destroy kind=session fp=? direction=both
+      spid=25882 suid=74 rport=44896 laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd"
+      hostname=? addr=92.255.85.237 terminal=? res=success'''
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[25881]: Disconnected from 92.255.85.237
+      port 44896 [preauth]'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[25881]: Received disconnect from 92.255.85.237
+      port 44896:11: Bye Bye [preauth]'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[25881]: input_userauth_request: invalid
+      user username [preauth]'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[25881]: Invalid user username from 92.255.85.237
+      port 44896'
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_SESSION msg=audit(1648488738.977:5936957): pid=25881 uid=0
+      auid=4294967295 ses=4294967295 msg=''op=start direction=from-client cipher=aes256-gcm@openssh.com
+      ksize=256 mac=<implicit> pfs=curve25519-sha256 spid=25882 suid=74 rport=44896
+      laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd" hostname=? addr=92.255.85.237
+      terminal=? res=success'''
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=USER_END msg=audit(1648488601.763:5936952): pid=24745 uid=0 auid=0
+      ses=79737 msg=''op=PAM:session_close grantors=pam_loginuid,pam_keyinit,pam_limits,pam_systemd
+      acct="root" exe="/usr/sbin/crond" hostname=? addr=? terminal=cron res=success'''
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRED_DISP msg=audit(1648488601.763:5936951): pid=24745 uid=0 auid=0
+      ses=79737 msg=''op=PAM:setcred grantors=pam_env,pam_unix acct="root" exe="/usr/sbin/crond"
+      hostname=? addr=? terminal=cron res=success'''
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=LOGIN msg=audit(1648488601.747:5936948): pid=24745 uid=0 old-auid=4294967295
+      auid=0 tty=(none) old-ses=4294967295 ses=79737 res=1'
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 CROND[24746]: (root) CMD (/usr/lib64/sa/sa1
+      1 1)'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[22568]: Received disconnect from
+      179.43.167.74 port 50116:11: Normal Shutdown, Thank you for playing [preauth]'
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_SESSION msg=audit(1648488212.639:5936938): pid=22568 uid=0
+      auid=4294967295 ses=4294967295 msg=''op=start direction=from-client cipher=aes128-ctr
+      ksize=128 mac=hmac-sha1 pfs=diffie-hellman-group14-sha1 spid=22569 suid=74 rport=50116
+      laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd" hostname=? addr=179.43.167.74
+      terminal=? res=success'''
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[22567]: Did not receive identification
+      string from 179.43.167.74 port 38328'
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_SESSION msg=audit(1648488044.284:5936923): pid=21480 uid=0
+      auid=4294967295 ses=4294967295 msg=''op=start direction=from-client cipher=aes256-ctr
+      ksize=256 mac=hmac-sha1 pfs=curve25519-sha256@libssh.org spid=21481 suid=74
+      rport=48936 laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd" hostname=? addr=49.234.50.70
+      terminal=? res=success'''
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[18944]: Connection closed by 193.169.255.38
+      port 46504 [preauth]'
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_SESSION msg=audit(1648487653.168:5936841): pid=18944 uid=0
+      auid=4294967295 ses=4294967295 msg=''op=start direction=from-client cipher=aes128-ctr
+      ksize=128 mac=hmac-sha2-256 pfs=curve25519-sha256 spid=18945 suid=74 rport=46504
+      laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd" hostname=? addr=193.169.255.38
+      terminal=? res=success'''
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 run-parts(/etc/cron.hourly)[14102]: finished
+      0anacron'
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 CROND[14093]: (root) CMD (run-parts /etc/cron.hourly)'
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_SESSION msg=audit(1648484790.709:5936661): pid=1611 uid=0 auid=4294967295
+      ses=4294967295 msg=''op=start direction=from-client cipher=aes128-gcm@openssh.com
+      ksize=128 mac=<implicit> pfs=curve25519-sha256@libssh.org spid=1612 suid=74
+      rport=15940 laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd" hostname=? addr=45.67.34.100
+      terminal=? res=success'''
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_SESSION msg=audit(1648476055.121:5936025): pid=12972 uid=0
+      auid=4294967295 ses=4294967295 msg=''op=start direction=from-client cipher=aes128-ctr
+      ksize=128 mac=hmac-sha2-256 pfs=ecdh-sha2-nistp256 spid=12973 suid=74 rport=44936
+      laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd" hostname=? addr=112.85.42.229
+      terminal=? res=success'''
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_SESSION msg=audit(1648463432.951:5935262): pid=752 uid=0 auid=4294967295
+      ses=4294967295 msg=''op=start direction=from-client cipher=aes128-ctr ksize=128
+      mac=hmac-sha2-256 pfs=curve25519-sha256@libssh.org spid=753 suid=74 rport=40960
+      laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd" hostname=? addr=167.94.138.47
+      terminal=? res=success'''
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[11402]: Received disconnect from
+      61.177.172.108 port 42273:11:  [preauth]'
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=SERVICE_STOP msg=audit(1648442529.818:5931104): pid=1 uid=0 auid=4294967295
+      ses=4294967295 msg=''unit=systemd-tmpfiles-clean comm="systemd" exe="/usr/lib/systemd/systemd"
+      hostname=? addr=? terminal=? res=success'''
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 anacron[29558]: Normal exit (1 job run)'
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 anacron[29558]: Job `cron.daily'' terminated'
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 run-parts(/etc/cron.daily)[31755]: finished
+      man-db.cron'
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 anacron[29558]: Jobs will be executed
+      sequentially'
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 anacron[29558]: Will run job `cron.daily''
+      in 6 min.'
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 anacron[29558]: Anacron started on 2022-03-28'
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_SESSION msg=audit(1648435787.125:5928644): pid=25481 uid=0
+      auid=4294967295 ses=4294967295 msg=''op=start direction=from-client cipher=aes128-ctr
+      ksize=128 mac=hmac-sha2-256 pfs=diffie-hellman-group-exchange-sha256 spid=25482
+      suid=74 rport=37160 laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd" hostname=?
+      addr=164.92.210.62 terminal=? res=success'''
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=SERVICE_START msg=audit(1648435027.497:5928606): pid=1 uid=0 auid=4294967295
+      ses=4294967295 msg=''unit=update-motd comm="systemd" exe="/usr/lib/systemd/systemd"
+      hostname=? addr=? terminal=? res=success'''
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 CROND[20671]: (root) CMD (/usr/bin/systemctl
+      --quiet restart update-motd)'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[23221]: error: maximum authentication
+      attempts exceeded for root from 36.110.228.254 port 40573 ssh2 [preauth]'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[29933]: Bad protocol version identification
+      ''MGLNDD_54.193.115.237_22'' from 192.241.226.55 port 59480'
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 CROND[25325]: (root) CMD (/usr/lib64/sa/sa2
+      -A)'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[27532]: Bad protocol version identification
+      ''\026\003\001\001\375\001'' from 23.95.222.129 port 40718'
+  - index: linux
+    sourcetype: cron-too_small
+    source: /var/log/cron
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 CROND[8140]: (root) CMD (/usr/sbin/raid-check)'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[16724]: input_userauth_request: invalid
+      user 54.245.4.236 [preauth]'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[16724]: Invalid user 54.245.4.236
+      from 103.40.246.79 port 52082'
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_SESSION msg=audit(1648275718.630:5917407): pid=19541 uid=0
+      auid=4294967295 ses=4294967295 msg=''op=start direction=from-client cipher=aes128-ctr
+      ksize=128 mac=hmac-sha1-etm@openssh.com pfs=diffie-hellman-group-exchange-sha256
+      spid=19542 suid=74 rport=46631 laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd"
+      hostname=? addr=104.206.128.62 terminal=? res=success'''
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[15983]: Received disconnect from
+      164.215.102.185 port 25170:11: disconnected by user [preauth]'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[15611]: error: maximum authentication
+      attempts exceeded for invalid user test2 from 164.215.102.185 port 38871 ssh2
+      [preauth]'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[19560]: Nasty PTR record "165.232.35.74"
+      is set up for 165.232.35.74, ignoring'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[18833]: Bad protocol version identification
+      ''GET / HTTP/1.1'' from 68.183.56.29 port 40482'
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_SESSION msg=audit(1648133390.737:5906859): pid=24927 uid=0
+      auid=4294967295 ses=4294967295 msg=''op=start direction=from-client cipher=aes128-ctr
+      ksize=128 mac=umac-64-etm@openssh.com pfs=curve25519-sha256@libssh.org spid=24928
+      suid=74 rport=59630 laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd" hostname=?
+      addr=2.232.248.6 terminal=? res=success'''
+  - index: linux
+    sourcetype: linux_audit
+    source: /var/log/audit/audit.log
+    host: mysql-02.internal.acme.com
+    _raw: 'type=CRYPTO_SESSION msg=audit(1648010724.634:5873213): pid=16857 uid=0
+      auid=4294967295 ses=4294967295 msg=''op=start direction=from-client cipher=aes128-ctr
+      ksize=128 mac=hmac-sha2-256-etm@openssh.com pfs=curve25519-sha256@libssh.org
+      spid=16858 suid=74 rport=35966 laddr=172.31.19.173 lport=22  exe="/usr/sbin/sshd"
+      hostname=? addr=185.213.155.164 terminal=? res=success'''
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[5272]: input_userauth_request: invalid
+      user www-data [preauth]'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[5272]: Invalid user www-data from
+      195.166.150.212 port 33724'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[7539]: Disconnecting: Change of username
+      or service not allowed: (cacti,ssh-connection) -> (caleb,ssh-connection) [preauth]'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[21498]: input_userauth_request: invalid
+      user it.support [preauth]'
+  - index: linux
+    sourcetype: linux_secure
+    source: /var/log/secure
+    host: mysql-02.internal.acme.com
+    _raw: '$TIMESTAMP$ ip-172-31-19-173 sshd[21498]: Invalid user it.support from
+      92.255.85.237 port 42642'

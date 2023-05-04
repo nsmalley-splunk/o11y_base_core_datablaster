@@ -1,0 +1,150 @@
+samples:
+- name: ITF-VMware-Datastore-Metrics
+  interval: 30
+  count: 18
+  randomizeEvents: false
+  tokens:
+  - name: VALUE_FREE
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    upper: 208510291512
+    lower: 205510291512
+  - name: VALUE_UNCOM
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    upper: 35222697861
+    lower: 30222697861
+  - name: VALUE_USED
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    upper: 69
+    lower: 60
+  - name: VALUE_READ
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    upper: 20
+    lower: 0
+  - name: VALUE_WRITE
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    upper: 20
+    lower: 0
+  lines:
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-44","name":"datastore-5309","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.capacity":"591363309568"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-43","name":"datastore-6753","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.capacity":"591363309568"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-42","name":"datastore-8675","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.capacity":"591363309568"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-44","name":"datastore-5309","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.capacity":"$VALUE_FREE$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-43","name":"datastore-6753","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.capacity":"$VALUE_FREE$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-42","name":"datastore-8675","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.capacity":"$VALUE_FREE$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-44","name":"datastore-5309","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.uncommitted":"$VALUE_UNCOM$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-43","name":"datastore-6753","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.uncommitted":"$VALUE_UNCOM$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-42","name":"datastore-8675","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.uncommitted":"$VALUE_UNCOM$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-44","name":"datastore-5309","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.used_percent":"$VALUE_USED$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-43","name":"datastore-6753","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.used_percent":"$VALUE_USED$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-42","name":"datastore-8675","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.datastore.used_percent":"$VALUE_USED$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-44","name":"datastore-5309","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.totalReadLatency":"$VALUE_READ$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-43","name":"datastore-6753","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.totalReadLatency":"$VALUE_READ$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-42","name":"datastore-8675","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.totalReadLatency":"$VALUE_READ$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-44","name":"datastore-5309","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.totalWriteLatency":"$VALUE_WRITE$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-43","name":"datastore-6753","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.totalWriteLatency":"$VALUE_WRITE$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.datastore.data
+    source: vsphere.datastore.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"entity_type":"vsphere.datastore","moid":"datastore-42","name":"datastore-8675","pool_name":"Global","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.totalWriteLatency":"$VALUE_WRITE$"}'

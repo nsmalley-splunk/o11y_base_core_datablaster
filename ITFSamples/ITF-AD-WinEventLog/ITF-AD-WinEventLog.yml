@@ -1,0 +1,1718 @@
+samples:
+- name: ITF-AD-WinEventLog
+  interval: 1
+  count: 1
+  randomizeEvents: true
+  lines:
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 02:39:39 PM\nLogName=Security\nEventCode=4625\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4093028\nKeywords=Audit Failure\n\
+      TaskCategory=Logon\nOpCode=Info\nMessage=An account failed to log on.\r\n\r\n\
+      Subject:\r\n\tSecurity ID:\t\tNULL SID\r\n\tAccount Name:\t\t-\r\n\tAccount\
+      \ Domain:\t\t-\r\n\tLogon ID:\t\t0x0\r\n\r\nLogon Type:\t\t\t3\r\n\r\nAccount\
+      \ For Which Logon Failed:\r\n\tSecurity ID:\t\tNULL SID\r\n\tAccount Name:\t\
+      \tADMIN\r\n\tAccount Domain:\t\t\r\n\r\nFailure Information:\r\n\tFailure Reason:\t\
+      \tUnknown user name or bad password.\r\n\tStatus:\t\t\t0xC000006D\r\n\tSub Status:\t\
+      \t0xC0000064\r\n\r\nProcess Information:\r\n\tCaller Process ID:\t0x0\r\n\t\
+      Caller Process Name:\t-\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\t\
+      -\r\n\tSource Network Address:\t185.190.24.44\r\n\tSource Port:\t\t0\r\n\r\n\
+      Detailed Authentication Information:\r\n\tLogon Process:\t\tNtLmSsp \r\n\tAuthentication\
+      \ Package:\tNTLM\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t\
+      -\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon request\
+      \ fails. It is generated on the computer where access was attempted.\r\n\r\n\
+      The Subject fields indicate the account on the local system which requested\
+      \ the logon. This is most commonly a service such as the Server service, or\
+      \ a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe Logon Type\
+      \ field indicates the kind of logon that was requested. The most common types\
+      \ are 2 (interactive) and 3 (network).\r\n\r\nThe Process Information fields\
+      \ indicate which account and process on the system requested the logon.\r\n\r\
+      \nThe Network Information fields indicate where a remote logon request originated.\
+      \ Workstation name is not always available and may be left blank in some cases.\r\
+      \n\r\nThe authentication information fields provide detailed information about\
+      \ this specific logon request.\r\n\t- Transited services indicate which intermediate\
+      \ services have participated in this logon request.\r\n\t- Package name indicates\
+      \ which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates\
+      \ the length of the generated session key. This will be 0 if no session key\
+      \ was requested."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 02:39:39 PM\nLogName=Security\nEventCode=4776\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4093027\nKeywords=Audit Failure\n\
+      TaskCategory=Credential Validation\nOpCode=Info\nMessage=The computer attempted\
+      \ to validate the credentials for an account.\r\n\r\nAuthentication Package:\t\
+      MICROSOFT_AUTHENTICATION_PACKAGE_V1_0\r\nLogon Account:\tADMIN\r\nSource Workstation:\t\
+      \r\nError Code:\t0xC0000064"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:39:37 PM\nLogName=Security\nEventCode=4634\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274911\nKeywords=Audit Success\n\
+      TaskCategory=Logoff\nOpCode=Info\nMessage=An account was logged off.\r\n\r\n\
+      Subject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\ACME-DC01$\r\n\tAccount Name:\t\tACME-DC01$\r\
+      \n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon ID:\t\t0x45070FED\r\n\r\nLogon Type:\t\
+      \t\t3\r\n\r\nThis event is generated when a logon session is destroyed. It may\
+      \ be positively correlated with a logon event using the Logon ID value. Logon\
+      \ IDs are only unique between reboots on the same computer."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:39:25 PM\nLogName=Security\nEventCode=4624\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274884\nKeywords=Audit Success\n\
+      TaskCategory=Logon\nOpCode=Info\nMessage=An account was successfully logged\
+      \ on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tNULL SID\r\n\tAccount Name:\t\t-\r\
+      \n\tAccount Domain:\t\t-\r\n\tLogon ID:\t\t0x0\r\n\r\nLogon Information:\r\n\
+      \tLogon Type:\t\t3\r\n\tRestricted Admin Mode:\t-\r\n\tVirtual Account:\t\t\
+      No\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\
+      \n\r\nNew Logon:\r\n\tSecurity ID:\t\tSTSHIRTCO\\rzombie\r\n\tAccount Name:\t\
+      \trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO.LOCAL\r\n\tLogon ID:\t\t0x45080CA9\r\
+      \n\tLinked Logon ID:\t\t0x0\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account\
+      \ Domain:\t-\r\n\tLogon GUID:\t\t{bd9c6290-58e8-0a09-cf48-19fc5644e023}\r\n\r\
+      \nProcess Information:\r\n\tProcess ID:\t\t0x0\r\n\tProcess Name:\t\t-\r\n\r\
+      \nNetwork Information:\r\n\tWorkstation Name:\t-\r\n\tSource Network Address:\t\
+      172.31.21.89\r\n\tSource Port:\t\t49244\r\n\r\nDetailed Authentication Information:\r\
+      \n\tLogon Process:\t\tKerberos\r\n\tAuthentication Package:\tKerberos\r\n\t\
+      Transited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t\
+      0\r\n\r\nThis event is generated when a logon session is created. It is generated\
+      \ on the computer that was accessed.\r\n\r\nThe subject fields indicate the\
+      \ account on the local system which requested the logon. This is most commonly\
+      \ a service such as the Server service, or a local process such as Winlogon.exe\
+      \ or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that\
+      \ occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\
+      \nThe New Logon fields indicate the account for whom the new logon was created,\
+      \ i.e. the account that was logged on.\r\n\r\nThe network fields indicate where\
+      \ a remote logon request originated. Workstation name is not always available\
+      \ and may be left blank in some cases.\r\n\r\nThe impersonation level field\
+      \ indicates the extent to which a process in the logon session can impersonate.\r\
+      \n\r\nThe authentication information fields provide detailed information about\
+      \ this specific logon request.\r\n\t- Logon GUID is a unique identifier that\
+      \ can be used to correlate this event with a KDC event.\r\n\t- Transited services\
+      \ indicate which intermediate services have participated in this logon request.\r\
+      \n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\
+      \n\t- Key length indicates the length of the generated session key. This will\
+      \ be 0 if no session key was requested."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:39:25 PM\nLogName=Security\nEventCode=4672\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274883\nKeywords=Audit Success\n\
+      TaskCategory=Special Logon\nOpCode=Info\nMessage=Special privileges assigned\
+      \ to new logon.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\rzombie\r\n\t\
+      Account Name:\t\trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon ID:\t\t\
+      0x45080CA9\r\n\r\nPrivileges:\t\tSeSecurityPrivilege\r\n\t\t\tSeBackupPrivilege\r\
+      \n\t\t\tSeRestorePrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeDebugPrivilege\r\
+      \n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\t\
+      SeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege\r\n\
+      \t\t\tSeEnableDelegationPrivilege"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 02:39:23 PM\nLogName=Security\nEventCode=4933\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4093022\nKeywords=Audit Success\n\
+      TaskCategory=Directory Service Replication\nOpCode=Info\nMessage=Synchronization\
+      \ of a replica of an Active Directory naming context has ended.\r\n\r\nDestination\
+      \ DRA:\tCN=NTDS Settings,CN=ACME-DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=acme,DC=local\r\
+      \nSource DRA:\tCN=NTDS Settings,CN=ACME-DC02,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=acme,DC=local\r\
+      \nNaming Context:\tDC=acme,DC=local\r\nOptions:\t\t524307\r\nSession ID:\t\
+      301672\r\nEnd USN:\t3047871\r\nStatus Code:\t0"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 02:39:23 PM\nLogName=Security\nEventCode=4932\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4093021\nKeywords=Audit Success\n\
+      TaskCategory=Directory Service Replication\nOpCode=Info\nMessage=Synchronization\
+      \ of a replica of an Active Directory naming context has begun.\r\n\r\nDestination\
+      \ DRA:\tCN=NTDS Settings,CN=ACME-DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=acme,DC=local\r\
+      \nSource DRA:\tCN=NTDS Settings,CN=ACME-DC02,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=acme,DC=local\r\
+      \nNaming Context:\tDC=acme,DC=local\r\nOptions:\t\t524307\r\nSession ID:\t\
+      301672\r\nStart USN:\t3047854"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC01-CHILD
+    _raw: '04/01/2022 02:39:22 PM
+
+      LogName=System
+
+      EventCode=36886
+
+      EventType=3
+
+      ComputerName=acme-dc01-child.childdomain.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Schannel
+
+      Type=Warning
+
+      RecordNumber=89871
+
+      Keywords=None
+
+      TaskCategory=None
+
+      OpCode=Info
+
+      Message=No suitable default server credential exists on this system. This will
+      prevent server applications that expect to make use of the system default credentials
+      from accepting SSL connections. An example of such an application is the directory
+      server. Applications that manage their own credentials, such as the internet
+      information server, are not affected by this.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:39:01 PM\nLogName=Security\nEventCode=4722\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274815\nKeywords=Audit Success\n\
+      TaskCategory=User Account Management\nOpCode=Info\nMessage=A user account was\
+      \ enabled.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\rzombie\r\n\tAccount\
+      \ Name:\t\trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon ID:\t\t0x44CA418B\r\
+      \n\r\nTarget Account:\r\n\tSecurity ID:\t\tSTSHIRTCO\\testuser1\r\n\tAccount\
+      \ Name:\t\ttestuser1\r\n\tAccount Domain:\t\tSTSHIRTCO"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:39:01 PM\nLogName=Security\nEventCode=4738\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274814\nKeywords=Audit Success\n\
+      TaskCategory=User Account Management\nOpCode=Info\nMessage=A user account was\
+      \ changed.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\rzombie\r\n\tAccount\
+      \ Name:\t\trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon ID:\t\t0x44CA418B\r\
+      \n\r\nTarget Account:\r\n\tSecurity ID:\t\tSTSHIRTCO\\testuser1\r\n\tAccount\
+      \ Name:\t\ttestuser1\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\r\nChanged Attributes:\r\
+      \n\tSAM Account Name:\t-\r\n\tDisplay Name:\t\t-\r\n\tUser Principal Name:\t\
+      -\r\n\tHome Directory:\t\t-\r\n\tHome Drive:\t\t-\r\n\tScript Path:\t\t-\r\n\
+      \tProfile Path:\t\t-\r\n\tUser Workstations:\t-\r\n\tPassword Last Set:\t-\r\
+      \n\tAccount Expires:\t\t-\r\n\tPrimary Group ID:\t-\r\n\tAllowedToDelegateTo:\t\
+      -\r\n\tOld UAC Value:\t\t0x11\r\n\tNew UAC Value:\t\t0x10\r\n\tUser Account\
+      \ Control:\t\r\n\t\tAccount Enabled\r\n\tUser Parameters:\t-\r\n\tSID History:\t\
+      \t-\r\n\tLogon Hours:\t\t-\r\n\r\nAdditional Information:\r\n\tPrivileges:\t\
+      \t-"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:39:01 PM\nLogName=Security\nEventCode=4724\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274811\nKeywords=Audit Success\n\
+      TaskCategory=User Account Management\nOpCode=Info\nMessage=An attempt was made\
+      \ to reset an account's password.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\\
+      rzombie\r\n\tAccount Name:\t\trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\t\
+      Logon ID:\t\t0x450794EE\r\n\r\nTarget Account:\r\n\tSecurity ID:\t\tSTSHIRTCO\\\
+      testuser1\r\n\tAccount Name:\t\ttestuser1\r\n\tAccount Domain:\t\tSTSHIRTCO"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:39:01 PM\nLogName=Security\nEventCode=4769\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274808\nKeywords=Audit Success\n\
+      TaskCategory=Kerberos Service Ticket Operations\nOpCode=Info\nMessage=A Kerberos\
+      \ service ticket was requested.\r\n\r\nAccount Information:\r\n\tAccount Name:\t\
+      \trzombie@STSHIRTCO.LOCAL\r\n\tAccount Domain:\t\tSTSHIRTCO.LOCAL\r\n\tLogon\
+      \ GUID:\t\t{038f17f4-4fe6-69e4-7520-423905d7b303}\r\n\r\nService Information:\r\
+      \n\tService Name:\t\tkrbtgt\r\n\tService ID:\t\tSTSHIRTCO\\krbtgt\r\n\r\nNetwork\
+      \ Information:\r\n\tClient Address:\t\t::1\r\n\tClient Port:\t\t0\r\n\r\nAdditional\
+      \ Information:\r\n\tTicket Options:\t\t0x40810000\r\n\tTicket Encryption Type:\t\
+      0x12\r\n\tFailure Code:\t\t0x0\r\n\tTransited Services:\t-\r\n\r\nThis event\
+      \ is generated every time access is requested to a resource such as a computer\
+      \ or a Windows service.  The service name indicates the resource to which access\
+      \ was requested.\r\n\r\nThis event can be correlated with Windows logon events\
+      \ by comparing the Logon GUID fields in each event.  The logon event occurs\
+      \ on the machine that was accessed, which is often a different machine than\
+      \ the domain controller which issued the service ticket.\r\n\r\nTicket options,\
+      \ encryption types, and failure codes are defined in RFC 4120."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:39:01 PM\nLogName=Security\nEventCode=4720\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274807\nKeywords=Audit Success\n\
+      TaskCategory=User Account Management\nOpCode=Info\nMessage=A user account was\
+      \ created.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\rzombie\r\n\tAccount\
+      \ Name:\t\trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon ID:\t\t0x44CA418B\r\
+      \n\r\nNew Account:\r\n\tSecurity ID:\t\tSTSHIRTCO\\testuser1\r\n\tAccount Name:\t\
+      \ttestuser1\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\r\nAttributes:\r\n\tSAM Account\
+      \ Name:\ttestuser1\r\n\tDisplay Name:\t\ttestuser1\r\n\tUser Principal Name:\t\
+      testuser1@acme.local\r\n\tHome Directory:\t\t-\r\n\tHome Drive:\t\t-\r\n\
+      \tScript Path:\t\t-\r\n\tProfile Path:\t\t-\r\n\tUser Workstations:\t-\r\n\t\
+      Password Last Set:\t<never>\r\n\tAccount Expires:\t\t<never>\r\n\tPrimary Group\
+      \ ID:\t513\r\n\tAllowed To Delegate To:\t-\r\n\tOld UAC Value:\t\t0x0\r\n\t\
+      New UAC Value:\t\t0x15\r\n\tUser Account Control:\t\r\n\t\tAccount Disabled\r\
+      \n\t\t'Password Not Required' - Enabled\r\n\t\t'Normal Account' - Enabled\r\n\
+      \tUser Parameters:\t-\r\n\tSID History:\t\t-\r\n\tLogon Hours:\t\t<value not\
+      \ set>\r\n\r\nAdditional Information:\r\n\tPrivileges\t\t-"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC02
+    _raw: "04/01/2022 02:39:01 PM\nLogName=System\nEventCode=37\nEventType=3\nComputerName=acme-dc02.acme.local\n\
+      SourceName=Microsoft-Windows-Kerberos-Key-Distribution-Center\nType=Warning\n\
+      RecordNumber=97755\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=The Key Distribution Center (KDC) encountered\
+      \ a ticket that did not contain information about the account that requested\
+      \ the ticket while processing a request for another ticket. This prevented security\
+      \ checks from running and could open security vulnerabilities. See https://go.microsoft.com/fwlink/?linkid=2173051\
+      \ to learn more.\r\n\r\n  Ticket PAC constructed by: ACME-DC02\r\n  Client:\
+      \ STSHIRTCO.LOCAL\\\\rzombie\r\n  Ticket for: krbtgt"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC01-CHILD
+    _raw: '04/01/2022 02:38:29 PM
+
+      LogName=System
+
+      EventCode=7036
+
+      EventType=4
+
+      ComputerName=acme-dc01-child.childdomain.acme.local
+
+      SourceName=Microsoft-Windows-Service Control Manager
+
+      Type=Information
+
+      RecordNumber=89866
+
+      Keywords=Classic
+
+      TaskCategory=None
+
+      OpCode=The operation completed successfully.
+
+      Message=The Network Setup Service service entered the running state.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 02:38:19 PM\nLogName=Security\nEventCode=4670\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4092954\nKeywords=Audit Success\n\
+      TaskCategory=Authorization Policy Change\nOpCode=Info\nMessage=Permissions on\
+      \ an object were changed.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tNT AUTHORITY\\\
+      SYSTEM\r\n\tAccount Name:\t\tACME-DC01$\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\
+      \tLogon ID:\t\t0x3E7\r\n\r\nObject:\r\n\tObject Server:\tSecurity\r\n\tObject\
+      \ Type:\tToken\r\n\tObject Name:\t-\r\n\tHandle ID:\t0x54c\r\n\r\nProcess:\r\
+      \n\tProcess ID:\t0x8cc\r\n\tProcess Name:\tC:\\Windows\\System32\\svchost.exe\r\
+      \n\r\nPermissions Change:\r\n\tOriginal Security Descriptor:\tD:(A;;GA;;;SY)(A;;GA;;;NS)\r\
+      \n\tNew Security Descriptor:\tD:(A;;GA;;;SY)(A;;RC;;;OW)(A;;GA;;;S-1-5-86-615999462-62705297-2911207457-59056572-3668589837)"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:38:16 PM\nLogName=Security\nEventCode=5379\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274675\nKeywords=Audit Success\n\
+      TaskCategory=User Account Management\nOpCode=Info\nMessage=Credential Manager\
+      \ credentials were read.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\rzombie\r\
+      \n\tAccount Name:\t\trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon ID:\t\
+      \t0x44CA418B\r\n\tRead Operation:\t\tEnumerate Credentials\r\n\r\nThis event\
+      \ occurs when a user performs a read operation on stored credentials in Credential\
+      \ Manager."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:37:57 PM\nLogName=Security\nEventCode=4768\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274602\nKeywords=Audit Success\n\
+      TaskCategory=Kerberos Authentication Service\nOpCode=Info\nMessage=A Kerberos\
+      \ authentication ticket (TGT) was requested.\r\n\r\nAccount Information:\r\n\
+      \tAccount Name:\t\trzombie\r\n\tSupplied Realm Name:\tSTSHIRTCO.LOCAL\r\n\t\
+      User ID:\t\t\tSTSHIRTCO\\rzombie\r\n\r\nService Information:\r\n\tService Name:\t\
+      \tkrbtgt\r\n\tService ID:\t\tSTSHIRTCO\\krbtgt\r\n\r\nNetwork Information:\r\
+      \n\tClient Address:\t\t::ffff:172.31.21.89\r\n\tClient Port:\t\t49228\r\n\r\n\
+      Additional Information:\r\n\tTicket Options:\t\t0x40810010\r\n\tResult Code:\t\
+      \t0x0\r\n\tTicket Encryption Type:\t0x12\r\n\tPre-Authentication Type:\t2\r\n\
+      \r\nCertificate Information:\r\n\tCertificate Issuer Name:\t\t\r\n\tCertificate\
+      \ Serial Number:\t\r\n\tCertificate Thumbprint:\t\t\r\n\r\nCertificate information\
+      \ is only provided if a certificate was used for pre-authentication.\r\n\r\n\
+      Pre-authentication types, ticket options, encryption types and result codes\
+      \ are defined in RFC 4120."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:36:53 PM\nLogName=Security\nEventCode=4742\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274404\nKeywords=Audit Success\n\
+      TaskCategory=Computer Account Management\nOpCode=Info\nMessage=A computer account\
+      \ was changed.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\WIN-711SO5F6E2C$\r\
+      \n\tAccount Name:\t\tWIN-711SO5F6E2C$\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\t\
+      Logon ID:\t\t0x45030B14\r\n\r\nComputer Account That Was Changed:\r\n\tSecurity\
+      \ ID:\t\tSTSHIRTCO\\WIN-711SO5F6E2C$\r\n\tAccount Name:\t\tWIN-711SO5F6E2C$\r\
+      \n\tAccount Domain:\t\tSTSHIRTCO\r\n\r\nChanged Attributes:\r\n\tSAM Account\
+      \ Name:\t-\r\n\tDisplay Name:\t\t-\r\n\tUser Principal Name:\t-\r\n\tHome Directory:\t\
+      \t-\r\n\tHome Drive:\t\t-\r\n\tScript Path:\t\t-\r\n\tProfile Path:\t\t-\r\n\
+      \tUser Workstations:\t-\r\n\tPassword Last Set:\t-\r\n\tAccount Expires:\t\t\
+      -\r\n\tPrimary Group ID:\t-\r\n\tAllowedToDelegateTo:\t-\r\n\tOld UAC Value:\t\
+      \t-\r\n\tNew UAC Value:\t\t-\r\n\tUser Account Control:\t-\r\n\tUser Parameters:\t\
+      -\r\n\tSID History:\t\t-\r\n\tLogon Hours:\t\t-\r\n\tDNS Host Name:\t\t-\r\n\
+      \tService Principal Names:\t\r\n\t\tHOST/WIN-711SO5F6E2C.acme.local\r\n\
+      \t\tRestrictedKrbHost/WIN-711SO5F6E2C.acme.local\r\n\t\tHOST/WIN-711SO5F6E2C\r\
+      \n\t\tRestrictedKrbHost/WIN-711SO5F6E2C\r\n\t\tWSMAN/WIN-711SO5F6E2C.acme.local\r\
+      \n\t\tWSMAN/WIN-711SO5F6E2C\r\n\t\tTERMSRV/WIN-711SO5F6E2C.acme.local\r\
+      \n\t\tTERMSRV/WIN-711SO5F6E2C\r\n\r\nAdditional Information:\r\n\tPrivileges:\t\
+      \t-"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 02:35:23 PM\nLogName=Security\nEventCode=4931\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4274041\nKeywords=Audit Success\n\
+      TaskCategory=Detailed Directory Service Replication\nOpCode=Info\nMessage=An\
+      \ Active Directory replica destination naming context was modified.\r\n\r\n\
+      Destination DRA:\t7e8310f6-e9b6-4341-9de4-3b55c917fae4._msdcs.acme.local\r\
+      \nSource DRA:\tCN=NTDS Settings,CN=ACME-DC02,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=acme,DC=local\r\
+      \nDestination Address:\t-\r\nNaming Context:\tDC=acme,DC=local\r\nOptions:\t\
+      \t7\r\nStatus Code:\t0"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02-CHILD
+    _raw: "04/01/2022 02:28:33 PM\nLogName=Security\nEventCode=5059\nEventType=0\n\
+      ComputerName=acme-dc02-child.childdomain.acme.local\nSourceName=Microsoft\
+      \ Windows security auditing.\nType=Information\nRecordNumber=640648\nKeywords=Audit\
+      \ Success\nTaskCategory=Other System Events\nOpCode=Info\nMessage=Key migration\
+      \ operation.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tCHILDDOMAIN\\jtest\r\n\tAccount\
+      \ Name:\t\tjtest\r\n\tAccount Domain:\t\tCHILDDOMAIN\r\n\tLogon ID:\t\t0x10FD7017\r\
+      \n\r\nProcess Information:\r\n\tProcess ID:\t\t4080\r\n\tProcess Creation Time:\t\
+      \u200E2022\u200E-\u200E04\u200E-\u200E01T19:28:33.389056900Z\r\n\r\nCryptographic\
+      \ Parameters:\r\n\tProvider Name:\tMicrosoft Software Key Storage Provider\r\
+      \n\tAlgorithm Name:\tECDSA_P256\r\n\tKey Name:\tMicrosoft Connected Devices\
+      \ Platform device certificate\r\n\tKey Type:\tUser key.\r\n\r\nAdditional Information:\r\
+      \n\tOperation:\tExport of persistent cryptographic key.\r\n\tReturn Code:\t\
+      0x0"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02-CHILD
+    _raw: "04/01/2022 02:28:33 PM\nLogName=Security\nEventCode=5061\nEventType=0\n\
+      ComputerName=acme-dc02-child.childdomain.acme.local\nSourceName=Microsoft\
+      \ Windows security auditing.\nType=Information\nRecordNumber=640647\nKeywords=Audit\
+      \ Success\nTaskCategory=System Integrity\nOpCode=Info\nMessage=Cryptographic\
+      \ operation.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tCHILDDOMAIN\\jtest\r\n\tAccount\
+      \ Name:\t\tjtest\r\n\tAccount Domain:\t\tCHILDDOMAIN\r\n\tLogon ID:\t\t0x10FD7017\r\
+      \n\r\nCryptographic Parameters:\r\n\tProvider Name:\tMicrosoft Software Key\
+      \ Storage Provider\r\n\tAlgorithm Name:\tECDSA_P256\r\n\tKey Name:\tMicrosoft\
+      \ Connected Devices Platform device certificate\r\n\tKey Type:\tUser key.\r\n\
+      \r\nCryptographic Operation:\r\n\tOperation:\tOpen Key.\r\n\tReturn Code:\t\
+      0x0"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02-CHILD
+    _raw: "04/01/2022 02:28:33 PM\nLogName=Security\nEventCode=5058\nEventType=0\n\
+      ComputerName=acme-dc02-child.childdomain.acme.local\nSourceName=Microsoft\
+      \ Windows security auditing.\nType=Information\nRecordNumber=640646\nKeywords=Audit\
+      \ Success\nTaskCategory=Other System Events\nOpCode=Info\nMessage=Key file operation.\r\
+      \n\r\nSubject:\r\n\tSecurity ID:\t\tCHILDDOMAIN\\jtest\r\n\tAccount Name:\t\t\
+      jtest\r\n\tAccount Domain:\t\tCHILDDOMAIN\r\n\tLogon ID:\t\t0x10FD7017\r\n\r\
+      \nProcess Information:\r\n\tProcess ID:\t\t4080\r\n\tProcess Creation Time:\t\
+      \u200E2022\u200E-\u200E04\u200E-\u200E01T19:28:33.389056900Z\r\n\r\nCryptographic\
+      \ Parameters:\r\n\tProvider Name:\tMicrosoft Software Key Storage Provider\r\
+      \n\tAlgorithm Name:\tUNKNOWN\r\n\tKey Name:\tMicrosoft Connected Devices Platform\
+      \ device certificate\r\n\tKey Type:\tUser key.\r\n\r\nKey File Operation Information:\r\
+      \n\tFile Path:\tC:\\Users\\jtest\\AppData\\Roaming\\Microsoft\\Crypto\\Keys\\\
+      de7cf8a7901d2ad13e5c67c29e5d1662_726fd149-3996-4e3f-99dc-70cdc0d0bfa8\r\n\t\
+      Operation:\tRead persisted key from file.\r\n\tReturn Code:\t0x0"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02-CHILD
+    _raw: "04/01/2022 02:28:32 PM\nLogName=Security\nEventCode=4799\nEventType=0\n\
+      ComputerName=acme-dc02-child.childdomain.acme.local\nSourceName=Microsoft\
+      \ Windows security auditing.\nType=Information\nRecordNumber=640642\nKeywords=Audit\
+      \ Success\nTaskCategory=Security Group Management\nOpCode=Info\nMessage=A security-enabled\
+      \ local group membership was enumerated.\r\n\r\nSubject:\r\n\tSecurity ID:\t\
+      \tNT AUTHORITY\\SYSTEM\r\n\tAccount Name:\t\tACME-DC02-CHILD$\r\n\tAccount Domain:\t\
+      \tCHILDDOMAIN\r\n\tLogon ID:\t\t0x3E7\r\n\r\nGroup:\r\n\tSecurity ID:\t\tBUILTIN\\\
+      Administrators\r\n\tGroup Name:\t\tAdministrators\r\n\tGroup Domain:\t\tBuiltin\r\
+      \n\r\nProcess Information:\r\n\tProcess ID:\t\t0x520\r\n\tProcess Name:\t\t\
+      C:\\Windows\\System32\\svchost.exe"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02-CHILD
+    _raw: "04/01/2022 02:28:32 PM\nLogName=Security\nEventCode=4648\nEventType=0\n\
+      ComputerName=acme-dc02-child.childdomain.acme.local\nSourceName=Microsoft\
+      \ Windows security auditing.\nType=Information\nRecordNumber=640638\nKeywords=Audit\
+      \ Success\nTaskCategory=Logon\nOpCode=Info\nMessage=A logon was attempted using\
+      \ explicit credentials.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tNT AUTHORITY\\\
+      SYSTEM\r\n\tAccount Name:\t\tACME-DC02-CHILD$\r\n\tAccount Domain:\t\tCHILDDOMAIN\r\
+      \n\tLogon ID:\t\t0x3E7\r\n\tLogon GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\
+      \n\r\nAccount Whose Credentials Were Used:\r\n\tAccount Name:\t\tjtest\r\n\t\
+      Account Domain:\t\tCHILDDOMAIN\r\n\tLogon GUID:\t\t{3ce7ad5b-2582-26af-476d-b95ae670234f}\r\
+      \n\r\nTarget Server:\r\n\tTarget Server Name:\tlocalhost\r\n\tAdditional Information:\t\
+      localhost\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x520\r\n\tProcess\
+      \ Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\
+      \tNetwork Address:\t136.34.206.13\r\n\tPort:\t\t\t0\r\n\r\nThis event is generated\
+      \ when a process attempts to log on an account by explicitly specifying that\
+      \ account\u2019s credentials.  This most commonly occurs in batch-type configurations\
+      \ such as scheduled tasks, or when using the RUNAS command."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC02-CHILD
+    _raw: '04/01/2022 02:28:32 PM
+
+      LogName=System
+
+      EventCode=7001
+
+      EventType=4
+
+      ComputerName=acme-dc02-child.childdomain.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-Winlogon
+
+      Type=Information
+
+      RecordNumber=89985
+
+      Keywords=None
+
+      TaskCategory=1101
+
+      OpCode=Info
+
+      Message=User Logon Notification for Customer Experience Improvement Program'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: ACME-DC02-CHILD
+    _raw: '04/01/2022 02:28:31 PM
+
+      LogName=Application
+
+      EventCode=9027
+
+      EventType=4
+
+      ComputerName=acme-dc02-child.childdomain.acme.local
+
+      SourceName=Desktop Window Manager
+
+      Type=Information
+
+      RecordNumber=11425
+
+      Keywords=Classic
+
+      TaskCategory=None
+
+      OpCode=None
+
+      Message=The Desktop Window Manager has registered the session port.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02-CHILD
+    _raw: "04/01/2022 02:27:47 PM\nLogName=Security\nEventCode=4647\nEventType=0\n\
+      ComputerName=acme-dc02-child.childdomain.acme.local\nSourceName=Microsoft\
+      \ Windows security auditing.\nType=Information\nRecordNumber=640584\nKeywords=Audit\
+      \ Success\nTaskCategory=Logoff\nOpCode=Info\nMessage=User initiated logoff:\r\
+      \n\r\nSubject:\r\n\tSecurity ID:\t\tCHILDDOMAIN\\jtest\r\n\tAccount Name:\t\t\
+      jtest\r\n\tAccount Domain:\t\tCHILDDOMAIN\r\n\tLogon ID:\t\t0x10EBB35A\r\n\r\
+      \nThis event is generated when a logoff is initiated. No further user-initiated\
+      \ activity can occur. This event can be interpreted as a logoff event."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC02-CHILD
+    _raw: '04/01/2022 02:27:47 PM
+
+      LogName=System
+
+      EventCode=7002
+
+      EventType=4
+
+      ComputerName=acme-dc02-child.childdomain.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-Winlogon
+
+      Type=Information
+
+      RecordNumber=89983
+
+      Keywords=None
+
+      TaskCategory=1102
+
+      OpCode=Info
+
+      Message=User Logoff Notification for Customer Experience Improvement Program'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: ACME-DC02-CHILD
+    _raw: '04/01/2022 02:27:47 PM
+
+      LogName=Application
+
+      EventCode=6000
+
+      EventType=4
+
+      ComputerName=acme-dc02-child.childdomain.acme.local
+
+      SourceName=Microsoft-Windows-Winlogon
+
+      Type=Information
+
+      RecordNumber=11424
+
+      Keywords=Classic
+
+      TaskCategory=None
+
+      OpCode=The operation completed successfully.
+
+      Message=The winlogon notification subscriber <WSearch> was unavailable to handle
+      a notification event.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC02-CHILD
+    _raw: '04/01/2022 02:25:52 PM
+
+      LogName=System
+
+      EventCode=16
+
+      EventType=4
+
+      ComputerName=acme-dc02-child.childdomain.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-Kernel-General
+
+      Type=Information
+
+      RecordNumber=89978
+
+      Keywords=None
+
+      TaskCategory=None
+
+      OpCode=Info
+
+      Message=The access history in hive \??\C:\Users\jtest\AppData\Local\Packages\windows.immersivecontrolpanel_cw5n1h2txyewy\Settings\settings.dat
+      was cleared updating 3 keys and creating 1 modified pages.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Directory Service
+    host: ACME-DC01
+    _raw: "04/01/2022 02:25:35 PM\nLogName=Directory Service\nEventCode=1704\nEventType=4\n\
+      ComputerName=acme-dc01.acme.local\nUser=NOT_TRANSLATED\nSid=S-1-5-7\nSidType=0\n\
+      SourceName=Microsoft-Windows-ActiveDirectory_DomainService\nType=Information\n\
+      RecordNumber=5696\nKeywords=Classic\nTaskCategory=Global Catalog\nOpCode=The\
+      \ operation completed successfully.\nMessage=The global catalog initiated replication\
+      \ of a member of the partial attribute set for the following directory partition\
+      \ from the following domain controller. \r\n \r\nDirectory partition:\r\nDC=childdomain,DC=acme,DC=local\
+      \ \r\nDomain controller:\r\nda529801-4647-4146-a308-549d3ae10c12._msdcs.acme.local\
+      \ \r\n \r\nThis is a special replication cycle due to the addition of one or\
+      \ more attributes to the partial attribute set."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC02-CHILD
+    _raw: '04/01/2022 02:25:29 PM
+
+      LogName=System
+
+      EventCode=1501
+
+      EventType=4
+
+      ComputerName=acme-dc02-child.childdomain.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-21-3728234164-4236303027-1010285278-1609
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-GroupPolicy
+
+      Type=Information
+
+      RecordNumber=89966
+
+      Keywords=None
+
+      TaskCategory=None
+
+      OpCode=Start
+
+      Message=The Group Policy settings for the user were processed successfully.
+      There were no changes detected since the last successful processing of Group
+      Policy.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: ACME-DC02-CHILD
+    _raw: '04/01/2022 02:25:28 PM
+
+      LogName=Application
+
+      EventCode=5
+
+      EventType=4
+
+      ComputerName=acme-dc02-child.childdomain.acme.local
+
+      SourceName=Microsoft-Windows-Search-ProfileNotify
+
+      Type=Information
+
+      RecordNumber=11423
+
+      Keywords=Classic
+
+      TaskCategory=None
+
+      OpCode=The operation completed successfully.
+
+      Message=Windows Search Service has created default configuration for new user
+      ''CHILDDOMAIN\jtest'' .'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02-CHILD
+    _raw: "04/01/2022 02:24:51 PM\nLogName=Security\nEventCode=4728\nEventType=0\n\
+      ComputerName=acme-dc02-child.childdomain.acme.local\nSourceName=Microsoft\
+      \ Windows security auditing.\nType=Information\nRecordNumber=640263\nKeywords=Audit\
+      \ Success\nTaskCategory=Security Group Management\nOpCode=Info\nMessage=A member\
+      \ was added to a security-enabled global group.\r\n\r\nSubject:\r\n\tSecurity\
+      \ ID:\t\tSTSHIRTCO\\rzombie\r\n\tAccount Name:\t\trzombie\r\n\tAccount Domain:\t\
+      \tSTSHIRTCO\r\n\tLogon ID:\t\t0x41977C\r\n\r\nMember:\r\n\tSecurity ID:\t\t\
+      CHILDDOMAIN\\jtest\r\n\tAccount Name:\t\tcn=jtest,CN=Users,DC=childdomain,DC=acme,DC=local\r\
+      \n\r\nGroup:\r\n\tSecurity ID:\t\tCHILDDOMAIN\\Domain Admins\r\n\tGroup Name:\t\
+      \tDomain Admins\r\n\tGroup Domain:\t\tCHILDDOMAIN\r\n\r\nAdditional Information:\r\
+      \n\tPrivileges:\t\t-"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02-CHILD
+    _raw: "04/01/2022 02:24:51 PM\nLogName=Security\nEventCode=4737\nEventType=0\n\
+      ComputerName=acme-dc02-child.childdomain.acme.local\nSourceName=Microsoft\
+      \ Windows security auditing.\nType=Information\nRecordNumber=640262\nKeywords=Audit\
+      \ Success\nTaskCategory=Security Group Management\nOpCode=Info\nMessage=A security-enabled\
+      \ global group was changed.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\\
+      rzombie\r\n\tAccount Name:\t\trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\t\
+      Logon ID:\t\t0x41977C\r\n\r\nGroup:\r\n\tSecurity ID:\t\tCHILDDOMAIN\\Domain\
+      \ Admins\r\n\tGroup Name:\t\tDomain Admins\r\n\tGroup Domain:\t\tCHILDDOMAIN\r\
+      \n\r\nChanged Attributes:\r\n\tSAM Account Name:\t-\r\n\tSID History:\t\t-\r\
+      \n\r\nAdditional Information:\r\n\tPrivileges:\t\t-"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Directory Service
+    host: ACME-DC01
+    _raw: "04/01/2022 02:24:47 PM\nLogName=Directory Service\nEventCode=1955\nEventType=4\n\
+      ComputerName=acme-dc01.acme.local\nUser=NOT_TRANSLATED\nSid=S-1-5-7\nSidType=0\n\
+      SourceName=Microsoft-Windows-ActiveDirectory_DomainService\nType=Information\n\
+      RecordNumber=5695\nKeywords=Classic\nTaskCategory=Replication\nOpCode=The operation\
+      \ completed successfully.\nMessage=Active Directory Domain Services encountered\
+      \ a write conflict when applying replicated changes to the following object.\
+      \ \r\n \r\nObject: \r\nCN=Administrator,CN=Users,DC=acme,DC=local \r\n\
+      Time in seconds: \r\n0 \r\nRetries: \r\n%3 \r\nret:\r\n%4 \r\n \r\nEvent log\
+      \ entries preceding this entry will indicate whether or not the update was accepted.\
+      \ \r\n \r\nA write conflict can be caused by simultaneous changes to the same\
+      \ object or simultaneous changes to other objects that have attributes referencing\
+      \ this object. This commonly occurs when the object represents a large group\
+      \ with many members, and the functional level of the forest is set to Windows\
+      \ 2000. This conflict triggered additional retries of the update. If the system\
+      \ appears slow, it could be because replication of these changes is occurring.\
+      \ \r\n \r\nUser Action \r\nUse smaller groups for this operation or raise the\
+      \ forest functional level to Windows Server 2003."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Directory Service
+    host: ACME-DC01
+    _raw: "04/01/2022 02:24:47 PM\nLogName=Directory Service\nEventCode=1083\nEventType=3\n\
+      ComputerName=acme-dc01.acme.local\nUser=NOT_TRANSLATED\nSid=S-1-5-7\nSidType=0\n\
+      SourceName=Microsoft-Windows-ActiveDirectory_DomainService\nType=Warning\nRecordNumber=5694\n\
+      Keywords=Classic\nTaskCategory=Replication\nOpCode=The operation completed successfully.\n\
+      Message=Active Directory Domain Services could not update the following object\
+      \ with changes received from the directory service at the following network\
+      \ address because Active Directory Domain Services was busy processing information.\
+      \ \r\n \r\nObject:\r\nCN=Administrator,CN=Users,DC=acme,DC=local \r\nNetwork\
+      \ address:\r\nda529801-4647-4146-a308-549d3ae10c12._msdcs.acme.local \r\
+      \n \r\nThis operation will be tried again later."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Directory Service
+    host: ACME-DC01
+    _raw: "04/01/2022 02:24:47 PM\nLogName=Directory Service\nEventCode=2041\nEventType=4\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft-Windows-ActiveDirectory_DomainService\n\
+      Type=Information\nRecordNumber=5693\nKeywords=Classic\nTaskCategory=Internal\
+      \ Processing\nOpCode=The operation completed successfully.\nMessage=Duplicate\
+      \ event log entries were suppressed. \r\n \r\nSee the previous event log entry\
+      \ for details. An entry is considered a duplicate if the event code and all\
+      \ of its insertion parameters are identical. The time period for this run of\
+      \ duplicates is from the time of the previous event to the time of this event.\
+      \ \r\n \r\nEvent Code:\r\n400006a8 \r\nNumber of duplicate entries: \r\n1"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC02
+    _raw: "04/01/2022 02:19:06 PM\nLogName=System\nEventCode=7024\nEventType=2\nComputerName=acme-dc02.acme.local\n\
+      SourceName=Microsoft-Windows-Service Control Manager\nType=Error\nRecordNumber=97750\n\
+      Keywords=Classic\nTaskCategory=None\nOpCode=The operation completed successfully.\n\
+      Message=The WinHTTP Web Proxy Auto-Discovery Service service terminated with\
+      \ the following service-specific error: \r\nThe endpoint mapper database entry\
+      \ could not be created."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 02:16:21 PM\nLogName=Security\nEventCode=4767\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4090953\nKeywords=Audit Success\n\
+      TaskCategory=User Account Management\nOpCode=Info\nMessage=A user account was\
+      \ unlocked.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\rzombie\r\n\tAccount\
+      \ Name:\t\trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon ID:\t\t0x3EE841EC\r\
+      \n\r\nTarget Account:\r\n\tSecurity ID:\t\tSTSHIRTCO\\rzombie\r\n\tAccount Name:\t\
+      \trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 02:15:55 PM\nLogName=Security\nEventCode=4771\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4090895\nKeywords=Audit Failure\n\
+      TaskCategory=Kerberos Authentication Service\nOpCode=Info\nMessage=Kerberos\
+      \ pre-authentication failed.\r\n\r\nAccount Information:\r\n\tSecurity ID:\t\
+      \tSTSHIRTCO\\rzombie\r\n\tAccount Name:\t\trzombie\r\n\r\nService Information:\r\
+      \n\tService Name:\t\tkrbtgt/acme\r\n\r\nNetwork Information:\r\n\tClient\
+      \ Address:\t\t::1\r\n\tClient Port:\t\t0\r\n\r\nAdditional Information:\r\n\t\
+      Ticket Options:\t\t0x40810010\r\n\tFailure Code:\t\t0x12\r\n\tPre-Authentication\
+      \ Type:\t0\r\n\r\nCertificate Information:\r\n\tCertificate Issuer Name:\t\t\
+      \r\n\tCertificate Serial Number: \t\r\n\tCertificate Thumbprint:\t\t\r\n\r\n\
+      Certificate information is only provided if a certificate was used for pre-authentication.\r\
+      \n\r\nPre-authentication types, ticket options and failure codes are defined\
+      \ in RFC 4120.\r\n\r\nIf the ticket was malformed or damaged during transit\
+      \ and could not be decrypted, then many fields in this event might not be present."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 02:15:42 PM\nLogName=Security\nEventCode=4740\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4090877\nKeywords=Audit Success\n\
+      TaskCategory=User Account Management\nOpCode=Info\nMessage=A user account was\
+      \ locked out.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tNT AUTHORITY\\SYSTEM\r\n\t\
+      Account Name:\t\tACME-DC01$\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon ID:\t\
+      \t0x3E7\r\n\r\nAccount That Was Locked Out:\r\n\tSecurity ID:\t\tSTSHIRTCO\\\
+      rzombie\r\n\tAccount Name:\t\trzombie\r\n\r\nAdditional Information:\r\n\tCaller\
+      \ Computer Name:\tACME-DC01"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC01
+    _raw: '04/01/2022 02:14:30 PM
+
+      LogName=System
+
+      EventCode=12294
+
+      EventType=2
+
+      ComputerName=acme-dc01.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-Directory-Services-SAM
+
+      Type=Error
+
+      RecordNumber=98363
+
+      Keywords=None
+
+      TaskCategory=None
+
+      OpCode=Info
+
+      Message=The SAM database was unable to lockout the account of Administrator
+      due to a resource error, such as a hard disk write failure (the specific error
+      code is in the error data) . Accounts are locked after a certain number of bad
+      passwords are provided so please consider resetting the password of the account
+      mentioned above.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: ACME-DC01
+    _raw: '04/01/2022 02:12:36 PM
+
+      LogName=Application
+
+      EventCode=16384
+
+      EventType=4
+
+      ComputerName=acme-dc01.acme.local
+
+      SourceName=Microsoft-Windows-Security-SPP
+
+      Type=Information
+
+      RecordNumber=11501
+
+      Keywords=Classic
+
+      TaskCategory=None
+
+      OpCode=The operation completed successfully.
+
+      Message=Successfully scheduled Software Protection service for re-start at 2022-04-04T15:58:36Z.
+      Reason: RulesEngine.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC01
+    _raw: '04/01/2022 02:12:20 PM
+
+      LogName=System
+
+      EventCode=19
+
+      EventType=4
+
+      ComputerName=acme-dc01.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-WindowsUpdateClient
+
+      Type=Information
+
+      RecordNumber=98360
+
+      Keywords=Installation, Success
+
+      TaskCategory=Windows Update Agent
+
+      OpCode=Installation
+
+      Message=Installation Successful: Windows successfully installed the following
+      update: Security Intelligence Update for Microsoft Defender Antivirus - KB2267602
+      (Version 1.361.1151.0)'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC01
+    _raw: '04/01/2022 02:12:08 PM
+
+      LogName=System
+
+      EventCode=43
+
+      EventType=4
+
+      ComputerName=acme-dc01.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-WindowsUpdateClient
+
+      Type=Information
+
+      RecordNumber=98359
+
+      Keywords=Installation, Started
+
+      TaskCategory=Windows Update Agent
+
+      OpCode=Installation
+
+      Message=Installation Started: Windows has started installing the following update:
+      Security Intelligence Update for Microsoft Defender Antivirus - KB2267602 (Version
+      1.361.1151.0)'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC01
+    _raw: '04/01/2022 02:12:08 PM
+
+      LogName=System
+
+      EventCode=44
+
+      EventType=4
+
+      ComputerName=acme-dc01.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-WindowsUpdateClient
+
+      Type=Information
+
+      RecordNumber=98358
+
+      Keywords=Download, Started
+
+      TaskCategory=Windows Update Agent
+
+      OpCode=Download
+
+      Message=Windows Update started downloading an update.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: ACME-DC01
+    _raw: '04/01/2022 02:11:59 PM
+
+      LogName=Application
+
+      EventCode=16394
+
+      EventType=4
+
+      ComputerName=acme-dc01.acme.local
+
+      SourceName=Microsoft-Windows-Security-SPP
+
+      Type=Information
+
+      RecordNumber=11500
+
+      Keywords=Classic
+
+      TaskCategory=None
+
+      OpCode=The operation completed successfully.
+
+      Message=Offline downlevel migration succeeded.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 02:10:02 PM\nLogName=Security\nEventCode=4946\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4090329\nKeywords=Audit Success\n\
+      TaskCategory=MPSSVC Rule-Level Policy Change\nOpCode=Info\nMessage=A change\
+      \ was made to the Windows Firewall exception list. A rule was added.\r\n\t\r\
+      \nProfile Changed:\tAll\r\n\r\nAdded Rule:\r\n\tRule ID:\t{7EFEB751-A325-417C-89FE-5F3EF542128F}\r\
+      \n\tRule Name:\tUsermode Font Driver Host"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 02:10:02 PM\nLogName=Security\nEventCode=4948\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4090327\nKeywords=Audit Success\n\
+      TaskCategory=MPSSVC Rule-Level Policy Change\nOpCode=Info\nMessage=A change\
+      \ was made to the Windows Firewall exception list. A rule was deleted.\r\n\t\
+      \r\nProfile Changed:\tAll\r\n\r\nDeleted Rule:\r\n\tRule ID:\t{75CF7BBE-5ACA-4C64-93DA-07067256AF7F}\r\
+      \n\tRule Name:\tUsermode Font Driver Host"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:DNS Server
+    host: ACME-DC01
+    _raw: '04/01/2022 02:08:23 PM
+
+      LogName=DNS Server
+
+      EventCode=5504
+
+      EventType=4
+
+      ComputerName=acme-dc01.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-DNS-Server-Service
+
+      Type=Information
+
+      RecordNumber=403
+
+      Keywords=None
+
+      TaskCategory=None
+
+      OpCode=Info
+
+      Message=The DNS server encountered an invalid domain name in a packet from 193.0.9.6.
+      The packet will be rejected. The event data contains the DNS packet.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC02
+    _raw: '04/01/2022 02:08:15 PM
+
+      LogName=System
+
+      EventCode=10010
+
+      EventType=2
+
+      ComputerName=acme-dc02.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-21-1777140705-3702755976-711469205-1112
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-DistributedCOM
+
+      Type=Error
+
+      RecordNumber=97720
+
+      Keywords=Classic
+
+      TaskCategory=None
+
+      OpCode=Info
+
+      Message=The server {3EEF301F-B596-4C0B-BD92-013BEAFCE793} did not register with
+      DCOM within the required timeout.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC02
+    _raw: '04/01/2022 02:07:58 PM
+
+      LogName=System
+
+      EventCode=1014
+
+      EventType=3
+
+      ComputerName=acme-dc02.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-20
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-DNS Client Events
+
+      Type=Warning
+
+      RecordNumber=97717
+
+      Keywords=None
+
+      TaskCategory=1014
+
+      OpCode=Info
+
+      Message=Name resolution for the name 217.127.27.194.IN-ADDR.ARPA timed out after
+      none of the configured DNS servers responded.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Directory Service
+    host: ACME-DC01
+    _raw: '04/01/2022 02:06:05 PM
+
+      LogName=Directory Service
+
+      EventCode=701
+
+      EventType=4
+
+      ComputerName=acme-dc01.acme.local
+
+      SourceName=NTDS ISAM
+
+      Type=Information
+
+      RecordNumber=5689
+
+      Keywords=Classic
+
+      TaskCategory=Performance
+
+      OpCode=Info
+
+      Message=NTDS (800,D,0) NTDSA: Online defragmentation has completed a full pass
+      on database ''C:\Windows\NTDS\ntds.dit'', freeing 1 pages. This pass started
+      on 4/1/2022 and ran for a total of 0 seconds, requiring 1 invocations over 1
+      days. Since the database was created it has been fully defragmented 102 times.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Directory Service
+    host: ACME-DC01
+    _raw: '04/01/2022 02:06:05 PM
+
+      LogName=Directory Service
+
+      EventCode=700
+
+      EventType=4
+
+      ComputerName=acme-dc01.acme.local
+
+      SourceName=NTDS ISAM
+
+      Type=Information
+
+      RecordNumber=5688
+
+      Keywords=Classic
+
+      TaskCategory=Performance
+
+      OpCode=Info
+
+      Message=NTDS (800,D,0) NTDSA: Online defragmentation is beginning a full pass
+      on database ''C:\Windows\NTDS\ntds.dit''.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC01
+    _raw: "04/01/2022 02:05:49 PM\nLogName=System\nEventCode=6148\nEventType=4\nComputerName=acme-dc01.acme.local\n\
+      User=NOT_TRANSLATED\nSid=S-1-5-18\nSidType=0\nSourceName=Microsoft-Windows-LSA\n\
+      Type=Information\nRecordNumber=98337\nKeywords=None\nTaskCategory=None\nOpCode=Info\n\
+      Message=The PDC completed an automatic trust scan operation for all trusts with\
+      \ no errors.\r\n\r\nMore information can be found at https://go.microsoft.com/fwlink/?linkid=2162089."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 01:55:46 PM\nLogName=Security\nEventCode=4957\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4266307\nKeywords=Audit Failure\n\
+      TaskCategory=MPSSVC Rule-Level Policy Change\nOpCode=Info\nMessage=Windows Firewall\
+      \ did not apply the following rule:\r\n\r\nRule Information:\r\n\tID:\tMicrosoft.Win32WebViewHost_cw5n1h2txyewy_S-1-5-21-1777140705-3702755976-711469205-1112_Out_notRemoteName_Cellular\r\
+      \n\tName:\tMicrosoft.Win32WebViewHost_cw5n1h2txyewy_S-1-5-21-1777140705-3702755976-711469205-1112_Out_notRemoteName_Cellular\r\
+      \n\r\nError Information:\r\n\tReason:\tInterfaces resolved to an empty set."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 01:54:45 PM\nLogName=Security\nEventCode=4911\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4266074\nKeywords=Audit Success\n\
+      TaskCategory=Authorization Policy Change\nOpCode=Info\nMessage=Resource attributes\
+      \ of the object were changed.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\\
+      rzombie\r\n\tAccount Name:\t\trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\t\
+      Logon ID:\t\t0x4499B0E0\r\n\r\nObject:\r\n\tObject Server:\tSecurity\r\n\tObject\
+      \ Type:\tFile\r\n\tObject Name:\tC:\\Users\\rzombie\\Downloads\r\n\tHandle ID:\t\
+      0xa38\r\n\r\nProcess Information:\r\n\tProcess ID:\t0x131c\r\n\tProcess Name:\t\
+      C:\\Windows\\explorer.exe\r\n\r\nResource Attributes:\r\n\tOriginal Security\
+      \ Descriptor:\t\r\n\tNew Security Descriptor:\t\tS:ARAI(RA;OICIIO;;;;WD;(\"\
+      IMAGELOAD\",TU,0x0,1))"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 01:53:14 PM\nLogName=Security\nEventCode=5447\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4265932\nKeywords=Audit Success\n\
+      TaskCategory=Other Policy Change Events\nOpCode=Info\nMessage=A Windows Filtering\
+      \ Platform filter has been changed.\r\n\t\r\nSubject:\r\n\tSecurity ID:\t\t\
+      NT AUTHORITY\\LOCAL SERVICE\r\n\tAccount Name:\t\tNT AUTHORITY\\LOCAL SERVICE\r\
+      \n\r\nProcess Information:\r\n\tProcess ID:\t1248\r\n\r\nProvider Information:\r\
+      \n\tID:\t\t{4b153735-1049-4480-aab4-d1b9bdc03710}\r\n\tName:\t\tMicrosoft Corporation\r\
+      \n\r\nChange Information:\r\n\tChange Type:\tDelete\r\n\r\nFilter Information:\r\
+      \n\tID:\t\t{99f1d27d-62cb-4865-801a-8172dea2fc27}\r\n\tName:\t\tInternetClient\
+      \ Default Rule\r\n\tType:\t\tNot persistent\r\n\tRun-Time ID:\t68382\r\n\r\n\
+      Layer Information:\r\n\tID:\t\t{4a72393b-319f-44bc-84c3-ba54dcb3b6b4}\r\n\t\
+      Name:\t\tALE Connect v6 Layer\r\n\tRun-Time ID:\t50\r\n\r\nCallout Information:\r\
+      \n\tID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\tName:\t\t-\r\n\r\nAdditional\
+      \ Information:\r\n\tWeight:\t206158438272\t\r\n\tConditions:\t\n\tCondition\
+      \ ID:\t{71bc78fa-f17c-4997-a602-6abb261f351c}\n\tMatch value:\tNot equal to\n\
+      \tCondition value:\t-\n\n\tCondition ID:\t{b235ae9a-1d64-49b8-a44c-5ff3d9095045}\n\
+      \tMatch value:\tIn range\n\tCondition value:\t00000000000000000000000000000000\
+      \ - ffffffffffffffffffffffffffffffff\n\n\tCondition ID:\t{46ea1551-2255-492b-8019-aabeee349f40}\n\
+      \tMatch value:\tEqual to\n\tCondition value:\t0x00000003\n\n\tCondition ID:\t\
+      {ab3033c9-c0e3-4759-937d-5758c65d4ae3}\n\tMatch value:\tEqual to\n\tCondition\
+      \ value:\t0x00000003\n\n\tCondition ID:\t{af043a0a-b34d-4f86-979c-c90371af6e66}\n\
+      \tMatch value:\tEqual to\n\tCondition value:\t\nO:LSD:(A;;CC;;;S-1-15-3-1)(A;;CC;;;WD)(A;;CC;;;AN)\n\
+      \n\r\n\tFilter Action:\tPermit"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: '04/01/2022 01:53:14 PM
+
+      LogName=Security
+
+      EventCode=4954
+
+      EventType=0
+
+      ComputerName=acme-dc02.acme.local
+
+      SourceName=Microsoft Windows security auditing.
+
+      Type=Information
+
+      RecordNumber=4265900
+
+      Keywords=Audit Success
+
+      TaskCategory=MPSSVC Rule-Level Policy Change
+
+      OpCode=Info
+
+      Message=Group Policy settings for Windows Firewall were changed, and the new
+      settings were applied.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC02
+    _raw: '04/01/2022 01:53:14 PM
+
+      LogName=System
+
+      EventCode=1502
+
+      EventType=4
+
+      ComputerName=acme-dc02.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-GroupPolicy
+
+      Type=Information
+
+      RecordNumber=97623
+
+      Keywords=None
+
+      TaskCategory=None
+
+      OpCode=Start
+
+      Message=The Group Policy settings for the computer were processed successfully.
+      New settings from 3 Group Policy objects were detected and applied.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 01:53:14 PM\nLogName=Security\nEventCode=6144\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4265853\nKeywords=Audit Success\n\
+      TaskCategory=Other Policy Change Events\nOpCode=Info\nMessage=Security policy\
+      \ in the group policy objects has been applied successfully. \r\n\r\nReturn\
+      \ Code:\t0\r\n\r\nGPO List:\r\n{6AC1786C-016F-11D2-945F-00C04fB984F9}\tDefault\
+      \ Domain Controllers Policy\n{31B2F340-016D-11D2-945F-00C04FB984F9}\tDefault\
+      \ Domain Policy\n{A2F24A9F-A822-49E5-B229-6F093F4A7E93}\tacme-all-it"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 01:53:14 PM\nLogName=Security\nEventCode=4719\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4265852\nKeywords=Audit Success\n\
+      TaskCategory=Audit Policy Change\nOpCode=Info\nMessage=System audit policy was\
+      \ changed.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tNT AUTHORITY\\SYSTEM\r\n\tAccount\
+      \ Name:\t\tACME-DC02$\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon ID:\t\t0x3E7\r\
+      \n\r\nAudit Policy Change:\r\n\tCategory:\t\tAccount Logon\r\n\tSubcategory:\t\
+      \tKerberos Authentication Service\r\n\tSubcategory GUID:\t{0cce9242-69ae-11d9-bed3-505054503030}\r\
+      \n\tChanges:\t\tFailure added"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Directory Service
+    host: ACME-DC01
+    _raw: '04/01/2022 01:51:01 PM
+
+      LogName=Directory Service
+
+      EventCode=1162
+
+      EventType=4
+
+      ComputerName=acme-dc01.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-7
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-ActiveDirectory_DomainService
+
+      Type=Information
+
+      RecordNumber=5681
+
+      Keywords=Classic
+
+      TaskCategory=Internal Processing
+
+      OpCode=The operation completed successfully.
+
+      Message=Internal event: The Address Book hierarchy table has been rebuilt.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Directory Service
+    host: ACME-DC01
+    _raw: "04/01/2022 01:51:01 PM\nLogName=Directory Service\nEventCode=2887\nEventType=3\n\
+      ComputerName=acme-dc01.acme.local\nUser=NOT_TRANSLATED\nSid=S-1-5-7\nSidType=0\n\
+      SourceName=Microsoft-Windows-ActiveDirectory_DomainService\nType=Warning\nRecordNumber=5680\n\
+      Keywords=Classic\nTaskCategory=LDAP Interface\nOpCode=The operation completed\
+      \ successfully.\nMessage=\r\nDuring the previous 24 hour period, some clients\
+      \ attempted to perform LDAP binds that were either: \r\n(1) A SASL (Negotiate,\
+      \ Kerberos, NTLM, or Digest) LDAP bind that did not request signing (integrity\
+      \ validation), or \r\n(2) A LDAP simple bind that was performed on a clear text\
+      \ (non-SSL/TLS-encrypted) connection \r\n \r\nThis directory server is not currently\
+      \ configured to reject such binds.  The security of this directory server can\
+      \ be significantly enhanced by configuring the server to reject such binds.\
+      \  For more details and information on how to make this configuration change\
+      \ to the server, please see http://go.microsoft.com/fwlink/?LinkID=87923. \r\
+      \n \r\nSummary information on the number of these binds received within the\
+      \ past 24 hours is below. \r\n \r\nYou can enable additional logging to log\
+      \ an event each time a client makes such a bind, including information on which\
+      \ client made the bind.  To do so, please raise the setting for the \"LDAP Interface\
+      \ Events\" event logging category to level 2 or higher. \r\n \r\nNumber of simple\
+      \ binds performed without SSL/TLS: 74 \r\nNumber of Negotiate/Kerberos/NTLM/Digest\
+      \ binds performed without signing: 0"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Directory Service
+    host: ACME-DC01
+    _raw: "04/01/2022 01:51:01 PM\nLogName=Directory Service\nEventCode=3041\nEventType=3\n\
+      ComputerName=acme-dc01.acme.local\nUser=NOT_TRANSLATED\nSid=S-1-5-7\nSidType=0\n\
+      SourceName=Microsoft-Windows-ActiveDirectory_DomainService\nType=Warning\nRecordNumber=5679\n\
+      Keywords=Classic\nTaskCategory=LDAP Interface\nOpCode=The operation completed\
+      \ successfully.\nMessage=The security of this directory server can be significantly\
+      \ enhanced by configuring the server to enforce  validation of Channel Binding\
+      \ Tokens received in LDAP bind requests sent over LDAPS connections. Even if\
+      \  no clients are issuing LDAP bind requests over LDAPS, configuring the server\
+      \ to validate Channel Binding  Tokens will improve the security of this server.\
+      \ \r\n \r\nFor more details and information on how to make this configuration\
+      \ change to the server, please see https://go.microsoft.com/fwlink/?linkid=2102405."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 01:49:17 PM\nLogName=Security\nEventCode=4662\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4087953\nKeywords=Audit Success\n\
+      TaskCategory=Directory Service Access\nOpCode=Info\nMessage=An operation was\
+      \ performed on an object.\r\n\r\nSubject :\r\n\tSecurity ID:\t\tSTSHIRTCO\\\
+      jeffw\r\n\tAccount Name:\t\tjeffw\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon\
+      \ ID:\t\t0x3BC8DE65\r\n\r\nObject:\r\n\tObject Server:\t\tDS\r\n\tObject Type:\t\
+      \tgroupPolicyContainer\n\tObject Name:\t\tCN={A2F24A9F-A822-49E5-B229-6F093F4A7E93}CN=Policies,CN=System,DC=acme,DC=local\n\
+      \tHandle ID:\t\t0x0\r\n\r\nOperation:\r\n\tOperation Type:\t\tObject Access\r\
+      \n\tAccesses:\t\tWrite Property\r\n\t\t\t\t\r\n\tAccess Mask:\t\t0x20\r\n\t\
+      Properties:\t\tWrite Property\r\n\t\tDefault Property Set\n\t\t\tversionNumber\n\
+      \tgroupPolicyContainer\n\r\n\r\nAdditional Information:\r\n\tParameter 1:\t\t\
+      -\r\n\tParameter 2:"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 01:48:15 PM\nLogName=Security\nEventCode=5448\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4087761\nKeywords=Audit Success\n\
+      TaskCategory=Filtering Platform Policy Change\nOpCode=Info\nMessage=A Windows\
+      \ Filtering Platform provider has been changed.\r\n\t\r\nSubject:\r\n\tSecurity\
+      \ ID:\t\tNT AUTHORITY\\SYSTEM\r\n\tAccount Name:\t\tNT AUTHORITY\\SYSTEM\r\n\
+      \r\nProcess Information:\r\n\tProcess ID:\t4\r\n\r\nChange Information:\r\n\t\
+      Change Type:\tAdd\r\n\r\nProvider Information:\r\n\tID:\t\t{b1afce13-b89a-4ef0-bbaa-245caee048fa}\r\
+      \n\tName:\t\tSplunk, Inc.\r\n\tType:\t\tNot persistent"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 01:48:15 PM\nLogName=Security\nEventCode=5450\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4087760\nKeywords=Audit Success\n\
+      TaskCategory=Filtering Platform Policy Change\nOpCode=Info\nMessage=A Windows\
+      \ Filtering Platform sub-layer has been changed.\r\n\t\r\nSubject:\r\n\tSecurity\
+      \ ID:\t\tNT AUTHORITY\\SYSTEM\r\n\tAccount Name:\t\tNT AUTHORITY\\SYSTEM\r\n\
+      \r\nProcess Information:\r\n\tProcess ID:\t4\r\n\r\nProvider Information:\r\n\
+      \tProvider ID:\t{00000000-0000-0000-0000-000000000000}\r\n\tProvider Name:\t\
+      -\r\n\r\nChange Information:\r\n\tChange Type:\tAdd\r\n\r\nSub-layer Information:\r\
+      \n\tSub-layer ID:\t{2e207682-d95f-4525-b966-969f26587f03}\r\n\tSub-layer Name:\t\
+      Transport Inspect Sub-Layer\r\n\tSub-layer Type:\tNot persistent\r\n\r\nAdditional\
+      \ Information:\r\n\tWeight:\t5"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 01:48:15 PM\nLogName=Security\nEventCode=5446\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4087759\nKeywords=Audit Success\n\
+      TaskCategory=Filtering Platform Policy Change\nOpCode=Info\nMessage=A Windows\
+      \ Filtering Platform callout has been changed.\r\n\t\r\nSubject:\r\n\tSecurity\
+      \ ID:\t\tNT AUTHORITY\\SYSTEM\r\n\tAccount Name:\t\tNT AUTHORITY\\SYSTEM\r\n\
+      \r\nProcess Information:\r\n\tProcess ID:\t4\r\n\r\nProvider Information:\r\n\
+      \tID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\tName:\t\t-\r\n\r\nChange\
+      \ Information:\r\n\tChange Type:\tAdd\r\n\r\nCallout Information:\r\n\tID:\t\
+      \t{6d126434-ed67-4285-925c-cb29282e0e06}\r\n\tName:\t\tTransport Inspect Callout\r\
+      \n\tType:\t\tNot persistent\r\n\tRun-Time ID:\t297\r\n\r\nLayer Information:\r\
+      \n\tID:\t\t{634a869f-fc23-4b90-b0c1-bf620a36ae6f}\r\n\tName:\t\tInbound Transport\
+      \ v6 Layer\r\n\tRun-Time ID:\t14"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: ACME-DC01
+    _raw: "04/01/2022 01:28:20 PM\nLogName=Application\nEventCode=1000\nEventType=2\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Application Error\nType=Error\n\
+      RecordNumber=11490\nKeywords=Classic\nTaskCategory=Application Crashing Events\n\
+      OpCode=Info\nMessage=Faulting application name: splunk-perfmon.exe, version:\
+      \ 2050.1024.25018.25489, time stamp: 0x61ba65e0\r\nFaulting module name: splunk-perfmon.exe,\
+      \ version: 2050.1024.25018.25489, time stamp: 0x61ba65e0\r\nException code:\
+      \ 0xc0000005\r\nFault offset: 0x00000000006e37cf\r\nFaulting process id: 0x814\r\
+      \nFaulting application start time: 0x01d845e80830c5cb\r\nFaulting application\
+      \ path: C:\\Program Files\\SplunkUniversalForwarder\\bin\\splunk-perfmon.exe\r\
+      \nFaulting module path: C:\\Program Files\\SplunkUniversalForwarder\\bin\\splunk-perfmon.exe\r\
+      \nReport Id: eff97ba8-683b-4bff-abec-f081df269117\r\nFaulting package full name:\
+      \ \r\nFaulting package-relative application ID:"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: ACME-DC01
+    _raw: '04/01/2022 01:26:51 PM
+
+      LogName=Application
+
+      EventCode=4097
+
+      EventType=4
+
+      ComputerName=acme-dc01.acme.local
+
+      SourceName=Microsoft-Windows-CAPI2
+
+      Type=Information
+
+      RecordNumber=11489
+
+      Keywords=Classic
+
+      TaskCategory=None
+
+      OpCode=Info
+
+      Message=Successful auto update of third-party root certificate:: Subject: <CN=ISRG
+      Root X1, O=Internet Security Research Group, C=US> Sha1 thumbprint: <CABD2A79A1076A31F21D253635CB039D4329A5E8>.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:DNS Server
+    host: ACME-DC02
+    _raw: '04/01/2022 01:24:52 PM
+
+      LogName=DNS Server
+
+      EventCode=5502
+
+      EventType=4
+
+      ComputerName=acme-dc02.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-DNS-Server-Service
+
+      Type=Information
+
+      RecordNumber=435
+
+      Keywords=None
+
+      TaskCategory=None
+
+      OpCode=Info
+
+      Message=The DNS server received a bad TCP-based DNS message from 192.241.223.243.  The
+      packet was rejected or ignored. The event data contains the DNS packet.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC02
+    _raw: "04/01/2022 01:21:30 PM\nLogName=Security\nEventCode=4770\nEventType=0\n\
+      ComputerName=acme-dc02.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4264297\nKeywords=Audit Success\n\
+      TaskCategory=Kerberos Service Ticket Operations\nOpCode=Info\nMessage=A Kerberos\
+      \ service ticket was renewed.\r\n\r\nAccount Information:\r\n\tAccount Name:\t\
+      \tACME-DC02$@STSHIRTCO.LOCAL\r\n\tAccount Domain:\t\tSTSHIRTCO.LOCAL\r\n\r\n\
+      Service Information:\r\n\tService Name:\t\tkrbtgt\r\n\tService ID:\t\tSTSHIRTCO\\\
+      krbtgt\r\n\r\nNetwork Information:\r\n\tClient Address:\t\t::1\r\n\tClient Port:\t\
+      \t0\r\n\r\nAdditional Information:\r\n\tTicket Options:\t\t0x10002\r\n\tTicket\
+      \ Encryption Type:\t0x12\r\n\r\nTicket options and encryption types are defined\
+      \ in RFC 4120."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 01:02:50 PM\nLogName=Security\nEventCode=4741\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4082613\nKeywords=Audit Success\n\
+      TaskCategory=Computer Account Management\nOpCode=Info\nMessage=A computer account\
+      \ was created.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\jeffw\r\n\tAccount\
+      \ Name:\t\tjeffw\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon ID:\t\t0x3BC8DE65\r\
+      \n\r\nNew Computer Account:\r\n\tSecurity ID:\t\tSTSHIRTCO\\ACME-COMPUTER-1$\r\
+      \n\tAccount Name:\t\tACME-COMPUTER-1$\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\r\
+      \nAttributes:\r\n\tSAM Account Name:\tACME-COMPUTER-1$\r\n\tDisplay Name:\t\t\
+      -\r\n\tUser Principal Name:\t-\r\n\tHome Directory:\t\t-\r\n\tHome Drive:\t\t\
+      -\r\n\tScript Path:\t\t-\r\n\tProfile Path:\t\t-\r\n\tUser Workstations:\t-\r\
+      \n\tPassword Last Set:\t<never>\r\n\tAccount Expires:\t\t<never>\r\n\tPrimary\
+      \ Group ID:\t515\r\n\tAllowedToDelegateTo:\t-\r\n\tOld UAC Value:\t\t0x0\r\n\
+      \tNew UAC Value:\t\t0x85\r\n\tUser Account Control:\t\r\n\t\tAccount Disabled\r\
+      \n\t\t'Password Not Required' - Enabled\r\n\t\t'Workstation Trust Account' -\
+      \ Enabled\r\n\tUser Parameters:\t-\r\n\tSID History:\t\t-\r\n\tLogon Hours:\t\
+      \t<value not set>\r\n\tDNS Host Name:\t\t-\r\n\tService Principal Names:\t-\r\
+      \n\r\nAdditional Information:\r\n\tPrivileges\t\t-"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC02-CHILD
+    _raw: '04/01/2022 12:21:30 PM
+
+      LogName=System
+
+      EventCode=7040
+
+      EventType=4
+
+      ComputerName=acme-dc02-child.childdomain.acme.local
+
+      User=NOT_TRANSLATED
+
+      Sid=S-1-5-18
+
+      SidType=0
+
+      SourceName=Microsoft-Windows-Service Control Manager
+
+      Type=Information
+
+      RecordNumber=89946
+
+      Keywords=Classic
+
+      TaskCategory=None
+
+      OpCode=The operation completed successfully.
+
+      Message=The start type of the Windows Modules Installer service was changed
+      from auto start to demand start.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: ACME-DC02
+    _raw: '04/01/2022 12:00:05 PM
+
+      LogName=System
+
+      EventCode=6013
+
+      EventType=4
+
+      ComputerName=acme-dc02.acme.local
+
+      SourceName=EventLog
+
+      Type=Information
+
+      RecordNumber=97530
+
+      Keywords=Classic
+
+      TaskCategory=None
+
+      OpCode=None
+
+      Message=The system uptime is 2406318 seconds.'
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 11:59:03 AM\nLogName=Security\nEventCode=4725\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4075457\nKeywords=Audit Success\n\
+      TaskCategory=User Account Management\nOpCode=Info\nMessage=A user account was\
+      \ disabled.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\jeffw\r\n\tAccount\
+      \ Name:\t\tjeffw\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon ID:\t\t0x3BC8DE65\r\
+      \n\r\nTarget Account:\r\n\tSecurity ID:\t\tSTSHIRTCO\\rzombie\r\n\tAccount Name:\t\
+      \trzombie\r\n\tAccount Domain:\t\tSTSHIRTCO"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: ACME-DC01
+    _raw: "04/01/2022 11:57:41 AM\nLogName=Security\nEventCode=4727\nEventType=0\n\
+      ComputerName=acme-dc01.acme.local\nSourceName=Microsoft Windows security\
+      \ auditing.\nType=Information\nRecordNumber=4075361\nKeywords=Audit Success\n\
+      TaskCategory=Security Group Management\nOpCode=Info\nMessage=A security-enabled\
+      \ global group was created.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tSTSHIRTCO\\\
+      jeffw\r\n\tAccount Name:\t\tjeffw\r\n\tAccount Domain:\t\tSTSHIRTCO\r\n\tLogon\
+      \ ID:\t\t0x3BC8DE65\r\n\r\nNew Group:\r\n\tSecurity ID:\t\tSTSHIRTCO\\acme-all-it\r\
+      \n\tGroup Name:\t\tacme-all-it\r\n\tGroup Domain:\t\tSTSHIRTCO\r\n\r\nAttributes:\r\
+      \n\tSAM Account Name:\tacme-all-it\r\n\tSID History:\t\t-\r\n\r\nAdditional\
+      \ Information:\r\n\tPrivileges:\t\t-"

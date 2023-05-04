@@ -1,0 +1,169 @@
+samples:
+- name: ITF-AD-Powershell
+  interval: 60
+  count: 8
+  randomizeEvents: false
+  lines:
+  - index: msad
+    sourcetype: Powershell:ScriptExecutionSummary
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 'Identity="531291b1-e15f-43c6-8ba3-aaf85e2077c8"
+
+      InvocationLine="& "$SplunkHome\etc\apps\Splunk_TA_windows\bin\Invoke-MonitoredScript.ps1"
+      -Command ".\powershell\2012r2-health.ps1""
+
+      TerminatingError="False"
+
+      ErrorCount="0"
+
+      Elapsed="00:00:01.720"
+
+      '
+  - index: msad
+    sourcetype: Powershell:ScriptExecutionSummary
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 'Identity="fc97c8ad-8c0c-4962-9b0b-f20223ade095"
+
+      InvocationLine="& "$SplunkHome\etc\apps\Splunk_TA_windows\bin\Invoke-MonitoredScript.ps1"
+      -Command ".\powershell\2012r2-repl-stats.ps1""
+
+      TerminatingError="False"
+
+      ErrorCount="0"
+
+      Elapsed="00:00:00.166"
+
+      '
+  - index: msad
+    sourcetype: Powershell:ScriptExecutionSummary
+    source: Powershell
+    host: ACME-DC01-CHILD
+    _raw: 'Identity="bf0b4437-b6f7-4fcd-8c73-e111d1e39bc9"
+
+      InvocationLine="& "$SplunkHome\etc\apps\Splunk_TA_windows\bin\Invoke-MonitoredScript.ps1"
+      -Command ".\powershell\2012r2-health.ps1""
+
+      TerminatingError="False"
+
+      ErrorCount="0"
+
+      Elapsed="00:00:03.495"
+
+      '
+  - index: msad
+    sourcetype: Powershell:ScriptExecutionSummary
+    source: Powershell
+    host: ACME-DC02
+    _raw: 'Identity="8b91abba-bbfa-46bb-b39b-748774af92f7"
+
+      InvocationLine="& "$SplunkHome\etc\apps\Splunk_TA_windows\bin\Invoke-MonitoredScript.ps1"
+      -Command ".\powershell\2012r2-repl-stats.ps1""
+
+      TerminatingError="False"
+
+      ErrorCount="0"
+
+      Elapsed="00:00:00.565"
+
+      '
+  - index: msad
+    sourcetype: Powershell:ScriptExecutionSummary
+    source: Powershell
+    host: ACME-DC02
+    _raw: 'Identity="52932749-68c6-47cf-8292-26ad61e46347"
+
+      InvocationLine="& "$SplunkHome\etc\apps\Splunk_TA_windows\bin\Invoke-MonitoredScript.ps1"
+      -Command ".\powershell\2012r2-health.ps1""
+
+      TerminatingError="False"
+
+      ErrorCount="0"
+
+      Elapsed="00:00:02.900"
+
+      '
+  - index: msad
+    sourcetype: Powershell:ScriptExecutionSummary
+    source: Powershell
+    host: ACME-DC01
+    _raw: 'Identity="9eff52c8-b72f-4011-b7cf-7fb5973f26ec"
+
+      InvocationLine="& "$SplunkHome\etc\apps\Splunk_TA_windows\bin\Invoke-MonitoredScript.ps1"
+      -Command ".\powershell\2012r2-repl-stats.ps1""
+
+      TerminatingError="False"
+
+      ErrorCount="0"
+
+      Elapsed="00:00:02.427"
+
+      '
+  - index: msad
+    sourcetype: Powershell:ScriptExecutionSummary
+    source: Powershell
+    host: ACME-DC02-CHILD
+    _raw: 'Identity="6e0f30e7-e539-48e0-ae95-28c8c66a3fa5"
+
+      InvocationLine="& "$SplunkHome\etc\apps\Splunk_TA_windows\bin\Invoke-MonitoredScript.ps1"
+      -Command ".\powershell\2012r2-repl-stats.ps1""
+
+      TerminatingError="False"
+
+      ErrorCount="0"
+
+      Elapsed="00:00:02.426"
+
+      '
+  - index: msad
+    sourcetype: Powershell:ScriptExecutionSummary
+    source: Powershell
+    host: ACME-DC01
+    _raw: 'Identity="879fcf7d-bbdb-4712-a0ec-2cc94c2bbca5"
+
+      InvocationLine="& "$SplunkHome\etc\apps\Splunk_TA_windows\bin\Invoke-MonitoredScript.ps1"
+      -Command ".\powershell\2012r2-health.ps1""
+
+      TerminatingError="False"
+
+      ErrorCount="0"
+
+      Elapsed="00:00:00.493"
+
+      '
+  - index: msad
+    sourcetype: Powershell:ScriptExecutionErrorRecord
+    source: Powershell
+    host: ACME-DC01
+    _raw: "ParentIdentity=\"caa25a95-698a-48b2-b588-1d2c96e8e29c\"\nErrorIndex=\"\
+      0\"\nErrorMessage=\"The server has returned the following error: invalid enumeration\
+      \ context.\"\nPositionMessage=\"At C:\\Program Files\\SplunkUniversalForwarder\\\
+      etc\\apps\\Splunk_TA_windows\\bin\\powershell\\2012r2-repl-stats.ps1:1 char:1\r\
+      \n+ Import-Module ActiveDirectory -ErrorAction SilentlyContinue\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\"\
+      \nCategoryInfo=\"NotSpecified: (AD:PSDriveInfo) [Import-Module], ADException\"\
+      \nFullyQualifiedErrorId=\"ADProvider:NewDrive:InvalidRoot:ADError,Microsoft.PowerShell.Commands.ImportModuleCommand\"\
+      \nException=\"Microsoft.ActiveDirectory.Management.ADException: The server has\
+      \ returned the following error: invalid enumeration context. ---> System.ServiceModel.FaultException:\
+      \ Invalid Enumeration Context specified in the request.\r\n   --- End of inner\
+      \ exception stack trace ---\r\n   at Microsoft.ActiveDirectory.Management.AdwsConnection.ThrowException(AdwsFault\
+      \ adwsFault, FaultException faultException)\r\n   at Microsoft.ActiveDirectory.Management.AdwsConnection.Search(ADSearchRequest\
+      \ request)\r\n   at Microsoft.ActiveDirectory.Management.ADWebServiceStoreAccess.Microsoft.ActiveDirectory.Management.IADSyncOperations.Search(ADSessionHandle\
+      \ handle, ADSearchRequest request)\r\n   at Microsoft.ActiveDirectory.Management.ADObjectSearcher.PagedSearch(Object&\
+      \ pageCookie, Boolean& hasSizeLimitExceeded, Int32 pageSize, Int32 sizeLimit)\r\
+      \n   at Microsoft.ActiveDirectory.Management.ADObjectSearchResultEnumerator.System.Collections.IEnumerator.MoveNext()\r\
+      \n   at Microsoft.ActiveDirectory.Management.ADSchema.ReadObjectSchema(ADObjectSearcher\
+      \ searcher, ADSchema adSchema)\r\n   at Microsoft.ActiveDirectory.Management.ADSchema.Init()\r\
+      \n   at Microsoft.ActiveDirectory.Management.ADTypeConverter.ConvertFromRaw(String\
+      \ propertyName, ADPropertyValueCollection propertyValues)\r\n   at Microsoft.ActiveDirectory.Management.ADObjectSearcher.CreateRichADObject(ADObject\
+      \ resultEntry)\r\n   at Microsoft.ActiveDirectory.Management.ADObjectSearcher.PagedSearch(Object&\
+      \ pageCookie, Boolean& hasSizeLimitExceeded, Int32 pageSize, Int32 sizeLimit)\r\
+      \n   at Microsoft.ActiveDirectory.Management.ADObjectSearchResultEnumerator.System.Collections.IEnumerator.MoveNext()\r\
+      \n   at Microsoft.ActiveDirectory.Management.ADObjectSearcher.FindOne(Boolean&\
+      \ foundMoreThanOneResult)\r\n   at Microsoft.ActiveDirectory.Management.Provider.ADProvider.GetValidatedADObject(ADSessionInfo\
+      \ sessionInfo, String path, Collection`1 propertiesToRetrieve, ADPathFormat\
+      \ formatType)\r\n   at Microsoft.ActiveDirectory.Management.Provider.ADProvider.GetAllHostedNamingContexts(ADSessionInfo\
+      \ sessionInfo, ADRootDSE rootDSE, ADDriveInfo extendedDriveInfo, Collection`1\
+      \ propertiesToRetrieve)\r\n   at Microsoft.ActiveDirectory.Management.Provider.ADProvider.NewDrive(PSDriveInfo\
+      \ drive)\"\nInnerException=\"System.ServiceModel.FaultException: Invalid Enumeration\
+      \ Context specified in the request.\"\n"

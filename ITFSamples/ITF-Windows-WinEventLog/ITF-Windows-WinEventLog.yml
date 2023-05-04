@@ -1,0 +1,2063 @@
+samples:
+- name: ITF-Windows-WinEventLog
+  interval: 1
+  count: 3
+  randomizeEvents: true
+  tokens:
+  - name: TIMESTAMP
+    format: template
+    type: gotimestamp
+    replacement: "03/10/2022 04:46:06 PM"
+  - name: PACKAGE_TITLE
+    format: template
+    type: choice
+    sample: PACKAGE_TITLE.sample
+  - name: SID
+    format: template
+    type: choice
+    choice:
+      - S-1-5-18
+      - S-1-5-21-867926485-3934617210-1925664431-500
+      - S-1-5-19
+  - name: HOST
+    format: template
+    type: choice
+    choice:
+      - win-01.internal.acme.com
+      - win-02.internal.acme.com
+      - win-03.internal.acme.com
+      - win-04.internal.acme.com
+      - win-05.internal.acme.com
+  lines:
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=0\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=gupdate\nType=Information\nRecordNumber=4611709\n\
+      Keywords=Classic\nTaskCategory=None\nOpCode=Info\nMessage=Splunk could not get\
+      \ the description for this event. Either the component that raises this event\
+      \ is not installed on your local computer or the installation is corrupt.\n\n\
+      FormatMessage error:\n\nGot the following information from this event: \n\n\
+      Service stopped"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=1\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=splunk-otel-collector\nType=Information\nRecordNumber=4611371\n\
+      Keywords=Classic\nTaskCategory=None\nOpCode=Info\nMessage=1.6469306378414426e+09\t\
+      info\tbuilder/receivers_builder.go:68\tReceiver is starting..."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=1000\nEventType=2\n\
+      ComputerName=$HOST$\nSourceName=Application Error\nType=Error\nRecordNumber=4610173\n\
+      Keywords=Classic\nTaskCategory=Application Crashing Events\nOpCode=Info\nMessage=Faulting\
+      \ application name: splunk-perfmon.exe, version: 2049.0.24452.62770, time stamp:\
+      \ 0x5f84f788\r\nFaulting module name: splunk-perfmon.exe, version: 2049.0.24452.62770,\
+      \ time stamp: 0x5f84f788\r\nException code: 0xc0000005\r\nFault offset: 0x0000000000693bf3\r\
+      \nFaulting process id: 0x598\r\nFaulting application start time: 0x01d8348ad1c7adbf\r\
+      \nFaulting application path: C:\\Program Files\\SplunkUniversalForwarder\\bin\\\
+      splunk-perfmon.exe\r\nFaulting module path: C:\\Program Files\\SplunkUniversalForwarder\\\
+      bin\\splunk-perfmon.exe\r\nReport Id: 0a90e9e5-007d-4bb4-a3cc-ae27c61b4e2c\r\
+      \nFaulting package full name: \r\nFaulting package-relative application ID:"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=10000\nEventType=4\n\
+      ComputerName=$HOST$\nUser=NOT_TRANSLATED\nSid=$SID$\nSidType=0\nSourceName=Microsoft-Windows-RestartManager\n\
+      Type=Information\nRecordNumber=4604305\nKeywords=None\nTaskCategory=None\nOpCode=Info\n\
+      Message=Starting session 0 - \u200E2022\u200E-\u200E03\u200E-\u200E10T14:14:43.403081900Z."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=10001\nEventType=4\n\
+      ComputerName=$HOST$\nUser=NOT_TRANSLATED\nSid=$SID$\nSidType=0\nSourceName=Microsoft-Windows-RestartManager\n\
+      Type=Information\nRecordNumber=4604324\nKeywords=None\nTaskCategory=None\nOpCode=Info\n\
+      Message=Ending session 0 started \u200E2022\u200E-\u200E03\u200E-\u200E10T14:14:43.403081900Z."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=1001
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-LoadPerf
+      Type=Information
+      RecordNumber=4605332
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=10010
+      EventType=2
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-DistributedCOM
+      Type=Error
+      RecordNumber=115899
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=Info
+      Message=The server {9BA05972-F6A8-11CF-A442-00A0C90A8F39} did not register with DCOM within the required timeout.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=1002
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-Winlogon
+      Type=Information
+      RecordNumber=4604356
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=The operation completed successfully.
+      Message=The shell stopped unexpectedly and explorer.exe was restarted.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=1003\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Security-SPP\nType=Information\n\
+      RecordNumber=4611620\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=The Software Protection service has completed\
+      \ licensing status check.\r\nApplication Id=55c92734-d682-4d71-983e-d6ec3f16059f\r\
+      \nLicensing Status=\n1: 1124ad22-3737-4c21-bfab-ae36a5323828, 1, 0 [(0 [0xC004F014,\
+      \ 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]\n2: 175a4401-9571-44e3-b7ed-1418ac983e2b,\
+      \ 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]\n3:\
+      \ 22105925-48c3-4ff4-a294-f654bb27e390, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1\
+      \ )(2 )(3 )]\n4: 2e7a9ad1-a849-4b56-babe-17d5a29fe4b4, 1, 0 [(0 [0xC004F014,\
+      \ 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]\n5: 34e1ae55-27f8-4950-8877-7a03be5fb181,\
+      \ 1, 0 [(0 [0x00000000, 1, 0], [(?)( 1 0x00000000)(?)( 2 0x00000000 0 0 msft:rm/algorithm/volume/1.0\
+      \ 0x4004F040 259157)(?)(?)( 10 0x00000000 msft:rm/algorithm/flags/1.0)(?)])(1\
+      \ )(2 )(3 )]\n6: 3c006fa7-3b03-45a4-93da-63ddc1bdce11, 1, 0 [(0 [0xC004F014,\
+      \ 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]\n7: 44aba848-245e-4e1a-ac42-1def36871f95,\
+      \ 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]\n8:\
+      \ 661f7658-7035-4b4c-9f35-010682943ec2, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1\
+      \ )(2 )(3 )]\n9: 7305f85e-3cc0-4168-807e-af0afae1f51f, 1, 0 [(0 [0xC004F014,\
+      \ 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]\n10: 7c815a7a-6d68-4369-9cfa-c3671c8d1a3f,\
+      \ 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]\n11:\
+      \ 864fa973-9c03-4e02-81d2-87fd17bc0b8c, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1\
+      \ )(2 )(3 )]\n12: 950d5c80-3a8b-4c7a-991b-6487e045dbc3, 1, 0 [(0 [0xC004F014,\
+      \ 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]\n13: 9db83b52-9904-4326-8957-ebe6feedf37c,\
+      \ 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]\n14:\
+      \ c28b8385-97ea-4fb1-acae-57fa346e6158, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1\
+      \ )(2 )(3 )]\n15: ceae6266-8034-48db-92e4-fc94eb11742f, 1, 0 [(0 [0xC004F014,\
+      \ 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]\n16: d8966f28-347f-4d92-8912-1e57d357200b,\
+      \ 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1 )(2 )(3 )]\n17:\
+      \ e73aabfa-12bc-4705-b551-2dd076bebc7d, 1, 0 [(0 [0xC004F014, 0, 0], [(?)(?)(?)(?)(?)(?)(?)(?)])(1\
+      \ )(2 )(3 )]"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=1004\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Security-SPP\nType=Information\n\
+      RecordNumber=4611616\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=The Software Protection service has successfully\
+      \ installed the license.\r\nLicense Title=Windows(R) UL inherited License (Private)\r\
+      \nLicense Id=5fb6cf25-982b-4bab-84c1-88559237505b"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=10100
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-DriverFrameworks-UserMode
+      Type=Information
+      RecordNumber=115233
+      Keywords=None
+      TaskCategory=Installation or update of device drivers.
+      OpCode=Stop
+      Message=The driver package installation has succeeded.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=10148\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Windows Remote Management\n\
+      Type=Information\nRecordNumber=116029\nKeywords=Classic\nTaskCategory=None\n\
+      OpCode=Info\nMessage=The WinRM service is listening for WS-Management requests.\
+      \ \r\n\r\n User Action \r\n Use the following command to see the specific IPs\
+      \ on which WinRM is listening: \r\n\r\n winrm enumerate winrm/config/listener"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=10149\nEventType=3\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Windows Remote Management\n\
+      Type=Warning\nRecordNumber=115509\nKeywords=Classic\nTaskCategory=None\nOpCode=Info\n\
+      Message=The WinRM service is not listening for WS-Management requests. \r\n\r\
+      \n User Action \r\n If you did not intentionally stop the service, use the following\
+      \ command to see the WinRM configuration: \r\n\r\n winrm enumerate winrm/config/listener"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=1033\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Security-SPP\nType=Information\n\
+      RecordNumber=4611726\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=These policies are being excluded since they\
+      \ are only defined with override-only attribute.\r\nPolicy Names=(Security-SPP-Reserved-EnableNotificationMode)\
+      \ \r\nApp Id=55c92734-d682-4d71-983e-d6ec3f16059f\r\nSku Id=34e1ae55-27f8-4950-8877-7a03be5fb181"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=1034
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-Security-SPP
+      Type=Information
+      RecordNumber=4611725
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=The operation completed successfully.
+      Message=Duplicate definition of policy found. Policy name=Security-SPP-IgnoreDeferredActivation  Priority=500
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=1035
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=MsiInstaller
+      Type=Information
+      RecordNumber=4604259
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=Info
+      Message=Windows Installer reconfigured the product. Product Name: Google Chrome. Product Version: 68.187.51. Product Language: 1033. Manufacturer: Google LLC. Reconfiguration success or error status: 0.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=1040
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=MsiInstaller
+      Type=Information
+      RecordNumber=4604297
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=Info
+      Message=Beginning a Windows Installer transaction: C:\Users\Administrator\Downloads\googlechromestandaloneenterprise64.msi. Client Process Id: 6800.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=1042
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=MsiInstaller
+      Type=Information
+      RecordNumber=4604321
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=Info
+      Message=Ending a Windows Installer transaction: C:\Users\Administrator\Downloads\googlechromestandaloneenterprise64.msi. Client Process Id: 6800.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=1066\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Security-SPP\nType=Information\n\
+      RecordNumber=4611382\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=Initialization status for service objects.\r\
+      \nC:\\Windows\\system32\\sppwinob.dll, msft:spp/windowsfunctionality/agent/7.0,\
+      \ 0x00000000, 0x00000000\nC:\\Windows\\system32\\sppobjs.dll, msft:rm/algorithm/inherited/1.0,\
+      \ 0x00000000, 0x00000000\nC:\\Windows\\system32\\sppobjs.dll, msft:rm/algorithm/phone/1.0,\
+      \ 0x00000000, 0x00000000\nC:\\Windows\\system32\\sppobjs.dll, msft:rm/algorithm/pkey/detect,\
+      \ 0x00000000, 0x00000000\nC:\\Windows\\system32\\sppobjs.dll, msft:spp/ActionScheduler/1.0,\
+      \ 0x00000000, 0x00000000\nC:\\Windows\\system32\\sppobjs.dll, msft:spp/TaskScheduler/1.0,\
+      \ 0x00000000, 0x00000000\nC:\\Windows\\system32\\sppobjs.dll, msft:spp/statecollector/pkey,\
+      \ 0x00000000, 0x00000000\nC:\\Windows\\system32\\sppobjs.dll, msft:spp/volume/services/kms/1.0,\
+      \ 0x00000000, 0x00000000\nC:\\Windows\\system32\\sppobjs.dll, msft:spp/volume/services/kms/activationinfo/1.0,\
+      \ 0x00000000, 0x00000000"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=1074\nEventType=4\nComputerName=$HOST$\n\
+      User=NOT_TRANSLATED\nSid=$SID$\nSidType=0\nSourceName=User32\nType=Information\n\
+      RecordNumber=115898\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=The process C:\\Windows\\system32\\MusNotificationUx.exe\
+      \ (EC2AMAZ-3G1B1SF) has initiated the restart of computer EC2AMAZ-3G1B1SF on\
+      \ behalf of user EC2AMAZ-3G1B1SF\\Administrator for the following reason: Operating\
+      \ System: Service pack (Planned)\r\n Reason Code: 0x80020010\r\n Shutdown Type:\
+      \ restart\r\n Comment:"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=1076\nEventType=3\nComputerName=$HOST$\n\
+      User=NOT_TRANSLATED\nSid=$SID$\nSidType=0\nSourceName=User32\nType=Warning\n\
+      RecordNumber=115817\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=The reason supplied by user EC2AMAZ-3G1B1SF\\\
+      Administrator for the last unexpected shutdown of this computer is: Other (Unplanned)\r\
+      \n Reason Code: 0xa000000\r\n Problem ID: \r\n Bugcheck String: \r\n Comment:"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=109\nEventType=4\nComputerName=$HOST$\n\
+      SourceName=Microsoft-Windows-Kernel-Power\nType=Information\nRecordNumber=115957\n\
+      Keywords=None\nTaskCategory=103\nOpCode=Info\nMessage=The kernel power manager\
+      \ has initiated a shutdown transition.\r\n\r\nShutdown Reason: Kernel API"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Security
+      EventCode=1100
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-Eventlog
+      Type=Information
+      RecordNumber=23646700
+      Keywords=Audit Success
+      TaskCategory=Service shutdown
+      OpCode=Info
+      Message=The event logging service has shut down.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Security
+      EventCode=1101
+      EventType=2
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-Eventlog
+      Type=Error
+      RecordNumber=23638997
+      Keywords=Audit Success
+      TaskCategory=Event processing
+      OpCode=Info
+      Message=Audit events have been dropped by the transport.  0
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=11707
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=MsiInstaller
+      Type=Information
+      RecordNumber=4604322
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=Info
+      Message=Product: Google Chrome -- Installation completed successfully.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=11724
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=MsiInstaller
+      Type=Information
+      RecordNumber=4604293
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=Info
+      Message=Product: Google Chrome -- Removal completed successfully.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=11728
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=MsiInstaller
+      Type=Information
+      RecordNumber=4604258
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=Info
+      Message=Product: Google Chrome -- Configuration completed successfully.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=12
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-UserModePowerService
+      Type=Information
+      RecordNumber=116068
+      Keywords=None
+      TaskCategory=10
+      OpCode=Info
+      Message=Process C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.17763.2510_none_56d7c72d9929a86b\TiWorker.exe (process ID:1028) reset policy scheme from {8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c} to {8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c}
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=12288\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Security-SPP\nType=Information\n\
+      RecordNumber=4609388\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=The client has sent an activation request\
+      \ to the key management service machine.\r\nInfo:\r\n0x00000000, 0x00000000,\
+      \ 169.254.169.250:1688, 606d10ae-cd93-48cb-90b5-ab37fabb3150, 2022/03/10 16:00,\
+      \ 1, 1, 249120, 34e1ae55-27f8-4950-8877-7a03be5fb181, 5"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=12289\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Security-SPP\nType=Information\n\
+      RecordNumber=4609389\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=The client has processed an activation response\
+      \ from the key management service machine.\r\nInfo:\r\n0x00000000, 0x00000000,\
+      \ 1, 0, 10, 120, 10080, 2022/03/10 16:00"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=13\nEventType=4\nComputerName=$HOST$\n\
+      SourceName=Microsoft-Windows-Kernel-General\nType=Information\nRecordNumber=115958\n\
+      Keywords=None\nTaskCategory=2\nOpCode=Info\nMessage=The operating system is\
+      \ shutting down at system time \u200E2022\u200E-\u200E03\u200E-\u200E10T16:42:41.570212500Z."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=14
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Wininit
+      Type=Information
+      RecordNumber=115976
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=Credential Guard configuration: 0x0, 0
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=15
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Kernel-General
+      Type=Information
+      RecordNumber=115147
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=Hive \SystemRoot\System32\Config\SOFTWARE was reorganized with a starting size of 87552000 bytes and an ending size of 87588864 bytes.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=15007
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-HttpEvent
+      Type=Information
+      RecordNumber=116070
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=The operation completed successfully.
+      Message=Reservation for namespace identified by URL prefix http://+:10246/MDEServer/ was successfully added.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=15008
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-HttpEvent
+      Type=Information
+      RecordNumber=116059
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=The operation completed successfully.
+      Message=Reservation for namespace identified by URL prefix http://+:3387/rdp/ was successfully deleted.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=153
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Kernel-Boot
+      Type=Information
+      RecordNumber=115960
+      Keywords=None
+      TaskCategory=62
+      OpCode=Info
+      Message=Virtualization-based security (policies: 0) is disabled.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=1531
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-User Profile Service
+      Type=Information
+      RecordNumber=4611261
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=The User Profile Service has started successfully.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=1532
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-User Profile Service
+      Type=Information
+      RecordNumber=4611260
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=The User Profile Service has stopped.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=16
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Kernel-General
+      Type=Information
+      RecordNumber=116060
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=The access history in hive \??\C:\Users\Default\NTUSER.DAT was cleared updating 1063 keys and creating 64 modified pages.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=16384
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-Security-SPP
+      Type=Information
+      RecordNumber=4611748
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=The operation completed successfully.
+      Message=Successfully scheduled Software Protection service for re-start at 2022-03-17T16:00:53Z. Reason: RulesEngine.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=16394
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-Security-SPP
+      Type=Information
+      RecordNumber=4611716
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=The operation completed successfully.
+      Message=Offline downlevel migration succeeded.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=16962\nEventType=4\n\
+      ComputerName=$HOST$\nUser=NOT_TRANSLATED\nSid=$SID$\nSidType=0\nSourceName=Microsoft-Windows-Directory-Services-SAM\n\
+      Type=Information\nRecordNumber=115977\nKeywords=None\nTaskCategory=None\nOpCode=Info\n\
+      Message=Remote calls to the SAM database are being restricted using the default\
+      \ security descriptor: O:SYG:SYD:(A;;RC;;;BA).\r\nFor more information please\
+      \ see http://go.microsoft.com/fwlink/?LinkId=787651."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=16977\nEventType=4\n\
+      ComputerName=$HOST$\nUser=NOT_TRANSLATED\nSid=$SID$\nSidType=0\nSourceName=Microsoft-Windows-Directory-Services-SAM\n\
+      Type=Information\nRecordNumber=115978\nKeywords=None\nTaskCategory=None\nOpCode=Info\n\
+      Message=The domain is configured with the following minimum password length-related\
+      \ settings.\r\n\r\nMinimumPasswordLength: 0\r\n\r\nMinimumPasswordLengthAudit:\
+      \ -1\r\n\r\nFor more information see https://go.microsoft.com/fwlink/?LinkId=2097191."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$nLogName=System\nEventCode=16983\nEventType=4\n\
+      ComputerName=$HOST$\nUser=NOT_TRANSLATED\nSid=$SID$\nSidType=0\nSourceName=Microsoft-Windows-Directory-Services-SAM\n\
+      Type=Information\nRecordNumber=115979\nKeywords=None\nTaskCategory=None\nOpCode=Info\n\
+      Message=The security account manager is now logging periodic summary events\
+      \ for remote clients that call legacy password change or set RPC methods.\r\n\
+      \r\nFor more information please see https://go.microsoft.com/fwlink/?linkid=2150956."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=172
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Kernel-Power
+      Type=Information
+      RecordNumber=115972
+      Keywords=None
+      TaskCategory=203
+      OpCode=Info
+      Message=Connectivity state in standby: Disconnected, Reason: NIC compliance
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=18
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Kernel-Boot
+      Type=Information
+      RecordNumber=115964
+      Keywords=None
+      TaskCategory=57
+      OpCode=Info
+      Message=There are 0x1 boot options on this system.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=19
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-WindowsUpdateClient
+      Type=Information
+      RecordNumber=116095
+      Keywords=Installation, Success
+      TaskCategory=Windows Update Agent
+      OpCode=Installation
+      Message=Installation Successful: Windows successfully installed the following update: 2022-03 Cumulative Update for Windows Server 2019 (1809) for x64-based Systems (KB5011503)
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=2\nEventType=3\n\
+      ComputerName=$HOST$\nSourceName=splunk-otel-collector\nType=Warning\nRecordNumber=4566335\n\
+      Keywords=Classic\nTaskCategory=None\nOpCode=Info\nMessage=1.646868003186732e+09\t\
+      warn\ttranslation/converter.go:477\tdropping dimension\t{\"dimension_name\"\
+      : \"process.command_line\", \"reason\": \"dimension value longer than 256 characters\"\
+      , \"dimension_value\": \"\\\"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\
+      \\chrome.exe\\\" --type=renderer --display-capture-permissions-policy-allowed\
+      \ --origin-trial-disabled-features=ConditionalFocus --disable-gpu-compositing\
+      \ --lang=en-US --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=10\
+      \ --launch-time-ticks=34918034930556 --mojo-platform-channel-handle=4784 --field-trial-handle=1812,i,11273038249563809001,16369896338658157196,131072\
+      \ /prefetch:1\", \"dimension_value_length\": 436}"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=20\nEventType=4\nComputerName=$HOST$\n\
+      User=NOT_TRANSLATED\nSid=$SID$\nSidType=0\nSourceName=Microsoft-Windows-Kernel-General\n\
+      Type=Information\nRecordNumber=115966\nKeywords=Time\nTaskCategory=6\nOpCode=Info\n\
+      Message=The leap second configuration has been updated.\r\nReason: Leap second\
+      \ data initialized from registry during boot\r\nLeap seconds enabled: true\r\
+      \nNew leap second count: 0\r\nOld leap second count: 0"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=20001
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-UserPnp
+      Type=Information
+      RecordNumber=115244
+      Keywords=None
+      TaskCategory=7005
+      OpCode=Info
+      Message=Driver Management concluded the process to install driver wpdfs.inf_amd64_10bfe1c48f153b03 for Device Instance ID SWD\WPDBUSENUM\{F13F7189-D455-11E9-8225-806E6F6E6963}#0000000647700000 with the following status: 0x0.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=20003
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-UserPnp
+      Type=Information
+      RecordNumber=115236
+      Keywords=None
+      TaskCategory=7005
+      OpCode=Info
+      Message=Driver Management has concluded the process to add Service WUDFWpdFs for Device Instance ID SWD\WPDBUSENUM\{F13F7189-D455-11E9-8225-806E6F6E6963}#0000000647700000 with the following status: 0.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=24576
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-WPD-ClassInstaller
+      Type=Information
+      RecordNumber=115240
+      Keywords=Classic
+      TaskCategory=Driver Installation
+      OpCode=The operation completed successfully.
+      Message=Drivers were successfully installed for device WPD Device.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=24577
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-WPD-ClassInstaller
+      Type=Information
+      RecordNumber=115241
+      Keywords=Classic
+      TaskCategory=Driver Post-Install Configuration
+      OpCode=The operation completed successfully.
+      Message=Media player and imaging program compatibility layers were successfully registered for device %1. Layer bits %2 were requested, layer bits %3 were registered.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=24579
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-WPD-ClassInstaller
+      Type=Information
+      RecordNumber=115242
+      Keywords=Classic
+      TaskCategory=Driver Post-Install Configuration
+      OpCode=The operation completed successfully.
+      Message=Autoplay registration was skipped for device %1.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=25
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Kernel-Boot
+      Type=Information
+      RecordNumber=115962
+      Keywords=None
+      TaskCategory=32
+      OpCode=Info
+      Message=The boot menu policy was 0x0.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=27
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Kernel-Boot
+      Type=Information
+      RecordNumber=115963
+      Keywords=None
+      TaskCategory=33
+      OpCode=Info
+      Message=The boot type was 0x0.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=3
+      EventType=2
+      ComputerName=$HOST$
+      SourceName=signalfx-agent
+      Type=Error
+      RecordNumber=4611815
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=Info
+      Message=time="2022-03-10T16:48:17Z" level=error msg="Error shipping datapoints to SignalFx" error="invalid status code 401: "
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=32
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Kernel-Boot
+      Type=Information
+      RecordNumber=115965
+      Keywords=None
+      TaskCategory=58
+      OpCode=Info
+      Message=The bootmgr spent 0 ms waiting for user input.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=35
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Time-Service
+      Type=Information
+      RecordNumber=115787
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=$PACKAGE_TITLE$ 169.254.169.123,0x9 (ntp.m|0x9|0.0.0.0:123->169.254.169.123:123) with reference id 2074738345. Current local stratum number is 4.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=37
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Time-Service
+      Type=Information
+      RecordNumber=115786
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=The time provider NtpClient is currently receiving valid time data from 169.254.169.123,0x9 (ntp.m|0x9|0.0.0.0:123->169.254.169.123:123).
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=4097
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-CAPI2
+      Type=Information
+      RecordNumber=4576271
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=Info
+      Message=Successful auto update of third-party root certificate:: Subject: <CN=DigiCert Trusted Root G4, OU=www.digicert.com, O=DigiCert Inc, C=US> Sha1 thumbprint: <DDFB16CD4931C973A2037D3FC83A4D7D775D05E4>.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=41
+      EventType=1
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Kernel-Power
+      Type=Critical
+      RecordNumber=115683
+      Keywords=None
+      TaskCategory=63
+      OpCode=Info
+      Message=The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=4100
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-CAPI2
+      Type=Information
+      RecordNumber=4565803
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=Info
+      Message=Successful auto update retrieval of third-party root certificate from: <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/CABD2A79A1076A31F21D253635CB039D4329A5E8.crt>.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=4202\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-MSDTC 2\nType=Information\n\
+      RecordNumber=4611713\nKeywords=Classic\nTaskCategory=TM\nOpCode=The operation\
+      \ completed successfully.\nMessage=MSDTC started with the following settings:\r\
+      \r Security Configuration (OFF = 0 and ON = 1):\r Allow Remote Administrator\
+      \ = 0,\r Network Clients = 0,\r Transaction Manager Communication: \r Allow\
+      \ Inbound Transactions = 0,\r Allow Outbound Transactions = 0,\r Transaction\
+      \ Internet Protocol (TIP) = 0,\r  Enable XA Transactions = 0,\r  Enable SNA\
+      \ LU 6.2 Transactions = 1,\r  MSDTC Communications Security = Mutual Authentication\
+      \ Required,\r Account = NT AUTHORITY\\NetworkService,\r  Firewall Exclusion\
+      \ Detected = 0\r\r Transaction Bridge Installed = 0\r Filtering Duplicate Events\
+      \ = 1"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=43
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-WindowsUpdateClient
+      Type=Information
+      RecordNumber=115890
+      Keywords=Installation, Started
+      TaskCategory=Windows Update Agent
+      OpCode=Installation
+      Message=Installation Started: Windows has started installing the following update: Windows Malicious Software Removal Tool x64 - v5.99 (KB890830)
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=44
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-WindowsUpdateClient
+      Type=Information
+      RecordNumber=115841
+      Keywords=Download, Started
+      TaskCategory=Windows Update Agent
+      OpCode=Download
+      Message=Windows Update started downloading an update.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4608\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646716\nKeywords=Audit Success\nTaskCategory=Security State Change\n\
+      OpCode=Info\nMessage=Windows is starting up.\r\n\r\nThis event is logged when\
+      \ LSASS.EXE starts and the auditing subsystem is initialized."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4616\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646702\nKeywords=Audit Success\nTaskCategory=Security State Change\n\
+      OpCode=Info\nMessage=The system time was changed.\r\n\r\nSubject:\r\n\tSecurity\
+      \ ID:\t\tS-1-5-19\r\n\tAccount Name:\t\tLOCAL SERVICE\r\n\tAccount Domain:\t\
+      \tNT AUTHORITY\r\n\tLogon ID:\t\t0x3E5\r\n\r\nProcess Information:\r\n\tProcess\
+      \ ID:\t0xb58\r\n\tName:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nPrevious\
+      \ Time:\t\t\u200E2022\u200E-\u200E03\u200E-\u200E10T16:42:35.972086000Z\r\n\
+      New Time:\t\t\u200E2022\u200E-\u200E03\u200E-\u200E10T16:42:35.981312500Z\r\n\
+      \r\nThis event is generated when the system time is changed. It is normal for\
+      \ the Windows Time Service, which runs with System privilege, to change the\
+      \ system time on a regular basis. Other system time changes may be indicative\
+      \ of attempts to tamper with the computer."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4624\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646920\nKeywords=Audit Success\nTaskCategory=Logon\nOpCode=Info\n\
+      Message=An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity\
+      \ ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tEC2AMAZ-3G1B1SF$\r\n\tAccount Domain:\t\
+      \tWORKGROUP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\
+      \t5\r\n\tRestricted Admin Mode:\t-\r\n\tVirtual Account:\t\tNo\r\n\tElevated\
+      \ Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\
+      \n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tSYSTEM\r\n\tAccount Domain:\t\
+      \tNT AUTHORITY\r\n\tLogon ID:\t\t0x3E7\r\n\tLinked Logon ID:\t\t0x0\r\n\tNetwork\
+      \ Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\
+      \n\r\nProcess Information:\r\n\tProcess ID:\t\t0x304\r\n\tProcess Name:\t\t\
+      C:\\Windows\\System32\\services.exe\r\n\r\nNetwork Information:\r\n\tWorkstation\
+      \ Name:\t-\r\n\tSource Network Address:\t-\r\n\tSource Port:\t\t-\r\n\r\nDetailed\
+      \ Authentication Information:\r\n\tLogon Process:\t\tAdvapi  \r\n\tAuthentication\
+      \ Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t\
+      -\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session\
+      \ is created. It is generated on the computer that was accessed.\r\n\r\nThe\
+      \ subject fields indicate the account on the local system which requested the\
+      \ logon. This is most commonly a service such as the Server service, or a local\
+      \ process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field\
+      \ indicates the kind of logon that occurred. The most common types are 2 (interactive)\
+      \ and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom\
+      \ the new logon was created, i.e. the account that was logged on.\r\n\r\nThe\
+      \ network fields indicate where a remote logon request originated. Workstation\
+      \ name is not always available and may be left blank in some cases.\r\n\r\n\
+      The impersonation level field indicates the extent to which a process in the\
+      \ logon session can impersonate.\r\n\r\nThe authentication information fields\
+      \ provide detailed information about this specific logon request.\r\n\t- Logon\
+      \ GUID is a unique identifier that can be used to correlate this event with\
+      \ a KDC event.\r\n\t- Transited services indicate which intermediate services\
+      \ have participated in this logon request.\r\n\t- Package name indicates which\
+      \ sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates\
+      \ the length of the generated session key. This will be 0 if no session key\
+      \ was requested."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4625\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646960\nKeywords=Audit Failure\nTaskCategory=Logon\nOpCode=Info\n\
+      Message=An account failed to log on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-0-0\r\
+      \n\tAccount Name:\t\t-\r\n\tAccount Domain:\t\t-\r\n\tLogon ID:\t\t0x0\r\n\r\
+      \nLogon Type:\t\t\t3\r\n\r\nAccount For Which Logon Failed:\r\n\tSecurity ID:\t\
+      \tS-1-0-0\r\n\tAccount Name:\t\tESSADMIN\r\n\tAccount Domain:\t\t\r\n\r\nFailure\
+      \ Information:\r\n\tFailure Reason:\t\tUnknown user name or bad password.\r\n\
+      \tStatus:\t\t\t0xC000006D\r\n\tSub Status:\t\t0xC0000064\r\n\r\nProcess Information:\r\
+      \n\tCaller Process ID:\t0x0\r\n\tCaller Process Name:\t-\r\n\r\nNetwork Information:\r\
+      \n\tWorkstation Name:\t-\r\n\tSource Network Address:\t45.9.20.72\r\n\tSource\
+      \ Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\
+      \tNtLmSsp \r\n\tAuthentication Package:\tNTLM\r\n\tTransited Services:\t-\r\n\
+      \tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated\
+      \ when a logon request fails. It is generated on the computer where access was\
+      \ attempted.\r\n\r\nThe Subject fields indicate the account on the local system\
+      \ which requested the logon. This is most commonly a service such as the Server\
+      \ service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\n\
+      The Logon Type field indicates the kind of logon that was requested. The most\
+      \ common types are 2 (interactive) and 3 (network).\r\n\r\nThe Process Information\
+      \ fields indicate which account and process on the system requested the logon.\r\
+      \n\r\nThe Network Information fields indicate where a remote logon request originated.\
+      \ Workstation name is not always available and may be left blank in some cases.\r\
+      \n\r\nThe authentication information fields provide detailed information about\
+      \ this specific logon request.\r\n\t- Transited services indicate which intermediate\
+      \ services have participated in this logon request.\r\n\t- Package name indicates\
+      \ which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates\
+      \ the length of the generated session key. This will be 0 if no session key\
+      \ was requested."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4634\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23641882\nKeywords=Audit Success\nTaskCategory=Logoff\nOpCode=Info\n\
+      Message=An account was logged off.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-21-867926485-3934617210-1925664431-500\r\
+      \n\tAccount Name:\t\tAdministrator\r\n\tAccount Domain:\t\tEC2AMAZ-3G1B1SF\r\
+      \n\tLogon ID:\t\t0x1FB61\r\n\r\nLogon Type:\t\t\t3\r\n\r\nThis event is generated\
+      \ when a logon session is destroyed. It may be positively correlated with a\
+      \ logon event using the Logon ID value. Logon IDs are only unique between reboots\
+      \ on the same computer."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4647\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23641880\nKeywords=Audit Success\nTaskCategory=Logoff\nOpCode=Info\n\
+      Message=User initiated logoff:\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-21-867926485-3934617210-1925664431-500\r\
+      \n\tAccount Name:\t\tAdministrator\r\n\tAccount Domain:\t\tEC2AMAZ-3G1B1SF\r\
+      \n\tLogon ID:\t\t0x3466B\r\n\r\nThis event is generated when a logoff is initiated.\
+      \ No further user-initiated activity can occur. This event can be interpreted\
+      \ as a logoff event."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4648\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646735\nKeywords=Audit Success\nTaskCategory=Logon\nOpCode=Info\n\
+      Message=A logon was attempted using explicit credentials.\r\n\r\nSubject:\r\n\
+      \tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tEC2AMAZ-3G1B1SF$\r\n\tAccount\
+      \ Domain:\t\tWORKGROUP\r\n\tLogon ID:\t\t0x3E7\r\n\tLogon GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\
+      \n\r\nAccount Whose Credentials Were Used:\r\n\tAccount Name:\t\tDWM-1\r\n\t\
+      Account Domain:\t\tWindow Manager\r\n\tLogon GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\
+      \n\r\nTarget Server:\r\n\tTarget Server Name:\tlocalhost\r\n\tAdditional Information:\t\
+      localhost\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x2d8\r\n\tProcess\
+      \ Name:\t\tC:\\Windows\\System32\\winlogon.exe\r\n\r\nNetwork Information:\r\
+      \n\tNetwork Address:\t-\r\n\tPort:\t\t\t-\r\n\r\nThis event is generated when\
+      \ a process attempts to log on an account by explicitly specifying that account\u2019\
+      s credentials.  This most commonly occurs in batch-type configurations such\
+      \ as scheduled tasks, or when using the RUNAS command."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4672\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646921\nKeywords=Audit Success\nTaskCategory=Special Logon\n\
+      OpCode=Info\nMessage=Special privileges assigned to new logon.\r\n\r\nSubject:\r\
+      \n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tSYSTEM\r\n\tAccount Domain:\t\
+      \tNT AUTHORITY\r\n\tLogon ID:\t\t0x3E7\r\n\r\nPrivileges:\t\tSeAssignPrimaryTokenPrivilege\r\
+      \n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\
+      \n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\
+      \n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\
+      \n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4688\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646715\nKeywords=Audit Success\nTaskCategory=Process Creation\n\
+      OpCode=Info\nMessage=A new process has been created.\r\n\r\nCreator Subject:\r\
+      \n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\t-\r\n\tAccount Domain:\t\t\
+      -\r\n\tLogon ID:\t\t0x3E7\r\n\r\nTarget Subject:\r\n\tSecurity ID:\t\tS-1-0-0\r\
+      \n\tAccount Name:\t\t-\r\n\tAccount Domain:\t\t-\r\n\tLogon ID:\t\t0x0\r\n\r\
+      \nProcess Information:\r\n\tNew Process ID:\t\t0x30c\r\n\tNew Process Name:\t\
+      C:\\Windows\\System32\\lsass.exe\r\n\tToken Elevation Type:\t%%1936\r\n\tMandatory\
+      \ Label:\t\tS-1-16-16384\r\n\tCreator Process ID:\t0x27c\r\n\tCreator Process\
+      \ Name:\tC:\\Windows\\System32\\wininit.exe\r\n\tProcess Command Line:\t\r\n\
+      \r\nToken Elevation Type indicates the type of token that was assigned to the\
+      \ new process in accordance with User Account Control policy.\r\n\r\nType 1\
+      \ is a full token with no privileges removed or groups disabled.  A full token\
+      \ is only used if User Account Control is disabled or if the user is the built-in\
+      \ Administrator account or a service account.\r\n\r\nType 2 is an elevated token\
+      \ with no privileges removed or groups disabled.  An elevated token is used\
+      \ when User Account Control is enabled and the user chooses to start the program\
+      \ using Run as administrator.  An elevated token is also used when an application\
+      \ is configured to always require administrative privilege or to always require\
+      \ maximum privilege, and the user is a member of the Administrators group.\r\
+      \n\r\nType 3 is a limited token with administrative privileges removed and administrative\
+      \ groups disabled.  The limited token is used when User Account Control is enabled,\
+      \ the application does not require administrative privilege, and the user does\
+      \ not choose to start the program using Run as administrator."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4696\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646704\nKeywords=Audit Success\nTaskCategory=Process Creation\n\
+      OpCode=Info\nMessage=A primary token was assigned to process.\r\n\r\nSubject:\r\
+      \n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\t-\r\n\tAccount Domain:\t\t\
+      -\r\n\tLogon ID:\t\t0x3E7\r\n\r\nProcess Information:\r\n\tProcess ID:\t0x4\r\
+      \n\tProcess Name:\t\r\n\r\nTarget Process:\r\n\tTarget Process ID:\t0x58\r\n\
+      \tTarget Process Name:\tRegistry\r\n\r\nNew Token Information:\r\n\tSecurity\
+      \ ID:\t\tS-1-0-0\r\n\tAccount Name:\t\t-\r\n\tAccount Domain:\t\t-\r\n\tLogon\
+      \ ID:\t\t0x3E7"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4776\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23639425\nKeywords=Audit Success\nTaskCategory=Credential Validation\n\
+      OpCode=Info\nMessage=The computer attempted to validate the credentials for\
+      \ an account.\r\n\r\nAuthentication Package:\tMICROSOFT_AUTHENTICATION_PACKAGE_V1_0\r\
+      \nLogon Account:\tAdministrator\r\nSource Workstation:\tEC2AMAZ-3G1B1SF\r\n\
+      Error Code:\t0x0"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4798\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23639422\nKeywords=Audit Success\nTaskCategory=User Account Management\n\
+      OpCode=Info\nMessage=A user's local group membership was enumerated.\r\n\r\n\
+      Subject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tEC2AMAZ-3G1B1SF$\r\
+      \n\tAccount Domain:\t\tWORKGROUP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nUser:\r\n\t\
+      Security ID:\t\tS-1-5-21-867926485-3934617210-1925664431-500\r\n\tAccount Name:\t\
+      \tAdministrator\r\n\tAccount Domain:\t\tEC2AMAZ-3G1B1SF\r\n\r\nProcess Information:\r\
+      \n\tProcess ID:\t\t0xd58\r\n\tProcess Name:\t\tC:\\Windows\\System32\\LogonUI.exe"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4799\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646877\nKeywords=Audit Success\nTaskCategory=Security Group Management\n\
+      OpCode=Info\nMessage=A security-enabled local group membership was enumerated.\r\
+      \n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tEC2AMAZ-3G1B1SF$\r\
+      \n\tAccount Domain:\t\tWORKGROUP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nGroup:\r\n\t\
+      Security ID:\t\tS-1-5-32-551\r\n\tGroup Name:\t\tBackup Operators\r\n\tGroup\
+      \ Domain:\t\tBuiltin\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x1264\r\
+      \n\tProcess Name:\t\tC:\\Windows\\System32\\VSSVC.exe"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4826\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646705\nKeywords=Audit Success\nTaskCategory=Other Policy Change\
+      \ Events\nOpCode=Info\nMessage=Boot Configuration Data loaded.\r\n\r\nSubject:\r\
+      \n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\t-\r\n\tAccount Domain:\t\t\
+      -\r\n\tLogon ID:\t\t0x3E7\r\n\r\nGeneral Settings:\r\n\tLoad Options:\t\t-\r\
+      \n\tAdvanced Options:\t\tNo\r\n\tConfiguration Access Policy:\tDefault\r\n\t\
+      System Event Logging:\tNo\r\n\tKernel Debugging:\tNo\r\n\tVSM Launch Type:\t\
+      Off\r\n\r\nSignature Settings:\r\n\tTest Signing:\t\tNo\r\n\tFlight Signing:\t\
+      \tNo\r\n\tDisable Integrity Checks:\tNo\r\n\r\nHyperVisor Settings:\r\n\tHyperVisor\
+      \ Load Options:\t-\r\n\tHyperVisor Launch Type:\tOff\r\n\tHyperVisor Debugging:\t\
+      No"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4902\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646718\nKeywords=Audit Success\nTaskCategory=Audit Policy Change\n\
+      OpCode=Info\nMessage=The Per-user audit policy table was created.\r\n\r\nNumber\
+      \ of Elements:\t0\r\nPolicy ID:\t0x754E"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=4907\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646882\nKeywords=Audit Success\nTaskCategory=Audit Policy Change\n\
+      OpCode=Info\nMessage=Auditing settings on object were changed.\r\n\r\nSubject:\r\
+      \n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tEC2AMAZ-3G1B1SF$\r\n\tAccount\
+      \ Domain:\t\tWORKGROUP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nObject:\r\n\tObject Server:\t\
+      Security\r\n\tObject Type:\tFile\r\n\tObject Name:\tC:\\Windows\\System32\\\
+      SecureBootUpdates\\dbxupdate.bin\r\n\tHandle ID:\t0x714\r\n\r\nProcess Information:\r\
+      \n\tProcess ID:\t0x404\r\n\tProcess Name:\tC:\\Windows\\WinSxS\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.17763.2510_none_56d7c72d9929a86b\\\
+      TiWorker.exe\r\n\r\nAuditing Settings:\r\n\tOriginal Security Descriptor:\t\
+      S:AI\r\n\tNew Security Descriptor:\t\tS:ARAI(AU;SAFA;DCLCRPCRSDWDWO;;;WD)"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=50036
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Dhcp-Client
+      Type=Information
+      RecordNumber=116005
+      Keywords=None
+      TaskCategory=Service State Event
+      OpCode=ServiceStart
+      Message=DHCPv4 client service is started
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=50037
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Dhcp-Client
+      Type=Information
+      RecordNumber=115939
+      Keywords=None
+      TaskCategory=Service State Event
+      OpCode=ServiceStop
+      Message=DHCPv4 client service is stopped. ShutDown Flag value is 1
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=50103
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Dhcp-Client
+      Type=Information
+      RecordNumber=116006
+      Keywords=None
+      TaskCategory=Service State Event
+      OpCode=ServiceShutdown
+      Message=DHCPv4 client registered for shutdown notification
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=50104
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Dhcp-Client
+      Type=Information
+      RecordNumber=115918
+      Keywords=None
+      TaskCategory=Service State Event
+      OpCode=ServiceShutdown
+      Message=DHCPv4 client received shutdown notification
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=50105
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Dhcp-Client
+      Type=Information
+      RecordNumber=115932
+      Keywords=None
+      TaskCategory=Service State Event
+      OpCode=ServiceShutdown
+      Message=DHCPv4 client ProcessDHCPRequestForever received TERMINATE_EVENT
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=50106
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Dhcp-Client
+      Type=Information
+      RecordNumber=115938
+      Keywords=None
+      TaskCategory=Service State Event
+      OpCode=ServiceShutdown
+      Message=DHCPv4 is waiting on DHCPv6 service to stop
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Security
+      EventCode=5024
+      EventType=0
+      ComputerName=$HOST$
+      SourceName=Microsoft Windows security auditing.
+      Type=Information
+      RecordNumber=23646769
+      Keywords=Audit Success
+      TaskCategory=Other System Events
+      OpCode=Info
+      Message=The Windows Firewall service started successfully.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Security
+      EventCode=5033
+      EventType=0
+      ComputerName=$HOST$
+      SourceName=Microsoft Windows security auditing.
+      Type=Information
+      RecordNumber=23646756
+      Keywords=Audit Success
+      TaskCategory=Other System Events
+      OpCode=Info
+      Message=The Windows Firewall Driver started successfully.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=5058\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646929\nKeywords=Audit Success\nTaskCategory=Other System Events\n\
+      OpCode=Info\nMessage=Key file operation.\r\n\r\nSubject:\r\n\tSecurity ID:\t\
+      \tS-1-5-19\r\n\tAccount Name:\t\tLOCAL SERVICE\r\n\tAccount Domain:\t\tNT AUTHORITY\r\
+      \n\tLogon ID:\t\t0x3E5\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t3712\r\
+      \n\tProcess Creation Time:\t\u200E2022\u200E-\u200E03\u200E-\u200E10T16:46:22.590822700Z\r\
+      \n\r\nCryptographic Parameters:\r\n\tProvider Name:\tMicrosoft Software Key\
+      \ Storage Provider\r\n\tAlgorithm Name:\tUNKNOWN\r\n\tKey Name:\tMicrosoft Connected\
+      \ Devices Platform device certificate\r\n\tKey Type:\tUser key.\r\n\r\nKey File\
+      \ Operation Information:\r\n\tFile Path:\tC:\\Windows\\ServiceProfiles\\LocalService\\\
+      AppData\\Roaming\\Microsoft\\Crypto\\Keys\\de7cf8a7901d2ad13e5c67c29e5d1662_3210b093-1205-4be7-a9ec-97efeec2c989\r\
+      \n\tOperation:\tRead persisted key from file.\r\n\tReturn Code:\t0x0"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=5059\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646931\nKeywords=Audit Success\nTaskCategory=Other System Events\n\
+      OpCode=Info\nMessage=Key migration operation.\r\n\r\nSubject:\r\n\tSecurity\
+      \ ID:\t\tS-1-5-19\r\n\tAccount Name:\t\tLOCAL SERVICE\r\n\tAccount Domain:\t\
+      \tNT AUTHORITY\r\n\tLogon ID:\t\t0x3E5\r\n\r\nProcess Information:\r\n\tProcess\
+      \ ID:\t\t3712\r\n\tProcess Creation Time:\t\u200E2022\u200E-\u200E03\u200E-\u200E\
+      10T16:46:22.590822700Z\r\n\r\nCryptographic Parameters:\r\n\tProvider Name:\t\
+      Microsoft Software Key Storage Provider\r\n\tAlgorithm Name:\tECDSA_P256\r\n\
+      \tKey Name:\tMicrosoft Connected Devices Platform device certificate\r\n\tKey\
+      \ Type:\tUser key.\r\n\r\nAdditional Information:\r\n\tOperation:\tExport of\
+      \ persistent cryptographic key.\r\n\tReturn Code:\t0x0"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=5061\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23646930\nKeywords=Audit Success\nTaskCategory=System Integrity\n\
+      OpCode=Info\nMessage=Cryptographic operation.\r\n\r\nSubject:\r\n\tSecurity\
+      \ ID:\t\tS-1-5-19\r\n\tAccount Name:\t\tLOCAL SERVICE\r\n\tAccount Domain:\t\
+      \tNT AUTHORITY\r\n\tLogon ID:\t\t0x3E5\r\n\r\nCryptographic Parameters:\r\n\t\
+      Provider Name:\tMicrosoft Software Key Storage Provider\r\n\tAlgorithm Name:\t\
+      ECDSA_P256\r\n\tKey Name:\tMicrosoft Connected Devices Platform device certificate\r\
+      \n\tKey Type:\tUser key.\r\n\r\nCryptographic Operation:\r\n\tOperation:\tOpen\
+      \ Key.\r\n\tReturn Code:\t0x0"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=51046
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-DHCPv6-Client
+      Type=Information
+      RecordNumber=116007
+      Keywords=None
+      TaskCategory=Service State Event
+      OpCode=ServiceStart
+      Message=DHCPv6 client service is started
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=51047
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-DHCPv6-Client
+      Type=Information
+      RecordNumber=115934
+      Keywords=None
+      TaskCategory=Service State Event
+      OpCode=ServiceStop
+      Message=DHCPv6 client service is stopped. ShutDown Flag value is 1
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=51057
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-DHCPv6-Client
+      Type=Information
+      RecordNumber=115935
+      Keywords=None
+      TaskCategory=Service State Event
+      OpCode=ServiceStopWithRefCount
+      Message=DHCPv6 client service stop is almost done.DHCP Context Ref count is 1
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Security
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Security\nEventCode=5379\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft Windows security auditing.\nType=Information\n\
+      RecordNumber=23641794\nKeywords=Audit Success\nTaskCategory=User Account Management\n\
+      OpCode=Info\nMessage=Credential Manager credentials were read.\r\n\r\nSubject:\r\
+      \n\tSecurity ID:\t\tS-1-5-21-867926485-3934617210-1925664431-500\r\n\tAccount\
+      \ Name:\t\tAdministrator\r\n\tAccount Domain:\t\tEC2AMAZ-3G1B1SF\r\n\tLogon\
+      \ ID:\t\t0x3466B\r\n\tRead Operation:\t\tEnumerate Credentials\r\n\r\nThis event\
+      \ occurs when a user performs a read operation on stored credentials in Credential\
+      \ Manager."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=55\nEventType=4\nComputerName=$HOST$\n\
+      User=NOT_TRANSLATED\nSid=$SID$\nSidType=0\nSourceName=Microsoft-Windows-Kernel-Processor-Power\n\
+      Type=Information\nRecordNumber=115974\nKeywords=None\nTaskCategory=47\nOpCode=Info\n\
+      Message=Processor 1 in group 0 exposes the following power management capabilities:\r\
+      \n\r\nIdle state type: ACPI Idle (C) States (1 state(s))\r\n\r\nPerformance\
+      \ state type: None\r\nNominal Frequency (MHz): 2400\r\nMaximum performance percentage:\
+      \ 100\r\nMinimum performance percentage: 100\r\nMinimum throttle percentage:\
+      \ 100"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=5615
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-WMI
+      Type=Information
+      RecordNumber=4611262
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=Windows Management Instrumentation Service started sucessfully
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=5617
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-WMI
+      Type=Information
+      RecordNumber=4611263
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=Windows Management Instrumentation Service subsystems initialized successfully
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=6\nEventType=4\nComputerName=$HOST$\n\
+      User=NOT_TRANSLATED\nSid=$SID$\nSidType=0\nSourceName=Microsoft-Windows-FilterManager\n\
+      Type=Information\nRecordNumber=115997\nKeywords=None\nTaskCategory=None\nOpCode=Info\n\
+      Message=File System Filter 'storqosflt' (10.0, \u200E1992\u200E-\u200E02\u200E\
+      -\u200E07T08:10:35.000000000Z) has successfully loaded and registered with Filter\
+      \ Manager."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=6000
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-Winlogon
+      Type=Information
+      RecordNumber=4611138
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=The operation completed successfully.
+      Message=The winlogon notification subscriber <WSearch> was unavailable to handle a notification event.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=6005
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=EventLog
+      Type=Information
+      RecordNumber=115929
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=None
+      Message=The Event log service was started.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=6006
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=EventLog
+      Type=Information
+      RecordNumber=115911
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=None
+      Message=The Event log service was stopped.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=6008\nEventType=2\nComputerName=$HOST$\n\
+      SourceName=EventLog\nType=Error\nRecordNumber=115674\nKeywords=Classic\nTaskCategory=None\n\
+      OpCode=None\nMessage=The previous system shutdown at 2:24:55 PM on \u200E3/\u200E\
+      10/\u200E2022 was unexpected."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=6009
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=EventLog
+      Type=Information
+      RecordNumber=115928
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=None
+      Message=Microsoft (R) Windows (R) 10.00. 17763  Multiprocessor Free.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=6013
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=EventLog
+      Type=Information
+      RecordNumber=115930
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=None
+      Message=The system uptime is 25 seconds.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=63
+      EventType=3
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-WMI
+      Type=Warning
+      RecordNumber=4611388
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=A provider, DMWmiBridgeProv1, has been registered in the Windows Management Instrumentation namespace root\cimv2\mdm\dmmap to use the LocalSystem account. This account is privileged and the provider may cause a security violation if it does not correctly impersonate user requests.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=7001
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Winlogon
+      Type=Information
+      RecordNumber=115754
+      Keywords=None
+      TaskCategory=1101
+      OpCode=Info
+      Message=User Logon Notification for Customer Experience Improvement Program
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=7002
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Winlogon
+      Type=Information
+      RecordNumber=115902
+      Keywords=None
+      TaskCategory=1102
+      OpCode=Info
+      Message=User Logoff Notification for Customer Experience Improvement Program
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=7023\nEventType=2\nComputerName=$HOST$\n\
+      SourceName=Microsoft-Windows-Service Control Manager\nType=Error\nRecordNumber=116050\n\
+      Keywords=Classic\nTaskCategory=None\nOpCode=The operation completed successfully.\n\
+      Message=The Splunk OpenTelemetry Collector service terminated with the following\
+      \ error: \r\nAn exception occurred in the service when handling the control\
+      \ request."
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=7026\nEventType=4\nComputerName=$HOST$\n\
+      SourceName=Microsoft-Windows-Service Control Manager\nType=Information\nRecordNumber=116051\n\
+      Keywords=Classic\nTaskCategory=None\nOpCode=The operation completed successfully.\n\
+      Message=The following boot-start or system-start driver(s) did not load: \r\n\
+      dam"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=7036
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-Service Control Manager
+      Type=Information
+      RecordNumber=116100
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=The operation completed successfully.
+      Message=The Background Intelligent Transfer Service service entered the stopped state.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=7040
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Service Control Manager
+      Type=Information
+      RecordNumber=116099
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=The operation completed successfully.
+      Message=The start type of the Background Intelligent Transfer Service service was changed from auto start to demand start.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=System\nEventCode=7045\nEventType=4\nComputerName=$HOST$\n\
+      User=NOT_TRANSLATED\nSid=$SID$\nSidType=0\nSourceName=Microsoft-Windows-Service\
+      \ Control Manager\nType=Information\nRecordNumber=115392\nKeywords=Classic\n\
+      TaskCategory=None\nOpCode=The operation completed successfully.\nMessage=A service\
+      \ was installed in the system.\r\n\r\nService Name:  Google Chrome Elevation\
+      \ Service (GoogleChromeElevationService)\r\nService File Name:  \"C:\\Program\
+      \ Files\\Google\\Chrome\\Application\\99.0.4844.51\\elevation_service.exe\"\r\
+      \nService Type:  user mode service\r\nService Start Type:  demand start\r\n\
+      Service Account:  LocalSystem"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=8197\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Security-SPP\nType=Information\n\
+      RecordNumber=4609397\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=SLUI.exe was launched with the following\
+      \ command-line parameters:\r\nRuleId=379cccfb-d4e0-48fe-b0f2-0136097be147;Action=CleanupState;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=34e1ae55-27f8-4950-8877-7a03be5fb181;Trigger=TimerEvent"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=8224
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=VSS
+      Type=Information
+      RecordNumber=4611772
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=Info
+      Message=The VSS service is shutting down due to idle timeout.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=8230\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Security-SPP\nType=Information\n\
+      RecordNumber=4611630\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=The rules engine successfully re-evaluated\
+      \ the schedule.\r\nKernel policies:\r\nSecurity-SPP-Action-StateData (REG_SZ)\
+      \ =AppId=55c92734-d682-4d71-983e-d6ec3f16059f;GraceEndDate=2022/09/06:16:01:18;LastConsumptionReason=0x4004f040;LastNotificationId=Cleanup;LicenseState=SL_LICENSING_STATUS_LICENSED;PartialProductKey=63DFG;ProductKeyType=Volume:GVLK;SkuId=34e1ae55-27f8-4950-8877-7a03be5fb181;ruleId=379cccfb-d4e0-48fe-b0f2-0136097be147;uxDifferentiator=ENVIRONMENT;volumeActivationOrder=normal"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=900\nEventType=4\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Security-SPP\nType=Information\n\
+      RecordNumber=4611714\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=The Software Protection service is starting.\r\
+      \nParameters:<explicit>"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: "$TIMESTAMP$\nLogName=Application\nEventCode=902\nEventType=0\n\
+      ComputerName=$HOST$\nSourceName=Microsoft-Windows-Security-SPP\nType=Information\n\
+      RecordNumber=4611622\nKeywords=Classic\nTaskCategory=None\nOpCode=The operation\
+      \ completed successfully.\nMessage=The Software Protection service has started.\r\
+      \n10.0.17763.2686"
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=9027
+      EventType=4
+      ComputerName=$HOST$
+      SourceName=Desktop Window Manager
+      Type=Information
+      RecordNumber=4611259
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=None
+      Message=The Desktop Window Manager has registered the session port.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:Application
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=Application
+      EventCode=903
+      EventType=0
+      ComputerName=$HOST$
+      SourceName=Microsoft-Windows-Security-SPP
+      Type=Information
+      RecordNumber=4611653
+      Keywords=Classic
+      TaskCategory=None
+      OpCode=The operation completed successfully.
+      Message=The Software Protection service has stopped.
+  - index: wineventlog
+    sourcetype: WinEventLog
+    source: WinEventLog:System
+    host: $HOST$
+    _raw: |-
+      $TIMESTAMP$
+      LogName=System
+      EventCode=98
+      EventType=4
+      ComputerName=$HOST$
+      User=NOT_TRANSLATED
+      Sid=$SID$
+      SidType=0
+      SourceName=Microsoft-Windows-Ntfs
+      Type=Information
+      RecordNumber=115975
+      Keywords=None
+      TaskCategory=None
+      OpCode=Info
+      Message=Volume D: (\Device\HarddiskVolume2) is healthy.  No action is needed.

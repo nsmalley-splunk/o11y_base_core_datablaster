@@ -1,0 +1,403 @@
+samples:
+- name: ITF-AWS-S3-AccessLogs
+  interval: 1
+  count: 1
+  randomizeEvents: true
+  lines:
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-06-31-26-B51FFA791B757AD9
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:05:24:07 +0000] 54.69.168.69 arn:$INDEX$:sts::755695087069:assumed-role/okta_ro_role/Axonius
+      1RHAZRTGWR06BWXN REST.GET.TAGGING - "GET /?tagging HTTP/1.1" 404 NoSuchTagSet
+      303 - 23 - "-" "Boto3/1.16.17 Python/3.6.9 Linux/5.11.0-1019-aws Botocore/1.19.63"
+      - oFRMBVLGfQHhlPBSMlRkeanUHmq8NAf99m/+5p1W40RVTkmfu4enLAn7RQYvQQAKdcEjC4cMuYw=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-06-31-26-B51FFA791B757AD9
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:05:24:06 +0000] 54.69.168.69 arn:$INDEX$:sts::755695087069:assumed-role/okta_ro_role/Axonius
+      0NXR35XHNHP8BTT1 REST.GET.PUBLIC_ACCESS_BLOCK - "GET /?publicAccessBlock HTTP/1.1"
+      200 - 328 - 14 - "-" "Boto3/1.16.17 Python/3.6.9 Linux/5.11.0-1019-aws Botocore/1.19.63"
+      - dWtA800XpasusvZw2i2hUAlqf2+Azd9x8C+ry9TWvOMXP02C3y7N3uWWEHaJD+D7L129ZJSGOQI=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-06-30-42-BDFA2F1327A28F7B
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:05:24:06 +0000] 54.69.168.69 arn:$INDEX$:sts::755695087069:assumed-role/okta_ro_role/Axonius
+      0NXYMDV6VXQMAER6 REST.GET.LOCATION - "GET /acme-public?location HTTP/1.1" 200
+      - 137 - 23 - "-" "Boto3/1.16.17 Python/3.6.9 Linux/5.11.0-1019-aws Botocore/1.19.63"
+      - vgoKxXOLStnU+Z4w+SdW1Jbk52Lrb09sm9cWcWS9kFsfCSS/BPJfS3Ed7B/ptBTsUB9CH8aHxWE=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3.us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-06-18-50-37B1DE33E790BF4B
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:05:24:04 +0000] 54.69.168.69 - 2VJVWG5Z0SYJGWZA REST.GET.ACL -
+      "GET /?acl HTTP/1.1" 400 AuthorizationHeaderMalformed 365 - 3 - "-" "Boto3/1.16.17
+      Python/3.6.9 Linux/5.11.0-1019-aws Botocore/1.19.63" - 6EwYTgV/B5fIN8pi7HYeoGtZx2lEPKPPtH5QMC8NQfHJ0T4ZaA7GSAxD1OOkgkBp947W60NIxLo=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-06-37-38-854330E9C0E68A59
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:05:07:19 +0000] 54.68.121.189 arn:$INDEX$:iam::755695087069:user/ForSplunkAutobahnIngest
+      4JJC72KB9AN9D7TP REST.GET.LOGGING_STATUS - "GET /acme-public?logging HTTP/1.1"
+      200 - 246 - 7 - "-" "Boto3/1.17.14 Python/3.7.10 Linux/3.10.0-1160.15.2.el7.x86_64
+      Botocore/1.20.112" - 5zHHUWYfc9Arvluoq6WvJuXm5xF0q++87VxpkpNzmft2mhfGtE8iDk3quSkpisfxqA9MPhD+new=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3.us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-06-37-38-854330E9C0E68A59
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:05:07:19 +0000] 54.68.121.189 arn:$INDEX$:iam::755695087069:user/ForSplunkAutobahnIngest
+      4JJ7N1HQJG5S9SQ6 REST.GET.CORS - "GET /acme-public?cors HTTP/1.1" 404 NoSuchCORSConfiguration
+      326 - 5 - "-" "Boto3/1.17.14 Python/3.7.10 Linux/3.10.0-1160.15.2.el7.x86_64
+      Botocore/1.20.112" - hoDXCYrb5FqklBMYYvKVhuoXXV4KqiGdsSp78/E5hjp34Vsr4+zzYDMs/NKXzImr+uCNeFmeIv4=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3.us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-02-36-18-C4B6652EBE1EA7A0
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:01:37:57 +0000] 52.95.24.235 arn:$INDEX$:sts::755695087069:assumed-role/config-role-us-east-2/AWSConfig-Describe
+      YMH73C1M0TVS8EXW REST.GET.LOCATION - "GET /?location HTTP/1.1" 200 - 137 - 30
+      - "-" "AWSConfig cfg/retry-mode/legacy" - KvG2qfP0HuRfUky1Ss4VL36IxPyiGztmis8f1yfRkyOw9KI5iZO1XXjQwPt9nRpUl+Uwigsemy4=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-02-35-24-62A99A1584E742F3
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:01:37:57 +0000] 52.95.24.235 - YMH2ZPTN7XJG5D2V REST.HEAD.BUCKET
+      - "HEAD / HTTP/1.1" 400 AuthorizationHeaderMalformed 365 - 2 - "-" "AWSConfig
+      cfg/retry-mode/legacy" - ZO2ZAr3ng+rp3XlFKnMBPdykEmctiYNyOT0IRmogaWj6polXaZvJah7aOHrfVwn7IP0bgSSdZBI=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-01-14-01-A9F827E51D74B3D3
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:00:58:12 +0000] 172.18.24.0 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForConfig/AWSConfig-Describe
+      0Y0F925NA8BQ9BCB REST.GET.LIFECYCLE - "GET /?lifecycle HTTP/1.1" 404 NoSuchLifecycleConfiguration
+      297 - 18 17 "-" "AWSConfig cfg/retry-mode/legacy" - z5xp/V5oJAQ4KEzwNMOc5pEFMjokAoqQMerMzQb0oDIBG+9BlBghhsatD2/XSwDfaAh8etKXHXk=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-01-14-01-A9F827E51D74B3D3
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:00:58:12 +0000] 172.18.24.0 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForConfig/AWSConfig-Describe
+      0Y0EPRSZYF0F93AZ REST.GET.LOGGING_STATUS - "GET /?logging HTTP/1.1" 200 - 246
+      - 7 - "-" "AWSConfig cfg/retry-mode/legacy" - IfP4+biE/wKR6VwXHVxsc/WSojCkOBw9twfnBnCURRiO6KooG7H2M+eNfySpfnq+u5HkLN6maY0=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-01-14-01-A9F827E51D74B3D3
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:00:58:12 +0000] 172.18.24.0 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForConfig/AWSConfig-Describe
+      0Y0C5Q68B1R67QSR REST.GET.OBJECT_LOCK_CONFIGURATION - "GET /?object-lock HTTP/1.1"
+      404 ObjectLockConfigurationNotFoundError 358 - 6 - "-" "AWSConfig cfg/retry-mode/legacy"
+      - XgUgwFlD0krlbSlVWciNJdEgp8r+oFuxUSCj5UakDgOkBYok7NJJvMzVC/2f1JL20WRM2OUspCo=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-01-29-55-EE3C8A281248E382
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:00:58:12 +0000] 172.18.24.0 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForConfig/AWSConfig-Describe
+      0Y0CYYAQVS2890SR REST.HEAD.BUCKET - "HEAD /acme-public/ HTTP/1.1" 200 - - -
+      17 16 "-" "AWSConfig cfg/retry-mode/legacy" - /lzE++NZKjVMidl69/b7d0YJV7UuKqze5M6Y0OM8J5v0YCjHjW3jXxwu9gJIVJPbreh9Llb3/Ec=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3.us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-01-52-47-28E6E97224258C2B
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:00:39:34 +0000] 204.107.141.240 - 07GWXDEZZ1SJ3YK0 REST.GET.ACL
+      - "GET /acme-public?acl HTTP/1.1" 301 PermanentRedirect 473 - 4 - "-" "Boto3/1.4.5
+      Python/2.7.15 Linux/3.10.0-1160.25.1.el7.x86_64 Botocore/1.5.94" - JD9OFoqicaBSXO09HF4pAVF23cHscn97EuI+j0qgwZmsI9RLQ0nauz6wf8n+/Ht3+Pa2vk5O8ro=
+      - ECDHE-RSA-AES128-GCM-SHA256 - s3.amazonaws.com TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-27-01-24-50-FF9CC1C0B5C61FEF
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [27/Nov/2021:00:39:34 +0000] 204.107.141.240 arn:$INDEX$:sts::755695087069:assumed-role/okta_ro_role/AssumeRole399_Jess_Whitman
+      07GR9D2WZ3QA2ZSY REST.GET.WEBSITE - "GET /acme-public?website HTTP/1.1" 404
+      NoSuchWebsiteConfiguration 350 - 8 - "-" "Boto3/1.4.5 Python/2.7.15 Linux/3.10.0-1160.25.1.el7.x86_64
+      Botocore/1.5.94" - v1QHlmXvuLWjB+PwiHKaYJMGZHL/nRH19MNMHuSS4eXfhM1WR3deN8A91YJae84laMU3gqRAJNs=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3-us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-26-19-41-40-96DE38381BFA448C
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [26/Nov/2021:18:49:11 +0000] 204.107.141.240 arn:$INDEX$:sts::755695087069:assumed-role/sgs-audit/botocore-session-1637952393
+      C9H9X4R9N89TD7JE REST.GET.WEBSITE - "GET /?website HTTP/1.1" 404 NoSuchWebsiteConfiguration
+      350 - 32 - "-" "Scout Suite/5.10.2 Python/3.6.8 Linux/3.10.0-1160.42.2.el7.x86_64
+      Scout Suite/5.10.2 (https://github.com/nccgroup/ScoutSuite)" - zTI44FROPaSRiDniGp0aEhYRIuqf17Zyrj/JNaUaapHHW+8e/kpeFL459fSUmG/dovTG0lnYgkU=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-26-19-27-55-222AC2ACD0D3FC00
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [26/Nov/2021:18:48:57 +0000] 204.107.141.240 arn:$INDEX$:sts::755695087069:assumed-role/sgs-audit/botocore-session-1637952393
+      7YDW5ME43PMEWNQW REST.GET.VERSIONING - "GET /?versioning HTTP/1.1" 200 - 113
+      - 7 - "-" "Scout Suite/5.10.2 Python/3.6.8 Linux/3.10.0-1160.42.2.el7.x86_64
+      Scout Suite/5.10.2 (https://github.com/nccgroup/ScoutSuite)" - VuCuIwDSWgjFSfsNiGBuSmTyjQK6/j8lwkB4Qo0OvgpPjHB/3z7pbkQiwgu/e444OXixpl7W7mc=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-26-19-39-02-AF98AAC591FDD169
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [26/Nov/2021:18:48:37 +0000] 204.107.141.240 arn:$INDEX$:sts::755695087069:assumed-role/sgs-audit/botocore-session-1637952393
+      Q201N5ZSB496T762 REST.GET.LOCATION - "GET /acme-public?location HTTP/1.1" 200
+      - 137 - 8 - "-" "Scout Suite/5.10.2 Python/3.6.8 Linux/3.10.0-1160.42.2.el7.x86_64
+      Scout Suite/5.10.2 (https://github.com/nccgroup/ScoutSuite)" - 1wpDskLZ17c42voaTrmebntIuEQvq/FiVFslNaqYPUYTKn6SWs9tHQU7MZ97S8bsagVeU667cYI=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3.ap-northeast-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-26-11-15-35-DCD6987C31DE9CE4
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [26/Nov/2021:10:25:22 +0000] 72.21.217.31 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForTrustedAdvisor/TrustedAdvisor_755695087069_47a4d603-b14d-4c16-85a0-bee598f3276f
+      Q7B1XSZ9EKST8D0P REST.GET.VERSIONING - "GET /?versioning HTTP/1.1" 200 - 113
+      - 18 - "-" "AWSSupport-TrustedAdvisor, aws-internal/3 aws-sdk-java/1.11.1030
+      Linux/5.4.147-83.259.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.312-b07 java/1.8.0_312
+      vendor/Oracle_Corporation cfg/retry-mode/standard" - vIhpagzZS8VPCmobmPBrYpt8rQxdHoXGFRlpx7iTyYSN686NBbdDdXL+KPvDlj8NZlavAKGD6RA=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-26-11-32-56-34501B3C1CC99B0B
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [26/Nov/2021:10:25:22 +0000] 72.21.217.31 - Q7BFAWZS53GB0TWB REST.HEAD.BUCKET
+      - "HEAD / HTTP/1.1" 400 AuthorizationHeaderMalformed 365 - 2 - "-" "AWSSupport-TrustedAdvisor,
+      aws-internal/3 aws-sdk-java/1.11.1030 Linux/5.4.147-83.259.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.312-b07
+      java/1.8.0_312 vendor/Oracle_Corporation cfg/retry-mode/standard" - aquckBpDAicRhhXEDhOlwSrDDr2P1wK/M8GITdWDlGLxEjgVXcZYxuah5bS3CSzeyB3vF+eB4rw=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-18-07-25-56-3C43DADE4FD0DCEC
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [18/Nov/2021:06:33:18 +0000] 72.21.217.31 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForTrustedAdvisor/TrustedAdvisor_755695087069_46e33214-630a-44b3-a542-385059d1618f
+      FR8PXVDYP46X1P7Z REST.GET.POLICY_STATUS - "GET /?policyStatus HTTP/1.1" 404
+      NoSuchBucketPolicy 316 - 6 - "-" "AWSSupport-TrustedAdvisor, aws-internal/3
+      aws-sdk-java/1.11.1030 Linux/5.4.147-83.259.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.312-b07
+      java/1.8.0_312 vendor/Oracle_Corporation cfg/retry-mode/standard" - aeP3NcxLkc42mGPqPSCJ5S5us8SwQF2BrikJgvttxxPlFj8BLMb24Yzbg4Xrhe3LAMsvM/9v6XI=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-07-15-38-31-8BFD5B5FCCE2C89C
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [07/Nov/2021:14:02:15 +0000] 76.92.195.52 - WNSA5N5828H8896Q REST.GET.BUCKET
+      - "GET / HTTP/1.1" 403 AccessDenied 243 - 13 - "-" "Mozilla/5.0 (iPhone; CPU
+      iPhone OS 14_8_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2
+      Mobile/15E148 Safari/604.1" - m6za8sCOUpFosLAueC/JizGARzGrvbjyRItTJ45po+zPXVi4aiZ53AGq2p1i9OzVvU4sZ100rTI=
+      - ECDHE-RSA-AES128-GCM-SHA256 - acme-public.s3.us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-22-23-09-576DD80E52FA90AB
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:21:16:16 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
+      0ESYP1YM1FWPNYYV REST.GET.POLICY_STATUS - "GET /?policyStatus HTTP/1.1" 404
+      NoSuchBucketPolicy 316 - 7 - "-" "S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.1030
+      Linux/5.4.141-78.230.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302
+      vendor/Oracle_Corporation cfg/retry-mode/standard" - 75bEvVcKdmEN2wAmJBIu02xOail1bgPbTQ4ZnFhv0zOd7gUggsmAa72PqN2cF+9ncU2ZyNz0wgY=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-22-23-09-576DD80E52FA90AB
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:21:16:16 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
+      0ESR39EDMB0S9ZVA REST.GET.ACL - "GET /?acl HTTP/1.1" 200 - 568 - 76 - "-" "S3Console/0.4,
+      aws-internal/3 aws-sdk-java/1.11.1030 Linux/5.4.141-78.230.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.302-b08
+      java/1.8.0_302 vendor/Oracle_Corporation cfg/retry-mode/standard" - hNqouvqL+uRkno9W3CfRYmdfXO6kVXJQ7HH5lHyOQX86jbQ0B37asNo41AtzoVEw9wP6W6eNODQ=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-22-41-26-48822503A79E2F03
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:21:16:15 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
+      F283N94TRCJ0EWNS REST.HEAD.BUCKET - "HEAD /acme-public HTTP/1.1" 200 - - - 25
+      24 "-" "S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.1030 Linux/5.4.141-78.230.amzn2int.x86_64
+      OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302 vendor/Oracle_Corporation
+      cfg/retry-mode/standard" - qGx8wnLraCMn3Ta0u/Jwu9LhrvksDnjE4uBdx5qBrOe1Uj/hzxWm5YoGyqNWbX8Oa7Ffrspcn9E=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3-us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-48-39-D655786E4940B3AD
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:46:15 +0000] 54.240.198.15 - 4HRAGD8KGA3ZK4XV REST.HEAD.BUCKET
+      - "HEAD /acme-public/ HTTP/1.1" 301 PermanentRedirect 473 - 2 - "-" "AWSConfig
+      cfg/retry-mode/legacy" - zxinhund4ZfJkKuFoZ99YtsYKu7CCAAyfXoUnVW9Yyh/DTtVX+ZFX7Dl8o0xzPkCPE9s7aHi8M8=
+      - ECDHE-RSA-AES128-GCM-SHA256 - s3.amazonaws.com TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-33-46-4B32C0659AA7B56F
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:44:40 +0000] 76.92.195.52 - 735GZJFSMYQRWY2M REST.GET.OBJECT
+      favicon.ico "GET /favicon.ico HTTP/1.1" 403 AccessDenied 243 - 8 - "https://acme-public.s3.us-west-1.amazonaws.com/helloworld.txt"
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+      like Gecko) Chrome/95.0.4638.69 Safari/537.36" - lFv99mlBto45BNbhwMD+SLpbOoemo/cL35vZfxYHETe741DXVsZYOGMlk5CdT9ueuSou6M0nKiI=
+      - ECDHE-RSA-AES128-GCM-SHA256 - acme-public.s3.us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-33-46-4B32C0659AA7B56F
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:44:39 +0000] 76.92.195.52 - 313PDY8QJ3MHFAEK REST.GET.OBJECT
+      helloworld.txt "GET /helloworld.txt HTTP/1.1" 403 AccessDenied 243 - 18 - "-"
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+      like Gecko) Chrome/95.0.4638.69 Safari/537.36" - MyPSaJu3tnrNAKpDkpe1Pl8oZkF+HtCPsbiKAe4s7cXWowWR1dQ3HRuY9DFfy2rtUmvniwAN3lQ=
+      - ECDHE-RSA-AES128-GCM-SHA256 - acme-public.s3.us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-41-12-68C896F5C66F1820
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:44:36 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
+      PBGWR83YG11CB26C REST.GET.ACL - "GET /acme-public?acl= HTTP/1.1" 200 - 568 -
+      84 - "-" "S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.1030 Linux/5.4.141-78.230.amzn2int.x86_64
+      OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302 vendor/Oracle_Corporation
+      cfg/retry-mode/standard" - /lOotkYle7unTi2/MqdtyoJHVyFU+NF/TB9gWoChkyjLsORHoHb+4axclJfL5bG8XOb6iaDaFf0=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3-us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-15-21-4063D1B24AEAC1A1
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:44:36 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
+      PBGZF19BW4WXR1JN REST.GET.BUCKETVERSIONS - "GET /?versions&max-keys=1&encoding-type=url
+      HTTP/1.1" 200 - 713 - 97 96 "-" "S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.1030
+      Linux/5.4.147-83.259.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302
+      vendor/Oracle_Corporation cfg/retry-mode/standard" - FX1XQrsh5cvPQym6U9/QCP0FtulbniN99pc7UbcJnUkZH1z7XMdebuU8e6wBiGUzAfV7+er334Y=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-27-53-A7B9AAA068D47434
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:44:17 +0000] 76.92.195.52 - NT3B35H4AJW35RB4 REST.GET.OBJECT
+      helloworld.txt "GET /helloworld.txt HTTP/1.1" 200 - 11 11 15 14 "-" "Mozilla/5.0
+      (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69
+      Safari/537.36" - Kfq2vm9XBCqsKDZLx0RRtqyQv4iR/XU54nFajeq8Ez+Dn/EHHarZscuBiHfdvxU1ASQmZE4OgFU=
+      - ECDHE-RSA-AES128-GCM-SHA256 - acme-public.s3.us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-20-45-88A0FF14E5B18187
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:36:32 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
+      YXPNM0YZF5ZNAJNB REST.GET.BUCKET - "GET /acme-public?list-type=2&encoding-type=url&max-keys=1000&fetch-owner=true&delimiter=%2F&prefix=
+      HTTP/1.1" 200 - 650 - 101 101 "-" "S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.1030
+      Linux/5.4.141-78.230.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302
+      vendor/Oracle_Corporation cfg/retry-mode/standard" - RPod+1Xu5UGLxTwO8TNYcr3rCfQcnE/yJ0BpGyuGFi6S8RKwy0K+/YicOCi7u3NdHwj8p4UeiHA=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3-us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-25-14-A26661FB25C08A5B
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:28:51 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
+      Q3Q3QVD72X1VT1D8 REST.GET.INTELLIGENT_TIERING - "GET /acme-public?intelligent-tiering=
+      HTTP/1.1" 200 - 169 - 43 - "-" "S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.1030
+      Linux/5.4.147-83.259.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302
+      vendor/Oracle_Corporation cfg/retry-mode/standard" - Wjm4hxbYbB7ssmHJSfEfHmvyTxY4lr8fj2eMO1v4QLZy2nFxMPEr1OmE/GfCYQwUjqTPiQPoKTM=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3-us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-31-12-CE6E09BADF88BF60
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:28:50 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
+      ZP18R7675Z94FYNE REST.HEAD.OBJECT helloworld.txt "HEAD /helloworld.txt HTTP/1.1"
+      200 - - 11 35 - "-" "S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.1030 Linux/5.4.147-83.259.amzn2int.x86_64
+      OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302 vendor/Oracle_Corporation
+      cfg/retry-mode/standard" - DjFoL9gbJUvWpfnnBFAo0mvsZBbwtFNTYSsFPXaMX8Yx/9gKPD+4A68DdxVPM9uuCSWl/4cwwjo=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader acme-public.s3.us-west-1.amazonaws.com
+      TLSv1.2 -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-13-35-8DF601974DF2CCF3
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:28:50 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
+      ZP14F35A7MEWVAP7 REST.GET.OBJECT_TAGGING helloworld.txt "GET /acme-public/helloworld.txt?tagging=
+      HTTP/1.1" 200 - 115 - 17 14 "-" "S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.1030
+      Linux/5.4.147-83.259.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302
+      vendor/Oracle_Corporation cfg/retry-mode/standard" - PKjbtCscbTRc6OIM88OhGb8Qh4JgFn7gzJwsdjYa8V/MKx01fxaI6UAppbT3wFMu8XKyRysiHIo=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3-us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-12-06-5B222EB50DE36140
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:28:50 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
+      ZP1A53QCSQSYMMN3 REST.HEAD.OBJECT helloworld.txt "HEAD /acme-public/helloworld.txt
+      HTTP/1.1" 200 - - 11 25 - "-" "S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.1030
+      Linux/5.4.147-83.259.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302
+      vendor/Oracle_Corporation cfg/retry-mode/standard" - 9JLWiQu4+KYDOeTPaPAZhdG5B11cVZ4QNJHJVrsm+sXCM2pXMceIyiGBMYSRTsaLXFbObhSPtWM=
+      SigV4 ECDHE-RSA-AES128-GCM-SHA256 AuthHeader s3-us-west-1.amazonaws.com TLSv1.2
+      -
+  - index: aws
+    sourcetype: aws:s3:accesslogs
+    source: s3://splunk-s3-access-bucket/2021-11-04-14-40-07-7AB35B4BC7729659
+    host: $decideOnStartup
+    _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
+      [04/Nov/2021:13:19:17 +0000] 76.92.195.52 - GZ8AWKSAS060QTG7 REST.GET.OBJECT
+      helloworld.txt "GET /helloworld.txt HTTP/1.1" 304 - - 11 28 - "-" "Mozilla/5.0
+      (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69
+      Safari/537.36" - AWa1eFw4lVCG3mI1vRMfJQ98UxDW+cszKAi2aS/VsyaXH61jpymT5K+ae6hi9mICwszOYqpy6cc=
+      - ECDHE-RSA-AES128-GCM-SHA256 - acme-public.s3.us-west-1.amazonaws.com TLSv1.2
+      -

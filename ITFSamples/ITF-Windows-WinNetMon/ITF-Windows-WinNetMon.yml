@@ -1,0 +1,173 @@
+samples:
+- name: ITF-Windows-WinNetMon
+  interval: 1
+  count: 2
+  randomizeEvents: true
+  tokens:
+  - name: TIMESTAMP
+    format: template
+    type: gotimestamp
+    replacement: '20220310102321'
+  - name: REMOTEHOSTNAME
+    format: template
+    type: choice
+    sample: REMOTEHOSTNAME.sample
+  - name: HOST
+    format: template
+    type: choice
+    choice:
+      - win-01.internal.acme.com
+      - win-02.internal.acme.com
+      - win-03.internal.acme.com
+      - win-04.internal.acme.com
+      - win-05.internal.acme.com
+  - name: LOCALADDRESS
+    format: template
+    type: choice
+    choice:
+      - 172.31.3.29
+      - fe80::9da1:c526:1c1e:4e7d
+      - 224.0.0.251
+      - ff02::fb
+  - name: REMOTEADDRESS
+    format: template
+    type: choice
+    sample: REMOTEADDRESS.sample
+  - name: USERSID
+    format: template
+    type: choice
+    choice:
+      - s-1-5-20
+      - s-1-5-18
+      - s-1-5-19
+      - unknown
+  - name: DIRECTION
+    format: template
+    type: choice
+    choice:
+      - outbound
+      - inbound
+  - name: PACKETTYPE
+    format: template
+    type: choice
+    choice:
+      - transport
+      - accept
+      - connect
+  - name: LOCALPORT
+    format: template
+    type: random
+    replacement: int
+    lower: 49000
+    upper: 65437
+  - name: REMOTEPORT
+    format: template
+    type: choice
+    sample: REMOTEPORT.sample
+  - name: USERID
+    format: template
+    type: choice
+    choice:
+      - 0-0
+      - 0-3e4
+      - 0-3e5
+  - name: ADDRESSFAMILY
+    format: template
+    type: choice
+    choice:
+      - ipv4
+      - ipv6
+  - name: PROTOCOL
+    format: template
+    type: choice
+    choice:
+      - TCP
+      - UDP
+  - name: HEADERSIZEBYTES
+    format: template
+    type: choice
+    choice:
+      - 0
+      - 20
+      - 40
+  - name: ADDRESSFAMILYID
+    format: template
+    type: choice
+    choice:
+      - 2
+      - 23
+  - name: PROTOCOLID
+    format: template
+    type: choice
+    choice:
+      - 6
+      - 17
+  - name: TRANSPORTHEADERSIZEBYTES
+    format: template
+    type: choice
+    choice:
+      - 0
+      - 20
+      - 32
+      - 8
+  - name: IPSECPROTECTED
+    format: template
+    type: choice
+    choice:
+      - 0
+  - name: PACKETTYPEID
+    format: template
+    type: choice
+    choice:
+      - 0
+      - 1
+      - 2
+  lines:
+  - index: windows
+    sourcetype: WinNetMon
+    source: inbound
+    host: $HOST$
+    _raw: |-
+      AddressFamily=$ADDRESSFAMILY$
+      AddressFamilyId=$ADDRESSFAMILYID$
+      PacketType=$PACKETTYPE$
+      PacketTypeId=$ADDRESSFAMILYID$
+      Direction=inbound
+      Protocol=$PROTOCOL$
+      ProtocolId=$PROTOCOLID$
+      LocalAddress=$LOCALADDRESS$
+      LocalPort=$LOCALPORT$
+      RemoteHostName=$REMOTEHOSTNAME$
+      RemoteAddress=$REMOTEHOSTNAME$
+      RemotePort=$PROTOCOLID$0291
+      ProcessName="c:\windows\system32\svchost.exe"
+      UserName="nt authority\network service"
+      UserSid=$USERSID$
+      UserId=$USERID$
+      HeaderSizeBytes=$HEADERSIZEBYTES$
+      IPsecProtected=$HEADERSIZEBYTES$
+      TransportHeaderSizeBytes=$HEADERSIZEBYTES$
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: $HOST$
+    _raw: |-
+      AddressFamily=$ADDRESSFAMILY$
+      AddressFamilyId=$ADDRESSFAMILYID$
+      PacketType=$PACKETTYPE$
+      PacketTypeId=$ADDRESSFAMILYID$
+      Direction=outbound
+      Protocol=$PROTOCOL$
+      ProtocolId=$PROTOCOLID$
+      LocalAddress=$LOCALADDRESS$
+      LocalPort=$LOCALPORT$
+      RemoteHostName=$REMOTEHOSTNAME$
+      RemoteAddress=$REMOTEHOSTNAME$
+      RemotePort=$REMOTEPORT$
+      ProcessName="c:\windows\system32\svchost.exe"
+      UserName="nt authority\network service"
+      UserSid=$USERSID$
+      UserId=$USERID$
+      HeaderSizeBytes=$HEADERSIZEBYTES$
+      IPsecProtected=$HEADERSIZEBYTES$
+      TransportHeaderSizeBytes=$HEADERSIZEBYTES$

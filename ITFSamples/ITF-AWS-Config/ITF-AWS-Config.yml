@@ -1,0 +1,104 @@
+samples:
+- name: ITF-AWS-Config
+  interval: 1
+  count: 1
+  randomizeEvents: true
+  lines:
+  - index: aws
+    sourcetype: aws:config:rule
+    source: 755695087069:us-west-1:configRule:complianceSummary
+    host: ip-10-202-14-145.ec2.acme.com
+    _raw: '{"CompliantResourceCount": {"CappedCount": 1, "CapExceeded": false}, "NonCompliantResourceCount":
+      {"CappedCount": 1, "CapExceeded": false}, "ComplianceSummaryTimestamp": "2021-10-04
+      21:52:02.305000+00:00", "ConfigRuleName": "alb-http-to-https-redirection-check"}'
+  - index: aws
+    sourcetype: aws:config:rule
+    source: 755695087069:us-west-1:configRule
+    host: ip-10-202-14-145.ec2.acme.com
+    _raw: '{"ConfigRuleName": "alb-http-to-https-redirection-check", "ConfigRuleArn":
+      "arn:$INDEX$:config:us-west-1:755695087069:config-rule/config-rule-45h4lk",
+      "ConfigRuleId": "config-rule-45h4lk", "Description": "Checks whether HTTP to
+      HTTPS redirection is configured on all HTTP listeners of Application Load Balancers.
+      The rule is NON_COMPLIANT if one or more HTTP listeners of Application Load
+      Balancer do not have HTTP to HTTPS redirection configured.", "Source": {"Owner":
+      "AWS", "SourceIdentifier": "ALB_HTTP_TO_HTTPS_REDIRECTION_CHECK"}, "MaximumExecutionFrequency":
+      "TwentyFour_Hours", "ConfigRuleState": "ACTIVE"}'
+  - index: aws
+    sourcetype: aws:config:rule
+    source: 755695087069:us-west-1:configRule:evaluationStatus
+    host: ip-10-202-14-145.ec2.acme.com
+    _raw: '{"ConfigRuleName": "account-part-of-organizations", "ConfigRuleArn": "arn:$INDEX$:config:us-west-1:755695087069:config-rule/config-rule-fzifuq",
+      "ConfigRuleId": "config-rule-fzifuq", "LastSuccessfulInvocationTime": "2021-10-04
+      21:49:39.961000+00:00", "LastSuccessfulEvaluationTime": "2021-10-04 21:49:41.428000+00:00",
+      "FirstActivatedTime": "2021-09-21 20:58:00.065000+00:00", "FirstEvaluationStarted":
+      true}'
+  - index: aws
+    sourcetype: aws:config:rule
+    source: 755695087069:us-west-1:configRule:complianceDetail
+    host: ip-10-202-14-145.ec2.acme.com
+    _raw: '{"EvaluationResultIdentifier": {"EvaluationResultQualifier": {"ConfigRuleName":
+      "account-part-of-organizations", "ResourceType": "AWS::::Account", "ResourceId":
+      "755695087069"}, "OrderingTimestamp": "2021-10-04 21:49:27.914000+00:00"}, "ComplianceType":
+      "COMPLIANT", "ResultRecordedTime": "2021-10-04 21:49:41.424000+00:00", "ConfigRuleInvokedTime":
+      "2021-10-04 21:49:39.945000+00:00"}'
+  - index: aws
+    sourcetype: aws:config
+    source: 755695087069_Config_us-west-1_ConfigHistory_AWS::EC2::EIP_20211004T165622Z_20211004T192735Z_1.json.gz
+    host: ip-10-202-14-145.ec2.acme.com
+    _raw: '{"relatedEvents": [], "relationships": [], "supplementaryConfiguration":
+      {}, "tags": {}, "configurationItemVersion": "1.3", "configurationItemCaptureTime":
+      "2021-10-04T19:27:35.623Z", "configurationStateId": 1633375655623, "awsAccountId":
+      "755695087069", "configurationItemStatus": "ResourceDeleted", "resourceType":
+      "AWS::EC2::EIP", "resourceId": "eipalloc-22810b3a", "ARN": "arn:$INDEX$:ec2:us-west-1:755695087069:eip-allocation/eipalloc-22810b3a",
+      "awsRegion": "us-west-1", "configurationStateMd5Hash": ""}'
+  - index: aws
+    sourcetype: aws:config:notification
+    source: aws_config://Autobahn_Config_Change_16f37c6c-9f9c-4f6e-b05f-ad9066c2e6dd
+    host: ip-10-202-14-145.ec2.acme.com
+    _raw: '{"configurationItemDiff": {"changedProperties": {"Configuration": {"previousValue":
+      {"instanceId": null, "publicIp": "13.56.73.90", "allocationId": "eipalloc-22810b3a",
+      "associationId": null, "domain": "vpc", "networkInterfaceId": null, "networkInterfaceOwnerId":
+      null, "privateIpAddress": null, "tags": [], "publicIpv4Pool": "amazon", "networkBorderGroup":
+      "us-west-1", "customerOwnedIp": null, "customerOwnedIpv4Pool": null, "carrierIp":
+      null}, "updatedValue": null, "changeType": "DELETE"}, "ResourceName": {"previousValue":
+      "13.56.73.90", "updatedValue": null, "changeType": "DELETE"}}, "changeType":
+      "DELETE"}, "configurationItem": {"relatedEvents": [], "relationships": [], "configuration":
+      null, "supplementaryConfiguration": {}, "tags": {}, "configurationItemVersion":
+      "1.3", "configurationItemCaptureTime": "2021-10-04T19:27:35.623Z", "configurationStateId":
+      1633375655623, "awsAccountId": "755695087069", "configurationItemStatus": "ResourceDeleted",
+      "resourceType": "AWS::EC2::EIP", "resourceId": "eipalloc-22810b3a", "resourceName":
+      null, "ARN": "arn:$INDEX$:ec2:us-west-1:755695087069:eip-allocation/eipalloc-22810b3a",
+      "awsRegion": "us-west-1", "availabilityZone": null, "configurationStateMd5Hash":
+      "", "resourceCreationTime": null}, "notificationCreationTime": "2021-10-04T19:27:35.669Z",
+      "messageType": "ConfigurationItemChangeNotification", "recordVersion": "1.3"}'
+  - index: aws
+    sourcetype: aws:config
+    source: 755695087069_Config_us-west-1_ConfigHistory_AWS::SQS::Queue_20211004T190214Z_20211004T190214Z_1.json.gz
+    host: ip-10-202-14-145.ec2.acme.com
+    _raw: '{"relatedEvents": [], "relationships": [], "configuration": {"Policy":
+      "{\\"Version\\":\\"2008-10-17\\",\\"Id\\":\\"__default_policy_ID\\",\\"Statement\\":[{\\"Sid\\":\\"__owner_statement\\",\\"Effect\\":\\"Allow\\",\\"Principal\\":{\\"AWS\\":\\"arn:$INDEX$:iam::755695087069:root\\"},\\"Action\\":\\"SQS:*\\",\\"Resource\\":\\"arn:$INDEX$:sqs:us-west-1:755695087069:Autobahn-Config-Rule-Notification\\"},{\\"Sid\\":\\"topic-subscription-arn:$INDEX$:sns:us-west-1:755695087069:splunk-config-rule-changes\\",\\"Effect\\":\\"Allow\\",\\"Principal\\":{\\"AWS\\":\\"*\\"},\\"Action\\":\\"SQS:SendMessage\\",\\"Resource\\":\\"arn:$INDEX$:sqs:us-west-1:755695087069:Autobahn-Config-Rule-Notification\\",\\"Condition\\":{\\"ArnLike\\":{\\"aws:SourceArn\\":\\"arn:$INDEX$:sns:us-west-1:755695087069:splunk-config-rule-changes\\"}}}]}",
+      "ReceiveMessageWaitTimeSeconds": "0", "CreatedTimestamp": "1633374020", "DelaySeconds":
+      "0", "MessageRetentionPeriod": "345600", "MaximumMessageSize": "262144", "VisibilityTimeout":
+      "300", "LastModifiedTimestamp": "1633374054", "QueueArn": "arn:$INDEX$:sqs:us-west-1:755695087069:Autobahn-Config-Rule-Notification"},
+      "supplementaryConfiguration": {"Tags": {}}, "tags": {}, "configurationItemVersion":
+      "1.3", "configurationItemCaptureTime": "2021-10-04T19:02:14.366Z", "configurationStateId":
+      1633374134366, "awsAccountId": "755695087069", "configurationItemStatus": "ResourceDiscovered",
+      "resourceType": "AWS::SQS::Queue", "resourceId": "https://sqs.us-west-1.amazonaws.com/755695087069/Autobahn-Config-Rule-Notification",
+      "resourceName": "Autobahn-Config-Rule-Notification", "ARN": "arn:$INDEX$:sqs:us-west-1:755695087069:Autobahn-Config-Rule-Notification",
+      "awsRegion": "us-west-1", "availabilityZone": "Not Applicable", "configurationStateMd5Hash":
+      "", "resourceCreationTime": "2021-10-04T19:00:20.000Z"}'
+  - index: aws
+    sourcetype: aws:config
+    source: 755695087069_Config_us-west-1_ConfigHistory_AWS::SNS::Topic_20211004T190004Z_20211004T190004Z_1.json.gz
+    host: ip-10-202-14-145.ec2.acme.com
+    _raw: '{"relatedEvents": [], "relationships": [], "configuration": {"Policy":
+      "{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Sid\\":\\"__default_statement_ID\\",\\"Effect\\":\\"Allow\\",\\"Principal\\":{\\"AWS\\":\\"*\\"},\\"Action\\":[\\"sns:GetTopicAttributes\\",\\"sns:SetTopicAttributes\\",\\"sns:AddPermission\\",\\"sns:RemovePermission\\",\\"sns:DeleteTopic\\",\\"sns:Subscribe\\",\\"sns:ListSubscriptionsByTopic\\",\\"sns:Publish\\"],\\"Resource\\":\\"arn:$INDEX$:sns:us-west-1:755695087069:splunk-config-rule-changes\\",\\"Condition\\":{\\"StringEquals\\":{\\"AWS:SourceOwner\\":\\"755695087069\\"}}},{\\"Sid\\":\\"AWSConfigSNSPolicy20180529\\",\\"Effect\\":\\"Allow\\",\\"Principal\\":{\\"AWS\\":\\"arn:$INDEX$:iam::755695087069:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig\\"},\\"Action\\":\\"sns:Publish\\",\\"Resource\\":\\"arn:$INDEX$:sns:us-west-1:755695087069:splunk-config-rule-changes\\"}]}",
+      "Owner": "755695087069", "TopicArn": "arn:$INDEX$:sns:us-west-1:755695087069:splunk-config-rule-changes",
+      "EffectiveDeliveryPolicy": "{\\"http\\":{\\"defaultHealthyRetryPolicy\\":{\\"minDelayTarget\\":20,\\"maxDelayTarget\\":20,\\"numRetries\\":3,\\"numMaxDelayRetries\\":0,\\"numNoDelayRetries\\":0,\\"numMinDelayRetries\\":0,\\"backoffFunction\\":\\"linear\\"},\\"disableSubscriptionOverrides\\":false}}",
+      "DisplayName": ""}, "supplementaryConfiguration": {"Tags": []}, "tags": {},
+      "configurationItemVersion": "1.3", "configurationItemCaptureTime": "2021-10-04T19:00:04.518Z",
+      "configurationStateId": 1633374004518, "awsAccountId": "755695087069", "configurationItemStatus":
+      "ResourceDiscovered", "resourceType": "AWS::SNS::Topic", "resourceId": "arn:$INDEX$:sns:us-west-1:755695087069:splunk-config-rule-changes",
+      "resourceName": "splunk-config-rule-changes", "ARN": "arn:$INDEX$:sns:us-west-1:755695087069:splunk-config-rule-changes",
+      "awsRegion": "us-west-1", "availabilityZone": "Not Applicable", "configurationStateMd5Hash":
+      ""}'

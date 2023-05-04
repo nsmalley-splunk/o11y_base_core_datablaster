@@ -1,0 +1,55 @@
+samples:
+- name: ITF-Apache-Solarwinds
+  interval: 60
+  count: 3
+  randomizeEvents: false
+  tokens:
+  - name: TIMESTAMP
+    format: template
+    type: gotimestamp
+    replacement: 2006/01/02 15:04:05
+  lines:
+  - index: stsc-scenario
+    sourcetype: solarwinds:alert
+    source: solarwinds
+    host: apache-02.external.acme.com
+    _raw: $TIMESTAMP$ nodename="apache-02.external.acme.com" alert="_ Orion GSMC alert
+      response test up" alerttriggertime="2022/03/28 10:03:11" nodedetailsurl="http://solarwinds-01:80/Orion/View.aspx?NetObject=AM:8944"
+      componenttype="14" status="up" statusorerrordescription="Component is up. HTTP
+      200. Request succeeded." usernotes="" componentname="apache-02.external.acme.com"
+      applicationname="Solarwinds Web Cart" responsetime=269 thresholdresponsetimewarning=1000
+      thresholdresponsetimecritical=2000 statusdescription="Solarwinds Web Cart response
+      test is up" Title="Solarwinds Alert response test up for apache-02.external.acme.com"
+  - index: stsc-scenario
+    sourcetype: solarwinds:alert
+    source: solarwinds
+    host: apache-04.external.acme.com
+    _raw: $TIMESTAMP$ nodename="apache-04.external.acme.com" alert="_ Orion GSMC alert
+      response test up" alerttriggertime="2022/03/28 10:03:11" nodedetailsurl="http://solarwinds-01:80/Orion/View.aspx?NetObject=AM:2151"
+      componenttype="14" status="up" statusorerrordescription="Component is up. HTTP
+      200. Request succeeded." usernotes="" componentname="apache-04.external.acme.com"
+      applicationname="Solarwinds Web Cart" responsetime=282 thresholdresponsetimewarning=1000
+      thresholdresponsetimecritical=2000 statusdescription="Solarwinds Web Cart response
+      test is up" Title="Solarwinds Alert response test up for apache-04.external.acme.com"
+  - index: stsc-scenario
+    sourcetype: solarwinds:alert
+    source: solarwinds
+    host: apache-01.external.acme.com
+    _raw: $TIMESTAMP$ nodename="apache-01.external.acme.com" alert="_ Orion GSMC alert
+      response test up" alerttriggertime="2022/03/28 10:03:13" nodedetailsurl="http://solarwinds-01:80/Orion/View.aspx?NetObject=AM:2199"
+      componenttype="14" status="up" statusorerrordescription="Component is up. HTTP
+      200. Request succeeded." usernotes="" componentname="apache-01.external.acme.com"
+      applicationname="Solarwinds Web Login" responsetime=283 thresholdresponsetimewarning=1000
+      thresholdresponsetimecritical=2000 statusdescription="Solarwinds Web Login response
+      test is up" Title="Solarwinds Alert response test up for apache-01.external.acme.com"
+  - index: stsc-scenario
+    sourcetype: solarwinds:alert
+    source: solarwinds
+    host: apache-03.external.acme.com
+    _raw: $TIMESTAMP$ nodename="apache-03.external.acme.com" alert="_ Orion GSMC alert
+      response test up" alerttriggertime="2022/03/28 09:03:13" nodedetailsurl="http://solarwinds-01:80/Orion/View.aspx?NetObject=AM:4720"
+      componenttype="14" status="up" statusorerrordescription="Component is up. HTTP
+      200. Request succeeded." usernotes="" componentname="apache-03.external.acme.com"
+      applicationname="Solarwinds Web Login" responsetime=269 thresholdresponsetimewarning=1000
+      thresholdresponsetimecritical=2000 statusdescription="Solarwinds Web Login response
+      test is up" Title="Solarwinds Alert response test up for apache-03.external.acme.com"

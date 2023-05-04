@@ -1,0 +1,217 @@
+samples:
+- name: ITF-VMware-ESXi-Metrics
+  interval: 30
+  count: 16
+  randomizeEvents: false
+  tokens:
+  - name: CPU_DEMAND
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 3302.1865483380957
+    upper: 3492.879075866314
+  - name: CPU_USAGE
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 34.75640150445806
+    upper: 71.2122836450011
+  - name: CPU_USAGE_MHZ
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2551.8378753329516
+    upper: 4914.505096426152
+  - name: DATA_READ_AVERAGED
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 237.23732978144437
+    upper: 707.1411216379488
+  - name: DATA_WRITE_AVERAGED
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 78.00515833480742
+    upper: 267.9671744261925
+  - name: DATA_READ
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 1897.898638251555
+    upper: 5657.12897310359
+  - name: DATA_WRITE
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 624.0412666784594
+    upper: 2143.73739540954
+  - name: DATA_STORAGE
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 35.992270852362225
+    upper: 63.65274716446028
+  - name: DATA_RL
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0
+    upper: 112.28949152542374
+  - name: DATA_WL
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 0.1
+    upper: 1128.0976271186441
+  - name: MEM_ACTIVE
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 21055.791269562244
+    upper: 47185644.06345159
+  - name: MEM_CONSUMED
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 24241702.094150364
+    upper: 43528577.639878385
+  - name: NET_TRANSMITTED
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 2191.1407630919402
+    upper: 2641.945114670402
+  - name: NET_REC
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 358.05488532959816
+    upper: 808.85923690806
+  - name: PACKET_TX
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 143596.4099092303
+    upper: 173139.87308992477
+  - name: PACKET_RX
+    format: template
+    field: fields
+    type: random
+    replacement: float
+    lower: 23465.126910075214
+    upper: 53008.59009076971
+  lines:
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"megaHertz","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.cpu.demand":"$CPU_DEMAND$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.cpu.usage":"$CPU_USAGE$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"megaHertz","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.cpu.usagemhz":"$CPU_USAGE_MHZ$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","datastore":"datastore-8675","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"number","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.numberReadAveraged":"$DATA_READ_AVERAGED$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","datastore":"datastore-8675","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"number","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.numberWriteAveraged":"$DATA_WRITE_AVERAGED$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","datastore":"datastore-8675","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"kiloBytesPerSecond","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.read":"$DATA_READ$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","datastore":"datastore-8675","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"kiloBytesPerSecond","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.write":"$DATA_WRITE$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","datastore":"datastore-8675","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"percent","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.storageUsed":"$DATA_STORAGE$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","datastore":"datastore-8675","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"millisecond","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.totalWriteLatency":"$DATA_WL$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","datastore":"datastore-8675","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"millisecond","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.datastore.totalReadLatency":"$DATA_RL$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"kiloBytes","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.mem.active":"$MEM_ACTIVE$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"kiloBytes","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.mem.consumed":"$MEM_CONSUMED$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"kiloBytesPerSecond","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.net.transmitted":"$NET_TRANSMITTED$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"kiloBytesPerSecond","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.net.received":"$NET_REC$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"number","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.net.packetsTx":"$PACKET_TX$"}'
+  - index: vmware-perf-metrics
+    sourcetype: vsphere.esxihost.data
+    source: vsphere.esxihost.data
+    host: prod-vcenter.acme.com
+    _raw: metric
+    fields: '{"cluster":"domain-c8675","cluster_name":"acme","entity_type":"vsphere.esxihost","ip":"10.101.0.100","moid":"host-8675","name":"esx-acme-01.internal.acme.com","os":"vmnix-x86","os_version":"5.5.0","pool_name":"Global","unit":"number","uuid":"fd89ba4d-f445-400a-aa0e-065f98c08bf8","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.esxihost.net.packetsRx":"$PACKET_RX$"}'
+
+

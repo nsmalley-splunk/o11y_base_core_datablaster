@@ -1,0 +1,54 @@
+samples:
+- name: ITF-Unix-Goodness
+  interval: 60
+  count: 7
+  randomizeEvents: false
+  lines:
+  - index: linux
+    sourcetype: unix:version
+    source: unix:version
+    host: mysql-01.internal.acme.com
+    _raw: '{"machine_architecture_name":"x86_64","os_version":"#1 SMP Tue Nov 10 18:01:38
+      UTC 2015","os_name":"Linux","os_release":"2.6.32-573.8.1.el6.x86_64","machine_hardware_name":"x86_64"}'
+  - index: linux
+    sourcetype: unix:version
+    source: unix:version
+    host: auth-02.internal.acme.com
+    _raw: '{"machine_architecture_name":"x86_64","os_version":"#1 SMP Tue Nov 10 18:01:38
+      UTC 2015","os_name":"Linux","os_release":"2.6.32-573.8.1.el6.x86_64","machine_hardware_name":"x86_64"}'
+  - index: linux
+    sourcetype: unix:version
+    source: unix:version
+    host: mysql-04.internal.acme.com
+    _raw: '{"machine_architecture_name":"x86_64","os_version":"#1 SMP Tue Nov 10 18:01:38
+      UTC 2015","os_name":"Linux","os_release":"2.6.32-573.8.1.el6.x86_64","machine_hardware_name":"x86_64"}'
+  - index: linux
+    sourcetype: unix:version
+    source: unix:version
+    host: mysql-03.internal.acme.com
+    _raw: '{"machine_architecture_name":"x86_64","os_version":"#1 SMP Tue Nov 10 18:01:38
+      UTC 2015","os_name":"Linux","os_release":"2.6.32-573.8.1.el6.x86_64","machine_hardware_name":"x86_64"}'
+  - index: linux
+    sourcetype: unix:version
+    source: unix:version
+    host: auth-01.internal.acme.com
+    _raw: '{"machine_architecture_name":"x86_64","os_version":"#1 SMP Tue Nov 10 18:01:38
+      UTC 2015","os_name":"Linux","os_release":"2.6.32-573.8.1.el6.x86_64","machine_hardware_name":"x86_64"}'
+  - index: linux
+    sourcetype: unix:version
+    source: unix:version
+    host: mysql-02.internal.acme.com
+    _raw: '{"machine_architecture_name":"x86_64","os_version":"#1 SMP Tue Nov 10 18:01:38
+      UTC 2015","os_name":"Linux","os_release":"2.6.32-573.8.1.el6.x86_64","machine_hardware_name":"x86_64"}'
+  - index: linux
+    sourcetype: unix:version
+    source: unix:version
+    host: auth-03.internal.acme.com
+    _raw: '{"machine_architecture_name":"x86_64","os_version":"#1 SMP Tue Nov 10 18:01:38
+      UTC 2015","os_name":"Linux","os_release":"2.6.32-573.8.1.el6.x86_64","machine_hardware_name":"x86_64"}'
+  - index: linux
+    sourcetype: unix:version
+    source: unix:version
+    host: auth-04.internal.acme.com
+    _raw: '{"machine_architecture_name":"x86_64","os_version":"#1 SMP Tue Nov 10 18:01:38
+      UTC 2015","os_name":"Linux","os_release":"2.6.32-573.8.1.el6.x86_64","machine_hardware_name":"x86_64"}'

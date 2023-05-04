@@ -1,0 +1,7432 @@
+samples:
+- name: ITF-AD-WinNetMon
+  interval: 60
+  count: 181
+  randomizeEvents: false
+  lines:
+  - index: windows
+    sourcetype: WinNetMon
+    source: inbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.6.93
+
+      LocalPort=389
+
+      RemoteHostName=154.38.112.34
+
+      RemoteAddress=154.38.112.34
+
+      RemotePort=42524
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="stsc-dc02-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=389
+
+      RemoteHostName=154.38.112.34
+
+      RemoteAddress=154.38.112.34
+
+      RemotePort=18242
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=389
+
+      RemoteHostName=customer.chcoilx1.pop.starlinkisp.net
+
+      RemoteAddress=129.222.74.253
+
+      RemotePort=32906
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=49669
+
+      RemoteHostName=98fe:f3f:d000:0:2000::
+
+      RemoteAddress=::1
+
+      RemotePort=62120
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=62120
+
+      RemoteHostName=98fe:f3f:d000:0:2000::
+
+      RemoteAddress=::1
+
+      RemotePort=49669
+
+      ProcessName="c:\program files\splunkuniversalforwarder\bin\splunk-winevtlog.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=54056
+
+      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+
+      RemoteAddress=172.31.8.190
+
+      RemotePort=3389
+
+      ProcessName="c:\windows\system32\mstsc.exe"
+
+      UserName="acme\rzombie"
+
+      UserSid=s-1-5-21-1777140705-3702755976-711469205-1112
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=64633
+
+      RemoteHostName=stsc-dc01.acme.local
+
+      RemoteAddress=172.31.10.229
+
+      RemotePort=3389
+
+      ProcessName="c:\windows\system32\mstsc.exe"
+
+      UserName="acme\rzombie"
+
+      UserSid=s-1-5-21-1777140705-3702755976-711469205-1112
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=64407
+
+      RemoteHostName=98fe:f3f:d000:0:2000::
+
+      RemoteAddress=::1
+
+      RemotePort=9389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=9389
+
+      RemoteHostName=98fe:f3f:d000:0:2000::
+
+      RemoteAddress=::1
+
+      RemotePort=64407
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=51166
+
+      RemoteHostName=a8fa:9f3b:3000::
+
+      RemoteAddress=::1
+
+      RemotePort=9389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=9389
+
+      RemoteHostName=a8fa:9f3b:3000::
+
+      RemoteAddress=::1
+
+      RemotePort=51166
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=127.0.0.1
+
+      LocalPort=49863
+
+      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+
+      RemoteAddress=127.0.0.1
+
+      RemotePort=3268
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=3389
+
+      RemoteHostName=stsc-dc02.acme.local
+
+      RemoteAddress=172.31.6.58
+
+      RemotePort=54056
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=127.0.0.1
+
+      LocalPort=389
+
+      RemoteHostName=stsc-dc02.acme.local
+
+      RemoteAddress=127.0.0.1
+
+      RemotePort=54693
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=127.0.0.1
+
+      LocalPort=54693
+
+      RemoteHostName=stsc-dc02.acme.local
+
+      RemoteAddress=127.0.0.1
+
+      RemotePort=389
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=64403
+
+      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+
+      RemoteAddress=172.31.8.190
+
+      RemotePort=53
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=49667
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=55514
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=55514
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=49667
+
+      ProcessName="c:\program files\splunkuniversalforwarder\bin\splunk-winevtlog.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=9389
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=57059
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=57059
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=9389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=389
+
+      RemoteHostName=c8f8:bfad:3d00::
+
+      RemoteAddress=::1
+
+      RemotePort=49801
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=9389
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=57059
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="stsc-dc02-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=57059
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=9389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="stsc-dc02-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.93
+
+      LocalPort=3389
+
+      RemoteHostName=136-34-206-13.googlefiber.net
+
+      RemoteAddress=136.34.206.13
+
+      RemotePort=58953
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=9389
+
+      RemoteHostName=a8fa:9f3b:3000::
+
+      RemoteAddress=::1
+
+      RemotePort=51166
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="stsc-dc01-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=51166
+
+      RemoteHostName=a8fa:9f3b:3000::
+
+      RemoteAddress=::1
+
+      RemotePort=9389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="stsc-dc01-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=9389
+
+      RemoteHostName=98fe:f3f:d000:0:2000::
+
+      RemoteAddress=::1
+
+      RemotePort=64407
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=64407
+
+      RemoteHostName=98fe:f3f:d000:0:2000::
+
+      RemoteAddress=::1
+
+      RemotePort=9389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=135
+
+      RemoteHostName=98fe:f3f:d000:0:2000::
+
+      RemoteAddress=::1
+
+      RemotePort=64406
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=135
+
+      RemoteHostName=98fe:f3f:d000:0:2000::
+
+      RemoteAddress=::1
+
+      RemotePort=64406
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=127.0.0.1
+
+      LocalPort=389
+
+      RemoteHostName=stsc-dc02.acme.local
+
+      RemoteAddress=127.0.0.1
+
+      RemotePort=64405
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=127.0.0.1
+
+      LocalPort=64405
+
+      RemoteHostName=stsc-dc02.acme.local
+
+      RemoteAddress=127.0.0.1
+
+      RemotePort=389
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-435feeb2
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=64404
+
+      RemoteHostName=98fe:f3f:d000:0:2000::
+
+      RemoteAddress=::1
+
+      RemotePort=389
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=127.0.0.1
+
+      LocalPort=64343
+
+      RemoteHostName=stsc-dc02.acme.local
+
+      RemoteAddress=127.0.0.1
+
+      RemotePort=389
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=3389
+
+      RemoteHostName=172.99.249.33
+
+      RemoteAddress=172.99.249.33
+
+      RemotePort=55431
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=137
+
+      RemoteHostName=172.31.15.255
+
+      RemoteAddress=172.31.15.255
+
+      RemotePort=137
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=56801
+
+      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+
+      RemoteAddress=172.31.8.190
+
+      RemotePort=389
+
+      ProcessName="c:\program files\splunkuniversalforwarder\bin\splunk-admon.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=static.22.107.9.5.clients.your-server.de
+
+      RemoteAddress=5.9.107.22
+
+      RemotePort=65460
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=static.22.107.9.5.clients.your-server.de
+
+      RemoteAddress=5.9.107.22
+
+      RemotePort=65460
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=56803
+
+      RemoteHostName=a8fa:9f3b:3000::
+
+      RemoteAddress=::1
+
+      RemotePort=49667
+
+      ProcessName="c:\program files\splunkuniversalforwarder\bin\splunk-winevtlog.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: inbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=63689
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=9389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=9389
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=63689
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=389
+
+      RemoteHostName=94-238-111-114.abo.bbox.fr
+
+      RemoteAddress=94.238.111.114
+
+      RemotePort=80
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=9389
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=63689
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=63689
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=9389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=ICMP
+
+      ProtocolId=1
+
+      LocalAddress=127.0.0.1
+
+      LocalPort=8
+
+      RemoteHostName=stsc-dc01.acme.local
+
+      RemoteAddress=127.0.0.1
+
+      RemotePort=0
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=::1
+
+      LocalPort=59257
+
+      RemoteHostName=c8f8:bfad:3d00::
+
+      RemoteAddress=::1
+
+      RemotePort=53
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=::1
+
+      LocalPort=59257
+
+      RemoteHostName=c8f8:bfad:3d00::
+
+      RemoteAddress=::1
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="stsc-dc02-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=135
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=57052
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=49669
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=60205
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=135
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=63687
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=135
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=63687
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=51164
+
+      RemoteHostName=stsc-dc01.acme.local
+
+      RemoteAddress=172.31.10.229
+
+      RemotePort=9389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=63685
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=389
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=51165
+
+      RemoteHostName=stsc-dc01.acme.local
+
+      RemoteAddress=172.31.10.229
+
+      RemotePort=9389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="stsc-dc01-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=135
+
+      RemoteHostName=c8f8:bfad:3d00::
+
+      RemoteAddress=::1
+
+      RemotePort=57051
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=49667
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=57053
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="stsc-dc02-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=64079
+
+      RemoteHostName=stsc-dc02.acme.local
+
+      RemoteAddress=172.31.6.58
+
+      RemotePort=389
+
+      ProcessName="c:\program files\splunkuniversalforwarder\bin\splunk-admon.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=127.0.0.1
+
+      LocalPort=51160
+
+      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+
+      RemoteAddress=127.0.0.1
+
+      RemotePort=389
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="stsc-dc01-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-fb3bd2d
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=51157
+
+      RemoteHostName=a8fa:9f3b:3000::
+
+      RemoteAddress=::1
+
+      RemotePort=135
+
+      ProcessName="system idle process"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=static.22.107.9.5.clients.your-server.de
+
+      RemoteAddress=5.9.107.22
+
+      RemotePort=65460
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.93
+
+      LocalPort=57048
+
+      RemoteHostName=stsc-dc01.acme.local
+
+      RemoteAddress=172.31.10.229
+
+      RemotePort=49669
+
+      ProcessName="system idle process"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=63249
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=49669
+
+      ProcessName="c:\program files\splunkuniversalforwarder\bin\splunk-winevtlog.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: LostPacketCount=3
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=8082
+
+      RemoteHostName=scanner-03.ch1.censys-scanner.com
+
+      RemoteAddress=167.248.133.141
+
+      RemotePort=48996
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=51440
+
+      RemoteHostName=dns.google
+
+      RemoteAddress=8.8.8.8
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=51440
+
+      RemoteHostName=dns.google
+
+      RemoteAddress=8.8.8.8
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=135
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=57047
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=57047
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=135
+
+      ProcessName="system idle process"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=123
+
+      RemoteHostName=40.119.6.228
+
+      RemoteAddress=40.119.6.228
+
+      RemotePort=123
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="local service"
+
+      UserSid=s-1-5-19
+
+      UserId=0-3e5
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=ns3190827.ip-51-195-189.eu
+
+      RemoteAddress=51.195.189.7
+
+      RemotePort=57790
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=ns3190827.ip-51-195-189.eu
+
+      RemoteAddress=51.195.189.7
+
+      RemotePort=57790
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=ns3190827.ip-51-195-189.eu
+
+      RemoteAddress=51.195.189.7
+
+      RemotePort=57790
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=51154
+
+      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+
+      RemoteAddress=172.31.8.190
+
+      RemotePort=389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=51154
+
+      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+
+      RemoteAddress=172.31.8.190
+
+      RemotePort=389
+
+      ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
+
+      UserName="stsc-dc01-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=ff02::fb
+
+      LocalPort=5353
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=5353
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc02-child$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=5353
+
+      RemoteHostName=c8f8:bfad:3d00:0:6709::
+
+      RemoteAddress=ff02::fb
+
+      RemotePort=5353
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=5353
+
+      RemoteHostName=c8f8:bfad:3d00:0:6709::
+
+      RemoteAddress=ff02::fb
+
+      RemotePort=5353
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc02-child$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=389
+
+      RemoteHostName=zg-0308e-173.stretchoid.com
+
+      RemoteAddress=192.241.226.73
+
+      RemotePort=37571
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=443
+
+      RemoteHostName=unn-212-102-58-164.cdn77.com
+
+      RemoteAddress=212.102.58.164
+
+      RemotePort=44804
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=389
+
+      RemoteHostName=zg-0308e-173.stretchoid.com
+
+      RemoteAddress=192.241.226.73
+
+      RemotePort=37571
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=445
+
+      RemoteHostName=a8fa:9f3b:3000::
+
+      RemoteAddress=::1
+
+      RemotePort=51144
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=63665
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=135
+
+      ProcessName="system idle process"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=445
+
+      RemoteHostName=98fe:f3f:d000:0:2000::
+
+      RemoteAddress=::1
+
+      RemotePort=64388
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=51138
+
+      RemoteHostName=stsc-dc02-child.childdomain.acme.local
+
+      RemoteAddress=172.31.6.93
+
+      RemotePort=49667
+
+      ProcessName="system idle process"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=3389
+
+      RemoteHostName=ec2-3-90-225-198.compute-1.amazonaws.com
+
+      RemoteAddress=3.90.225.198
+
+      RemotePort=61385
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=3389
+
+      RemoteHostName=ec2-3-90-225-198.compute-1.amazonaws.com
+
+      RemoteAddress=3.90.225.198
+
+      RemotePort=61385
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=3389
+
+      RemoteHostName=ec2-3-90-225-198.compute-1.amazonaws.com
+
+      RemoteAddress=3.90.225.198
+
+      RemotePort=61385
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc01-child$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=ip-104-238-116-169.ip.secureserver.net
+
+      RemoteAddress=104.238.116.169
+
+      RemotePort=64547
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=ip-104-238-116-169.ip.secureserver.net
+
+      RemoteAddress=104.238.116.169
+
+      RemotePort=64547
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=ip-104-238-116-169.ip.secureserver.net
+
+      RemoteAddress=104.238.116.169
+
+      RemotePort=64547
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=389
+
+      RemoteHostName=dhcp-077-248-038-094.chello.nl
+
+      RemoteAddress=77.248.38.94
+
+      RemotePort=443
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=445
+
+      RemoteHostName=scanner-05.ch1.censys-scanner.com
+
+      RemoteAddress=162.142.125.211
+
+      RemotePort=37956
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=389
+
+      RemoteHostName=customer.chcoilx1.pop.starlinkisp.net
+
+      RemoteAddress=129.222.74.253
+
+      RemotePort=32906
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="stsc-dc01-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=123
+
+      RemoteHostName=stsc-dc01.acme.local
+
+      RemoteAddress=172.31.10.229
+
+      RemotePort=123
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="local service"
+
+      UserSid=s-1-5-19
+
+      UserId=0-3e5
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=53
+
+      RemoteHostName=196.27.245.58.adsl-pool.jlccptt.net.cn
+
+      RemoteAddress=58.245.27.196
+
+      RemotePort=39542
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=53
+
+      RemoteHostName=196.27.245.58.adsl-pool.jlccptt.net.cn
+
+      RemoteAddress=58.245.27.196
+
+      RemotePort=39542
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3326
+
+      RemoteHostName=recyber.net
+
+      RemoteAddress=89.248.165.178
+
+      RemotePort=51521
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=64359
+
+      RemoteHostName=98fe:f3f:d000:0:2000::
+
+      RemoteAddress=::1
+
+      RemotePort=135
+
+      ProcessName="system idle process"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=63654
+
+      RemoteHostName=169.254.169.254
+
+      RemoteAddress=169.254.169.254
+
+      RemotePort=80
+
+      ProcessName="c:\program files\amazon\ssm\ssm-agent-worker.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=wsip-184-185-167-102.ph.ph.cox.net
+
+      RemoteAddress=184.185.167.102
+
+      RemotePort=14285
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=wsip-184-185-167-102.ph.ph.cox.net
+
+      RemoteAddress=184.185.167.102
+
+      RemotePort=14285
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=wsip-184-185-167-102.ph.ph.cox.net
+
+      RemoteAddress=184.185.167.102
+
+      RemotePort=14285
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=3389
+
+      RemoteHostName=90.222.125.186.telecom.com.ar
+
+      RemoteAddress=186.125.222.90
+
+      RemotePort=55033
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=3389
+
+      RemoteHostName=90.222.125.186.telecom.com.ar
+
+      RemoteAddress=186.125.222.90
+
+      RemotePort=55033
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=445
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=57023
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=3389
+
+      RemoteHostName=90.222.125.186.telecom.com.ar
+
+      RemoteAddress=186.125.222.90
+
+      RemotePort=55033
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: inbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=63644
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=49669
+
+      ProcessName="unknown"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=ICMP
+
+      ProtocolId=1
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=0
+
+      RemoteHostName=ec2-52-81-202-104.cn-north-1.compute.amazonaws.com.cn
+
+      RemoteAddress=52.81.202.104
+
+      RemotePort=0
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=ICMP
+
+      ProtocolId=1
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=8
+
+      RemoteHostName=ec2-52-81-202-104.cn-north-1.compute.amazonaws.com.cn
+
+      RemoteAddress=52.81.202.104
+
+      RemotePort=0
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=445
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=63634
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=57019
+
+      RemoteHostName=c8f8:bfad:3d00:0:2000::
+
+      RemoteAddress=fe80::14bb:ccfd:90cf:a12c
+
+      RemotePort=49667
+
+      ProcessName="unknown"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=389
+
+      RemoteHostName=dhcp-077-248-038-094.chello.nl
+
+      RemoteAddress=77.248.38.94
+
+      RemotePort=443
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=63627
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=389
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="stsc-dc01-child$"
+
+      UserSid=s-1-5-21-3728234164-4236303027-1010285278-1008
+
+      UserId=0-3f8781d4
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=ICMP
+
+      ProtocolId=1
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=0
+
+      RemoteHostName=185.173.35.1.netsystemsresearch.com
+
+      RemoteAddress=185.173.35.1
+
+      RemotePort=0
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=millenniumparkplaza.com
+
+      RemoteAddress=50.238.81.32
+
+      RemotePort=16424
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=ICMP
+
+      ProtocolId=1
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=0
+
+      RemoteHostName=pinger-w4.ant.isi.edu
+
+      RemoteAddress=128.9.29.131
+
+      RemotePort=0
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.93
+
+      LocalPort=445
+
+      RemoteHostName=ip-188-19-116-202.dsl.surnet.ru
+
+      RemoteAddress=188.19.116.202
+
+      RemotePort=56787
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=465
+
+      RemoteHostName=45-33-80-207.ip.linodeusercontent.com
+
+      RemoteAddress=45.33.80.207
+
+      RemotePort=61000
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=61107
+
+      RemoteHostName=hebei.10.60.IN-ADDR.ARPA
+
+      RemoteAddress=60.10.41.234
+
+      RemotePort=16119
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=445
+
+      RemoteHostName=zl-dal-us-gp1-wk121.internet-census.org
+
+      RemoteAddress=128.14.209.234
+
+      RemotePort=48372
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=445
+
+      RemoteHostName=zl-dal-us-gp1-wk121.internet-census.org
+
+      RemoteAddress=128.14.209.234
+
+      RemotePort=48372
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=8080
+
+      RemoteHostName=area-ypxfr.poshflawed.com
+
+      RemoteAddress=185.254.196.238
+
+      RemotePort=43202
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=389
+
+      RemoteHostName=187.250.15.85.dsl.dyn.telnor.net
+
+      RemoteAddress=187.250.15.85
+
+      RemotePort=80
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=56007
+
+      RemoteHostName=dns-lk.sh.cncnet.net
+
+      RemoteAddress=58.247.118.253
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=56007
+
+      RemoteHostName=dns-lk.sh.cncnet.net
+
+      RemoteAddress=58.247.118.253
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=127.0.0.1
+
+      LocalPort=63564
+
+      RemoteHostName=stsc-dc01.acme.local
+
+      RemoteAddress=127.0.0.1
+
+      RemotePort=389
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="stsc-dc01-child$"
+
+      UserSid=s-1-5-21-3728234164-4236303027-1010285278-1008
+
+      UserId=0-3f7a3857
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=62729
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=49669
+
+      ProcessName="c:\windows\system32\mmc.exe"
+
+      UserName="acme\jeffw"
+
+      UserSid=s-1-5-21-1777140705-3702755976-711469205-1122
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=57189
+
+      RemoteHostName=b.in-addr-servers.ARPA
+
+      RemoteAddress=199.253.183.183
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=57189
+
+      RemoteHostName=b.in-addr-servers.ARPA
+
+      RemoteAddress=199.253.183.183
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.93
+
+      LocalPort=9389
+
+      RemoteHostName=scanner-04.ch1.censys-scanner.com
+
+      RemoteAddress=162.142.125.9
+
+      RemotePort=60904
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.93
+
+      LocalPort=9389
+
+      RemoteHostName=scanner-04.ch1.censys-scanner.com
+
+      RemoteAddress=162.142.125.9
+
+      RemotePort=60904
+
+      ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
+
+      UserName="stsc-dc02-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=40'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=63539
+
+      RemoteHostName=stsc-dc01.acme.local
+
+      RemoteAddress=172.31.10.229
+
+      RemotePort=389
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="jeffw"
+
+      UserSid=s-1-5-21-1777140705-3702755976-711469205-1122
+
+      UserId=0-3bc8de65
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=63536
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=49669
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="jeffw"
+
+      UserSid=s-1-5-21-1777140705-3702755976-711469205-1122
+
+      UserId=0-3bc8de65
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=389
+
+      RemoteHostName=94-238-111-114.abo.bbox.fr
+
+      RemoteAddress=94.238.111.114
+
+      RemotePort=80
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=ICMP
+
+      ProtocolId=1
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=0
+
+      RemoteHostName=c777-412e.iad01.us.misaka.io
+
+      RemoteAddress=199.119.65.46
+
+      RemotePort=0
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=ICMP
+
+      ProtocolId=1
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=8
+
+      RemoteHostName=c777-412e.iad01.us.misaka.io
+
+      RemoteAddress=199.119.65.46
+
+      RemotePort=0
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=59257
+
+      RemoteHostName=c8f8:bfad:3d00:0:6709::
+
+      RemoteAddress=ff02::1:3
+
+      RemotePort=5355
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=59257
+
+      RemoteHostName=c8f8:bfad:3d00:0:6709::
+
+      RemoteAddress=ff02::1:3
+
+      RemotePort=5355
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc02-child$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=fe80::14bb:ccfd:90cf:a12c
+
+      LocalPort=50896
+
+      RemoteHostName=c8f8:bfad:3d00:0:2704::
+
+      RemoteAddress=ff02::1:3
+
+      RemotePort=5355
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=3389
+
+      RemoteHostName=hosting-by.4cloud.mobi
+
+      RemoteAddress=79.124.62.222
+
+      RemotePort=42341
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=116-80-72-109.indigo.static.arena.ne.jp
+
+      RemoteAddress=116.80.72.109
+
+      RemotePort=54966
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=116-80-72-109.indigo.static.arena.ne.jp
+
+      RemoteAddress=116.80.72.109
+
+      RemotePort=54966
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=116-80-72-109.indigo.static.arena.ne.jp
+
+      RemoteAddress=116.80.72.109
+
+      RemotePort=54966
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-20
+
+      UserId=0-3e4
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=139
+
+      RemoteHostName=zg-0308d-11.stretchoid.com
+
+      RemoteAddress=192.241.223.177
+
+      RemotePort=50670
+
+      ProcessName="system idle process"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=139
+
+      RemoteHostName=zg-0308d-11.stretchoid.com
+
+      RemoteAddress=192.241.223.177
+
+      RemotePort=50670
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=ICMP
+
+      ProtocolId=1
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=11
+
+      RemoteHostName=customer.chcoilx1.pop.starlinkisp.net
+
+      RemoteAddress=129.222.74.253
+
+      RemotePort=1
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=51695
+
+      RemoteHostName=m.gtld-servers.net
+
+      RemoteAddress=192.55.83.30
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=64079
+
+      RemoteHostName=stsc-dc02.acme.local
+
+      RemoteAddress=172.31.6.58
+
+      RemotePort=389
+
+      ProcessName="c:\program files\splunkuniversalforwarder\bin\splunk-admon.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=64078
+
+      RemoteHostName=98fe:f3f:d000:0:ac00::
+
+      RemoteAddress=::1
+
+      RemotePort=389
+
+      ProcessName="c:\program files\splunkuniversalforwarder\bin\splunk-admon.exe"
+
+      UserName="stsc-dc02$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=445
+
+      RemoteHostName=187-51-3-75.customer.tdatabrasil.net.br
+
+      RemoteAddress=187.51.3.75
+
+      RemotePort=50921
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=445
+
+      RemoteHostName=187-51-3-75.customer.tdatabrasil.net.br
+
+      RemoteAddress=187.51.3.75
+
+      RemotePort=50921
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=445
+
+      RemoteHostName=111-250-134-239.dynamic-ip.hinet.net
+
+      RemoteAddress=111.250.134.239
+
+      RemotePort=64278
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=445
+
+      RemoteHostName=111-250-134-239.dynamic-ip.hinet.net
+
+      RemoteAddress=111.250.134.239
+
+      RemotePort=64278
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=88
+
+      RemoteHostName=scanner-07.ch1.censys-scanner.com
+
+      RemoteAddress=167.94.138.61
+
+      RemotePort=54572
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=40'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=88
+
+      RemoteHostName=scanner-07.ch1.censys-scanner.com
+
+      RemoteAddress=167.94.138.61
+
+      RemotePort=60692
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=64025
+
+      RemoteHostName=98fe:f3f:d000:0:ac00::
+
+      RemoteAddress=::1
+
+      RemotePort=389
+
+      ProcessName="c:\windows\system32\mmc.exe"
+
+      UserName="acme\rzombie"
+
+      UserSid=s-1-5-21-1777140705-3702755976-711469205-1112
+
+      UserId=0-0
+
+      HeaderSizeBytes=40
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=64025
+
+      RemoteHostName=98fe:f3f:d000:0:ac00::
+
+      RemoteAddress=::1
+
+      RemotePort=389
+
+      ProcessName="c:\windows\system32\mmc.exe"
+
+      UserName="rzombie"
+
+      UserSid=s-1-5-21-1777140705-3702755976-711469205-1112
+
+      UserId=0-44ca418b
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=ICMP
+
+      ProtocolId=1
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3
+
+      RemoteHostName=ec2-34-242-224-54.eu-west-1.compute.amazonaws.com
+
+      RemoteAddress=34.242.224.54
+
+      RemotePort=3
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=127.0.0.1
+
+      LocalPort=63331
+
+      RemoteHostName=stsc-dc01.acme.local
+
+      RemoteAddress=127.0.0.1
+
+      RemotePort=389
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="stsc-dc02-child$"
+
+      UserSid=s-1-5-21-3728234164-4236303027-1010285278-1112
+
+      UserId=0-3f59ae1d
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=63330
+
+      RemoteHostName=e8fd:ff57:d900:0:90f3:ff57:d900:0
+
+      RemoteAddress=::1
+
+      RemotePort=389
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="stsc-dc02-child$"
+
+      UserSid=s-1-5-21-3728234164-4236303027-1010285278-1112
+
+      UserId=0-3f59ae1d
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.93
+
+      LocalPort=63361
+
+      RemoteHostName=169.254.169.254
+
+      RemoteAddress=169.254.169.254
+
+      RemotePort=80
+
+      ProcessName="c:\program files\amazon\ssm\ssm-agent-worker.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.93
+
+      LocalPort=64114
+
+      RemoteHostName=stsc-dc02-child.childdomain.acme.local
+
+      RemoteAddress=172.31.6.93
+
+      RemotePort=389
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="rzombie"
+
+      UserSid=s-1-5-21-1777140705-3702755976-711469205-1112
+
+      UserId=0-41977c
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=63056
+
+      RemoteHostName=a23-74-155-80.deploy.static.akamaitechnologies.com
+
+      RemoteAddress=23.74.155.80
+
+      RemotePort=80
+
+      ProcessName="system idle process"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=63056
+
+      RemoteHostName=a23-74-155-80.deploy.static.akamaitechnologies.com
+
+      RemoteAddress=23.74.155.80
+
+      RemotePort=80
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="stsc-dc01-child$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=56324
+
+      RemoteHostName=103.99.135.219.broad.fs.gd.dynamic.163data.com.cn
+
+      RemoteAddress=219.135.99.103
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=445
+
+      RemoteHostName=81.213.64.121.dynamic.ttnet.com.tr
+
+      RemoteAddress=81.213.64.121
+
+      RemotePort=59104
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=445
+
+      RemoteHostName=81.213.64.121.dynamic.ttnet.com.tr
+
+      RemoteAddress=81.213.64.121
+
+      RemotePort=59104
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=55244
+
+      RemoteHostName=a0.org.afilias-nst.info
+
+      RemoteAddress=199.19.56.1
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=62865
+
+      RemoteHostName=a2.org.afilias-nst.info
+
+      RemoteAddress=199.249.112.1
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=3389
+
+      RemoteHostName=vps-ea8ef12b.vps.ovh.net
+
+      RemoteAddress=92.222.180.101
+
+      RemotePort=51393
+
+      ProcessName="c:\windows\system32\svchost.exe"
+
+      UserName="nt authority\network service"
+
+      UserSid=s-1-5-20
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=445
+
+      RemoteHostName=202.200/29.203.215.12.IN-ADDR.ARPA
+
+      RemoteAddress=12.215.203.202
+
+      RemotePort=51300
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=445
+
+      RemoteHostName=202.200/29.203.215.12.IN-ADDR.ARPA
+
+      RemoteAddress=12.215.203.202
+
+      RemotePort=53137
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.58
+
+      LocalPort=445
+
+      RemoteHostName=122.52.183.146.pldt.net
+
+      RemoteAddress=122.52.183.146
+
+      RemotePort=54064
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=32'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02
+    _raw: 'AddressFamily=ipv6
+
+      AddressFamilyId=23
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=::1
+
+      LocalPort=64976
+
+      RemoteHostName=98fe:f3f:d000:0:ac00::
+
+      RemoteAddress=::1
+
+      RemotePort=49669
+
+      ProcessName="unknown"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=389
+
+      RemoteHostName=45.95.55.45.linkways.de
+
+      RemoteAddress=45.95.55.45
+
+      RemotePort=22
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=445
+
+      RemoteHostName=mx-ll-223.205.245-29.dynamic.3bb.co.th
+
+      RemoteAddress=223.205.245.29
+
+      RemotePort=51868
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.8.190
+
+      LocalPort=445
+
+      RemoteHostName=mx-ll-223.205.245-29.dynamic.3bb.co.th
+
+      RemoteAddress=223.205.245.29
+
+      RemotePort=51868
+
+      ProcessName="system"
+
+      UserName="localsystem"
+
+      UserSid=s-1-5-19
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=accept
+
+      PacketTypeId=1
+
+      Direction=inbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=389
+
+      RemoteHostName=45.95.55.45.linkways.de
+
+      RemoteAddress=45.95.55.45
+
+      RemotePort=22
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=8'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC02-CHILD
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=inbound
+
+      Protocol=TCP
+
+      ProtocolId=6
+
+      LocalAddress=172.31.6.93
+
+      LocalPort=53
+
+      RemoteHostName=ip241.208-100-26.static.steadfastdns.net
+
+      RemoteAddress=208.100.26.241
+
+      RemotePort=55265
+
+      ProcessName="unknown"
+
+      UserName="unknown"
+
+      UserSid=unknown
+
+      UserId=0-0
+
+      HeaderSizeBytes=20
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=20'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=connect
+
+      PacketTypeId=0
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=63406
+
+      RemoteHostName=b.in-addr.cn
+
+      RemoteAddress=203.119.26.3
+
+      RemotePort=53
+
+      ProcessName="c:\windows\system32\dns.exe"
+
+      UserName="stsc-dc01$"
+
+      UserSid=s-1-5-18
+
+      UserId=0-3e7
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
+  - index: windows
+    sourcetype: WinNetMon
+    source: outbound
+    host: ACME-DC01
+    _raw: 'AddressFamily=ipv4
+
+      AddressFamilyId=2
+
+      PacketType=transport
+
+      PacketTypeId=2
+
+      Direction=outbound
+
+      Protocol=UDP
+
+      ProtocolId=17
+
+      LocalAddress=172.31.10.229
+
+      LocalPort=389
+
+      RemoteHostName=s-man-ac-gkdel-dkh.core.gelsen.net
+
+      RemoteAddress=217.70.169.2
+
+      RemotePort=80
+
+      ProcessName="c:\windows\system32\lsass.exe"
+
+      UserName="nt authority\system"
+
+      UserSid=s-1-5-18
+
+      UserId=0-0
+
+      HeaderSizeBytes=0
+
+      IPsecProtected=0
+
+      TransportHeaderSizeBytes=0'
