@@ -24,23 +24,23 @@ samples:
     source: vsphere.cluster.data
     host: prod-vcenter.acme.com
     _raw: metric
-    fields: '{"entity_type":"vsphere.cluster","moid":"domain-c8675","name":"totalmanagedinfrastructure","pool_name":"Global","unit":"megaHertz","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.cluster.clusterServices.effectivecpu":1500000}'
+    fields: '{"entity_type":"vsphere.cluster","moid":"domain-c8675","name":"acme","pool_name":"Global","unit":"megaHertz","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.cluster.clusterServices.effectivecpu":1500000}'
   - index: vmware-perf-metrics
     sourcetype: vsphere.cluster.data
     source: vsphere.cluster.data
     host: prod-vcenter.acme.com
     _raw: metric
-    fields: '{"entity_type":"vsphere.cluster","moid":"domain-c8675","name":"totalmanagedinfrastructure","pool_name":"Global","unit":"megaBytes","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.cluster.clusterServices.effectivemem":8000000}'
+    fields: '{"entity_type":"vsphere.cluster","moid":"domain-c8675","name":"acme","pool_name":"Global","unit":"megaBytes","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.cluster.clusterServices.effectivemem":8000000}'
   - index: vmware-perf-metrics
     sourcetype: vsphere.cluster.data
     source: vsphere.cluster.data
     host: prod-vcenter.acme.com
     _raw: metric
-    fields: '{"entity_type":"vsphere.cluster","moid":"domain-c8675","name":"totalmanagedinfrastructure","pool_name":"Global","unit":"megaHertz","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.cluster.cpu.usage":"$CPU_USAGE$"}'
+    fields: '{"entity_type":"vsphere.cluster","moid":"domain-c8675","name":"acme","pool_name":"Global","unit":"megaHertz","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.cluster.cpu.usage":"$CPU_USAGE$"}'
   - index: vmware-perf-metrics
     sourcetype: vsphere.cluster.data
     source: vsphere.cluster.data
     host: prod-vcenter.acme.com
     _raw: metric
-    fields: '{"entity_type":"vsphere.cluster","moid":"domain-c8675","name":"totalmanagedinfrastructure","pool_name":"Global","unit":"megaHertz","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.cluster.cpu.usagemhz":"$CPU_USAGE_MHZ$"}'
+    fields: '{"entity_type":"vsphere.cluster","moid":"domain-c8675","name":"acme","pool_name":"Global","unit":"megaHertz","vcenter":"prod-vcenter.acme.com","metric_name:vsphere.cluster.cpu.usagemhz":"$CPU_USAGE_MHZ$"}'
 

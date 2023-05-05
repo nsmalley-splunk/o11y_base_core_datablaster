@@ -34,7 +34,7 @@ samples:
 
       ProcessName="c:\windows\system32\lsass.exe"
 
-      UserName="stsc-dc02-child$"
+      UserName="acme-dc02-child$"
 
       UserSid=s-1-5-18
 
@@ -231,13 +231,13 @@ samples:
 
       LocalPort=54056
 
-      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+      RemoteHostName=acme-dc01-child.childdomain.acme.local
 
       RemoteAddress=172.31.8.190
 
       RemotePort=3389
 
-      ProcessName="c:\windows\system32\mstsc.exe"
+      ProcessName="c:\windows\system32\macme.exe"
 
       UserName="acme\rzombie"
 
@@ -272,13 +272,13 @@ samples:
 
       LocalPort=64633
 
-      RemoteHostName=stsc-dc01.acme.local
+      RemoteHostName=acme-dc01.acme.local
 
       RemoteAddress=172.31.10.229
 
       RemotePort=3389
 
-      ProcessName="c:\windows\system32\mstsc.exe"
+      ProcessName="c:\windows\system32\macme.exe"
 
       UserName="acme\rzombie"
 
@@ -477,7 +477,7 @@ samples:
 
       LocalPort=49863
 
-      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+      RemoteHostName=acme-dc01-child.childdomain.acme.local
 
       RemoteAddress=127.0.0.1
 
@@ -518,7 +518,7 @@ samples:
 
       LocalPort=3389
 
-      RemoteHostName=stsc-dc02.acme.local
+      RemoteHostName=acme-dc02.acme.local
 
       RemoteAddress=172.31.6.58
 
@@ -559,7 +559,7 @@ samples:
 
       LocalPort=389
 
-      RemoteHostName=stsc-dc02.acme.local
+      RemoteHostName=acme-dc02.acme.local
 
       RemoteAddress=127.0.0.1
 
@@ -600,7 +600,7 @@ samples:
 
       LocalPort=54693
 
-      RemoteHostName=stsc-dc02.acme.local
+      RemoteHostName=acme-dc02.acme.local
 
       RemoteAddress=127.0.0.1
 
@@ -641,7 +641,7 @@ samples:
 
       LocalPort=64403
 
-      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+      RemoteHostName=acme-dc01-child.childdomain.acme.local
 
       RemoteAddress=172.31.8.190
 
@@ -895,7 +895,7 @@ samples:
 
       ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
 
-      UserName="stsc-dc02-child$"
+      UserName="acme-dc02-child$"
 
       UserSid=s-1-5-18
 
@@ -936,7 +936,7 @@ samples:
 
       ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
 
-      UserName="stsc-dc02-child$"
+      UserName="acme-dc02-child$"
 
       UserSid=s-1-5-18
 
@@ -1018,7 +1018,7 @@ samples:
 
       ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
 
-      UserName="stsc-dc01-child$"
+      UserName="acme-dc01-child$"
 
       UserSid=s-1-5-18
 
@@ -1059,7 +1059,7 @@ samples:
 
       ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
 
-      UserName="stsc-dc01-child$"
+      UserName="acme-dc01-child$"
 
       UserSid=s-1-5-18
 
@@ -1100,7 +1100,7 @@ samples:
 
       ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-18
 
@@ -1141,7 +1141,7 @@ samples:
 
       ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-18
 
@@ -1223,7 +1223,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-20
 
@@ -1256,7 +1256,7 @@ samples:
 
       LocalPort=389
 
-      RemoteHostName=stsc-dc02.acme.local
+      RemoteHostName=acme-dc02.acme.local
 
       RemoteAddress=127.0.0.1
 
@@ -1264,7 +1264,7 @@ samples:
 
       ProcessName="c:\windows\system32\lsass.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-18
 
@@ -1297,7 +1297,7 @@ samples:
 
       LocalPort=64405
 
-      RemoteHostName=stsc-dc02.acme.local
+      RemoteHostName=acme-dc02.acme.local
 
       RemoteAddress=127.0.0.1
 
@@ -1305,7 +1305,7 @@ samples:
 
       ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-18
 
@@ -1379,7 +1379,7 @@ samples:
 
       LocalPort=64343
 
-      RemoteHostName=stsc-dc02.acme.local
+      RemoteHostName=acme-dc02.acme.local
 
       RemoteAddress=127.0.0.1
 
@@ -1502,7 +1502,7 @@ samples:
 
       LocalPort=56801
 
-      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+      RemoteHostName=acme-dc01-child.childdomain.acme.local
 
       RemoteAddress=172.31.8.190
 
@@ -1797,7 +1797,7 @@ samples:
 
       ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-18
 
@@ -1838,7 +1838,7 @@ samples:
 
       ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-18
 
@@ -1871,7 +1871,7 @@ samples:
 
       LocalPort=8
 
-      RemoteHostName=stsc-dc01.acme.local
+      RemoteHostName=acme-dc01.acme.local
 
       RemoteAddress=127.0.0.1
 
@@ -1961,7 +1961,7 @@ samples:
 
       ProcessName="c:\windows\system32\lsass.exe"
 
-      UserName="stsc-dc02-child$"
+      UserName="acme-dc02-child$"
 
       UserSid=s-1-5-18
 
@@ -2125,7 +2125,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-20
 
@@ -2158,7 +2158,7 @@ samples:
 
       LocalPort=51164
 
-      RemoteHostName=stsc-dc01.acme.local
+      RemoteHostName=acme-dc01.acme.local
 
       RemoteAddress=172.31.10.229
 
@@ -2240,7 +2240,7 @@ samples:
 
       LocalPort=51165
 
-      RemoteHostName=stsc-dc01.acme.local
+      RemoteHostName=acme-dc01.acme.local
 
       RemoteAddress=172.31.10.229
 
@@ -2248,7 +2248,7 @@ samples:
 
       ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
 
-      UserName="stsc-dc01-child$"
+      UserName="acme-dc01-child$"
 
       UserSid=s-1-5-18
 
@@ -2330,7 +2330,7 @@ samples:
 
       ProcessName="c:\windows\system32\lsass.exe"
 
-      UserName="stsc-dc02-child$"
+      UserName="acme-dc02-child$"
 
       UserSid=s-1-5-18
 
@@ -2363,7 +2363,7 @@ samples:
 
       LocalPort=64079
 
-      RemoteHostName=stsc-dc02.acme.local
+      RemoteHostName=acme-dc02.acme.local
 
       RemoteAddress=172.31.6.58
 
@@ -2404,7 +2404,7 @@ samples:
 
       LocalPort=51160
 
-      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+      RemoteHostName=acme-dc01-child.childdomain.acme.local
 
       RemoteAddress=127.0.0.1
 
@@ -2412,7 +2412,7 @@ samples:
 
       ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
 
-      UserName="stsc-dc01-child$"
+      UserName="acme-dc01-child$"
 
       UserSid=s-1-5-18
 
@@ -2494,7 +2494,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-20
 
@@ -2527,7 +2527,7 @@ samples:
 
       LocalPort=57048
 
-      RemoteHostName=stsc-dc01.acme.local
+      RemoteHostName=acme-dc01.acme.local
 
       RemoteAddress=172.31.10.229
 
@@ -2704,7 +2704,7 @@ samples:
 
       ProcessName="c:\windows\system32\dns.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-18
 
@@ -2950,7 +2950,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-20
 
@@ -2983,7 +2983,7 @@ samples:
 
       LocalPort=51154
 
-      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+      RemoteHostName=acme-dc01-child.childdomain.acme.local
 
       RemoteAddress=172.31.8.190
 
@@ -3024,7 +3024,7 @@ samples:
 
       LocalPort=51154
 
-      RemoteHostName=stsc-dc01-child.childdomain.acme.local
+      RemoteHostName=acme-dc01-child.childdomain.acme.local
 
       RemoteAddress=172.31.8.190
 
@@ -3032,7 +3032,7 @@ samples:
 
       ProcessName="c:\windows\system32\windowspowershell\v1.0\powershell.exe"
 
-      UserName="stsc-dc01-child$"
+      UserName="acme-dc01-child$"
 
       UserSid=s-1-5-18
 
@@ -3073,7 +3073,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc02-child$"
+      UserName="acme-dc02-child$"
 
       UserSid=s-1-5-20
 
@@ -3155,7 +3155,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc02-child$"
+      UserName="acme-dc02-child$"
 
       UserSid=s-1-5-20
 
@@ -3434,7 +3434,7 @@ samples:
 
       LocalPort=51138
 
-      RemoteHostName=stsc-dc02-child.childdomain.acme.local
+      RemoteHostName=acme-dc02-child.childdomain.acme.local
 
       RemoteAddress=172.31.6.93
 
@@ -3565,7 +3565,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc01-child$"
+      UserName="acme-dc01-child$"
 
       UserSid=s-1-5-20
 
@@ -3688,7 +3688,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-20
 
@@ -3811,7 +3811,7 @@ samples:
 
       ProcessName="c:\windows\system32\lsass.exe"
 
-      UserName="stsc-dc01-child$"
+      UserName="acme-dc01-child$"
 
       UserSid=s-1-5-18
 
@@ -3844,7 +3844,7 @@ samples:
 
       LocalPort=123
 
-      RemoteHostName=stsc-dc01.acme.local
+      RemoteHostName=acme-dc01.acme.local
 
       RemoteAddress=172.31.10.229
 
@@ -3934,7 +3934,7 @@ samples:
 
       ProcessName="c:\windows\system32\dns.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-18
 
@@ -4057,7 +4057,7 @@ samples:
 
       ProcessName="c:\program files\amazon\ssm\ssm-agent-worker.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-18
 
@@ -4180,7 +4180,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-20
 
@@ -4344,7 +4344,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-20
 
@@ -4590,7 +4590,7 @@ samples:
 
       ProcessName="c:\windows\system32\lsass.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-18
 
@@ -4631,7 +4631,7 @@ samples:
 
       ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
 
-      UserName="stsc-dc01-child$"
+      UserName="acme-dc01-child$"
 
       UserSid=s-1-5-21-3728234164-4236303027-1010285278-1008
 
@@ -5123,7 +5123,7 @@ samples:
 
       ProcessName="c:\windows\system32\dns.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-18
 
@@ -5156,7 +5156,7 @@ samples:
 
       LocalPort=63564
 
-      RemoteHostName=stsc-dc01.acme.local
+      RemoteHostName=acme-dc01.acme.local
 
       RemoteAddress=127.0.0.1
 
@@ -5164,7 +5164,7 @@ samples:
 
       ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
 
-      UserName="stsc-dc01-child$"
+      UserName="acme-dc01-child$"
 
       UserSid=s-1-5-21-3728234164-4236303027-1010285278-1008
 
@@ -5287,7 +5287,7 @@ samples:
 
       ProcessName="c:\windows\system32\dns.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-18
 
@@ -5369,7 +5369,7 @@ samples:
 
       ProcessName="c:\windows\adws\microsoft.activedirectory.webservices.exe"
 
-      UserName="stsc-dc02-child$"
+      UserName="acme-dc02-child$"
 
       UserSid=s-1-5-18
 
@@ -5402,7 +5402,7 @@ samples:
 
       LocalPort=63539
 
-      RemoteHostName=stsc-dc01.acme.local
+      RemoteHostName=acme-dc01.acme.local
 
       RemoteAddress=172.31.10.229
 
@@ -5492,7 +5492,7 @@ samples:
 
       ProcessName="c:\windows\system32\lsass.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-18
 
@@ -5656,7 +5656,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc02-child$"
+      UserName="acme-dc02-child$"
 
       UserSid=s-1-5-20
 
@@ -5861,7 +5861,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-20
 
@@ -6058,7 +6058,7 @@ samples:
 
       LocalPort=64079
 
-      RemoteHostName=stsc-dc02.acme.local
+      RemoteHostName=acme-dc02.acme.local
 
       RemoteAddress=172.31.6.58
 
@@ -6066,7 +6066,7 @@ samples:
 
       ProcessName="c:\program files\splunkuniversalforwarder\bin\splunk-admon.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-18
 
@@ -6107,7 +6107,7 @@ samples:
 
       ProcessName="c:\program files\splunkuniversalforwarder\bin\splunk-admon.exe"
 
-      UserName="stsc-dc02$"
+      UserName="acme-dc02$"
 
       UserSid=s-1-5-18
 
@@ -6312,7 +6312,7 @@ samples:
 
       ProcessName="c:\windows\system32\lsass.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-18
 
@@ -6509,7 +6509,7 @@ samples:
 
       LocalPort=63331
 
-      RemoteHostName=stsc-dc01.acme.local
+      RemoteHostName=acme-dc01.acme.local
 
       RemoteAddress=127.0.0.1
 
@@ -6517,7 +6517,7 @@ samples:
 
       ProcessName="c:\windows\system32\dns.exe"
 
-      UserName="stsc-dc02-child$"
+      UserName="acme-dc02-child$"
 
       UserSid=s-1-5-21-3728234164-4236303027-1010285278-1112
 
@@ -6558,7 +6558,7 @@ samples:
 
       ProcessName="c:\windows\system32\dns.exe"
 
-      UserName="stsc-dc02-child$"
+      UserName="acme-dc02-child$"
 
       UserSid=s-1-5-21-3728234164-4236303027-1010285278-1112
 
@@ -6632,7 +6632,7 @@ samples:
 
       LocalPort=64114
 
-      RemoteHostName=stsc-dc02-child.childdomain.acme.local
+      RemoteHostName=acme-dc02-child.childdomain.acme.local
 
       RemoteAddress=172.31.6.93
 
@@ -6722,7 +6722,7 @@ samples:
 
       ProcessName="c:\windows\system32\svchost.exe"
 
-      UserName="stsc-dc01-child$"
+      UserName="acme-dc01-child$"
 
       UserSid=s-1-5-18
 
@@ -6927,7 +6927,7 @@ samples:
 
       ProcessName="c:\windows\system32\dns.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-18
 
@@ -7296,7 +7296,7 @@ samples:
 
       ProcessName="c:\windows\system32\lsass.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-18
 
@@ -7378,7 +7378,7 @@ samples:
 
       ProcessName="c:\windows\system32\dns.exe"
 
-      UserName="stsc-dc01$"
+      UserName="acme-dc01$"
 
       UserSid=s-1-5-18
 

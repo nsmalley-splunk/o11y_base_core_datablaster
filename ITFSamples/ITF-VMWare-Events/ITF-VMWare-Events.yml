@@ -14,14 +14,14 @@ samples:
     source: Username:VSPHERE.LOCAL\Administrator
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9255999", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.253999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmAcquiredTicketEvent", "fullFormattedMessage": "A ticket for stsc-dev-vm-51
-      of type MKS on esxi02.internal.acme.com in STSC-Datacenter has been acquired",
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmAcquiredTicketEvent", "fullFormattedMessage": "A ticket for acme-dev-vm-51
+      of type MKS on esxi02.internal.acme.com in ACME-Datacenter has been acquired",
       "host": {"host": {"moid": "host-29", "type": "HostSystem"}, "name": "esxi02.internal.acme.com"},
       "key": "9255999", "template": "False", "ticketType": "mks", "userName": "VSPHERE.LOCAL\\Administrator",
-      "vm": {"name": "stsc-dev-vm-51", "vm": {"moid": "vm-326", "type": "VirtualMachine"}},
+      "vm": {"name": "acme-dev-vm-51", "vm": {"moid": "vm-326", "type": "VirtualMachine"}},
       "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
@@ -50,44 +50,44 @@ samples:
     host: vctr01.internal.acme.com
     _raw: '{"alarm": {"alarm": {"moid": "alarm-6", "type": "Alarm"}, "name": "Virtual
       machine memory usage"}, "chainId": "9255993", "computeResource": {"computeResource":
-      {"moid": "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      {"moid": "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.878000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "entity":
-      {"entity": {"moid": "vm-326", "type": "VirtualMachine"}, "name": "stsc-dev-vm-51"},
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "entity":
+      {"entity": {"moid": "vm-326", "type": "VirtualMachine"}, "name": "acme-dev-vm-51"},
       "eventClass": "AlarmStatusChangedEvent", "from": "gray", "fullFormattedMessage":
-      "Alarm ''Virtual machine memory usage'' on stsc-dev-vm-51 changed from Gray
+      "Alarm ''Virtual machine memory usage'' on acme-dev-vm-51 changed from Gray
       to Green", "host": {"host": {"moid": "host-29", "type": "HostSystem"}, "name":
       "esxi02.internal.acme.com"}, "key": "9255993", "source": {"entity": {"moid":
       "group-d1", "type": "Folder"}, "name": "Datacenters"}, "to": "green", "userName":
-      "None", "vm": {"name": "stsc-dev-vm-51", "vm": {"moid": "vm-326", "type": "VirtualMachine"}},
+      "None", "vm": {"name": "acme-dev-vm-51", "vm": {"moid": "vm-326", "type": "VirtualMachine"}},
       "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:VSPHERE.LOCAL\Administrator
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9255991", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.525999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "TaskEvent", "fullFormattedMessage": "Task: Relocate virtual machine", "host":
       {"host": {"moid": "host-29", "type": "HostSystem"}, "name": "esxi02.internal.acme.com"},
       "info": {"cancelable": "True", "cancelled": "False", "descriptionId": "VirtualMachine.relocate",
-      "entity": {"moid": "vm-326", "type": "VirtualMachine"}, "entityName": "stsc-dev-vm-51",
+      "entity": {"moid": "vm-326", "type": "VirtualMachine"}, "entityName": "acme-dev-vm-51",
       "eventChainId": "0", "key": "task-48819", "name": "RelocateVM_Task", "queueTime":
       "$TIMESTAMP$.526726+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
       "state": "queued", "task": {"moid": "task-48819", "type": "Task"}}, "key": "9255991",
-      "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name": "stsc-dev-vm-51",
+      "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name": "acme-dev-vm-51",
       "vm": {"moid": "vm-326", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:User
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9255990", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.857999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmMessageWarningEvent", "fullFormattedMessage": "Warning message on stsc-dev-vm-51
-      on esxi02.internal.acme.com in STSC-Datacenter: No operating system was found.
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmMessageWarningEvent", "fullFormattedMessage": "Warning message on acme-dev-vm-51
+      on esxi02.internal.acme.com in ACME-Datacenter: No operating system was found.
       If you have an operating system installation disc, you can insert the disc into
       the system''s CD-ROM drive and restart the virtual machine.\n", "host": {"host":
       {"moid": "host-29", "type": "HostSystem"}, "name": "esxi02.internal.acme.com"},
@@ -97,47 +97,47 @@ samples:
       "text": "No operating system was found. If you have an operating system installation
       disc, you can insert the disc into the system''s CD-ROM drive and restart the
       virtual machine. "}], "template": "True", "userName": "User", "vm": {"name":
-      "stsc-dev-vm-51", "vm": {"moid": "vm-326", "type": "VirtualMachine"}}, "pool_name":
+      "acme-dev-vm-51", "vm": {"moid": "vm-326", "type": "VirtualMachine"}}, "pool_name":
       "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9255989", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.429999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "EventEx", "eventTypeId": "com.vmware.vc.HA.VmProtectedEvent", "fullFormattedMessage":
-      "Virtual machine stsc-dev-vm-51 in cluster STSC-VM-Cluster in STSC-Datacenter
+      "Virtual machine acme-dev-vm-51 in cluster ACME-VM-Cluster in ACME-Datacenter
       is vSphere HA Protected and HA will attempt to restart it after a failure.",
       "host": {"host": {"moid": "host-29", "type": "HostSystem"}, "name": "esxi02.internal.acme.com"},
-      "key": "9255989", "message": "None", "objectId": "vm-326", "objectName": "stsc-dev-vm-51",
+      "key": "9255989", "message": "None", "objectId": "vm-326", "objectName": "acme-dev-vm-51",
       "objectType": "VirtualMachine", "severity": "None", "userName": "None", "vm":
-      {"name": "stsc-dev-vm-51", "vm": {"moid": "vm-326", "type": "VirtualMachine"}},
+      {"name": "acme-dev-vm-51", "vm": {"moid": "vm-326", "type": "VirtualMachine"}},
       "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9255979", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.981999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "DrsVmPoweredOnEvent", "fullFormattedMessage": "DRS powered On stsc-dev-vm-51
-      on esxi02.internal.acme.com in STSC-Datacenter", "host": {"host": {"moid": "host-29",
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "DrsVmPoweredOnEvent", "fullFormattedMessage": "DRS powered On acme-dev-vm-51
+      on esxi02.internal.acme.com in ACME-Datacenter", "host": {"host": {"moid": "host-29",
       "type": "HostSystem"}, "name": "esxi02.internal.acme.com"}, "key": "9255984",
-      "template": "False", "userName": "None", "vm": {"name": "stsc-dev-vm-51", "vm":
+      "template": "False", "userName": "None", "vm": {"name": "acme-dev-vm-51", "vm":
       {"moid": "vm-326", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:vpxuser
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9255983", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.679999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmMessageEvent", "fullFormattedMessage": "Message on stsc-dev-vm-51 on esxi02.internal.acme.com
-      in STSC-Datacenter: Install the VMware Tools package inside this virtual machine.
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmMessageEvent", "fullFormattedMessage": "Message on acme-dev-vm-51 on esxi02.internal.acme.com
+      in ACME-Datacenter: Install the VMware Tools package inside this virtual machine.
       After the guest operating system starts, select VM > Install VMware Tools\u2026
       and follow the instructions.\n", "host": {"host": {"moid": "host-29", "type":
       "HostSystem"}, "name": "esxi02.internal.acme.com"}, "key": "9255983", "message":
@@ -147,74 +147,74 @@ samples:
       VMware Tools\u2026"], "id": "msg.tools.toolsReminder", "text": "Install the
       VMware Tools package inside this virtual machine. After the guest operating
       system starts, select VM > Install VMware Tools\u2026 and follow the instructions.
-      "}], "template": "True", "userName": "vpxuser", "vm": {"name": "stsc-dev-vm-51",
+      "}], "template": "True", "userName": "vpxuser", "vm": {"name": "acme-dev-vm-51",
       "vm": {"moid": "vm-326", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9255979", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.498000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmStartingEvent", "fullFormattedMessage": "stsc-dev-vm-51 on host esxi02.internal.acme.com
-      in STSC-Datacenter is starting", "host": {"host": {"moid": "host-29", "type":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmStartingEvent", "fullFormattedMessage": "acme-dev-vm-51 on host esxi02.internal.acme.com
+      in ACME-Datacenter is starting", "host": {"host": {"moid": "host-29", "type":
       "HostSystem"}, "name": "esxi02.internal.acme.com"}, "key": "9255982", "template":
-      "False", "userName": "None", "vm": {"name": "stsc-dev-vm-51", "vm": {"moid":
+      "False", "userName": "None", "vm": {"name": "acme-dev-vm-51", "vm": {"moid":
       "vm-326", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9255979", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.460000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "ds": {"datastore":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "ds": {"datastore":
       {"moid": "dstore01.internal.acme.com01", "type": "Datastore"}, "name": "dstore03.internal.acme.com"},
       "eventClass": "VmRelocatedEvent", "fullFormattedMessage": "Completed the relocation
       of the virtual machine", "host": {"host": {"moid": "host-29", "type": "HostSystem"},
       "name": "esxi02.internal.acme.com"}, "key": "9255981", "sourceDatacenter": {"datacenter":
-      {"moid": "datacenter-0", "type": "Datacenter"}, "name": "STSC-Datacenter"},
+      {"moid": "datacenter-0", "type": "Datacenter"}, "name": "ACME-Datacenter"},
       "sourceDatastore": {"datastore": {"moid": "dstore01.internal.acme.com01", "type":
       "Datastore"}, "name": "dstore03.internal.acme.com"}, "sourceHost": {"host":
       {"moid": "host-34", "type": "HostSystem"}, "name": "esxi01.internal.acme.com"},
-      "template": "False", "userName": "None", "vm": {"name": "stsc-dev-vm-51", "vm":
+      "template": "False", "userName": "None", "vm": {"name": "acme-dev-vm-51", "vm":
       {"moid": "vm-326", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9255979", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.603000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "destDatacenter":
-      {"datacenter": {"moid": "datacenter-0", "type": "Datacenter"}, "name": "STSC-Datacenter"},
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "destDatacenter":
+      {"datacenter": {"moid": "datacenter-0", "type": "Datacenter"}, "name": "ACME-Datacenter"},
       "destDatastore": {"datastore": {"moid": "dstore01.internal.acme.com01", "type":
       "Datastore"}, "name": "dstore03.internal.acme.com"}, "destHost": {"host": {"moid":
       "host-29", "type": "HostSystem"}, "name": "esxi02.internal.acme.com"}, "ds":
       {"datastore": {"moid": "dstore01.internal.acme.com01", "type": "Datastore"},
       "name": "dstore03.internal.acme.com"}, "eventClass": "VmBeingRelocatedEvent",
-      "fullFormattedMessage": "Relocating stsc-dev-vm-51 in STSC-Datacenter from esxi01.internal.acme.com,
+      "fullFormattedMessage": "Relocating acme-dev-vm-51 in ACME-Datacenter from esxi01.internal.acme.com,
       dstore03.internal.acme.com to esxi02.internal.acme.com, dstore03.internal.acme.com",
       "host": {"host": {"moid": "host-34", "type": "HostSystem"}, "name": "esxi01.internal.acme.com"},
-      "key": "9255980", "template": "False", "userName": "None", "vm": {"name": "stsc-dev-vm-51",
+      "key": "9255980", "template": "False", "userName": "None", "vm": {"name": "acme-dev-vm-51",
       "vm": {"moid": "vm-326", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9255979", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.486999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "TaskEvent", "fullFormattedMessage": "Task: Power On virtual machine", "host":
       {"host": {"moid": "host-34", "type": "HostSystem"}, "name": "esxi01.internal.acme.com"},
       "info": {"cancelable": "True", "cancelled": "False", "descriptionId": "Drm.ExecuteVmPowerOnLRO",
-      "entity": {"moid": "vm-326", "type": "VirtualMachine"}, "entityName": "stsc-dev-vm-51",
+      "entity": {"moid": "vm-326", "type": "VirtualMachine"}, "entityName": "acme-dev-vm-51",
       "eventChainId": "0", "key": "task-48818", "parentTaskKey": "task-48817", "queueTime":
       "$TIMESTAMP$.487568+00:00", "reason": "", "rootTaskKey": "task-48817", "state":
       "queued", "task": {"moid": "task-48818", "type": "Task"}}, "key": "9255979",
-      "userName": "None", "vm": {"name": "stsc-dev-vm-51", "vm": {"moid": "vm-326",
+      "userName": "None", "vm": {"name": "acme-dev-vm-51", "vm": {"moid": "vm-326",
       "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
@@ -285,13 +285,13 @@ samples:
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9255681", "createdTime": "$TIMESTAMP$.442999+00:00", "datacenter":
-      {"datacenter": {"moid": "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"},
+      {"datacenter": {"moid": "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"},
       "datastore": {"datastore": {"moid": "dstore01.internal.acme.com01", "type":
       "Datastore"}, "name": "dstore03.internal.acme.com"}, "ds": {"datastore": {"moid":
       "dstore01.internal.acme.com01", "type": "Datastore"}, "name": "dstore03.internal.acme.com"},
       "eventClass": "DatastoreCapacityIncreasedEvent", "fullFormattedMessage": "Datastore
       dstore03.internal.acme.com increased in capacity from 5,991,460,372,480 bytes
-      to 5,992,940,838,912 bytes in STSC-Datacenter", "key": "9255681", "newCapacity":
+      to 5,992,940,838,912 bytes in ACME-Datacenter", "key": "9255681", "newCapacity":
       "5992940838912", "oldCapacity": "5991460372480", "userName": "None", "pool_name":
       "Global pool"}'
   - index: vmware-taskevent
@@ -302,9 +302,9 @@ samples:
       {"voltage": "green"}, {"temperature": "green"}, {"power": "green"}, {"systemBoard":
       "green"}, {"battery": "green"}, {"storage": "green"}, {"other": "green"}], "chainId":
       "9255389", "computeResource": {"computeResource": {"moid": "domain-c26", "type":
-      "ClusterComputeResource"}, "name": "STSC-VM-Cluster"}, "createdTime": "$TIMESTAMP$.204999+00:00",
+      "ClusterComputeResource"}, "name": "ACME-VM-Cluster"}, "createdTime": "$TIMESTAMP$.204999+00:00",
       "datacenter": {"datacenter": {"moid": "datacenter-21", "type": "Datacenter"},
-      "name": "STSC-Datacenter"}, "eventClass": "EventEx", "eventTypeId": "com.vmware.vc.HardwareSensorGroupStatus",
+      "name": "ACME-Datacenter"}, "eventClass": "EventEx", "eventTypeId": "com.vmware.vc.HardwareSensorGroupStatus",
       "fullFormattedMessage": "event.com.vmware.vc.HardwareSensorGroupStatus.fullFormat
       (com.vmware.vc.HardwareSensorGroupStatus)", "host": {"host": {"moid": "host-29",
       "type": "HostSystem"}, "name": "esxi02.internal.acme.com"}, "key": "9255389",
@@ -324,9 +324,9 @@ samples:
     host: vctr01.internal.acme.com
     _raw: '{"alarm": {"alarm": {"moid": "alarm-21", "type": "Alarm"}, "name": "Host
       error"}, "chainId": "9251677", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.935000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "entity":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "entity":
       {"entity": {"moid": "host-29", "type": "HostSystem"}, "name": "esxi02.internal.acme.com"},
       "eventClass": "AlarmSnmpCompletedEvent", "fullFormattedMessage": "Alarm ''Host
       error'': an SNMP trap for entity esxi02.internal.acme.com was sent", "host":
@@ -338,9 +338,9 @@ samples:
     host: vctr01.internal.acme.com
     _raw: '{"alarm": {"alarm": {"moid": "alarm-21", "type": "Alarm"}, "name": "Host
       error"}, "chainId": "9251646", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.933000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "entity":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "entity":
       {"entity": {"moid": "host-29", "type": "HostSystem"}, "name": "esxi02.internal.acme.com"},
       "eventClass": "AlarmActionTriggeredEvent", "fullFormattedMessage": "Alarm ''Host
       error'' on esxi02.internal.acme.com triggered an action", "host": {"host": {"moid":
@@ -352,11 +352,11 @@ samples:
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9251644", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.652000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "GeneralHostWarningEvent", "fullFormattedMessage": "Issue detected on esxi02.internal.acme.com
-      in STSC-Datacenter: vmsyslog logger 10.202.14.231:1514 lost 426330 log messages\n
+      in ACME-Datacenter: vmsyslog logger 10.202.14.231:1514 lost 426330 log messages\n
       (2022-03-25T10:22:36.891Z cpu7:6925504)", "host": {"host": {"moid": "host-29",
       "type": "HostSystem"}, "name": "esxi02.internal.acme.com"}, "key": "9251644",
       "message": "vmsyslog logger 10.202.14.231:1514 lost 426330 log messages\n (2022-03-25T10:22:36.891Z
@@ -396,7 +396,7 @@ samples:
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9202519", "createdTime": "$TIMESTAMP$.094000+00:00", "datacenter":
-      {"datacenter": {"moid": "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"},
+      {"datacenter": {"moid": "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"},
       "datastore": {"datastore": {"moid": "dstore01.internal.acme.com01", "type":
       "Datastore"}, "name": "dstore03.internal.acme.com"}, "ds": {"datastore": {"moid":
       "dstore01.internal.acme.com01", "type": "Datastore"}, "name": "dstore03.internal.acme.com"},
@@ -435,63 +435,63 @@ samples:
     source: Username:VSPHERE.LOCAL\Administrator
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9110059", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.138999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmPoweredOnEvent", "fullFormattedMessage": "stsc-dev-vm-58 on  esxi01.internal.acme.com
-      in STSC-Datacenter is powered on", "host": {"host": {"moid": "host-34", "type":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmPoweredOnEvent", "fullFormattedMessage": "acme-dev-vm-58 on  esxi01.internal.acme.com
+      in ACME-Datacenter is powered on", "host": {"host": {"moid": "host-34", "type":
       "HostSystem"}, "name": "esxi01.internal.acme.com"}, "key": "9110061", "template":
-      "False", "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name": "stsc-dev-vm-58",
+      "False", "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name": "acme-dev-vm-58",
       "vm": {"moid": "vm-416", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:VSPHERE.LOCAL\Administrator
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9110059", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.833999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmResettingEvent", "fullFormattedMessage": "stsc-dev-vm-58 on  esxi01.internal.acme.com
-      in STSC-Datacenter is reset", "host": {"host": {"moid": "host-34", "type": "HostSystem"},
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmResettingEvent", "fullFormattedMessage": "acme-dev-vm-58 on  esxi01.internal.acme.com
+      in ACME-Datacenter is reset", "host": {"host": {"moid": "host-34", "type": "HostSystem"},
       "name": "esxi01.internal.acme.com"}, "key": "9110060", "template": "False",
-      "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name": "stsc-dev-vm-58",
+      "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name": "acme-dev-vm-58",
       "vm": {"moid": "vm-416", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:VSPHERE.LOCAL\Administrator
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9109366", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.133000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmPoweredOffEvent", "fullFormattedMessage": "stsc-dev-vm-58 on  esxi01.internal.acme.com
-      in STSC-Datacenter is powered off", "host": {"host": {"moid": "host-34", "type":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmPoweredOffEvent", "fullFormattedMessage": "acme-dev-vm-58 on  esxi01.internal.acme.com
+      in ACME-Datacenter is powered off", "host": {"host": {"moid": "host-34", "type":
       "HostSystem"}, "name": "esxi01.internal.acme.com"}, "key": "9109369", "template":
-      "False", "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name": "stsc-dev-vm-58",
+      "False", "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name": "acme-dev-vm-58",
       "vm": {"moid": "vm-416", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:VSPHERE.LOCAL\Administrator
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9109366", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.252000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmStoppingEvent", "fullFormattedMessage": "stsc-dev-vm-58 on  esxi01.internal.acme.com
-      in STSC-Datacenter is stopping", "host": {"host": {"moid": "host-34", "type":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmStoppingEvent", "fullFormattedMessage": "acme-dev-vm-58 on  esxi01.internal.acme.com
+      in ACME-Datacenter is stopping", "host": {"host": {"moid": "host-34", "type":
       "HostSystem"}, "name": "esxi01.internal.acme.com"}, "key": "9109367", "template":
-      "False", "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name": "stsc-dev-vm-58",
+      "False", "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name": "acme-dev-vm-58",
       "vm": {"moid": "vm-416", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9045667", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.639000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "HostConnectedEvent", "fullFormattedMessage": "Connected to esxi01.internal.acme.com
-      in STSC-Datacenter", "host": {"host": {"moid": "host-34", "type": "HostSystem"},
+      in ACME-Datacenter", "host": {"host": {"moid": "host-34", "type": "HostSystem"},
       "name": "esxi01.internal.acme.com"}, "key": "9045667", "userName": "None", "pool_name":
       "Global pool"}'
   - index: vmware-taskevent
@@ -499,22 +499,22 @@ samples:
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9045666", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.637999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmConnectedEvent", "fullFormattedMessage": "Virtual machine stsc-dev-vm-39
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmConnectedEvent", "fullFormattedMessage": "Virtual machine acme-dev-vm-39
       is connected", "host": {"host": {"moid": "host-34", "type": "HostSystem"}, "name":
       "esxi01.internal.acme.com"}, "key": "9045666", "template": "False", "userName":
-      "None", "vm": {"name": "stsc-dev-vm-39", "vm": {"moid": "vm-366", "type": "VirtualMachine"}},
+      "None", "vm": {"name": "acme-dev-vm-39", "vm": {"moid": "vm-366", "type": "VirtualMachine"}},
       "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9045632", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.463000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "HostSyncFailedEvent", "fullFormattedMessage": "Cannot synchronize host esxi01.internal.acme.com.
       An error occurred while communicating with the remote host.", "host": {"host":
       {"moid": "host-34", "type": "HostSystem"}, "name": "esxi01.internal.acme.com"},
@@ -526,11 +526,11 @@ samples:
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9045631", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.438000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "HostConnectionLostEvent", "fullFormattedMessage": "Host esxi01.internal.acme.com
-      in STSC-Datacenter is not responding", "host": {"host": {"moid": "host-34",
+      in ACME-Datacenter is not responding", "host": {"host": {"moid": "host-34",
       "type": "HostSystem"}, "name": "esxi01.internal.acme.com"}, "key": "9045631",
       "userName": "None", "pool_name": "Global pool"}'
   - index: vmware-taskevent
@@ -538,22 +538,22 @@ samples:
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "9045630", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.438000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmDisconnectedEvent", "fullFormattedMessage": "stsc-dev-vm-39 on host esxi01.internal.acme.com
-      in STSC-Datacenter is disconnected", "host": {"host": {"moid": "host-34", "type":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmDisconnectedEvent", "fullFormattedMessage": "acme-dev-vm-39 on host esxi01.internal.acme.com
+      in ACME-Datacenter is disconnected", "host": {"host": {"moid": "host-34", "type":
       "HostSystem"}, "name": "esxi01.internal.acme.com"}, "key": "9045630", "template":
-      "False", "userName": "None", "vm": {"name": "stsc-dev-vm-39", "vm": {"moid":
+      "False", "userName": "None", "vm": {"name": "acme-dev-vm-39", "vm": {"moid":
       "vm-366", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8953498", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.203000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "VimAccountPasswordChangedEvent", "fullFormattedMessage": "VIM account password
       was changed on host esxi02.internal.acme.com", "host": {"host": {"moid": "host-29",
       "type": "HostSystem"}, "name": "esxi02.internal.acme.com"}, "key": "8953498",
@@ -563,9 +563,9 @@ samples:
     source: Username:System
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8953503", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.182000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "UserPasswordChanged", "fullFormattedMessage": "Password was changed for account
       vpxuser on host esxi02.internal.acme.com", "host": {"host": {"moid": "host-29",
       "type": "HostSystem"}, "name": "esxi02.internal.acme.com"}, "key": "8953503",
@@ -575,31 +575,31 @@ samples:
     source: Username:VSPHERE.LOCAL\Administrator
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8911406", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.166999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "ds": {"datastore":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "ds": {"datastore":
       {"moid": "dstore01.internal.acme.com01", "type": "Datastore"}, "name": "dstore03.internal.acme.com"},
       "eventClass": "VmMigratedEvent", "fullFormattedMessage": "Migration of virtual
-      machine stsc-dev-vm-63 from esxi02.internal.acme.com, dstore03.internal.acme.com
+      machine acme-dev-vm-63 from esxi02.internal.acme.com, dstore03.internal.acme.com
       to esxi01.internal.acme.com, dstore03.internal.acme.com completed", "host":
       {"host": {"moid": "host-34", "type": "HostSystem"}, "name": "esxi01.internal.acme.com"},
       "key": "8911422", "sourceDatacenter": {"datacenter": {"moid": "datacenter-0",
-      "type": "Datacenter"}, "name": "STSC-Datacenter"}, "sourceDatastore": {"datastore":
+      "type": "Datacenter"}, "name": "ACME-Datacenter"}, "sourceDatastore": {"datastore":
       {"moid": "dstore01.internal.acme.com01", "type": "Datastore"}, "name": "dstore03.internal.acme.com"},
       "sourceHost": {"host": {"moid": "host-29", "type": "HostSystem"}, "name": "esxi02.internal.acme.com"},
       "template": "False", "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name":
-      "stsc-dev-vm-63", "vm": {"moid": "vm-420", "type": "VirtualMachine"}}, "pool_name":
+      "acme-dev-vm-63", "vm": {"moid": "vm-420", "type": "VirtualMachine"}}, "pool_name":
       "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:User
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8911421", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.353000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmMessageEvent", "fullFormattedMessage": "Message on stsc-dev-vm-63 on esxi02.internal.acme.com
-      in STSC-Datacenter: The VMware Tools package is not running in this virtual
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmMessageEvent", "fullFormattedMessage": "Message on acme-dev-vm-63 on esxi02.internal.acme.com
+      in ACME-Datacenter: The VMware Tools package is not running in this virtual
       machine. The package might be necessary for the guest operating system to run
       at resolutions higher than 640x480 with 16 colors. The package provides significant
       performance benefits as well. To install it, choose VM > Install VMware Tools\u2026
@@ -621,52 +621,52 @@ samples:
       > Install VMware Tools\u2026 after the guest operating system starts. VMware
       ESX can remind you to install the VMware Tools package when you power on the
       VM. Select OK to enable the reminder. "}], "template": "True", "userName": "User",
-      "vm": {"name": "stsc-dev-vm-63", "vm": {"moid": "vm-420", "type": "VirtualMachine"}},
+      "vm": {"name": "acme-dev-vm-63", "vm": {"moid": "vm-420", "type": "VirtualMachine"}},
       "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:VSPHERE.LOCAL\Administrator
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8911406", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.856999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmEmigratingEvent", "fullFormattedMessage": "Migrating stsc-dev-vm-63 off host
-      esxi02.internal.acme.com in STSC-Datacenter", "host": {"host": {"moid": "host-29",
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmEmigratingEvent", "fullFormattedMessage": "Migrating acme-dev-vm-63 off host
+      esxi02.internal.acme.com in ACME-Datacenter", "host": {"host": {"moid": "host-29",
       "type": "HostSystem"}, "name": "esxi02.internal.acme.com"}, "key": "8911416",
       "template": "False", "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name":
-      "stsc-dev-vm-63", "vm": {"moid": "vm-420", "type": "VirtualMachine"}}, "pool_name":
+      "acme-dev-vm-63", "vm": {"moid": "vm-420", "type": "VirtualMachine"}}, "pool_name":
       "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:VSPHERE.LOCAL\Administrator
     host: vctr01.internal.acme.com
     _raw: '{"arguments": [{"destHost": "esxi01.internal.acme.com"}, {"destDatastore":
-      "dstore03.internal.acme.com"}, {"destDatacenter": "STSC-Datacenter"}], "chainId":
+      "dstore03.internal.acme.com"}, {"destDatacenter": "ACME-Datacenter"}], "chainId":
       "8911406", "computeResource": {"computeResource": {"moid": "domain-c26", "type":
-      "ClusterComputeResource"}, "name": "STSC-VM-Cluster"}, "createdTime": "$TIMESTAMP$.794000+00:00",
+      "ClusterComputeResource"}, "name": "ACME-VM-Cluster"}, "createdTime": "$TIMESTAMP$.794000+00:00",
       "datacenter": {"datacenter": {"moid": "datacenter-21", "type": "Datacenter"},
-      "name": "STSC-Datacenter"}, "ds": {"datastore": {"moid": "dstore01.internal.acme.com01",
+      "name": "ACME-Datacenter"}, "ds": {"datastore": {"moid": "dstore01.internal.acme.com01",
       "type": "Datastore"}, "name": "dstore03.internal.acme.com"}, "eventClass": "EventEx",
       "eventTypeId": "com.vmware.vc.vm.VmHotMigratingWithEncryptionEvent", "fullFormattedMessage":
-      "Hot migrating stsc-dev-vm-63 from esxi02.internal.acme.com, dstore03.internal.acme.com
-      in STSC-Datacenter to esxi01.internal.acme.com, dstore03.internal.acme.com in
-      STSC-Datacenter with encryption", "host": {"host": {"moid": "host-29", "type":
+      "Hot migrating acme-dev-vm-63 from esxi02.internal.acme.com, dstore03.internal.acme.com
+      in ACME-Datacenter to esxi01.internal.acme.com, dstore03.internal.acme.com in
+      ACME-Datacenter with encryption", "host": {"host": {"moid": "host-29", "type":
       "HostSystem"}, "name": "esxi02.internal.acme.com"}, "key": "8911407", "message":
-      "None", "objectId": "vm-420", "objectName": "stsc-dev-vm-63", "objectType":
+      "None", "objectId": "vm-420", "objectName": "acme-dev-vm-63", "objectType":
       "VirtualMachine", "severity": "info", "userName": "VSPHERE.LOCAL\\Administrator",
-      "vm": {"name": "stsc-dev-vm-63", "vm": {"moid": "vm-420", "type": "VirtualMachine"}},
+      "vm": {"name": "acme-dev-vm-63", "vm": {"moid": "vm-420", "type": "VirtualMachine"}},
       "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:N/A
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8891774", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.455999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "HostIsolationIpPingFailedEvent", "fullFormattedMessage": "vSphere HA agent
-      on host esxi02.internal.acme.com in cluster STSC-VM-Cluster in STSC-Datacenter
+      on host esxi02.internal.acme.com in cluster ACME-VM-Cluster in ACME-Datacenter
       could not reach isolation address: 10.141.6.1", "host": {"host": {"moid": "host-29",
       "type": "HostSystem"}, "name": "esxi02.internal.acme.com"}, "isolationIp": "10.141.6.1",
       "key": "8891774", "userName": "None", "pool_name": "Global pool"}'
@@ -693,28 +693,28 @@ samples:
     source: Username:VSPHERE.LOCAL\Administrator
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8677252", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.265999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmGuestRebootEvent", "fullFormattedMessage": "Guest OS reboot for stsc-prd-vm-17
-      on esxi02.internal.acme.com in STSC-Datacenter", "host": {"host": {"moid": "host-29",
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmGuestRebootEvent", "fullFormattedMessage": "Guest OS reboot for acme-prd-vm-17
+      on esxi02.internal.acme.com in ACME-Datacenter", "host": {"host": {"moid": "host-29",
       "type": "HostSystem"}, "name": "esxi02.internal.acme.com"}, "key": "8677253",
       "template": "False", "userName": "VSPHERE.LOCAL\\Administrator", "vm": {"name":
-      "stsc-prd-vm-17", "vm": {"moid": "vm-482", "type": "VirtualMachine"}}, "pool_name":
+      "acme-prd-vm-17", "vm": {"moid": "vm-482", "type": "VirtualMachine"}}, "pool_name":
       "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:VSPHERE.LOCAL\vpxd-extension-be73b05d-e7f9-463b-93c0-60b6dca73feb
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8677084", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.025999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
-      "VmCreatedEvent", "fullFormattedMessage": "Created virtual machine stsc-prd-vm-17
-      on esxi01.internal.acme.com in STSC-Datacenter", "host": {"host": {"moid": "host-34",
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
+      "VmCreatedEvent", "fullFormattedMessage": "Created virtual machine acme-prd-vm-17
+      on esxi01.internal.acme.com in ACME-Datacenter", "host": {"host": {"moid": "host-34",
       "type": "HostSystem"}, "name": "esxi01.internal.acme.com"}, "key": "8677089",
       "template": "False", "userName": "VSPHERE.LOCAL\\vpxd-extension-be73b05d-e7f9-463b-93c0-60b6dca73feb",
-      "vm": {"name": "stsc-prd-vm-17", "vm": {"moid": "vm-482", "type": "VirtualMachine"}},
+      "vm": {"name": "acme-prd-vm-17", "vm": {"moid": "vm-482", "type": "VirtualMachine"}},
       "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
@@ -722,49 +722,49 @@ samples:
     host: vctr01.internal.acme.com
     _raw: '{"adapter": "Apps VMware (3704)", "chainId": "8677084", "computeResource":
       {"computeResource": {"moid": "domain-c26", "type": "ClusterComputeResource"},
-      "name": "STSC-VM-Cluster"}, "createdTime": "$TIMESTAMP$.001999+00:00", "datacenter":
-      {"datacenter": {"moid": "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"},
+      "name": "ACME-VM-Cluster"}, "createdTime": "$TIMESTAMP$.001999+00:00", "datacenter":
+      {"datacenter": {"moid": "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"},
       "eventClass": "VmMacAssignedEvent", "fullFormattedMessage": "New MAC address
-      (00:50:56:b6:0b:5a) assigned to adapter Apps VMware (3704) for stsc-prd-vm-17",
+      (00:50:56:b6:0b:5a) assigned to adapter Apps VMware (3704) for acme-prd-vm-17",
       "host": {"host": {"moid": "host-34", "type": "HostSystem"}, "name": "esxi01.internal.acme.com"},
       "key": "8677088", "mac": "00:50:56:b6:0b:5a", "template": "False", "userName":
       "VSPHERE.LOCAL\\vpxd-extension-be73b05d-e7f9-463b-93c0-60b6dca73feb", "vm":
-      {"name": "stsc-prd-vm-17", "vm": {"moid": "vm-482", "type": "VirtualMachine"}},
+      {"name": "acme-prd-vm-17", "vm": {"moid": "vm-482", "type": "VirtualMachine"}},
       "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:VSPHERE.LOCAL\vpxd-extension-be73b05d-e7f9-463b-93c0-60b6dca73feb
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8677084", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.001000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "VmUuidAssignedEvent", "fullFormattedMessage": "Assigned new BIOS UUID (42366f98-43c6-b35a-9285-bbafdb535ffb)
-      to stsc-prd-vm-17 on esxi01.internal.acme.com in STSC-Datacenter", "host": {"host":
+      to acme-prd-vm-17 on esxi01.internal.acme.com in ACME-Datacenter", "host": {"host":
       {"moid": "host-34", "type": "HostSystem"}, "name": "esxi01.internal.acme.com"},
       "key": "8677087", "template": "False", "userName": "VSPHERE.LOCAL\\vpxd-extension-be73b05d-e7f9-463b-93c0-60b6dca73feb",
-      "uuid": "42366f98-43c6-b35a-9285-bbafdb535ffb", "vm": {"name": "stsc-prd-vm-17",
+      "uuid": "42366f98-43c6-b35a-9285-bbafdb535ffb", "vm": {"name": "acme-prd-vm-17",
       "vm": {"moid": "vm-482", "type": "VirtualMachine"}}, "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:VSPHERE.LOCAL\vpxd-extension-be73b05d-e7f9-463b-93c0-60b6dca73feb
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8677084", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$+00:00", "datacenter": {"datacenter": {"moid": "datacenter-21",
-      "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass": "VmInstanceUuidAssignedEvent",
+      "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass": "VmInstanceUuidAssignedEvent",
       "fullFormattedMessage": "Assign a new instance UUID (50365fb4-a273-a327-6bd5-969ad64c27e9)
-      to stsc-prd-vm-17", "host": {"host": {"moid": "host-34", "type": "HostSystem"},
+      to acme-prd-vm-17", "host": {"host": {"moid": "host-34", "type": "HostSystem"},
       "name": "esxi01.internal.acme.com"}, "instanceUuid": "50365fb4-a273-a327-6bd5-969ad64c27e9",
       "key": "8677086", "template": "False", "userName": "VSPHERE.LOCAL\\vpxd-extension-be73b05d-e7f9-463b-93c0-60b6dca73feb",
-      "vm": {"name": "stsc-prd-vm-17", "vm": {"moid": "vm-482", "type": "VirtualMachine"}},
+      "vm": {"name": "acme-prd-vm-17", "vm": {"moid": "vm-482", "type": "VirtualMachine"}},
       "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:VSPHERE.LOCAL\vpxd-extension-be73b05d-e7f9-463b-93c0-60b6dca73feb
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8677084", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "configSpec": {"annotation": "[Splunk 8.1.0 Data Collection Node for VMware]
       Version: 201214a - Splunk 8.1.0(It can be downloaded from:https://download.splunk.com/products/splunk/releases/8.1.0/linux/splunk-8.1.0-f57c09e87251-linux-2.6-x86_64.rpm)
       - Contains all the packages needed. (App/Suite, TA-VMware) - Splunk Add-on for
@@ -806,36 +806,36 @@ samples:
       "add"}, {"device": {"busNumber": "0", "device": ["-100"], "key": "-200", "sharedBus":
       "noSharing", "slotInfo": {"pciSlotNumber": "16"}}, "operation": "add"}, {"device":
       {"backing": {"datastore": {"moid": "dstore01.internal.acme.com01", "type": "Datastore"},
-      "diskMode": "persistent", "eagerlyScrub": "False", "fileName": "ds:///vmfs/volumes/2bde41b6-2c3dd3d0/stsc-prd-vm-17/stsc-prd-vm-17.vmdk",
+      "diskMode": "persistent", "eagerlyScrub": "False", "fileName": "ds:///vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-17/acme-prd-vm-17.vmdk",
       "split": "False", "thinProvisioned": "True"}, "capacityInBytes": "17179869184",
       "capacityInKB": "16777216", "controllerKey": "-200", "key": "-100", "unitNumber":
       "0"}, "fileOperation": "create", "operation": "add", "profile": [""]}, {"device":
       {"addressType": "Generated", "backing": {"deviceName": "Apps VMware (3704)"},
       "connectable": {"allowGuestControl": "True", "connected": "False", "startConnected":
       "True"}, "key": "-4000", "slotInfo": {"pciSlotNumber": "160"}, "wakeOnLanEnabled":
-      "True"}, "operation": "add"}], "files": {"vmPathName": "ds:///vmfs/volumes/2bde41b6-2c3dd3d0/stsc-prd-vm-17/stsc-prd-vm-17.vmx"},
+      "True"}, "operation": "add"}], "files": {"vmPathName": "ds:///vmfs/volumes/2bde41b6-2c3dd3d0/acme-prd-vm-17/acme-prd-vm-17.vmx"},
       "guestId": "centos64Guest", "memoryAllocation": {"limit": "-1", "reservation":
       "1024", "shares": {"level": "normal", "shares": "122880"}}, "memoryHotAddEnabled":
-      "False", "memoryMB": "12288", "name": "stsc-prd-vm-17", "nestedHVEnabled": "False",
+      "False", "memoryMB": "12288", "name": "acme-prd-vm-17", "nestedHVEnabled": "False",
       "numCPUs": "8", "numCoresPerSocket": "4", "vAppConfig": {"product": [{"info":
       {"classId": "None", "instanceId": "None", "key": "0"}, "operation": "add"}]},
       "version": "vmx-11", "virtualICH7MPresent": "False", "virtualSMCPresent": "False",
       "vmProfile": [""]}, "createdTime": "$TIMESTAMP$.981999+00:00", "datacenter":
-      {"datacenter": {"moid": "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"},
-      "eventClass": "VmBeingCreatedEvent", "fullFormattedMessage": "Creating stsc-prd-vm-17
-      on host esxi01.internal.acme.com in STSC-Datacenter", "host": {"host": {"moid":
+      {"datacenter": {"moid": "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"},
+      "eventClass": "VmBeingCreatedEvent", "fullFormattedMessage": "Creating acme-prd-vm-17
+      on host esxi01.internal.acme.com in ACME-Datacenter", "host": {"host": {"moid":
       "host-34", "type": "HostSystem"}, "name": "esxi01.internal.acme.com"}, "key":
       "8677085", "template": "False", "userName": "VSPHERE.LOCAL\\vpxd-extension-be73b05d-e7f9-463b-93c0-60b6dca73feb",
-      "vm": {"name": "stsc-prd-vm-17", "vm": {"moid": "vm-482", "type": "VirtualMachine"}},
+      "vm": {"name": "acme-prd-vm-17", "vm": {"moid": "vm-482", "type": "VirtualMachine"}},
       "pool_name": "Global pool"}'
   - index: vmware-taskevent
     sourcetype: vmware_inframon:events
     source: Username:VSPHERE.LOCAL\vpxd-extension-be73b05d-e7f9-463b-93c0-60b6dca73feb
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8677084", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.237999+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "TaskEvent", "fullFormattedMessage": "Task: Deploy OVF template", "info": {"cancelable":
       "True", "cancelled": "False", "descriptionId": "ResourcePool.ImportVAppLRO",
       "entity": {"moid": "resgroup-27", "type": "ResourcePool"}, "entityName": "Resources",
@@ -849,9 +849,9 @@ samples:
     source: Username:vsphere.local\Administrator
     host: vctr01.internal.acme.com
     _raw: '{"chainId": "8677075", "computeResource": {"computeResource": {"moid":
-      "domain-c26", "type": "ClusterComputeResource"}, "name": "STSC-VM-Cluster"},
+      "domain-c26", "type": "ClusterComputeResource"}, "name": "ACME-VM-Cluster"},
       "createdTime": "$TIMESTAMP$.514000+00:00", "datacenter": {"datacenter": {"moid":
-      "datacenter-21", "type": "Datacenter"}, "name": "STSC-Datacenter"}, "eventClass":
+      "datacenter-21", "type": "Datacenter"}, "name": "ACME-Datacenter"}, "eventClass":
       "TaskEvent", "fullFormattedMessage": "Task: Import OVF package", "host": {"host":
       {"moid": "host-34", "type": "HostSystem"}, "name": "esxi01.internal.acme.com"},
       "info": {"activationId": "5be1cb4b-7648-47da-9d9a-56c977ddcf2f", "cancelable":
