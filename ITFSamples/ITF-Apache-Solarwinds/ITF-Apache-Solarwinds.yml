@@ -9,7 +9,7 @@ samples:
     type: gotimestamp
     replacement: 2006/01/02 15:04:05
   lines:
-  - index: stsc-scenario
+  - index: scenario
     sourcetype: solarwinds:alert
     source: solarwinds
     host: apache-02.external.acme.com
@@ -20,7 +20,7 @@ samples:
       applicationname="Solarwinds Web Cart" responsetime=269 thresholdresponsetimewarning=1000
       thresholdresponsetimecritical=2000 statusdescription="Solarwinds Web Cart response
       test is up" Title="Solarwinds Alert response test up for apache-02.external.acme.com"
-  - index: stsc-scenario
+  - index: scenario
     sourcetype: solarwinds:alert
     source: solarwinds
     host: apache-04.external.acme.com
@@ -31,7 +31,7 @@ samples:
       applicationname="Solarwinds Web Cart" responsetime=282 thresholdresponsetimewarning=1000
       thresholdresponsetimecritical=2000 statusdescription="Solarwinds Web Cart response
       test is up" Title="Solarwinds Alert response test up for apache-04.external.acme.com"
-  - index: stsc-scenario
+  - index: scenario
     sourcetype: solarwinds:alert
     source: solarwinds
     host: apache-01.external.acme.com
@@ -42,7 +42,7 @@ samples:
       applicationname="Solarwinds Web Login" responsetime=283 thresholdresponsetimewarning=1000
       thresholdresponsetimecritical=2000 statusdescription="Solarwinds Web Login response
       test is up" Title="Solarwinds Alert response test up for apache-01.external.acme.com"
-  - index: stsc-scenario
+  - index: scenario
     sourcetype: solarwinds:alert
     source: solarwinds
     host: apache-03.external.acme.com

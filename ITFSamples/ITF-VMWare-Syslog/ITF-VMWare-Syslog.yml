@@ -243,7 +243,7 @@ samples:
     host: $HOST$
     _raw: '<164>$TIMESTAMP$.761Z apps-esxi65-2 Hostd: warning hostd[C6C2B70] [Originator@6876
       sub=Default opID=0cfe3cc8 user=vpxuser] FileLayoutExToFileLayout: While populating
-      disk layoutSkipping empty diskLayout configuration for VM [dstore03.internal.splunktshirtcompany.com]
+      disk layoutSkipping empty diskLayout configuration for VM [dstore03.internal.acme.com]
       vsim_netapp-7m/DataONTAP.vmx, key 3003'
   - index: vmware-esxilog
     sourcetype: vmware:esxlog:Hostd
@@ -658,7 +658,7 @@ samples:
     source: vmware:esxlog:source::tcp:1514
     host: $HOST$
     _raw: '<14>$TIMESTAMP$.770Z apps-esxi65-2 storageRM:  Storage I/O Control: ANOMALY
-      - external workload detected on datastore dstore03.internal.splunktshirtcompany.com'
+      - external workload detected on datastore dstore03.internal.acme.com'
   - index: vmware-esxilog
     sourcetype: vmware:esxlog:Vpxa
     source: vmware:esxlog:source::tcp:1514
