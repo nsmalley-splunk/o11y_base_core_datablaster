@@ -6,232 +6,232 @@ global:
     outputter: splunkhec
     outputTemplate: splunkhec
     endpoints:
-    - https://localhost:8088/services/collector/event
+    - https:/localhost:8088/services/collector/event
     splunkHECToken: 00000000-0000-0000-0000-000000000000
 
 
 mix:
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-WinHostMon-win01/ITF-Windows-WinHostMon-win01.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-WinHostMon-win01/ITF-Windows-WinHostMon-win01.yml
   count: 426
   interval: 60
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-WinHostMon-win02/ITF-Windows-WinHostMon-win02.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-WinHostMon-win02/ITF-Windows-WinHostMon-win02.yml
   count: 426
   interval: 60
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-WinHostMon-win03/ITF-Windows-WinHostMon-win03.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-WinHostMon-win03/ITF-Windows-WinHostMon-win03.yml
   count: 426
   interval: 60
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-WinHostMon-win04/ITF-Windows-WinHostMon-win04.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-WinHostMon-win04/ITF-Windows-WinHostMon-win04.yml
   count: 426
   interval: 60
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-WinHostMon-win05/ITF-Windows-WinHostMon-win05.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-WinHostMon-win05/ITF-Windows-WinHostMon-win05.yml
   count: 426
   interval: 60
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AD-Powershell/ITF-AD-Powershell.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AD-Powershell/ITF-AD-Powershell.yml
   count: 8
   interval: 60
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-VMWare-Task/ITF-VMWare-Task.yml
+- sample: /home/ubuntu/ITFSamples/ITF-VMWare-Task/ITF-VMWare-Task.yml
   count: 1
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Apache-Access/ITF-Apache-Access.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Apache-Access/ITF-Apache-Access.yml
   count: 1
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Nagios-Goodness/ITF-Nagios-Goodness.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Nagios-Goodness/ITF-Nagios-Goodness.yml
   count: 1
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-VMWare-Events/ITF-VMWare-Events.yml
-  count: 1
-  interval: 1
-  begin: now
-  realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AWS-S3-AccessLogs/ITF-AWS-S3-AccessLogs.yml
+- sample: /home/ubuntu/ITFSamples/ITF-VMWare-Events/ITF-VMWare-Events.yml
   count: 1
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AD-WinEventLog/ITF-AD-WinEventLog.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AWS-S3-AccessLogs/ITF-AWS-S3-AccessLogs.yml
   count: 1
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-PerfmonMetrics-win01/ITF-Windows-PerfmonMetrics-win01.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AD-WinEventLog/ITF-AD-WinEventLog.yml
+  count: 1
+  interval: 1
+  begin: now
+  realtime: true
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-PerfmonMetrics-win01/ITF-Windows-PerfmonMetrics-win01.yml
   count: 93
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-PerfmonMetrics-win02/ITF-Windows-PerfmonMetrics-win02.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-PerfmonMetrics-win02/ITF-Windows-PerfmonMetrics-win02.yml
   count: 93
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-PerfmonMetrics-win03/ITF-Windows-PerfmonMetrics-win03.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-PerfmonMetrics-win03/ITF-Windows-PerfmonMetrics-win03.yml
   count: 93
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-PerfmonMetrics-win04/ITF-Windows-PerfmonMetrics-win04.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-PerfmonMetrics-win04/ITF-Windows-PerfmonMetrics-win04.yml
   count: 93
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-PerfmonMetrics-win05/ITF-Windows-PerfmonMetrics-win05.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-PerfmonMetrics-win05/ITF-Windows-PerfmonMetrics-win05.yml
   count: 93
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AD-MSAD/ITF-AD-MSAD.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AD-MSAD/ITF-AD-MSAD.yml
   count: 728
   interval: 60
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Apache-Solarwinds/ITF-Apache-Solarwinds.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Apache-Solarwinds/ITF-Apache-Solarwinds.yml
   count: 3
   interval: 60
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-WinEventLog/ITF-Windows-WinEventLog.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-WinEventLog/ITF-Windows-WinEventLog.yml
   count: 3
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-VMWare-Metrics/ITF-VMWare-Metrics.yml
+- sample: /home/ubuntu/ITFSamples/ITF-VMWare-Metrics/ITF-VMWare-Metrics.yml
   count: 282
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AD-Host-Metrics/ITF-AD-Host-Metrics.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AD-Host-Metrics/ITF-AD-Host-Metrics.yml
   count: 518
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AD-WinHostMon/ITF-AD-WinHostMon.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AD-WinHostMon/ITF-AD-WinHostMon.yml
   count: 155
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-UnixLinux-OSLogs/ITF-UnixLinux-OSLogs.yml
+- sample: /home/ubuntu/ITFSamples/ITF-UnixLinux-OSLogs/ITF-UnixLinux-OSLogs.yml
   count: 8
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AWS-Description/ITF-AWS-Description.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AWS-Description/ITF-AWS-Description.yml
   count: 48
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AWS-Cloudtrail/ITF-AWS-Cloudtrail.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AWS-Cloudtrail/ITF-AWS-Cloudtrail.yml
   count: 1
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-XmlWinEventLog/ITF-Windows-XmlWinEventLog.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-XmlWinEventLog/ITF-Windows-XmlWinEventLog.yml
   count: 2
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AD-WinNetMon/ITF-AD-WinNetMon.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AD-WinNetMon/ITF-AD-WinNetMon.yml
   count: 2
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AWS-CloudwatchLogs/ITF-AWS-CloudwatchLogs.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AWS-CloudwatchLogs/ITF-AWS-CloudwatchLogs.yml
   count: 1
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-UnixLinux-Metrics/ITF-UnixLinux-Metrics.yml
+- sample: /home/ubuntu/ITFSamples/ITF-UnixLinux-Metrics/ITF-UnixLinux-Metrics.yml
   count: 70
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AWS-Config/ITF-AWS-Config.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AWS-Config/ITF-AWS-Config.yml
   count: 1
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-VMWare-Syslog/ITF-VMWare-Syslog.yml
+- sample: /home/ubuntu/ITFSamples/ITF-VMWare-Syslog/ITF-VMWare-Syslog.yml
   count: 1
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Windows-WinNetMon/ITF-Windows-WinNetMon.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Windows-WinNetMon/ITF-Windows-WinNetMon.yml
   count: 2
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Unix-Goodness/ITF-Unix-Goodness.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Unix-Goodness/ITF-Unix-Goodness.yml
   count: 4
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Unix-Metrics/ITF-Unix-Metrics.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Unix-Metrics/ITF-Unix-Metrics.yml
   count: 45
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Unix-Logs/ITF-Unix-Logs.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Unix-Logs/ITF-Unix-Logs.yml
   count: 10
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AWS-Description-Users/ITF-AWS-Description-Users.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AWS-Description-Users/ITF-AWS-Description-Users.yml
   count: 4
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Stream-Goodness/ITF-Stream-Goodness.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Stream-Goodness/ITF-Stream-Goodness.yml
   count: 3
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-VMWare-Inv/ITF-VMWare-Inv.yml
+- sample: /home/ubuntu/ITFSamples/ITF-VMWare-Inv/ITF-VMWare-Inv.yml
   count: 221
   interval: 300
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-JMX-Goodness/ITF-JMX-Goodness.yml
+- sample: /home/ubuntu/ITFSamples/ITF-JMX-Goodness/ITF-JMX-Goodness.yml
   count: 6
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AWS-Cloudwatch/ITF-AWS-Cloudwatch.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AWS-Cloudwatch/ITF-AWS-Cloudwatch.yml
   count: 115
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-AD-ActiveDirectory/ITF-AD-ActiveDirectory.yml
+- sample: /home/ubuntu/ITFSamples/ITF-AD-ActiveDirectory/ITF-AD-ActiveDirectory.yml
   count: 1
   interval: 1
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Unix-Onetime-login-sudo/ITF-Unix-Onetime-login-sudo.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Unix-Onetime-login-sudo/ITF-Unix-Onetime-login-sudo.yml
   count: 3
   interval: 7200
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-Metrics-Badness/ITF-Metrics-Badness.yml
+- sample: /home/ubuntu/ITFSamples/ITF-Metrics-Badness/ITF-Metrics-Badness.yml
   count: 9
   interval: 30
   begin: now
   realtime: true
-- sample: /home/ubuntu/ITFSamples//ITF-All-Badness/ITF-All-Badness.yml
+- sample: /home/ubuntu/ITFSamples/ITF-All-Badness/ITF-All-Badness.yml
   count: 20
   interval: 30
   begin: now
