@@ -26,7 +26,7 @@ samples:
     host: vctr01.internal.acme.com
     _raw: '{"activationId": "None", "cancelable": "False", "cancelled": "False", "completeTime":
       "$TIMESTAMP$.495000+00:00", "descriptionId": "Datacenter.powerOnVm", "entity":
-      {"moid": "datacenter-21", "type": "Datacenter"}, "entityName": "STSC-Datacenter",
+      {"moid": "datacenter-21", "type": "Datacenter"}, "entityName": "ACME-Datacenter",
       "eventChainId": "9255978", "key": "task-48817", "name": "PowerOnMultiVM_Task",
       "queueTime": "$TIMESTAMP$.440999+00:00", "reason": {"userName": "VSPHERE.LOCAL\\Administrator"},
       "result": {"attempted": [{"task": {"moid": "task-48818", "type": "Task"}, "vm":

@@ -17,17 +17,17 @@ samples:
     lower: -300
     upper: -300
   lines:
-  - index: stsc_scenario
+  - index: scenario
     sourcetype: linux_secure
     source: /var/log/secure
     host: mysql-02.internal.acme.com
     _raw: '$TIMESTAMP1$ ip-172-31-19-173 sshd[28376]: Accepted publickey for junior-admin from 76.92.195.52 port 55363 ssh2: RSA SHA256:1AUC5X80g+MGbz4RFLWHQfqh/ms6jFP0n0eicin64wY'
-  - index: stsc_scenario
+  - index: scenario
     sourcetype: linux_secure
     source: /var/log/secure
     host: mysql-02.internal.acme.com
     _raw: '$TIMESTAMP1$ ip-172-31-19-173 sshd[28376]: pam_unix(sshd:session): session opened for user junior-admin by (uid=0)'
-  - index: stsc_scenario
+  - index: scenario
     sourcetype: linux_secure
     source: /var/log/secure
     host: mysql-02.internal.acme.com
