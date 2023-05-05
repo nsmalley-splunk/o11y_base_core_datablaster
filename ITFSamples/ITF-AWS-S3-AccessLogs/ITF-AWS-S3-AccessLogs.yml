@@ -7,7 +7,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-06-31-26-B51FFA791B757AD9
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:05:24:07 +0000] 54.69.168.69 arn:$INDEX$:sts::755695087069:assumed-role/okta_ro_role/Axonius
       1RHAZRTGWR06BWXN REST.GET.TAGGING - "GET /?tagging HTTP/1.1" 404 NoSuchTagSet
@@ -18,7 +18,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-06-31-26-B51FFA791B757AD9
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:05:24:06 +0000] 54.69.168.69 arn:$INDEX$:sts::755695087069:assumed-role/okta_ro_role/Axonius
       0NXR35XHNHP8BTT1 REST.GET.PUBLIC_ACCESS_BLOCK - "GET /?publicAccessBlock HTTP/1.1"
@@ -29,7 +29,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-06-30-42-BDFA2F1327A28F7B
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:05:24:06 +0000] 54.69.168.69 arn:$INDEX$:sts::755695087069:assumed-role/okta_ro_role/Axonius
       0NXYMDV6VXQMAER6 REST.GET.LOCATION - "GET /acme-public?location HTTP/1.1" 200
@@ -40,7 +40,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-06-18-50-37B1DE33E790BF4B
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:05:24:04 +0000] 54.69.168.69 - 2VJVWG5Z0SYJGWZA REST.GET.ACL -
       "GET /?acl HTTP/1.1" 400 AuthorizationHeaderMalformed 365 - 3 - "-" "Boto3/1.16.17
@@ -50,7 +50,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-06-37-38-854330E9C0E68A59
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:05:07:19 +0000] 54.68.121.189 arn:$INDEX$:iam::755695087069:user/ForSplunkAutobahnIngest
       4JJC72KB9AN9D7TP REST.GET.LOGGING_STATUS - "GET /acme-public?logging HTTP/1.1"
@@ -61,7 +61,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-06-37-38-854330E9C0E68A59
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:05:07:19 +0000] 54.68.121.189 arn:$INDEX$:iam::755695087069:user/ForSplunkAutobahnIngest
       4JJ7N1HQJG5S9SQ6 REST.GET.CORS - "GET /acme-public?cors HTTP/1.1" 404 NoSuchCORSConfiguration
@@ -72,7 +72,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-02-36-18-C4B6652EBE1EA7A0
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:01:37:57 +0000] 52.95.24.235 arn:$INDEX$:sts::755695087069:assumed-role/config-role-us-east-2/AWSConfig-Describe
       YMH73C1M0TVS8EXW REST.GET.LOCATION - "GET /?location HTTP/1.1" 200 - 137 - 30
@@ -82,7 +82,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-02-35-24-62A99A1584E742F3
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:01:37:57 +0000] 52.95.24.235 - YMH2ZPTN7XJG5D2V REST.HEAD.BUCKET
       - "HEAD / HTTP/1.1" 400 AuthorizationHeaderMalformed 365 - 2 - "-" "AWSConfig
@@ -92,7 +92,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-01-14-01-A9F827E51D74B3D3
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:00:58:12 +0000] 172.18.24.0 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForConfig/AWSConfig-Describe
       0Y0F925NA8BQ9BCB REST.GET.LIFECYCLE - "GET /?lifecycle HTTP/1.1" 404 NoSuchLifecycleConfiguration
@@ -102,7 +102,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-01-14-01-A9F827E51D74B3D3
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:00:58:12 +0000] 172.18.24.0 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForConfig/AWSConfig-Describe
       0Y0EPRSZYF0F93AZ REST.GET.LOGGING_STATUS - "GET /?logging HTTP/1.1" 200 - 246
@@ -112,7 +112,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-01-14-01-A9F827E51D74B3D3
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:00:58:12 +0000] 172.18.24.0 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForConfig/AWSConfig-Describe
       0Y0C5Q68B1R67QSR REST.GET.OBJECT_LOCK_CONFIGURATION - "GET /?object-lock HTTP/1.1"
@@ -123,7 +123,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-01-29-55-EE3C8A281248E382
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:00:58:12 +0000] 172.18.24.0 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForConfig/AWSConfig-Describe
       0Y0CYYAQVS2890SR REST.HEAD.BUCKET - "HEAD /acme-public/ HTTP/1.1" 200 - - -
@@ -133,7 +133,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-01-52-47-28E6E97224258C2B
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:00:39:34 +0000] 204.107.141.240 - 07GWXDEZZ1SJ3YK0 REST.GET.ACL
       - "GET /acme-public?acl HTTP/1.1" 301 PermanentRedirect 473 - 4 - "-" "Boto3/1.4.5
@@ -142,7 +142,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-27-01-24-50-FF9CC1C0B5C61FEF
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [27/Nov/2021:00:39:34 +0000] 204.107.141.240 arn:$INDEX$:sts::755695087069:assumed-role/okta_ro_role/AssumeRole399_Jess_Whitman
       07GR9D2WZ3QA2ZSY REST.GET.WEBSITE - "GET /acme-public?website HTTP/1.1" 404
@@ -153,7 +153,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-26-19-41-40-96DE38381BFA448C
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [26/Nov/2021:18:49:11 +0000] 204.107.141.240 arn:$INDEX$:sts::755695087069:assumed-role/sgs-audit/botocore-session-1637952393
       C9H9X4R9N89TD7JE REST.GET.WEBSITE - "GET /?website HTTP/1.1" 404 NoSuchWebsiteConfiguration
@@ -164,7 +164,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-26-19-27-55-222AC2ACD0D3FC00
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [26/Nov/2021:18:48:57 +0000] 204.107.141.240 arn:$INDEX$:sts::755695087069:assumed-role/sgs-audit/botocore-session-1637952393
       7YDW5ME43PMEWNQW REST.GET.VERSIONING - "GET /?versioning HTTP/1.1" 200 - 113
@@ -175,7 +175,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-26-19-39-02-AF98AAC591FDD169
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [26/Nov/2021:18:48:37 +0000] 204.107.141.240 arn:$INDEX$:sts::755695087069:assumed-role/sgs-audit/botocore-session-1637952393
       Q201N5ZSB496T762 REST.GET.LOCATION - "GET /acme-public?location HTTP/1.1" 200
@@ -186,7 +186,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-26-11-15-35-DCD6987C31DE9CE4
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [26/Nov/2021:10:25:22 +0000] 72.21.217.31 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForTrustedAdvisor/TrustedAdvisor_755695087069_47a4d603-b14d-4c16-85a0-bee598f3276f
       Q7B1XSZ9EKST8D0P REST.GET.VERSIONING - "GET /?versioning HTTP/1.1" 200 - 113
@@ -198,7 +198,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-26-11-32-56-34501B3C1CC99B0B
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [26/Nov/2021:10:25:22 +0000] 72.21.217.31 - Q7BFAWZS53GB0TWB REST.HEAD.BUCKET
       - "HEAD / HTTP/1.1" 400 AuthorizationHeaderMalformed 365 - 2 - "-" "AWSSupport-TrustedAdvisor,
@@ -209,7 +209,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-18-07-25-56-3C43DADE4FD0DCEC
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [18/Nov/2021:06:33:18 +0000] 72.21.217.31 arn:$INDEX$:sts::755695087069:assumed-role/AWSServiceRoleForTrustedAdvisor/TrustedAdvisor_755695087069_46e33214-630a-44b3-a542-385059d1618f
       FR8PXVDYP46X1P7Z REST.GET.POLICY_STATUS - "GET /?policyStatus HTTP/1.1" 404
@@ -221,7 +221,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-07-15-38-31-8BFD5B5FCCE2C89C
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [07/Nov/2021:14:02:15 +0000] 76.92.195.52 - WNSA5N5828H8896Q REST.GET.BUCKET
       - "GET / HTTP/1.1" 403 AccessDenied 243 - 13 - "-" "Mozilla/5.0 (iPhone; CPU
@@ -232,7 +232,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-22-23-09-576DD80E52FA90AB
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:21:16:16 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
       0ESYP1YM1FWPNYYV REST.GET.POLICY_STATUS - "GET /?policyStatus HTTP/1.1" 404
@@ -244,7 +244,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-22-23-09-576DD80E52FA90AB
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:21:16:16 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
       0ESR39EDMB0S9ZVA REST.GET.ACL - "GET /?acl HTTP/1.1" 200 - 568 - 76 - "-" "S3Console/0.4,
@@ -255,7 +255,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-22-41-26-48822503A79E2F03
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:21:16:15 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
       F283N94TRCJ0EWNS REST.HEAD.BUCKET - "HEAD /acme-public HTTP/1.1" 200 - - - 25
@@ -267,7 +267,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-48-39-D655786E4940B3AD
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:46:15 +0000] 54.240.198.15 - 4HRAGD8KGA3ZK4XV REST.HEAD.BUCKET
       - "HEAD /acme-public/ HTTP/1.1" 301 PermanentRedirect 473 - 2 - "-" "AWSConfig
@@ -276,7 +276,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-33-46-4B32C0659AA7B56F
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:44:40 +0000] 76.92.195.52 - 735GZJFSMYQRWY2M REST.GET.OBJECT
       favicon.ico "GET /favicon.ico HTTP/1.1" 403 AccessDenied 243 - 8 - "https://acme-public.s3.us-west-1.amazonaws.com/helloworld.txt"
@@ -287,7 +287,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-33-46-4B32C0659AA7B56F
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:44:39 +0000] 76.92.195.52 - 313PDY8QJ3MHFAEK REST.GET.OBJECT
       helloworld.txt "GET /helloworld.txt HTTP/1.1" 403 AccessDenied 243 - 18 - "-"
@@ -298,7 +298,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-41-12-68C896F5C66F1820
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:44:36 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
       PBGWR83YG11CB26C REST.GET.ACL - "GET /acme-public?acl= HTTP/1.1" 200 - 568 -
@@ -310,7 +310,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-15-21-4063D1B24AEAC1A1
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:44:36 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
       PBGZF19BW4WXR1JN REST.GET.BUCKETVERSIONS - "GET /?versions&max-keys=1&encoding-type=url
@@ -322,7 +322,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-27-53-A7B9AAA068D47434
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:44:17 +0000] 76.92.195.52 - NT3B35H4AJW35RB4 REST.GET.OBJECT
       helloworld.txt "GET /helloworld.txt HTTP/1.1" 200 - 11 11 15 14 "-" "Mozilla/5.0
@@ -333,7 +333,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-20-45-88A0FF14E5B18187
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:36:32 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
       YXPNM0YZF5ZNAJNB REST.GET.BUCKET - "GET /acme-public?list-type=2&encoding-type=url&max-keys=1000&fetch-owner=true&delimiter=%2F&prefix=
@@ -345,7 +345,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-25-14-A26661FB25C08A5B
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:28:51 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
       Q3Q3QVD72X1VT1D8 REST.GET.INTELLIGENT_TIERING - "GET /acme-public?intelligent-tiering=
@@ -357,7 +357,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-31-12-CE6E09BADF88BF60
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:28:50 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
       ZP18R7675Z94FYNE REST.HEAD.OBJECT helloworld.txt "HEAD /helloworld.txt HTTP/1.1"
@@ -369,7 +369,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-13-35-8DF601974DF2CCF3
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:28:50 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
       ZP14F35A7MEWVAP7 REST.GET.OBJECT_TAGGING helloworld.txt "GET /acme-public/helloworld.txt?tagging=
@@ -381,7 +381,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-12-06-5B222EB50DE36140
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:28:50 +0000] 76.92.195.52 arn:$INDEX$:sts::755695087069:assumed-role/AWSReservedSSO_SPLKAdministratorAccess_61e521091489b4d2/jwiedemann@splunk.com
       ZP1A53QCSQSYMMN3 REST.HEAD.OBJECT helloworld.txt "HEAD /acme-public/helloworld.txt
@@ -393,7 +393,7 @@ samples:
   - index: aws
     sourcetype: aws:s3:accesslogs
     source: s3://splunk-s3-access-bucket/2021-11-04-14-40-07-7AB35B4BC7729659
-    host: $decideOnStartup
+    host: acme-public.s3.us-west-1.amazonaws.com
     _raw: 5c54f2ef5fb119e68bf26b4f177c47dba21cc7a6c90f296771e0b4490b219fc5 acme-public
       [04/Nov/2021:13:19:17 +0000] 76.92.195.52 - GZ8AWKSAS060QTG7 REST.GET.OBJECT
       helloworld.txt "GET /helloworld.txt HTTP/1.1" 304 - - 11 28 - "-" "Mozilla/5.0
