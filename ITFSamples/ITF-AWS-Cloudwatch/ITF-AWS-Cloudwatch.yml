@@ -1245,7 +1245,7 @@ samples:
   - index: aws
     sourcetype: aws:cloudwatch
     source: us-west-1:AWS/EC2
-    host:ip-10-345-22-26.acme.com
+    host: ip-10-345-22-26.acme.com
     _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
       0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
       "metric_name": "StatusCheckFailed_System", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'
