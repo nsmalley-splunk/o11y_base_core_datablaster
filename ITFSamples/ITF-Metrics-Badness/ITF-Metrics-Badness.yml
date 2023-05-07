@@ -139,7 +139,7 @@ samples:
     upper: 8376301.0
   lines:
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metrics
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
