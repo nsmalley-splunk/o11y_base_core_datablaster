@@ -1179,7 +1179,7 @@ samples:
   - index: aws
     sourcetype: aws:cloudwatch
     source: us-west-1:AWS/EC2
-    host:ip-10-345-22-28.acme.com
+    host: ip-10-345-22-28.acme.com
     _raw: '{"Average": 9628478.4, "Maximum": 10664460.0, "Minimum": 6317114.0, "SampleCount":
       5.0, "Sum": 48142392.0, "Unit": "Bytes", "account_id": "755695087069", "metric_dimensions":
       "InstanceId=[i-0b08a46573d49b2ee]", "metric_name": "NetworkOut", "period": 300,
@@ -1245,7 +1245,7 @@ samples:
   - index: aws
     sourcetype: aws:cloudwatch
     source: us-west-1:AWS/EC2
-    host:ip-10-345-22-26.acme.com
+    host: ip-10-345-22-26.acme.com
     _raw: '{"Average": 0.0, "Maximum": 0.0, "Minimum": 0.0, "SampleCount": 5.0, "Sum":
       0.0, "Unit": "Count", "account_id": "755695087069", "metric_dimensions": "InstanceId=[i-023ee207c86a15a06]",
       "metric_name": "StatusCheckFailed_System", "period": 300, "timestamp": "2021-11-27T05:55:00Z"}'

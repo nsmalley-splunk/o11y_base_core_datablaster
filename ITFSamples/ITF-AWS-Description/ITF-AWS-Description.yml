@@ -429,7 +429,7 @@ samples:
       "t2.2xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2021-04-07T19:23:45.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-14-88.us-west-1.compute.internal",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-14-88.us-west-1.acme.internal",
       "private_ip_address": "172.31.14.88", "public_dns_name": "", "reason": "User
       initiated (2021-07-12 15:57:34 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
       "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
@@ -447,7 +447,7 @@ samples:
       "t2.2xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2021-02-03T15:23:28.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-11-170.us-west-1.compute.internal",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-11-170.us-west-1.acme.internal",
       "private_ip_address": "172.31.11.170", "public_dns_name": "", "reason": "User
       initiated (2021-07-12 15:57:34 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
       "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
@@ -461,15 +461,15 @@ samples:
       "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
       0, "placement": "us-west-1b", "placement_group": "", "placement_tenancy": "default",
       "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
-      "ec2-54-176-119-178.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "ec2-54-176-119-178.us-west-1.acme.amazonaws.com", "ebs_optimized": false,
       "group_name": null, "hypervisor": "xen", "id": "i-06db6dbd61dbaca8d", "image_id":
       "ami-047ce89c62c8f180e", "instance_profile": null, "instance_type": "t2.large",
       "ip_address": "54.176.119.178", "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2021-01-29T19:33:09.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
       "disabled", "persistent": false, "platform": "windows", "private_dns_name":
-      "ip-172-31-3-29.us-west-1.compute.internal", "private_ip_address": "172.31.3.29",
-      "public_dns_name": "ec2-54-176-119-178.us-west-1.compute.amazonaws.com", "reason":
+      "ip-172-31-3-29.us-west-1.acme.internal", "private_ip_address": "172.31.3.29",
+      "public_dns_name": "ec2-54-176-119-178.us-west-1.acme.amazonaws.com", "reason":
       "", "root_device_name": "/dev/sda1", "root_device_type": "ebs", "sourceDestCheck":
       "true", "spot_instance_request_id": null, "subnet_id": "subnet-0696525d", "tags":
       {"Name": "acme-dev-windows"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
@@ -486,7 +486,7 @@ samples:
       "t2.2xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2020-06-02T21:15:42.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-2-17.us-west-1.compute.internal",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-2-17.us-west-1.acme.internal",
       "private_ip_address": "172.31.2.17", "public_dns_name": "", "reason": "User
       initiated (2020-06-22 17:20:55 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
       "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
@@ -505,7 +505,7 @@ samples:
       "c5.2xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2020-01-15T14:43:11.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-14-76.us-west-1.compute.internal",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-14-76.us-west-1.acme.internal",
       "private_ip_address": "172.31.14.76", "public_dns_name": "", "reason": "User
       initiated (2020-03-16 21:41:42 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
       "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
@@ -519,14 +519,14 @@ samples:
       "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
       0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
       "ami_launch_index": "0", "architecture": "x86_64", "client_token": "163709565037576098",
-      "dns_name": "ec2-54-215-127-2.us-west-1.compute.amazonaws.com", "ebs_optimized":
+      "dns_name": "ec2-54-215-127-2.us-west-1.acme.amazonaws.com", "ebs_optimized":
       false, "group_name": null, "hypervisor": "xen", "id": "i-0e5bf972e5b5f5761",
       "image_id": "ami-0ec66cb402b90492d", "instance_profile": null, "instance_type":
       "t2.medium", "ip_address": "54.215.127.2", "item": "\n                ", "kernel":
       null, "key_name": "stealth-tshirt-prj", "launch_time": "2021-11-16T20:48:20.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-16-204.us-west-1.compute.internal",
-      "private_ip_address": "172.31.16.204", "public_dns_name": "ec2-54-215-127-2.us-west-1.compute.amazonaws.com",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-16-204.us-west-1.acme.internal",
+      "private_ip_address": "172.31.16.204", "public_dns_name": "ec2-54-215-127-2.us-west-1.acme.amazonaws.com",
       "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
       "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
       {"Name": "Tomcat"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
@@ -538,14 +538,14 @@ samples:
       "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
       0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
       "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
-      "ec2-54-177-158-73.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "ec2-54-177-158-73.us-west-1.acme.amazonaws.com", "ebs_optimized": false,
       "group_name": null, "hypervisor": "xen", "id": "i-0a594ccf0f3c8f37f", "image_id":
       "ami-03ab7423a204da002", "instance_profile": null, "instance_type": "t2.large",
       "ip_address": "54.177.158.73", "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2021-10-25T14:20:33.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-28-236.us-west-1.compute.internal",
-      "private_ip_address": "172.31.28.236", "public_dns_name": "ec2-54-177-158-73.us-west-1.compute.amazonaws.com",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-28-236.us-west-1.acme.internal",
+      "private_ip_address": "172.31.28.236", "public_dns_name": "ec2-54-177-158-73.us-west-1.acme.amazonaws.com",
       "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
       "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
       {"Name": "Cloud gateway", "Jerad Is": "So Awesome", "I-Cant": "Express how awesome
@@ -563,7 +563,7 @@ samples:
       "t2.large", "ip_address": null, "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2021-09-19T13:39:30.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-22-255.us-west-1.compute.internal",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-22-255.us-west-1.acme.internal",
       "private_ip_address": "172.31.22.255", "public_dns_name": "", "reason": "User
       initiated (2021-09-19 14:06:49 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
       "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
@@ -582,7 +582,7 @@ samples:
       "t3.xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2021-05-12T16:24:04.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-31-40.us-west-1.compute.internal",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-31-40.us-west-1.acme.internal",
       "private_ip_address": "172.31.31.40", "public_dns_name": "", "reason": "User
       initiated (2021-07-12 15:57:34 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
       "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
@@ -601,7 +601,7 @@ samples:
       "t3.2xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2021-03-11T22:00:27.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-21-177.us-west-1.compute.internal",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-21-177.us-west-1.acme.internal",
       "private_ip_address": "172.31.21.177", "public_dns_name": "", "reason": "User
       initiated (2021-05-11 17:19:49 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
       "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
@@ -620,7 +620,7 @@ samples:
       "t3.xlarge", "ip_address": null, "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2021-01-23T15:46:01.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-16-82.us-west-1.compute.internal",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-16-82.us-west-1.acme.internal",
       "private_ip_address": "172.31.16.82", "public_dns_name": "", "reason": "User
       initiated (2021-07-12 15:57:34 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
       "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
@@ -639,7 +639,7 @@ samples:
       "t2.medium", "ip_address": null, "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2020-12-15T19:30:37.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-28-230.us-west-1.compute.internal",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-28-230.us-west-1.acme.internal",
       "private_ip_address": "172.31.28.230", "public_dns_name": "", "reason": "User
       initiated (2020-12-16 15:31:30 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
       "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
@@ -658,7 +658,7 @@ samples:
       "t2.medium", "ip_address": null, "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2020-12-15T19:32:05.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-27-132.us-west-1.compute.internal",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-27-132.us-west-1.acme.internal",
       "private_ip_address": "172.31.27.132", "public_dns_name": "", "reason": "User
       initiated (2020-12-16 15:31:30 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
       "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
@@ -672,14 +672,14 @@ samples:
       "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
       0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
       "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
-      "ec2-54-193-115-237.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "ec2-54-193-115-237.us-west-1.acme.amazonaws.com", "ebs_optimized": false,
       "group_name": null, "hypervisor": "xen", "id": "i-08661e2f1ae1e78d2", "image_id":
       "ami-08d9a394ac1c2994c", "instance_profile": null, "instance_type": "t2.medium",
       "ip_address": "54.193.115.237", "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2020-12-15T03:45:35.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-19-173.us-west-1.compute.internal",
-      "private_ip_address": "172.31.19.173", "public_dns_name": "ec2-54-193-115-237.us-west-1.compute.amazonaws.com",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-19-173.us-west-1.acme.internal",
+      "private_ip_address": "172.31.19.173", "public_dns_name": "ec2-54-193-115-237.us-west-1.acme.amazonaws.com",
       "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
       "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
       {"Name": "stac-dev-nix"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
@@ -691,14 +691,14 @@ samples:
       "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
       0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
       "ami_launch_index": "2", "architecture": "x86_64", "client_token": "", "dns_name":
-      "ec2-54-183-21-92.us-west-1.compute.amazonaws.com", "ebs_optimized": true, "group_name":
+      "ec2-54-183-21-92.us-west-1.acme.amazonaws.com", "ebs_optimized": true, "group_name":
       null, "hypervisor": "xen", "id": "i-0b08a46573d49b2ee", "image_id": "ami-066df92ac6f03efca",
       "instance_profile": null, "instance_type": "c5.4xlarge", "ip_address": "54.183.21.92",
       "item": "\n                ", "kernel": null, "key_name": "stealth-tshirt-prj",
       "launch_time": "2020-09-08T21:43:52.000Z", "monitored": false, "monitoring":
       "\n                    ", "monitoring_state": "disabled", "persistent": false,
-      "platform": null, "private_dns_name": "ip-172-31-23-120.us-west-1.compute.internal",
-      "private_ip_address": "172.31.23.120", "public_dns_name": "ec2-54-183-21-92.us-west-1.compute.amazonaws.com",
+      "platform": null, "private_dns_name": "ip-172-31-23-120.us-west-1.acme.internal",
+      "private_ip_address": "172.31.23.120", "public_dns_name": "ec2-54-183-21-92.us-west-1.acme.amazonaws.com",
       "reason": "", "root_device_name": "/dev/sda1", "root_device_type": "ebs", "sourceDestCheck":
       "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
       {"Name": "Prod-033"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
@@ -710,14 +710,14 @@ samples:
       "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
       0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
       "ami_launch_index": "1", "architecture": "x86_64", "client_token": "", "dns_name":
-      "ec2-54-176-28-233.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "ec2-54-176-28-233.us-west-1.acme.amazonaws.com", "ebs_optimized": false,
       "group_name": null, "hypervisor": "xen", "id": "i-023ee207c86a15a06", "image_id":
       "ami-066df92ac6f03efca", "instance_profile": null, "instance_type": "t2.xlarge",
       "ip_address": "54.176.28.233", "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2020-08-28T20:07:17.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-27-100.us-west-1.compute.internal",
-      "private_ip_address": "172.31.27.100", "public_dns_name": "ec2-54-176-28-233.us-west-1.compute.amazonaws.com",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-27-100.us-west-1.acme.internal",
+      "private_ip_address": "172.31.27.100", "public_dns_name": "ec2-54-176-28-233.us-west-1.acme.amazonaws.com",
       "reason": "", "root_device_name": "/dev/sda1", "root_device_type": "ebs", "sourceDestCheck":
       "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
       {"Name": "Prod-057"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
@@ -729,14 +729,14 @@ samples:
       "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
       0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
       "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
-      "ec2-3-101-112-216.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "ec2-3-101-112-216.us-west-1.acme.amazonaws.com", "ebs_optimized": false,
       "group_name": null, "hypervisor": "xen", "id": "i-090bfe7b4ccad82fc", "image_id":
       "ami-066df92ac6f03efca", "instance_profile": null, "instance_type": "t2.xlarge",
       "ip_address": "3.101.112.216", "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2020-08-28T20:07:17.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-24-115.us-west-1.compute.internal",
-      "private_ip_address": "172.31.24.115", "public_dns_name": "ec2-3-101-112-216.us-west-1.compute.amazonaws.com",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-24-115.us-west-1.acme.internal",
+      "private_ip_address": "172.31.24.115", "public_dns_name": "ec2-3-101-112-216.us-west-1.acme.amazonaws.com",
       "reason": "", "root_device_name": "/dev/sda1", "root_device_type": "ebs", "sourceDestCheck":
       "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
       {"Name": "Prod-058"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
@@ -748,14 +748,14 @@ samples:
       "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
       0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
       "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
-      "ec2-54-241-82-250.us-west-1.compute.amazonaws.com", "ebs_optimized": true,
+      "ec2-54-241-82-250.us-west-1.acme.amazonaws.com", "ebs_optimized": true,
       "group_name": null, "hypervisor": "xen", "id": "i-0d661437ec3bab1a4", "image_id":
       "ami-068f8b575f0b2f8b0", "instance_profile": null, "instance_type": "c5.4xlarge",
       "ip_address": "54.241.82.250", "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2020-12-16T15:35:37.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-25-138.us-west-1.compute.internal",
-      "private_ip_address": "172.31.25.138", "public_dns_name": "ec2-54-241-82-250.us-west-1.compute.amazonaws.com",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-25-138.us-west-1.acme.internal",
+      "private_ip_address": "172.31.25.138", "public_dns_name": "ec2-54-241-82-250.us-west-1.acme.amazonaws.com",
       "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
       "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
       {"Name": "bills box"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
@@ -772,7 +772,7 @@ samples:
       null, "instance_type": "c5.4xlarge", "ip_address": null, "item": "\n                ",
       "kernel": null, "key_name": "stealth-tshirt-prj", "launch_time": "2021-01-29T22:03:34.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-18-47.us-west-1.compute.internal",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-18-47.us-west-1.acme.internal",
       "private_ip_address": "172.31.18.47", "public_dns_name": "", "reason": "User
       initiated (2021-03-06 14:34:47 GMT)", "root_device_name": "/dev/xvda", "root_device_type":
       "ebs", "sourceDestCheck": "true", "spot_instance_request_id": null, "subnet_id":
@@ -1063,14 +1063,14 @@ samples:
       "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
       0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
       "ami_launch_index": "0", "architecture": "x86_64", "client_token": "163709565037576098",
-      "dns_name": "ec2-54-215-127-2.us-west-1.compute.amazonaws.com", "ebs_optimized":
+      "dns_name": "ec2-54-215-127-2.us-west-1.acme.amazonaws.com", "ebs_optimized":
       false, "group_name": null, "hypervisor": "xen", "id": "i-0e5bf972e5b5f5761",
       "image_id": "ami-0ec66cb402b90492d", "instance_profile": null, "instance_type":
       "t2.medium", "ip_address": "54.215.127.2", "item": "\n                ", "kernel":
       null, "key_name": "stealth-tshirt-prj", "launch_time": "2021-11-16T20:48:20.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-16-204.us-west-1.compute.internal",
-      "private_ip_address": "172.31.16.204", "public_dns_name": "ec2-54-215-127-2.us-west-1.compute.amazonaws.com",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-16-204.us-west-1.acme.internal",
+      "private_ip_address": "172.31.16.204", "public_dns_name": "ec2-54-215-127-2.us-west-1.acme.amazonaws.com",
       "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
       "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
       {}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
@@ -1155,14 +1155,14 @@ samples:
       "state": "running", "state_code": 16, "previous_state": null, "previous_state_code":
       0, "placement": "us-west-1c", "placement_group": "", "placement_tenancy": "default",
       "ami_launch_index": "0", "architecture": "x86_64", "client_token": "", "dns_name":
-      "ec2-54-177-158-73.us-west-1.compute.amazonaws.com", "ebs_optimized": false,
+      "ec2-54-177-158-73.us-west-1.acme.amazonaws.com", "ebs_optimized": false,
       "group_name": null, "hypervisor": "xen", "id": "i-0a594ccf0f3c8f37f", "image_id":
       "ami-03ab7423a204da002", "instance_profile": null, "instance_type": "t2.large",
       "ip_address": "54.177.158.73", "item": "\n                ", "kernel": null,
       "key_name": "stealth-tshirt-prj", "launch_time": "2021-10-25T14:20:33.000Z",
       "monitored": false, "monitoring": "\n                    ", "monitoring_state":
-      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-28-236.us-west-1.compute.internal",
-      "private_ip_address": "172.31.28.236", "public_dns_name": "ec2-54-177-158-73.us-west-1.compute.amazonaws.com",
+      "disabled", "persistent": false, "platform": null, "private_dns_name": "ip-172-31-28-236.us-west-1.acme.internal",
+      "private_ip_address": "172.31.28.236", "public_dns_name": "ec2-54-177-158-73.us-west-1.acme.amazonaws.com",
       "reason": "", "root_device_name": "/dev/xvda", "root_device_type": "ebs", "sourceDestCheck":
       "true", "spot_instance_request_id": null, "subnet_id": "subnet-dfd96eb8", "tags":
       {"Name": "Cloud gateway"}, "virtualization_type": "hvm", "vpc_id": "vpc-41444e25"}'
