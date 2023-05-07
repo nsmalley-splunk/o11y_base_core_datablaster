@@ -636,115 +636,115 @@ samples:
     upper: 1.0
   lines:
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metrics
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIdle":"$VALUE_1$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metricss
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"1","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIdle":"$VALUE_2$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metricss
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"all","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIdle":"$VALUE_3$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metricss
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIowait":"$VALUE_4$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metricss
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"1","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIowait":"$VALUE_5$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metricss
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"all","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctIowait":"$VALUE_6$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metricss
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctNice":"$VALUE_7$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metricss
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"1","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctNice":"$VALUE_8$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metricss
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"all","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctNice":"$VALUE_9$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metricss
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctSystem":"$VALUE_10$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metricss
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"1","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctSystem":"$VALUE_11$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metrics
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"all","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctSystem":"$VALUE_12$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metrics
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctUser":"$VALUE_13$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metrics
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"1","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctUser":"$VALUE_14$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metric
+    sourcetype: cpu_metrics
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"CPU":"all","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctUser":"$VALUE_15$"}'
   - index: itsi_im_metrics
-    sourcetype: df_metric
+    sourcetype: df_metrics
     source: df
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Filesystem":"/dev/xvda1","IP_address":"172.31.19.173","MountedOn":"/","OS_name":"Amazon Linux","OS_version":"2","Type":"xfs","entity_type":"TA_Nix","metric_name:df_metric.Avail_KB":"$VALUE_16$"}'
   - index: itsi_im_metrics
-    sourcetype: df_metric
+    sourcetype: df_metrics
     source: df
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Filesystem":"/dev/xvda1","IP_address":"172.31.19.173","MountedOn":"/","OS_name":"Amazon Linux","OS_version":"2","Type":"xfs","entity_type":"TA_Nix","metric_name:df_metric.Size_KB":"$VALUE_17$"}'
   - index: itsi_im_metrics
-    sourcetype: df_metric
+    sourcetype: df_metrics
     source: df
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Filesystem":"/dev/xvda1","IP_address":"172.31.19.173","MountedOn":"/","OS_name":"Amazon Linux","OS_version":"2","Type":"xfs","entity_type":"TA_Nix","metric_name:df_metric.UsePct":"$VALUE_18$"}'
   - index: itsi_im_metrics
-    sourcetype: df_metric
+    sourcetype: df_metrics
     source: df
     host: mysql-02.internal.acme.com
     _raw: metric
@@ -785,289 +785,289 @@ samples:
     fields: '{"Duplex":"<n/a>","IP_address":"172.31.19.173","MAC":"02:c8:00:b7:c2:e9","Name":"eth0","OS_name":"Amazon
       Linux","OS_version":"2","RXdropped":"0","Speed":"<n/a>","TXdropped":"0","entity_type":"TA_Nix","inet6Addr":"fe80::c8:ff:feb7:c2e9/64","inetAddr":"172.31.19.173/20","metric_name:interfaces_metric.TXerrors":"$VALUE_24$"}'
   - index: itsi_im_metrics
-    sourcetype: iostat_metric
+    sourcetype: iostat_metrics
     source: iostat
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.avgQueueSZ":"$VALUE_25$"}'
   - index: itsi_im_metrics
-    sourcetype: iostat_metric
+    sourcetype: iostat_metrics
     source: iostat
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.avgSvcMillis":"$VALUE_26$"}'
   - index: itsi_im_metrics
-    sourcetype: iostat_metric
+    sourcetype: iostat_metrics
     source: iostat
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.avgWaitMillis":"$VALUE_27$"}'
   - index: itsi_im_metrics
-    sourcetype: iostat_metric
+    sourcetype: iostat_metrics
     source: iostat
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.bandwUtilPct":"$VALUE_28$"}'
   - index: itsi_im_metrics
-    sourcetype: iostat_metric
+    sourcetype: iostat_metrics
     source: iostat
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.rKB_PS":"$VALUE_29$"}'
   - index: itsi_im_metrics
-    sourcetype: iostat_metric
+    sourcetype: iostat_metrics
     source: iostat
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.rReq_PS":"$VALUE_30$"}'
   - index: itsi_im_metrics
-    sourcetype: iostat_metric
+    sourcetype: iostat_metrics
     source: iostat
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.wKB_PS":"$VALUE_31$"}'
   - index: itsi_im_metrics
-    sourcetype: iostat_metric
+    sourcetype: iostat_metrics
     source: iostat
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Device":"xvda","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:iostat_metric.wReq_PS":"$VALUE_32$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--foreground_--hintpolicy=subset","COMMAND":"irqbalance","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2566","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_33$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--keep-baud_115200,38400,9600_ttyS0_vt220","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"3118","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_34$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--noclear_tty1_linux","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"3119","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_35$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--quiet_restart_update-motd","COMMAND":"systemctl","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"11283","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_36$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--quiet_restart_update-motd","COMMAND":"systemctl","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"1998","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_37$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--switched-root_--system_--deserialize_21","COMMAND":"systemd","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"1","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_38$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--system_--address=systemd:_--nofork_--nopidfile_--systemd-activation","COMMAND":"dbus-daemon","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2573","USER":"dbus","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_39$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"-6_-nw_-lf_/var/lib/dhclient/dhclient6--eth0.lease_-pf_/var/run/dhclient6-eth0.pid_eth0","COMMAND":"dhclient","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2881","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_40$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"-B_1_2","COMMAND":"sar","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"10018","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_41$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"-B_1_2","COMMAND":"sar","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"10033","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.RSZ_KB":"$VALUE_42$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--foreground_--hintpolicy=subset","COMMAND":"irqbalance","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2566","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_43$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--keep-baud_115200,38400,9600_ttyS0_vt220","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"3118","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_44$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--noclear_tty1_linux","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"3119","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_45$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--quiet_restart_update-motd","COMMAND":"systemctl","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"11283","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_46$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--quiet_restart_update-motd","COMMAND":"systemctl","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"1998","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_47$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--switched-root_--system_--deserialize_21","COMMAND":"systemd","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"1","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_48$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--system_--address=systemd:_--nofork_--nopidfile_--systemd-activation","COMMAND":"dbus-daemon","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2573","USER":"dbus","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_49$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"-6_-nw_-lf_/var/lib/dhclient/dhclient6--eth0.lease_-pf_/var/run/dhclient6-eth0.pid_eth0","COMMAND":"dhclient","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2881","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_50$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"-B_1_2","COMMAND":"sar","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"10018","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_51$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"-B_1_2","COMMAND":"sar","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"10033","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.VSZ_KB":"$VALUE_52$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--foreground_--hintpolicy=subset","COMMAND":"irqbalance","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2566","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_53$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--keep-baud_115200,38400,9600_ttyS0_vt220","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"3118","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_54$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--noclear_tty1_linux","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"3119","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_55$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--quiet_restart_update-motd","COMMAND":"systemctl","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"11283","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_56$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--quiet_restart_update-motd","COMMAND":"systemctl","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"1998","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_57$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--switched-root_--system_--deserialize_21","COMMAND":"systemd","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"1","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_58$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--system_--address=systemd:_--nofork_--nopidfile_--systemd-activation","COMMAND":"dbus-daemon","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2573","USER":"dbus","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_59$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"-6_-nw_-lf_/var/lib/dhclient/dhclient6--eth0.lease_-pf_/var/run/dhclient6-eth0.pid_eth0","COMMAND":"dhclient","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2881","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_60$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com 
     _raw: metric
     fields: '{"ARGS":"-B_1_2","COMMAND":"sar","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"10018","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_61$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"-B_1_2","COMMAND":"sar","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"10033","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctCPU":"$VALUE_62$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--foreground_--hintpolicy=subset","COMMAND":"irqbalance","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2566","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_63$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--keep-baud_115200,38400,9600_ttyS0_vt220","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"3118","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_64$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--noclear_tty1_linux","COMMAND":"agetty","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"3119","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_65$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--quiet_restart_update-motd","COMMAND":"systemctl","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"11283","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_66$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--quiet_restart_update-motd","COMMAND":"systemctl","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"1998","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_67$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--switched-root_--system_--deserialize_21","COMMAND":"systemd","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"1","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_68$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"--system_--address=systemd:_--nofork_--nopidfile_--systemd-activation","COMMAND":"dbus-daemon","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2573","USER":"dbus","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_69$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"-6_-nw_-lf_/var/lib/dhclient/dhclient6--eth0.lease_-pf_/var/run/dhclient6-eth0.pid_eth0","COMMAND":"dhclient","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2881","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_70$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"ARGS":"-B_1_2","COMMAND":"sar","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"10018","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_71$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metric
+    sourcetype: ps_metrics
     source: ps
     host: mysql-02.internal.acme.com
     _raw: metric
