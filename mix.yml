@@ -6,7 +6,7 @@ global:
     outputter: splunkhec
     outputTemplate: splunkhec
     endpoints:
-    - https:/localhost:8088/services/collector/event
+    - https://localhost:8088/services/collector/event
     splunkHECToken: 00000000-0000-0000-0000-000000000000
 
 
