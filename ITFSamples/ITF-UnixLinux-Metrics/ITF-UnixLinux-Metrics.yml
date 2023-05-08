@@ -812,109 +812,109 @@ samples:
     _raw: metric
     fields: '{"ARGS":"--system_--address=systemd:_--nofork_--nopidfile_--systemd-activation","COMMAND":"dbus-daemon","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2573","USER":"dbus","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_52$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.cSwitches":"$VALUE_53$"}' 
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.forks":"$VALUE_54$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.interrupts":"$VALUE_55$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.interrupts_PS":"$VALUE_56$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.loadAvg1mi":"$VALUE_57$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.memFreeMB":"$VALUE_58$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.memFreePct":"$VALUE_59$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.memTotalMB":"$VALUE_60$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.memUsedMB":"$VALUE_61$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.memUsedPct":"$VALUE_62$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.pgPageIn_PS":"$VALUE_63$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.pgPageOut":"$VALUE_64$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.pgPageOut_PS":"$VALUE_65$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.pgSwapOut":"$VALUE_66$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.processes":"$VALUE_67$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.swapUsedPct":"$VALUE_68$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
     fields: '{"IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:vmstat_metric.threads":"$VALUE_69$"}'
   - index: itsi_im_metrics
-    sourcetype: vmstat_metric
+    sourcetype: vmstat_metrics
     source: vmstat
     host: $HOST$
     _raw: metric
