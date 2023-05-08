@@ -236,3 +236,8 @@ mix:
   interval: 30
   begin: now
   realtime: true
+- sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-Unix-Metrics/ITF-Unix-Metrics.yml
+  count: 9
+  interval: 30
+  begin: now
+  realtime: true
