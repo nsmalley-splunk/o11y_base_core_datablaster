@@ -678,7 +678,7 @@ samples:
     _raw: metric
     fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctNice":"$VALUE_7$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metricss
+    sourcetype: cpu_metrics
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
@@ -696,7 +696,7 @@ samples:
     _raw: metric
     fields: '{"CPU":"0","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","entity_type":"TA_Nix","metric_name:cpu_metric.pctSystem":"$VALUE_10$"}'
   - index: itsi_im_metrics
-    sourcetype: cpu_metricss
+    sourcetype: cpu_metrics
     source: cpu
     host: mysql-02.internal.acme.com
     _raw: metric
