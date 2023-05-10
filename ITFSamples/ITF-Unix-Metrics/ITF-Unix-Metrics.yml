@@ -1,7 +1,7 @@
 samples:
 - name: ITF-Unix-Metrics
-  interval: 60
-  count: 89
+  interval: 30
+  count: 90
   randomizeEvents: false
   tokens:
   - name: VALUE_1
@@ -1073,7 +1073,7 @@ samples:
     _raw: metric
     fields: '{"ARGS":"-B_1_2","COMMAND":"sar","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"10033","USER":"root","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_72$"}'
   - index: itsi_im_metrics
-    sourcetype: ps_metrics
+    sourcetype: vmstat_metrics
     source: vmstat
     host: mysql-02.internal.acme.com
     _raw: metric

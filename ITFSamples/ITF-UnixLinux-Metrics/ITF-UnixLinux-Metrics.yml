@@ -1,7 +1,7 @@
 samples:
 - name: ITF-UnixLinux-Metrics
   interval: 30
-  count: 70
+  count: 90
   randomizeEvents: false
   tokens:
   - name: HOST
@@ -810,7 +810,7 @@ samples:
     source: ps
     host: $HOST$
     _raw: metric
-    fields: '{"ARGS":"--system_--address=systemd:_--nofork_--nopidfile_--systemd-activation","COMMAND":"dbus-daemon","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2573","USER":"dbus","entity_type":"TA_Nix","metric_name:ps_metric.pctMEM":"$VALUE_52$"}'
+    fields: '{"ARGS":"--system_--address=systemd:_--nofork_--nopidfile_--systemd-activation","COMMAND":"dbus-daemon","IP_address":"172.31.19.173","OS_name":"Amazon Linux","OS_version":"2","PID":"2573","USER":"dbus","entity_type":"TA_Nix","metric_name:vmstat_metric.pctMEM":"$VALUE_52$"}'
   - index: itsi_im_metrics
     sourcetype: vmstat_metrics
     source: vmstat
