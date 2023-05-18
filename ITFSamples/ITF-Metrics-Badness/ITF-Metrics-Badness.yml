@@ -121,8 +121,8 @@ samples:
     field: fields
     type: random
     replacement: float
-    lower: 8376300.0
-    upper: 8376301.0
+    lower: 8041000.0
+    upper: 8041000.0
   - name: VALUE_18
     format: template
     field: fields
@@ -135,8 +135,8 @@ samples:
     field: fields
     type: random
     replacement: float
-    lower: 8041000.0
-    upper: 8376301.0
+    lower: 8032000.0
+    upper: 8041000.0
   lines:
   - index: itsi_im_metrics
     sourcetype: cpu_metrics
