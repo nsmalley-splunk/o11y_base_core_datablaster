@@ -183,13 +183,13 @@ mix:
   realtime: true
 - sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-Unix-Metrics/ITF-Unix-Metrics.yml
   count: 90
-  interval: 30
-  begin: now
+  interval: 45
+  begin: 15
   realtime: true
 - sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-Unix-Logs/ITF-Unix-Logs.yml
-  count: 10
-  interval: 1
-  begin: now
+  count: 90
+  interval: 45
+  begin: 15
   realtime: true
 - sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-AWS-Description-Users/ITF-AWS-Description-Users.yml
   count: 4
@@ -227,12 +227,12 @@ mix:
   begin: now
   realtime: true
 - sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-Metrics-Badness/ITF-Metrics-Badness.yml
-  count: 9
-  interval: 30
+  count: 90
+  interval: 15
   begin: now
   realtime: true
 - sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-All-Badness/ITF-All-Badness.yml
   count: 20
-  interval: 30
+  interval: 15
   begin: now
   realtime: true
