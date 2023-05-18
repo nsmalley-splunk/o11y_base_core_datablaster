@@ -114,8 +114,8 @@ samples:
     field: fields
     type: random
     replacement: float
-    lower: 100.0
-    upper: 335000.0
+    lower: 1.0
+    upper: 1000.0
   - name: VALUE_17
     format: template
     field: fields
@@ -252,18 +252,18 @@ samples:
     host: mysql-02.internal.acme.com
     _raw: metric
     fields: '{"Filesystem":"/dev/xvda1","IP_address":"172.31.19.173","MountedOn":"/","OS_name":"Amazon Linux","OS_version":"2","Type":"xfs","entity_type":"TA_Nix","metric_name:df_metric.Used_KB":"$VALUE_19$"}'
- - index: itsi_im_metrics
+  - index: itsi_im_metrics
     sourcetype: df_metricss
     source: df
     host: mysql-02.internal.acme.com
     _raw: metric
-    fields: '{"Filesystem":"/dev/xvda2","IP_address":"172.31.19.173","MountedOn":"/","OS_name":"Amazon Linux","OS_version":"2","Type":"nsf4","entity_type":"TA_Nix","metric_name:df_metric.Avail_KB":"$VALUE_16$"}'
+    fields: '{"Filesystem":"/dev/xvda2","IP_address":"172.31.19.173","MountedOn":"/dev/","OS_name":"Amazon Linux","OS_version":"2","Type":"nsf4","entity_type":"TA_Nix","metric_name:df_metric.Avail_KB":"$VALUE_16$"}'
   - index: itsi_im_metrics
     sourcetype: df_metrics
     source: df
     host: mysql-02.internal.acme.com
     _raw: metric
-    fields: '{"Filesystem":"/dev/xvda2","IP_address":"172.31.19.173","MountedOn":"/","OS_name":"Amazon Linux","OS_version":"2","Type":"nsf4","entity_type":"TA_Nix","metric_name:df_metric.Size_KB":"$VALUE_17$"}'
+    fields: '{"Filesystem":"/dev/xvda2","IP_address":"172.31.19.173","MountedOn":"/dev/","OS_name":"Amazon Linux","OS_version":"2","Type":"nsf4","entity_type":"TA_Nix","metric_name:df_metric.Size_KB":"$VALUE_17$"}'
   - index: itsi_im_metrics
     sourcetype: df_metrics
     source: df
