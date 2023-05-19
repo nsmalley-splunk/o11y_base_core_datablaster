@@ -184,12 +184,12 @@ mix:
 - sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-Unix-Metrics/ITF-Unix-Metrics.yml
   count: 90
   interval: 45
-  begin: 15
+  begin: now
   realtime: true
 - sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-Unix-Logs/ITF-Unix-Logs.yml
   count: 90
   interval: 45
-  begin: 15
+  begin: now
   realtime: true
 - sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-AWS-Description-Users/ITF-AWS-Description-Users.yml
   count: 4
