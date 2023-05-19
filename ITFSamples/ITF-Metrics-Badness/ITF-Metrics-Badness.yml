@@ -10,21 +10,21 @@ samples:
     type: random
     replacement: float
     lower: 10.0
-    upper: 100.0
+    upper: 30.0
   - name: VALUE_2
     format: template
     field: fields
     type: random
     replacement: float
-    lower: 89.8
-    upper: 100.0
+    lower: 10.1
+    upper: 30.0
   - name: VALUE_3
     format: template
     field: fields
     type: random
     replacement: float
-    lower: 50.51
-    upper: 99.49
+    lower: 10.1
+    upper: 30.0
   - name: VALUE_4
     format: template
     field: fields
@@ -93,22 +93,22 @@ samples:
     field: fields
     type: random
     replacement: float
-    lower: 0.0
-    upper: 80.0
+    lower: 70.0
+    upper: 99.0
   - name: VALUE_14
     format: template
     field: fields
     type: random
     replacement: float
-    lower: 0.0
-    upper: 6.12
+    lower: 70.0
+    upper: 99.0
   - name: VALUE_15
     format: template
     field: fields
     type: random
     replacement: float
-    lower: 0.0
-    upper: 41.41
+    lower: 70.0
+    upper: 99.0
   - name: VALUE_16
     format: template
     field: fields
