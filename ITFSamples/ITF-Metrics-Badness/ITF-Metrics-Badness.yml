@@ -1,7 +1,7 @@
 samples:
 - name: ITF-Metrics-Badness
   interval: 60
-  count: 18
+  count: 23
   randomizeEvents: false
   tokens:
   - name: VALUE_1
