@@ -226,13 +226,5 @@ mix:
   interval: 7200
   begin: now
   realtime: true
-- sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-Metrics-Badness/ITF-Metrics-Badness.yml
-  count: 90
-  interval: 15
-  begin: now
-  realtime: true
-- sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-All-Badness/ITF-All-Badness.yml
-  count: 20
-  interval: 15
   begin: now
   realtime: true
