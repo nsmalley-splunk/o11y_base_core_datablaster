@@ -1,0 +1,40 @@
+[Options]
+; Introduce a option using @
+; Use @include to specify a list of urls where these replacements should be applied
+
+@include[] = /^https://cse.splk.me:8000/en-US/.*$/
+@include[] = /^https://.*.victorops.com/.*$/
+@include[] = /^https://.*.signalfx.com/.*$/
+@include[] = /^https?://app.us1.signalfx.com/.*$/
+@include[] = /^https?://10.202.2.8:8000/.*$/
+@include[] = /^https?://o11y4it*/
+@include[] = /^https?://54.164.23.50*/
+
+; ... or you can create a section for your variables:
+[Variables]
+; Introduce variables using $
+; The value after = is used as placeholder
+; Use // to introduce a description for the variable
+;$prospect=AppDynamics//Set the name of your prospect. This will be used to name the application
+;$domain=appdynamics.com//Set the main domain of your prospect. This will be used in the User Experience Section
+[Imports]
++Cities
+[Application]
+; Write simple replacements like this:
+;Inventory-Services=Self-Service-Portal
+; Insert variables anywhere
+;ECommerce=$prospect Customer Care
+;api.shipping.com=api.$domain
+; Spaces around the = sign are not required, but make the configuration more readable
+;Order-Processing = Invoice-Processing
+;!/demomonkey/ip = TestApe
+[EUM]
+;www.ecommerce.com = www.$domain
+; commands (like regex) are introduced with a ! ...
+;!/cart/ip = issue
+; ... so you can use / without quoting ...
+;/en/ = /de/
+;apache=onlinegaming
+acme = <Whatever you want> 
+ACME = <Whatever you want> 
+Acme = <Whatever you want> 
