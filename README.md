@@ -25,8 +25,7 @@
    8. Dashboard for turn on / turn off of events 
         a. In the app context above (step 7) click Dashboards > New Dashboard > Edit > Source
         b. Copy the details below for a easy dashboard to turn off bad / good events 
-           ```
-           <form version="1.1">
+        ```<form version="1.1">
             <label>Bad Events Management Dashboard</label>
             <fieldset submitButton="true" autoRun="false">
                <input type="dropdown" token="action">
@@ -49,8 +48,7 @@
                   </table>
                </panel>
             </row>
-           </form>
-   ```
+          </form>```
         c. Click Save 
         d. Test Dashboard by selecting a value and looking at mysql02 metrics for changes in behavior
    9. Demo Monkey Components
