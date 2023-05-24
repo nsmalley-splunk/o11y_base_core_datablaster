@@ -4,7 +4,7 @@
    This leverages the standalone [datablaster](https://splunk.atlassian.net/wiki/spaces/SS/pages/1078228782750/Datablaster) configurations. 
 
 ## Steps to Use Data Generator: 
-   1. Download the most recent binary from [repo](http://10.234.3.156/data-blaster-samples/)
+markup: 1. Download the most recent binary from [repo](http://10.234.3.156/data-blaster-samples/)
    2. Clone this repo on the splunk system 
    3. Run the following command (you can update the data-blaster-linux-metrics you download in Step 1)
       chmod +x ./data-blaster-samples/data-blaster-linux-metrics
@@ -22,8 +22,8 @@
                ^ this has a set of searches that will turn on bad data for an hour and then a search will turn on good data every hour moving forward
         b. Copy the bin directory content (2 locations 1 $SPLUNK_HOME$/bin/scripts | $SPLUNK_HOME/etc/apps/<YOUR APP ABOVE>/bin/)
             i. event_status.py
-   8. Dashboard for turn on / turn off of events 
-        a. In the app context above (step 7) click Dashboards > New Dashboard > Edit > Source
+    8. Dashboard for turn on / turn off of events 
+       a. In the app context above (step 7) click Dashboards > New Dashboard > Edit > Source
         b. Copy the details below for a easy dashboard to turn off bad / good events 
         ```<form version="1.1">
             <label>Bad Events Management Dashboard</label>
