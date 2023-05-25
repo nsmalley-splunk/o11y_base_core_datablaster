@@ -16,11 +16,11 @@
    6. Check Splunk Instance validate data
 ## Steps for Splunk Demo Usage: Install Steps: 
    7. Install Customer Command / Script 
-        1. Copy the local directory content into a local app directory - (ensure the $SPLUNK_HOME/etc/apps/'<APP OF YOUR CHOICE>'/local/ - (PRO TIP: install in an app that has global visibility)
+        1. Copy the local directory content into a local app directory - (ensure the $SPLUNK_HOME/etc/apps/$APP OF YOUR CHOICE$/local/ - (PRO TIP: install in an app that has global visibility)
             1. commands.conf 
             2. savedsearches.conf
                ^ this has a set of searches that will turn on bad data for an hour and then a search will turn on good data every hour moving forward
-        2. Copy the bin directory content (2 locations: $SPLUNK_HOME/bin/scripts '|' $SPLUNK_HOME/etc/apps/'<YOUR APP ABOVE>'/bin/)
+        2. Copy the bin directory content (2 locations: $SPLUNK_HOME/bin/scripts '|' $SPLUNK_HOME/etc/apps/$YOUR APP ABOVE$/bin/)
             1. event_status.py
     8. Dashboard for turn on / turn off of events 
         1. In the app context above (step 7) click Dashboards > New Dashboard > Edit > Source
