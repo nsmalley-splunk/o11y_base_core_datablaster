@@ -236,3 +236,8 @@ mix:
   interval: 15
   begin: now
   realtime: true
+- sample: /home/ubuntu/o11y_base_core_datablaster/ITFSamples/ITF-AWS-Topology/ITF-AWS-Topology.yml
+  count: 1
+  interval: 1
+  begin: now
+  realtime: true

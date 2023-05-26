@@ -1,0 +1,1520 @@
+samples:
+- name: ITF-AWS-Topology
+  interval: 1
+  count: 1
+  randomizeEvents: false
+samples:
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, relationships="vpc-40c55125,Is contained in Vpc", resourceId="rtb-5b6a023e", awsAccountId=063605715280, resourceName=PublicRT, resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time=time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, relationships="vpc-40c55125,Is contained in Vpc", resourceId="rtb-5b6a023e", awsAccountId=063605715280, resourceName=PublicRT, resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, relationships="vpc-40c55125,Is contained in Vpc", resourceId="rtb-5b6a023e", awsAccountId=063605715280, resourceName=PublicRT, resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, relationships="vpc-40c55125,Is contained in Vpc", resourceId="rtb-5b6a023e", awsAccountId=063605715280, resourceName=PublicRT, resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, relationships="vpc-40c55125,Is contained in Vpc", resourceId="rtb-5b6a023e", awsAccountId=063605715280, resourceName=PublicRT, resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, relationships="i-2073950b,Is attached to Instance", resourceId="vol-ed2f1ce5", awsAccountId=063605715280, resourceName="vol-ed2f1ce5", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, relationships="i-2073950b,Is attached to Instance", resourceId="vol-ed2f1ce5", awsAccountId=063605715280, resourceName="vol-ed2f1ce5", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, relationships="i-f072b3d8,Is attached to Instance", resourceId="vol-d8f4f8d7", awsAccountId=063605715280, resourceName="vol-d8f4f8d7", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, relationships="i-f072b3d8,Is attached to Instance", resourceId="vol-d8f4f8d7", awsAccountId=063605715280, resourceName="vol-d8f4f8d7", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, resourceId="vol-4a1cde44", awsAccountId=063605715280, resourceName="vol-4a1cde44", resourceType="AWS::EC2::Volume", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, resourceId="vol-4a1cde44", awsAccountId=063605715280, resourceName="vol-4a1cde44", resourceType="AWS::EC2::Volume", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, resourceId="vol-4a1cde44", awsAccountId=063605715280, resourceName="vol-4a1cde44", resourceType="AWS::EC2::Volume", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359680, resourceId="vol-4a1cde44", awsAccountId=063605715280, resourceName="vol-4a1cde44", resourceType="AWS::EC2::Volume", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359620, relationships="i-9273875f,Is attached to Instance", resourceId="vol-20568b2e", awsAccountId=063605715280, resourceName="vol-20568b2e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359620, relationships="i-9273875f,Is attached to Instance", resourceId="vol-20568b2e", awsAccountId=063605715280, resourceName="vol-20568b2e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359620, relationships="i-9273875f,Is attached to Instance", resourceId="vol-20568b2e", awsAccountId=063605715280, resourceName="vol-20568b2e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359560, relationships="sg-f1e90d94,Is associated with SecurityGroupsubnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-65a49e4d", awsAccountId=063605715280, resourceName=QLT_AWS, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359500, relationships="sg-aa1920cf,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-3f3152b1", awsAccountId=063605715280, resourceName=QLT_TA_automation, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359500, relationships="sg-aa1920cf,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-3f3152b1", awsAccountId=063605715280, resourceName=QLT_TA_automation, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: s3://splunk-s3-access-bucket/2023-05-23-06-31-26-B51FFA791B757AD9
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359500, relationships="sg-aa1920cf,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-3f3152b1", awsAccountId=063605715280, resourceName=QLT_TA_automation, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359440, resourceId="vol-c999c7c1", awsAccountId=063605715280, resourceName="vol-c999c7c1", resourceType="AWS::EC2::Volume", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359440, relationships="sg-e26cf587,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-4c70783a", awsAccountId=063605715280, resourceName="eni-4c70783a", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359440, relationships="sg-e26cf587,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-4c70783a", awsAccountId=063605715280, resourceName="eni-4c70783a", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="sg-789ece1d,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-11110b75", awsAccountId=063605715280, resourceName="eni-11110b75", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="sg-789ece1d,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-11110b75", awsAccountId=063605715280, resourceName="eni-11110b75", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="sg-789ece1d,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-11110b75", awsAccountId=063605715280, resourceName="eni-11110b75", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="sg-789ece1d,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-11110b75", awsAccountId=063605715280, resourceName="eni-11110b75", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="sg-789ece1d,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-11110b75", awsAccountId=063605715280, resourceName="eni-11110b75", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="sg-789ece1d,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-11110b75", awsAccountId=063605715280, resourceName="eni-11110b75", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="vpc-311b8f54,Is contained in Vpc", resourceId="rtb-e3016a86", awsAccountId=063605715280, resourceName="rtb-e3016a86", resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="vpc-311b8f54,Is contained in Vpc", resourceId="rtb-e3016a86", awsAccountId=063605715280, resourceName="rtb-e3016a86", resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="vpc-311b8f54,Is contained in Vpc", resourceId="rtb-e3016a86", awsAccountId=063605715280, resourceName="rtb-e3016a86", resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="vpc-311b8f54,Is contained in Vpc", resourceId="rtb-e3016a86", awsAccountId=063605715280, resourceName="rtb-e3016a86", resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="vpc-311b8f54,Is contained in Vpc", resourceId="rtb-e3016a86", awsAccountId=063605715280, resourceName="rtb-e3016a86", resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="vpc-311b8f54,Is contained in Vpc", resourceId="rtb-e3016a86", awsAccountId=063605715280, resourceName="rtb-e3016a86", resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="vpc-311b8f54,Is contained in Vpc", resourceId="rtb-e3016a86", awsAccountId=063605715280, resourceName="rtb-e3016a86", resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="vpc-311b8f54,Is contained in Vpc", resourceId="rtb-e3016a86", awsAccountId=063605715280, resourceName="rtb-e3016a86", resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="vpc-311b8f54,Is contained in Vpc", resourceId="rtb-e3016a86", awsAccountId=063605715280, resourceName="rtb-e3016a86", resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="vpc-311b8f54,Is contained in Vpc", resourceId="rtb-e3016a86", awsAccountId=063605715280, resourceName="rtb-e3016a86", resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="vpc-311b8f54,Is contained in Vpc", resourceId="rtb-e3016a86", awsAccountId=063605715280, resourceName="rtb-e3016a86", resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="sg-55f00c30,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-374160fb", awsAccountId=063605715280, resourceName=DLM_samuel_5_sso_splunk, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="sg-55f00c30,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-374160fb", awsAccountId=063605715280, resourceName=DLM_samuel_5_sso_splunk, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="sg-55f00c30,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-374160fb", awsAccountId=063605715280, resourceName=DLM_samuel_5_sso_splunk, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="sg-55f00c30,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-374160fb", awsAccountId=063605715280, resourceName=DLM_samuel_5_sso_splunk, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359200, relationships="sg-55f00c30,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-374160fb", awsAccountId=063605715280, resourceName=DLM_samuel_5_sso_splunk, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359080, relationships="i-af78040b,Is attached to Instance", resourceId="vol-4ead0394", awsAccountId=063605715280, resourceName="vol-4ead0394", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359080, relationships="i-af78040b,Is attached to Instance", resourceId="vol-4ead0394", awsAccountId=063605715280, resourceName="vol-4ead0394", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359080, relationships="i-8e367543,Is attached to Instance sg-6a6feb0f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-52bf5936", awsAccountId=063605715280, resourceName="eni-52bf5936", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359020, relationships="sg-178daf72,Is associated with SecurityGroup subnet-a81252cd,Is contained in Subnetvpc-311b8f54,Is contained in Vpc", resourceId="i-d7760a73", awsAccountId=063605715280, resourceName=DLM_GOOD_SPLUNK, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359020, relationships="i-cfc82e03,Is attached to Instance sg-e26cf587,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-a88007cc", awsAccountId=063605715280, resourceName="eni-a88007cc", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359020, relationships="i-881a7806,Is attached to Instance", resourceId="vol-78437cbf", awsAccountId=063605715280, resourceName="vol-78437cbf", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359020, relationships="i-881a7806,Is attached to Instance", resourceId="vol-78437cbf", awsAccountId=063605715280, resourceName="vol-78437cbf", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359020, relationships="i-881a7806,Is attached to Instance", resourceId="vol-78437cbf", awsAccountId=063605715280, resourceName="vol-78437cbf", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359020, relationships="i-881a7806,Is attached to Instance", resourceId="vol-78437cbf", awsAccountId=063605715280, resourceName="vol-78437cbf", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359020, relationships="i-881a7806,Is attached to Instance", resourceId="vol-78437cbf", awsAccountId=063605715280, resourceName="vol-78437cbf", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595359020, relationships="i-881a7806,Is attached to Instance", resourceId="vol-78437cbf", awsAccountId=063605715280, resourceName="vol-78437cbf", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358960, relationships="eipalloc-6ecd2d0b,Is attached to ElasticIp sg-c4f35aa1,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-4787058b", awsAccountId=063605715280, resourceName=DLM_CUSTOMER_DOWNLOAD, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358960, relationships="eipalloc-0d84946f,Is attached to ElasticIp sg-01ba0764,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-33b05718", awsAccountId=063605715280, resourceName=DWM_Good_MDM, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358960, relationships="sg-09dcff6c,Is associated with SecurityGroup subnet-93f98be4,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="i-fd28b873", awsAccountId=063605715280, resourceName=DLS_Jove_Bastion, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358960, relationships="eipalloc-6ecd2d0b,Is attached to ElasticIp sg-c4f35aa1,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-4787058b", awsAccountId=063605715280, resourceName=DLM_CUSTOMER_DOWNLOAD, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="acl-06791b63,Is attached to NetworkAcl rtb-5b6a023e,Is contained in RouteTable vpc-40c55125,Is contained in Vpc", resourceId="subnet-93f98be4", awsAccountId=063605715280, resourceName="Public Subnet", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="acl-06791b63,Is attached to NetworkAcl rtb-5b6a023e,Is contained in RouteTable vpc-40c55125,Is contained in Vpc", resourceId="subnet-93f98be4", awsAccountId=063605715280, resourceName="Public Subnet", resourceType="AWS::EC2::Subnet", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="acl-06791b63,Is attached to NetworkAcl rtb-5b6a023e,Is contained in RouteTable vpc-40c55125,Is contained in Vpc", resourceId="subnet-93f98be4", awsAccountId=063605715280, resourceName="Public Subnet", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="acl-06791b63,Is attached to NetworkAcl rtb-5b6a023e,Is contained in RouteTable vpc-40c55125,Is contained in Vpc", resourceId="subnet-93f98be4", awsAccountId=063605715280, resourceName="Public Subnet", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="acl-06791b63,Is attached to NetworkAcl rtb-5b6a023e,Is contained in RouteTable vpc-40c55125,Is contained in Vpc", resourceId="subnet-93f98be4", awsAccountId=063605715280, resourceName="Public Subnet", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="i-4787058b,Is attached to Instance", resourceId="vol-a37397b7", awsAccountId=063605715280, resourceName="vol-a37397b7", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="eipalloc-03dad361,Is attached to ElasticIp i-18472f4e,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-a6091ec4", awsAccountId=063605715280, resourceName="eni-a6091ec4", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="i-9cb5c938,Is attached to Instance sg-98406dfd,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-bb04c7dc", awsAccountId=063605715280, resourceName="eni-bb04c7dc", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="eipalloc-03dad361,Is attached to ElasticIp i-18472f4e,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-a6091ec4", awsAccountId=063605715280, resourceName="eni-a6091ec4", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="i-9cb5c938,Is attached to Instance sg-98406dfd,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-bb04c7dc", awsAccountId=063605715280, resourceName="eni-bb04c7dc", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="eipalloc-03dad361,Is attached to ElasticIp i-18472f4e,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-a6091ec4", awsAccountId=063605715280, resourceName="eni-a6091ec4", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="i-9cb5c938,Is attached to Instance sg-98406dfd,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-bb04c7dc", awsAccountId=063605715280, resourceName="eni-bb04c7dc", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="eipalloc-03dad361,Is attached to ElasticIp i-18472f4e,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-a6091ec4", awsAccountId=063605715280, resourceName="eni-a6091ec4", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="eipalloc-03dad361,Is attached to ElasticIp i-18472f4e,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-a6091ec4", awsAccountId=063605715280, resourceName="eni-a6091ec4", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="eipalloc-03dad361,Is attached to ElasticIp i-18472f4e,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-a6091ec4", awsAccountId=063605715280, resourceName="eni-a6091ec4", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358900, relationships="eipalloc-03dad361,Is attached to ElasticIp i-18472f4e,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-a6091ec4", awsAccountId=063605715280, resourceName="eni-a6091ec4", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358840, relationships="i-4cf234e8,Is attached to Instance", resourceId="vol-799d1d91", awsAccountId=063605715280, resourceName="vol-799d1d91", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358840, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-f775b8dc", awsAccountId=063605715280, resourceName=QWT_win12_r2_zimo, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358840, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-f775b8dc", awsAccountId=063605715280, resourceName=QWT_win12_r2_zimo, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358840, relationships="eipalloc-35b7a957,Is attached to ElasticIp sg-caf723af,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-946fca59", awsAccountId=063605715280, resourceName=QLT_Qualys, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358840, relationships="eipalloc-35b7a957,Is attached to ElasticIp sg-caf723af,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-946fca59", awsAccountId=063605715280, resourceName=QLT_Qualys, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358840, relationships="eipalloc-35b7a957,Is attached to ElasticIp sg-caf723af,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-946fca59", awsAccountId=063605715280, resourceName=QLT_Qualys, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358840, relationships="eipalloc-35b7a957,Is attached to ElasticIp sg-caf723af,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-946fca59", awsAccountId=063605715280, resourceName=QLT_Qualys, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358780, relationships="i-3d3f9c15,Is attached to Instance", resourceId="vol-6b475c64", awsAccountId=063605715280, resourceName="vol-6b475c64", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358780, relationships="i-3d3f9c15,Is attached to Instance", resourceId="vol-6b475c64", awsAccountId=063605715280, resourceName="vol-6b475c64", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358780, relationships="i-3d3f9c15,Is attached to Instance", resourceId="vol-6b475c64", awsAccountId=063605715280, resourceName="vol-6b475c64", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358780, relationships="i-3d3f9c15,Is attached to Instance", resourceId="vol-6b475c64", awsAccountId=063605715280, resourceName="vol-6b475c64", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358780, relationships="i-3d3f9c15,Is attached to Instance", resourceId="vol-6b475c64", awsAccountId=063605715280, resourceName="vol-6b475c64", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358780, relationships="eni-1811d96f,Is associated with NetworkInterface eni-19c81a6e,Is associated with NetworkInterface eni-19e5937c,Is associated with NetworkInterface eni-1b0fbf6c,Is associated with NetworkInterface eni-1c209778,Is associated with NetworkInterface eni-20ee9a44,Is associated with NetworkInterfaceeni-313dc178,Is associated with NetworkInterface eni-3917c44e,Is associated with NetworkInterface eni-8735cdf0,Is associated with NetworkInterface eni-916cbee6,Is associated with NetworkInterface eni-984336fd,Is associated with NetworkInterface eni-b03289d7,Is associated with NetworkInterface eni-cbe128bc,Is associated with NetworkInterface i-0354b028,Is associated with Instance i-2073950b,Is associated with Instance i-41b3a269,Is associated with Instance i-51970bdf,Is associated with Instance i-633af9ae,Is associated with Instance i-65a49e4d,Is associated with Instance i-76f3e2bb,Is associated with Instance i-84fd3520,Is associated with Instance i-940013bc,Is associated with Instance i-d655b2fd,Is associated with Instance i-df97df7b,Is associated with Instance i-e820ee25,Is associated with Instance i-f775b8dc,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-f1e90d94", awsAccountId=063605715280, resourceName=qa_splunk_server, resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358780, relationships="eni-1811d96f,Is associated with NetworkInterface eni-19c81a6e,Is associated with NetworkInterface eni-19e5937c,Is associated with NetworkInterface eni-1b0fbf6c,Is associated with NetworkInterface eni-1c209778,Is associated with NetworkInterface eni-20ee9a44,Is associated with NetworkInterface eni-313dc178,Is associated with NetworkInterface eni-3917c44e,Is associated with NetworkInterface eni-8735cdf0,Is associated with NetworkInterface eni-916cbee6,Is associated with NetworkInterface eni-984336fd,Is associated with NetworkInterface eni-b03289d7,Is associated with NetworkInterface eni-cbe128bc,Is associated with NetworkInterface i-0354b028,Is associated with Instance i-2073950b,Is associated with Instance i-41b3a269,Is associated with Instance i-51970bdf,Is associated with Instance i-633af9ae,Is associated with Instance i-65a49e4d,Is associated with Instance i-76f3e2bb,Is associated with Instance i-84fd3520,Is associated with Instance i-940013bc,Is associated with Instance i-d655b2fd,Is associated with Instance i-df97df7b,Is associated with Instance i-e820ee25,Is associated with Instance i-f775b8dc,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-f1e90d94", awsAccountId=063605715280, resourceName=qa_splunk_server, resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK  eni-984336fd,Is associated with NetworkInterface eni-b03289d7,Is associated with NetworkInterface eni-cbe128bc,Is associated with NetworkInterface i-0354b028,Is associated with Instance i-2073950b,Is associated with Instance i-41b3a269,Is associated with Instance i-51970bdf,Is associated with Instance i-633af9ae,Is associated with Instance i-65a49e4d,Is associated with Instance i-76f3e2bb,Is associated with Instance i-84fd3520,Is associated with Instance i-940013bc,Is associated with Instance i-d655b2fd,Is associated with Instance i-df97df7b,Is associated with Instance i-e820ee25,Is associated with Instance i-f775b8dc,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-f1e90d94", awsAccountId=063605715280, resourceName=qa_splunk_server, resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK   - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358780, relationships="i-62a5c7ec,Is attached to Instance sg-55f00c30,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-3bd97872", awsAccountId=063605715280, resourceName="eni-3bd97872", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358780, relationships="eni-1811d96f,Is associated with NetworkInterface eni-19c81a6e,Is associated with NetworkInterface eni-19e5937c,Is associated with NetworkInterface eni-1b0fbf6c,Is associated with NetworkInterface eni-1c209778,Is associated with NetworkInterface eni-20ee9a44,Is associated with NetworkInterface eni-313dc178,Is associated with NetworkInterface eni-3917c44e,Is associated with NetworkInterface eni-8735cdf0,Is associated with NetworkInterface eni-916cbee6,Is associated with NetworkInterface eni-984336fd,Is associated with NetworkInterface eni-b03289d7,Is associated with NetworkInterface eni-cbe128bc,Is associated with NetworkInterface i-0354b028,Is associated with Instance i-2073950b,Is associated with Instance i-41b3a269,Is associated with Instance i-51970bdf,Is associated with Instance i-633af9ae,Is associated with Instance i-65a49e4d,Is associated with Instance i-76f3e2bb,Is associated with Instance i-84fd3520,Is associated with Instance i-940013bc,Is associated with Instance i-d655b2fd,Is associated with Instance i-df97df7b,Is associated with Instance i-e820ee25,Is associated with Instance i-f775b8dc,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-f1e90d94", awsAccountId=063605715280, resourceName=qa_splunk_server, resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358780, relationships="eni-1811d96f,Is associated with NetworkInterface eni-19c81a6e,Is associated with NetworkInterface eni-19e5937c,Is associated with NetworkInterface eni-1b0fbf6c,Is associated with NetworkInterface eni-1c209778,Is associated with NetworkInterface eni-20ee9a44,Is associated with NetworkInterface eni-313dc178,Is associated with NetworkInterface eni-3917c44e,Is associated with NetworkInterface eni-8735cdf0,Is associated with NetworkInterface eni-916cbee6,Is associated with NetworkInterface eni-984336fd,Is associated with NetworkInterface eni-b03289d7,Is associated with NetworkInterface eni-cbe128bc,Is associated with NetworkInterface i-0354b028,Is associated with Instance i-2073950b,Is associated with Instance i-41b3a269,Is associated with Instance i-51970bdf,Is associated with Instance i-633af9ae,Is associated with Instance i-65a49e4d,Is associated with Instance i-76f3e2bb,Is associated with Instance i-84fd3520,Is associated with Instance i-940013bc,Is associated with Instance i-d655b2fd,Is associated with Instance i-df97df7b,Is associated with Instance i-e820ee25,Is associated with Instance i-f775b8dc,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-f1e90d94", awsAccountId=063605715280, resourceName=qa_splunk_server, resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358780, relationships="eni-e4ada492,Is associated with NetworkInterface i-27c041a9,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-ef6b3b8a", awsAccountId=063605715280, resourceName="launch-wizard-1", resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358720, relationships="vpc-d2d110ba,Is contained in Vpc", resourceId="sg-cbc538ae", awsAccountId=063605715280, resourceName="AWS-OpsWorks-Web-Server", resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358720, relationships="vpc-d2d110ba,Is contained in Vpc", resourceId="sg-cbc538ae", awsAccountId=063605715280, resourceName="AWS-OpsWorks-Web-Server", resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358720, relationships="vpc-d2d110ba,Is contained in Vpc", resourceId="sg-cbc538ae", awsAccountId=063605715280, resourceName="AWS-OpsWorks-Web-Server", resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358720, relationships="acl-06791b63,Is attached to NetworkAcl rtb-2e6b034b,Is contained in RouteTable vpc-40c55125,Is contained in Vpc", resourceId="subnet-acf98bdb", awsAccountId=063605715280, resourceName="Private Subnet", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358720, relationships="acl-06791b63,Is attached to NetworkAcl rtb-2e6b034b,Is contained in RouteTable vpc-40c55125,Is contained in Vpc", resourceId="subnet-acf98bdb", awsAccountId=063605715280, resourceName="Private Subnet", resourceType="AWS::EC2::Subnet", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358720, relationships="acl-06791b63,Is attached to NetworkAcl rtb-2e6b034b,Is contained in RouteTable vpc-40c55125,Is contained in Vpc", resourceId="subnet-acf98bdb", awsAccountId=063605715280, resourceName="Private Subnet", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358720, relationships="acl-06791b63,Is attached to NetworkAcl rtb-2e6b034b,Is contained in RouteTable vpc-40c55125,Is contained in Vpc", resourceId="subnet-acf98bdb", awsAccountId=063605715280, resourceName="Private Subnet", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358720, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-84fd3520", awsAccountId=063605715280, resourceName=QLT_Zimo_TA_AWS, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358660, relationships="sg-6a6feb0f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-8e367543", awsAccountId=063605715280, resourceName=DLM_strong, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358660, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-940013bc", awsAccountId=063605715280, resourceName=QLT_spl60_aws_mchen, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358660, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-940013bc", awsAccountId=063605715280, resourceName=QLT_spl60_aws_mchen, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358660, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-940013bc", awsAccountId=063605715280, resourceName=QLT_spl60_aws_mchen, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358660, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-940013bc", awsAccountId=063605715280, resourceName=QLT_spl60_aws_mchen, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358660, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-940013bc", awsAccountId=063605715280, resourceName=QLT_spl60_aws_mchen, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358600, relationships="i-90b5c934,Is attached to Instance sg-98406dfd,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-b904c7de", awsAccountId=063605715280, resourceName="eni-b904c7de", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358600, relationships="i-90b5c934,Is attached to Instance sg-98406dfd,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-b904c7de", awsAccountId=063605715280, resourceName="eni-b904c7de", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358600, relationships="i-f072b3d8,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-5a25e43f", awsAccountId=063605715280, resourceName="eni-5a25e43f", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358600, relationships="i-f072b3d8,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-5a25e43f", awsAccountId=063605715280, resourceName="eni-5a25e43f", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358600, relationships="i-f072b3d8,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-5a25e43f", awsAccountId=063605715280, resourceName="eni-5a25e43f", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358600, relationships="i-f072b3d8,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-5a25e43f", awsAccountId=063605715280, resourceName="eni-5a25e43f", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358600, relationships="i-f072b3d8,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-5a25e43f", awsAccountId=063605715280, resourceName="eni-5a25e43f", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358600, relationships="i-f072b3d8,Is attached to Instance sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-5a25e43f", awsAccountId=063605715280, resourceName="eni-5a25e43f", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358480, relationships="eni-482fdb01,Is associated with NetworkInterface i-fd28b873,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-09dcff6c", awsAccountId=063605715280, resourceName=JoveBastionSG, resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358480, relationships="eni-482fdb01,Is associated with NetworkInterface i-fd28b873,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-09dcff6c", awsAccountId=063605715280, resourceName=JoveBastionSG, resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358480, relationships="eni-482fdb01,Is associated with NetworkInterface i-fd28b873,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-09dcff6c", awsAccountId=063605715280, resourceName=JoveBastionSG, resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358480, relationships="eni-482fdb01,Is associated with NetworkInterface i-fd28b873,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-09dcff6c", awsAccountId=063605715280, resourceName=JoveBastionSG, resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358480, relationships="eni-482fdb01,Is associated with NetworkInterface i-fd28b873,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-09dcff6c", awsAccountId=063605715280, resourceName=JoveBastionSG, resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358480, relationships="acl-a8d110c0,Is attached to NetworkAcl vpc-d2d110ba,Is contained in Vpc", resourceId="subnet-d3d110bb", awsAccountId=063605715280, resourceName="subnet-d3d110bb", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358480, relationships="acl-a8d110c0,Is attached to NetworkAcl vpc-d2d110ba,Is contained in Vpc", resourceId="subnet-d3d110bb", awsAccountId=063605715280, resourceName="subnet-d3d110bb", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358420, relationships="i-51970bdf,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-313dc178", awsAccountId=063605715280, resourceName="eni-313dc178", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358420, relationships="i-51970bdf,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-313dc178", awsAccountId=063605715280, resourceName="eni-313dc178", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358420, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-84fd3520", awsAccountId=063605715280, resourceName=QLT_Zimo_TA_AWS, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358420, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-84fd3520", awsAccountId=063605715280, resourceName=QLT_Zimo_TA_AWS, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358420, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-84fd3520", awsAccountId=063605715280, resourceName=QLT_Zimo_TA_AWS, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358420, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-84fd3520", awsAccountId=063605715280, resourceName=QLT_Zimo_TA_AWS, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358420, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-84fd3520", awsAccountId=063605715280, resourceName=QLT_Zimo_TA_AWS, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358360, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-2073950b", awsAccountId=063605715280, resourceName=DLT_laiqiang, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358300, relationships="i-76f3e2bb,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-1c209778", awsAccountId=063605715280, resourceName="eni-1c209778", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358240, relationships="i-0df0fcc1,Is attached to Instance", resourceId="vol-be20b6aa", awsAccountId=063605715280, resourceName="vol-be20b6aa", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358240, relationships="i-0df0fcc1,Is attached to Instance", resourceId="vol-be20b6aa", awsAccountId=063605715280, resourceName="vol-be20b6aa", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358180, relationships="sg-f1e90d94,Is associated with SecurityGroupsubnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-e820ee25", awsAccountId=063605715280, resourceName=QLT_spl61_snow_mchen, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358180, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-e820ee25", awsAccountId=063605715280, resourceName=QLT_spl61_snow_mchen, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="sg-fa69af9f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-9273875f", awsAccountId=063605715280, resourceName="DLM_samuel_2_zhi.hr.splunk.io", resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="sg-fa69af9f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-9273875f", awsAccountId=063605715280, resourceName="DLM_samuel_2_zhi.hr.splunk.io", resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="sg-fa69af9f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-9273875f", awsAccountId=063605715280, resourceName="DLM_samuel_2_zhi.hr.splunk.io", resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="i-6adc8fa7,Is attached to Instance", resourceId="vol-76fb189e", awsAccountId=063605715280, resourceName="vol-76fb189e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="i-6adc8fa7,Is attached to Instance", resourceId="vol-76fb189e", awsAccountId=063605715280, resourceName="vol-76fb189e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="i-6adc8fa7,Is attached to Instance", resourceId="vol-76fb189e", awsAccountId=063605715280, resourceName="vol-76fb189e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-f775b8dc", awsAccountId=063605715280, resourceName=QWT_win12_r2_zimo, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-f775b8dc", awsAccountId=063605715280, resourceName=QWT_win12_r2_zimo, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-f775b8dc", awsAccountId=063605715280, resourceName=QWT_win12_r2_zimo, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="eni-67994d2e,Is associated with NetworkInterface i-7681e5f8,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-ea0e3e8f", awsAccountId=063605715280, resourceName="JoveVpn-VPNSecurityGroup-XZYFPCCBHSWW", resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="eni-67994d2e,Is associated with NetworkInterface i-7681e5f8,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-ea0e3e8f", awsAccountId=063605715280, resourceName="JoveVpn-VPNSecurityGroup-XZYFPCCBHSWW", resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="eni-67994d2e,Is associated with NetworkInterface i-7681e5f8,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-ea0e3e8f", awsAccountId=063605715280, resourceName="JoveVpn-VPNSecurityGroup-XZYFPCCBHSWW", resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="eni-67994d2e,Is associated with NetworkInterface i-7681e5f8,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-ea0e3e8f", awsAccountId=063605715280, resourceName="JoveVpn-VPNSecurityGroup-XZYFPCCBHSWW", resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="eni-67994d2e,Is associated with NetworkInterface i-7681e5f8,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-ea0e3e8f", awsAccountId=063605715280, resourceName="JoveVpn-VPNSecurityGroup-XZYFPCCBHSWW", resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="eni-67994d2e,Is associated with NetworkInterface i-7681e5f8,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-ea0e3e8f", awsAccountId=063605715280, resourceName="JoveVpn-VPNSecurityGroup-XZYFPCCBHSWW", resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358120, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-633af9ae", awsAccountId=063605715280, resourceName=QLT_spl62_snow_mchen, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358060, relationships="eipalloc-dd14c3b8,Is attached to ElasticIp i-33780497,Is attached to Instance sg-3e8aa85b,Is associated with SecurityGroup subnet-ab1252ce,Is contained in Subnet vpc-311b8f54,Is contained in Vpc", resourceId="eni-4a70b02d", awsAccountId=063605715280, resourceName="eni-4a70b02d", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358060, relationships="eipalloc-dd14c3b8,Is attached to ElasticIp i-33780497,Is attached to Instance sg-3e8aa85b,Is associated with SecurityGroup subnet-ab1252ce,Is contained in Subnet vpc-311b8f54,Is contained in Vpc", resourceId="eni-4a70b02d", awsAccountId=063605715280, resourceName="eni-4a70b02d", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358060, relationships="eipalloc-dd14c3b8,Is attached to ElasticIp i-33780497,Is attached to Instance sg-3e8aa85b,Is associated with SecurityGroup subnet-ab1252ce,Is contained in Subnet vpc-311b8f54,Is contained in Vpc", resourceId="eni-4a70b02d", awsAccountId=063605715280, resourceName="eni-4a70b02d", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358060, relationships="eipalloc-dd14c3b8,Is attached to ElasticIp i-33780497,Is attached to Instance sg-3e8aa85b,Is associated with SecurityGroup subnet-ab1252ce,Is contained in Subnet vpc-311b8f54,Is contained in Vpc", resourceId="eni-4a70b02d", awsAccountId=063605715280, resourceName="eni-4a70b02d", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358060, relationships="eipalloc-dd14c3b8,Is attached to ElasticIp i-33780497,Is attached to Instance sg-3e8aa85b,Is associated with SecurityGroup subnet-ab1252ce,Is contained in Subnet vpc-311b8f54,Is contained in Vpc", resourceId="eni-4a70b02d", awsAccountId=063605715280, resourceName="eni-4a70b02d", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358060, relationships="i-91b5c935,Is attached to Instance", resourceId="vol-c342ec19", awsAccountId=063605715280, resourceName="vol-c342ec19", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358060, relationships="i-91b5c935,Is attached to Instance", resourceId="vol-c342ec19", awsAccountId=063605715280, resourceName="vol-c342ec19", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358060, relationships="i-91b5c935,Is attached to Instance", resourceId="vol-c342ec19", awsAccountId=063605715280, resourceName="vol-c342ec19", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358060, relationships="i-3c382e14,Is attached to Instance", resourceId="vol-8c123a84", awsAccountId=063605715280, resourceName="vol-8c123a84", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358060, relationships="i-0354b028,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-3917c44e", awsAccountId=063605715280, resourceName="eni-3917c44e", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358060, relationships="i-0354b028,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-3917c44e", awsAccountId=063605715280, resourceName="eni-3917c44e", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358000, relationships="sg-999fcffc,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-3c89ef98", awsAccountId=063605715280, resourceName=DLS_Frank_ELBTest, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595358000, relationships="sg-999fcffc,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-3c89ef98", awsAccountId=063605715280, resourceName=DLS_Frank_ELBTest, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357940, relationships="i-d655b2fd,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-19c81a6e", awsAccountId=063605715280, resourceName="eni-19c81a6e", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357880, relationships="i-881a7806,Is attached to Instance sg-67665d02,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-1cd67055", awsAccountId=063605715280, resourceName="eni-1cd67055", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357880, relationships="i-94afd130,Is attached to Instance", resourceId="vol-5f4ee585", awsAccountId=063605715280, resourceName="vol-5f4ee585", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357880, relationships="i-94afd130,Is attached to Instance", resourceId="vol-5f4ee585", awsAccountId=063605715280, resourceName="vol-5f4ee585", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance", resourceId="vol-f99ec23e", awsAccountId=063605715280, resourceName="vol-f99ec23e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance", resourceId="vol-f99ec23e", awsAccountId=063605715280, resourceName="vol-f99ec23e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance", resourceId="vol-f99ec23e", awsAccountId=063605715280, resourceName="vol-f99ec23e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance", resourceId="vol-f99ec23e", awsAccountId=063605715280, resourceName="vol-f99ec23e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance", resourceId="vol-f99ec23e", awsAccountId=063605715280, resourceName="vol-f99ec23e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance", resourceId="vol-f99ec23e", awsAccountId=063605715280, resourceName="vol-f99ec23e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance", resourceId="vol-f99ec23e", awsAccountId=063605715280, resourceName="vol-f99ec23e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance", resourceId="vol-f99ec23e", awsAccountId=063605715280, resourceName="vol-f99ec23e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance", resourceId="vol-f99ec23e", awsAccountId=063605715280, resourceName="vol-f99ec23e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="vpc-40c55125,Is contained in Vpc", resourceId="rtb-5b6a023e", awsAccountId=063605715280, resourceName=PublicRT, resourceType="AWS::EC2::RouteTable", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-82e524aa", awsAccountId=063605715280, resourceName="DLM_samuel_3_node.dev.splunk.io", resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-82e524aa", awsAccountId=063605715280, resourceName="DLM_samuel_3_node.dev.splunk.io", resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-82e524aa", awsAccountId=063605715280, resourceName="DLM_samuel_3_node.dev.splunk.io", resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="sg-b08367df,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-82e524aa", awsAccountId=063605715280, resourceName="DLM_samuel_3_node.dev.splunk.io", resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-51970bdf,Is attached to Instance", resourceId="vol-10b8e3d7", awsAccountId=063605715280, resourceName="vol-10b8e3d7", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance sg-bfa586da,Is associated with SecurityGroup subnet-acf98bdb,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="eni-e11ce8a8", awsAccountId=063605715280, resourceName="eni-e11ce8a8", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance sg-bfa586da,Is associated with SecurityGroup subnet-acf98bdb,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="eni-e11ce8a8", awsAccountId=063605715280, resourceName="eni-e11ce8a8", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357760, relationships="i-e72fbf69,Is attached to Instance sg-bfa586da,Is associated with SecurityGroup subnet-acf98bdb,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="eni-e11ce8a8", awsAccountId=063605715280, resourceName="eni-e11ce8a8", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357700, relationships="acl-a8d110c0,Is attached to NetworkAcl vpc-d2d110ba,Is contained in Vpc", resourceId="subnet-d4d110bc", awsAccountId=063605715280, resourceName="subnet-d4d110bc", resourceType="AWS::EC2::Subnet", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357700, relationships="acl-a8d110c0,Is attached to NetworkAcl vpc-d2d110ba,Is contained in Vpc", resourceId="subnet-d4d110bc", awsAccountId=063605715280, resourceName="subnet-d4d110bc", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357700, relationships="acl-a8d110c0,Is attached to NetworkAcl vpc-d2d110ba,Is contained in Vpc", resourceId="subnet-d4d110bc", awsAccountId=063605715280, resourceName="subnet-d4d110bc", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357700, relationships="acl-a8d110c0,Is attached to NetworkAcl vpc-d2d110ba,Is contained in Vpc", resourceId="subnet-d4d110bc", awsAccountId=063605715280, resourceName="subnet-d4d110bc", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357700, relationships="acl-a8d110c0,Is attached to NetworkAcl vpc-d2d110ba,Is contained in Vpc", resourceId="subnet-d4d110bc", awsAccountId=063605715280, resourceName="subnet-d4d110bc", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357700, relationships="acl-a8d110c0,Is attached to NetworkAcl vpc-d2d110ba,Is contained in Vpc", resourceId="subnet-d4d110bc", awsAccountId=063605715280, resourceName="subnet-d4d110bc", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357700, relationships="acl-a8d110c0,Is attached to NetworkAcl vpc-d2d110ba,Is contained in Vpc", resourceId="subnet-d4d110bc", awsAccountId=063605715280, resourceName="subnet-d4d110bc", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357700, relationships="eipalloc-d010c9b5,Is attached to ElasticIp sg-01ba0764,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-fc72b3d4", awsAccountId=063605715280, resourceName=DLM_Roy1, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357700, relationships="eipalloc-d010c9b5,Is attached to ElasticIp sg-01ba0764,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-fc72b3d4", awsAccountId=063605715280, resourceName=DLM_Roy1, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357640, relationships="eipalloc-5ad0063f,Is attached to ElasticIp sg-36007653,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-94afd130", awsAccountId=063605715280, resourceName=DLS_fakeblog_Akamai_Calvin, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357640, relationships="eipalloc-5ad0063f,Is attached to ElasticIp sg-36007653,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-94afd130", awsAccountId=063605715280, resourceName=DLS_fakeblog_Akamai_Calvin, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357640, relationships="eipalloc-5ad0063f,Is attached to ElasticIp sg-36007653,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-94afd130", awsAccountId=063605715280, resourceName=DLS_fakeblog_Akamai_Calvin, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357580, relationships="i-90b5c934,Is attached to Instance", resourceId="vol-5342ec89", awsAccountId=063605715280, resourceName="vol-5342ec89", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357580, relationships="i-90b5c934,Is attached to Instance", resourceId="vol-5342ec89", awsAccountId=063605715280, resourceName="vol-5342ec89", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357580, relationships="i-90b5c934,Is attached to Instance", resourceId="vol-5342ec89", awsAccountId=063605715280, resourceName="vol-5342ec89", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357580, relationships="i-90b5c934,Is attached to Instance", resourceId="vol-5342ec89", awsAccountId=063605715280, resourceName="vol-5342ec89", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357580, relationships="i-90b5c934,Is attached to Instance", resourceId="vol-5342ec89", awsAccountId=063605715280, resourceName="vol-5342ec89", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357580, relationships="i-90b5c934,Is attached to Instance", resourceId="vol-5342ec89", awsAccountId=063605715280, resourceName="vol-5342ec89", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357580, relationships="i-90b5c934,Is attached to Instance", resourceId="vol-5342ec89", awsAccountId=063605715280, resourceName="vol-5342ec89", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357580, relationships="i-90b5c934,Is attached to Instance", resourceId="vol-5342ec89", awsAccountId=063605715280, resourceName="vol-5342ec89", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357580, relationships="i-90b5c934,Is attached to Instance", resourceId="vol-5342ec89", awsAccountId=063605715280, resourceName="vol-5342ec89", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357580, relationships="i-90b5c934,Is attached to Instance", resourceId="vol-5342ec89", awsAccountId=063605715280, resourceName="vol-5342ec89", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357460, relationships="eni-bebaa6db,Is associated with NetworkInterface i-562b539b,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-29a9524c", awsAccountId=063605715280, resourceName="splunk-network", resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357460, relationships="sg-98406dfd,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-93b5c937", awsAccountId=063605715280, resourceName=QLS_QA_SHC_Sh3, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357460, relationships="sg-98406dfd,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-93b5c937", awsAccountId=063605715280, resourceName=QLS_QA_SHC_Sh3, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357460, relationships="sg-98406dfd,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-93b5c937", awsAccountId=063605715280, resourceName=QLS_QA_SHC_Sh3, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357460, relationships="eipalloc-33859551,Is attached to ElasticIp i-3181671a,Is attached to Instance sg-6e8c6801,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-0414c673", awsAccountId=063605715280, resourceName="eni-0414c673", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357460, relationships="eipalloc-33859551,Is attached to ElasticIp i-3181671a,Is attached to Instance sg-6e8c6801,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-0414c673", awsAccountId=063605715280, resourceName="eni-0414c673", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357460, relationships="eipalloc-33859551,Is attached to ElasticIp i-3181671a,Is attached to Instance sg-6e8c6801,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-0414c673", awsAccountId=063605715280, resourceName="eni-0414c673", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357400, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-f775b8dc", awsAccountId=063605715280, resourceName=QWT_win12_r2_zimo, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-84fd3520,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-20ee9a44", awsAccountId=063605715280, resourceName="eni-20ee9a44", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-84fd3520,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-20ee9a44", awsAccountId=063605715280, resourceName="eni-20ee9a44", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-84fd3520,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-20ee9a44", awsAccountId=063605715280, resourceName="eni-20ee9a44", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-84fd3520,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-20ee9a44", awsAccountId=063605715280, resourceName="eni-20ee9a44", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-84fd3520,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-20ee9a44", awsAccountId=063605715280, resourceName="eni-20ee9a44", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-84fd3520,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-20ee9a44", awsAccountId=063605715280, resourceName="eni-20ee9a44", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-84fd3520,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-20ee9a44", awsAccountId=063605715280, resourceName="eni-20ee9a44", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-84fd3520,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-20ee9a44", awsAccountId=063605715280, resourceName="eni-20ee9a44", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-fd28b873,Is attached to Instance", resourceId="vol-a864386f", awsAccountId=063605715280, resourceName="vol-a864386f", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-fd28b873,Is attached to Instance", resourceId="vol-a864386f", awsAccountId=063605715280, resourceName="vol-a864386f", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-fd28b873,Is attached to Instance", resourceId="vol-a864386f", awsAccountId=063605715280, resourceName="vol-a864386f", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-fd28b873,Is attached to Instance", resourceId="vol-a864386f", awsAccountId=063605715280, resourceName="vol-a864386f", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-fd28b873,Is attached to Instance", resourceId="vol-a864386f", awsAccountId=063605715280, resourceName="vol-a864386f", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="i-fd28b873,Is attached to Instance", resourceId="vol-a864386f", awsAccountId=063605715280, resourceName="vol-a864386f", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357340, relationships="acl-06791b63,Is attached to NetworkAcl rtb-2e6b034b,Is contained in RouteTable vpc-40c55125,Is contained in Vpc", resourceId="subnet-acf98bdb", awsAccountId=063605715280, resourceName="Private Subnet", resourceType="AWS::EC2::Subnet", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357220, relationships="i-a530588d,Is attached to Instance sg-25b95f40,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-7376f016", awsAccountId=063605715280, resourceName="eni-7376f016", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357160, relationships="sg-a68367c9,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-141cc973", awsAccountId=063605715280, resourceName="eni-141cc973", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357160, relationships="sg-a68367c9,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-141cc973", awsAccountId=063605715280, resourceName="eni-141cc973", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357160, relationships="sg-a68367c9,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-141cc973", awsAccountId=063605715280, resourceName="eni-141cc973", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357160, relationships="eni-a91fbcdf,Is associated with NetworkInterface i-d4565c18,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-7cf99d19", awsAccountId=063605715280, resourceName=QLS_rzhang_test, resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357160, relationships="i-9273875f,Is attached to Instance sg-fa69af9f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-e4771181", awsAccountId=063605715280, resourceName="eni-e4771181", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357100, relationships="i-65a49e4d,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-8735cdf0", awsAccountId=063605715280, resourceName="eni-8735cdf0", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357100, relationships="i-65a49e4d,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-8735cdf0", awsAccountId=063605715280, resourceName="eni-8735cdf0", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357100, relationships="i-65a49e4d,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-8735cdf0", awsAccountId=063605715280, resourceName="eni-8735cdf0", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357100, relationships="i-65a49e4d,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-8735cdf0", awsAccountId=063605715280, resourceName="eni-8735cdf0", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357100, relationships="eipalloc-82bb6ce7,Is attached to ElasticIp sg-38f3c55d,Is associated with SecurityGroup subnet-93f98be4,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="i-ab7a1f25", awsAccountId=063605715280, resourceName=DLS_Jove_Mongo, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357100, relationships="eipalloc-82bb6ce7,Is attached to ElasticIp sg-38f3c55d,Is associated with SecurityGroup subnet-93f98be4,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="i-ab7a1f25", awsAccountId=063605715280, resourceName=DLS_Jove_Mongo, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357100, relationships="eipalloc-82bb6ce7,Is attached to ElasticIp sg-38f3c55d,Is associated with SecurityGroup subnet-93f98be4,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="i-ab7a1f25", awsAccountId=063605715280, resourceName=DLS_Jove_Mongo, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357040, relationships="eni-49b0c82c,Is associated with NetworkInterface eni-b3ae3ad6,Is associated with NetworkInterface i-1073aedd,Is associated with Instance i-8cb9a446,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-2b04fb4e", awsAccountId=063605715280, resourceName=qa_test_m, resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357040, relationships="eni-49b0c82c,Is associated with NetworkInterface eni-b3ae3ad6,Is associated with NetworkInterface i-1073aedd,Is associated with Instance i-8cb9a446,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-2b04fb4e", awsAccountId=063605715280, resourceName=qa_test_m, resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595357040, relationships="eni-49b0c82c,Is associated with NetworkInterface eni-b3ae3ad6,Is associated with NetworkInterface i-1073aedd,Is associated with Instance i-8cb9a446,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-2b04fb4e", awsAccountId=063605715280, resourceName=qa_test_m, resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356980, relationships="sg-ea0e3e8f,Is associated with SecurityGroup subnet-93f98be4,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="i-7681e5f8", awsAccountId=063605715280, resourceName=DLS_VPN_Jove, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356980, relationships="sg-ea0e3e8f,Is associated with SecurityGroup subnet-93f98be4,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="i-7681e5f8", awsAccountId=063605715280, resourceName=DLS_VPN_Jove, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356980, relationships="sg-ea0e3e8f,Is associated with SecurityGroup subnet-93f98be4,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="i-7681e5f8", awsAccountId=063605715280, resourceName=DLS_VPN_Jove, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356980, relationships="sg-ea0e3e8f,Is associated with SecurityGroup subnet-93f98be4,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="i-7681e5f8", awsAccountId=063605715280, resourceName=DLS_VPN_Jove, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356980, relationships="sg-ea0e3e8f,Is associated with SecurityGroup subnet-93f98be4,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="i-7681e5f8", awsAccountId=063605715280, resourceName=DLS_VPN_Jove, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356980, relationships="sg-ea0e3e8f,Is associated with SecurityGroup subnet-93f98be4,Is contained in Subnet vpc-40c55125,Is contained in Vpc", resourceId="i-7681e5f8", awsAccountId=063605715280, resourceName=DLS_VPN_Jove, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356980, relationships="eipalloc-33859551,Is attached to ElasticIp sg-6e8c6801,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-3181671a", awsAccountId=063605715280, resourceName=DWM_Good_MDM2, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356980, relationships="eipalloc-33859551,Is attached to ElasticIp sg-6e8c6801,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-3181671a", awsAccountId=063605715280, resourceName=DWM_Good_MDM2, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356980, relationships="eipalloc-33859551,Is attached to ElasticIp sg-6e8c6801,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-3181671a", awsAccountId=063605715280, resourceName=DWM_Good_MDM2, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356980, relationships="sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-633af9ae", awsAccountId=063605715280, resourceName=QLT_spl62_snow_mchen, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356920, relationships="vpc-d2d110ba,Is contained in Vpc", resourceId="sg-d2c538b7", awsAccountId=063605715280, resourceName="AWS-OpsWorks-Java-App-Server", resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356920, relationships="vpc-d2d110ba,Is contained in Vpc", resourceId="sg-d2c538b7", awsAccountId=063605715280, resourceName="AWS-OpsWorks-Java-App-Server", resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356920, relationships="vpc-d2d110ba,Is contained in Vpc", resourceId="sg-d2c538b7", awsAccountId=063605715280, resourceName="AWS-OpsWorks-Java-App-Server", resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356920, relationships="sg-e26cf587,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-d3eff6b7", awsAccountId=063605715280, resourceName="eni-d3eff6b7", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356920, relationships="i-2073950b,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-916cbee6", awsAccountId=063605715280, resourceName="eni-916cbee6", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356920, relationships="i-2073950b,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-916cbee6", awsAccountId=063605715280, resourceName="eni-916cbee6", resourceType="AWS::EC2::NetworkInterface", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356860, relationships="sg-2cda3149,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-56e2d17e", awsAccountId=063605715280, resourceName=QLM_Performance_Result, resourceType="AWS::EC2::Instance", instanceStatus=stopped, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356800, relationships="sg-2b04fb4e,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="i-1073aedd", awsAccountId=063605715280, resourceName=QLT_jmx_server, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356800, relationships="igw-61e24304,Is attached to InternetGateway", resourceId="vpc-311b8f54", awsAccountId=063605715280, resourceName=MOBILE_GOOD_VPC, resourceType="AWS::EC2::VPC", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356800, relationships="igw-61e24304,Is attached to InternetGateway", resourceId="vpc-311b8f54", awsAccountId=063605715280, resourceName=MOBILE_GOOD_VPC, resourceType="AWS::EC2::VPC", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356800, relationships="igw-61e24304,Is attached to InternetGateway", resourceId="vpc-311b8f54", awsAccountId=063605715280, resourceName=MOBILE_GOOD_VPC, resourceType="AWS::EC2::VPC", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356800, relationships="igw-61e24304,Is attached to InternetGateway", resourceId="vpc-311b8f54", awsAccountId=063605715280, resourceName=MOBILE_GOOD_VPC, resourceType="AWS::EC2::VPC", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="i-3c382e14,Is attached to Instance sg-7347b516,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-abc50bdc", awsAccountId=063605715280, resourceName="eni-abc50bdc", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="i-3c382e14,Is attached to Instance sg-7347b516,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-abc50bdc", awsAccountId=063605715280, resourceName="eni-abc50bdc", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="i-3c382e14,Is attached to Instance sg-7347b516,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-abc50bdc", awsAccountId=063605715280, resourceName="eni-abc50bdc", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="vpc-40c55125,Is contained in Vpc", resourceId="sg-d0daf9b5", awsAccountId=063605715280, resourceName=default, resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="eni-ec59ea9b,Is associated with NetworkInterface i-e949b725,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-b8458cdd", awsAccountId=063605715280, resourceName=QLT_proxy_mchen, resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="eni-ec59ea9b,Is associated with NetworkInterface i-e949b725,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-b8458cdd", awsAccountId=063605715280, resourceName=QLT_proxy_mchen, resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="eni-ec59ea9b,Is associated with NetworkInterface i-e949b725,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-b8458cdd", awsAccountId=063605715280, resourceName=QLT_proxy_mchen, resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="i-8e367543,Is attached to Instance sg-6a6feb0f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-52bf5936", awsAccountId=063605715280, resourceName="eni-52bf5936", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="i-8e367543,Is attached to Instance sg-6a6feb0f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-52bf5936", awsAccountId=063605715280, resourceName="eni-52bf5936", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="i-8e367543,Is attached to Instance sg-6a6feb0f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-52bf5936", awsAccountId=063605715280, resourceName="eni-52bf5936", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK 
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="i-8e367543,Is attached to Instance sg-6a6feb0f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-52bf5936", awsAccountId=063605715280, resourceName="eni-52bf5936", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="i-8e367543,Is attached to Instance sg-6a6feb0f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-52bf5936", awsAccountId=063605715280, resourceName="eni-52bf5936", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="i-8e367543,Is attached to Instance sg-6a6feb0f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-52bf5936", awsAccountId=063605715280, resourceName="eni-52bf5936", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="i-8e367543,Is attached to Instance sg-6a6feb0f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-52bf5936", awsAccountId=063605715280, resourceName="eni-52bf5936", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="i-8e367543,Is attached to Instance sg-6a6feb0f,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-52bf5936", awsAccountId=063605715280, resourceName="eni-52bf5936", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-40c55125", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356680, relationships="eni-67994d2e,Is associated with NetworkInterface i-7681e5f8,Is associated with Instance vpc-40c55125,Is contained in Vpc", resourceId="sg-ea0e3e8f", awsAccountId=063605715280, resourceName="JoveVpn-VPNSecurityGroup-XZYFPCCBHSWW", resourceType="AWS::EC2::SecurityGroup", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356500, relationships="i-0df0fcc1,Is attached to Instance sg-7942d81c,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-bf2184c9", awsAccountId=063605715280, resourceName="eni-bf2184c9", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356500, relationships="i-0df0fcc1,Is attached to Instance sg-7942d81c,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-bf2184c9", awsAccountId=063605715280, resourceName="eni-bf2184c9", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356500, relationships="i-0df0fcc1,Is attached to Instance sg-7942d81c,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-bf2184c9", awsAccountId=063605715280, resourceName="eni-bf2184c9", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356500, relationships="i-0df0fcc1,Is attached to Instance sg-7942d81c,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-bf2184c9", awsAccountId=063605715280, resourceName="eni-bf2184c9", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356500, relationships="i-0df0fcc1,Is attached to Instance sg-7942d81c,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-bf2184c9", awsAccountId=063605715280, resourceName="eni-bf2184c9", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356500, relationships="i-0df0fcc1,Is attached to Instance sg-7942d81c,Is associated with SecurityGroup subnet-d4d110bc,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-bf2184c9", awsAccountId=063605715280, resourceName="eni-bf2184c9", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356440, relationships="i-df97df7b,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-b03289d7", awsAccountId=063605715280, resourceName="eni-b03289d7", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356440, relationships="i-df97df7b,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-b03289d7", awsAccountId=063605715280, resourceName="eni-b03289d7", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356440, relationships="i-df97df7b,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-b03289d7", awsAccountId=063605715280, resourceName="eni-b03289d7", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356440, relationships="i-df97df7b,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-b03289d7", awsAccountId=063605715280, resourceName="eni-b03289d7", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356440, relationships="i-df97df7b,Is attached to Instance sg-f1e90d94,Is associated with SecurityGroup subnet-d3d110bb,Is contained in Subnet vpc-d2d110ba,Is contained in Vpc", resourceId="eni-b03289d7", awsAccountId=063605715280, resourceName="eni-b03289d7", resourceType="AWS::EC2::NetworkInterface", resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-d2d110ba", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356320, relationships="eni-e4771181,Is associated with NetworkInterface i-9273875f,Is associated with Instance vpc-d2d110ba,Is contained in Vpc", resourceId="sg-fa69af9f", awsAccountId=063605715280, resourceName="shanghai-zhi", resourceType="AWS::EC2::SecurityGroup", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356260, relationships="i-9273875f,Is attached to Instance", resourceId="vol-20568b2e", awsAccountId=063605715280, resourceName="vol-20568b2e", resourceType="AWS::EC2::Volume", resourceStatus=ResourceDiscovered
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356260, relationships="eipalloc-dd14c3b8,Is attached to ElasticIp sg-3e8aa85b,Is associated with SecurityGroup subnet-ab1252ce,Is contained in Subnet vpc-311b8f54,Is contained in Vpc", resourceId="i-33780497", awsAccountId=063605715280, resourceName=DWM_GOOD_GD, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356260, relationships="eipalloc-dd14c3b8,Is attached to ElasticIp sg-3e8aa85b,Is associated with SecurityGroup subnet-ab1252ce,Is contained in Subnet vpc-311b8f54,Is contained in Vpc", resourceId="i-33780497", awsAccountId=063605715280, resourceName=DWM_GOOD_GD, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356260, relationships="eipalloc-dd14c3b8,Is attached to ElasticIp sg-3e8aa85b,Is associated with SecurityGroup subnet-ab1252ce,Is contained in Subnet vpc-311b8f54,Is contained in Vpc", resourceId="i-33780497", awsAccountId=063605715280, resourceName=DWM_GOOD_GD, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
+  - index: aws_topology_history
+    sourcetype: stash 
+    source: aws_topology_summary
+    host: acme-public.s3.us-west-1.amazonaws.com
+    _raw: _time="1595446200.000", search_name="Config: Topology Playback Appender", search_now=1595446200.000, info_search_time=1595446201.386, vpcId="vpc-311b8f54", canMiss=0, awsRegion="ap-southeast-1", timestamp=1595356260, relationships="eipalloc-dd14c3b8,Is attached to ElasticIp sg-3e8aa85b,Is associated with SecurityGroup subnet-ab1252ce,Is contained in Subnet vpc-311b8f54,Is contained in Vpc", resourceId="i-33780497", awsAccountId=063605715280, resourceName=DWM_GOOD_GD, resourceType="AWS::EC2::Instance", instanceStatus=running, resourceStatus=OK
