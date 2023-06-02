@@ -3,7 +3,7 @@ samples:
   interval: 1
   count: 1
   randomizeEvents: false
-samples:
+  lines:
   - index: aws_topology_history
     sourcetype: stash 
     source: aws_topology_summary
